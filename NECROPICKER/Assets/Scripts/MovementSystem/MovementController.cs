@@ -23,5 +23,9 @@ public class MovementController : MonoBehaviour
         Move(direction.normalized * multiplier);
     }
 
-    public void SetSpeed(float newSpeed) => _speed = newSpeed;
+    public void SetSpeed(float newSpeed)
+    {
+        _speed = newSpeed;
+    }
+
 }
