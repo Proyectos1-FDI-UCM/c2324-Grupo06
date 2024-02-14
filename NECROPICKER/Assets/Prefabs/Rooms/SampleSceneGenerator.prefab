@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2635493839846716923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7873593974046729976}
+  - component: {fileID: 1392821162466313952}
+  m_Layer: 0
+  m_Name: SampleSceneGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7873593974046729976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2635493839846716923}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.773613, y: -1.1524478, z: 0.019017326}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1392821162466313952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2635493839846716923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f9e71c4edcc9e478223b9141dc3efb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialRoom: {fileID: 1565287536060672417, guid: dc0de4799ba0221418c591bad70bbbed, type: 3}
+  nextFloorRooms:
+  - {fileID: 4572079177953394565, guid: cbe2b71670e00ad4fb7781aed40b656f, type: 3}
+  - {fileID: 4064528618668708597, guid: de90fb0be4c6bc645b1e8becdb54ba74, type: 3}
+  - {fileID: 8998825949166416510, guid: 5000a131bdd00414489539bd9b3154ff, type: 3}
+  - {fileID: 2815064359836656549, guid: b08e8546ef6ee684cade6d43ee965c35, type: 3}
+  roomPrefabs:
+  - {fileID: 1254913484813632879, guid: 499a75e6291204d4fa3ea4ef7c0d7955, type: 3}
+  - {fileID: 4270979173122795403, guid: eaae344c3e1935641805569e9dc2aae8, type: 3}
+  - {fileID: 2110042355460383670, guid: 807c4923ca82ba9479ff2743fb3b2a8a, type: 3}
+  - {fileID: 6686994654661238254, guid: 1295f3e8db4ab0e43824c18ece20e7a7, type: 3}
+  - {fileID: 3411677126881676309, guid: 39ee70678aa2f0646b18107bd0104e52, type: 3}
+  - {fileID: 9021738499054048329, guid: 74fc2e9ca07201a40887487bd3790ec8, type: 3}
+  - {fileID: 1811540630454103158, guid: 5daae145e0ef521448a8be10dec31d1e, type: 3}
+  - {fileID: 7219726215886603503, guid: bf633bd326fb33b4d823b13be9a808d3, type: 3}
+  - {fileID: 9048814835331755539, guid: abf2f8eddb9173247aa9344e58aa9f90, type: 3}
+  - {fileID: 8671222076881652507, guid: 7570c67e3775b444c819812ab70298d1, type: 3}
+  - {fileID: 827026664377514088, guid: bef5f5c7f432e1844804fe33a28e89d0, type: 3}
+  strictRoomPrefabs:
+  - {fileID: 104480420169098190, guid: 686d8271672b0eb49867bfe58a6bf0a3, type: 3}
+  - {fileID: 1254913484813632879, guid: 499a75e6291204d4fa3ea4ef7c0d7955, type: 3}
+  - {fileID: 4270979173122795403, guid: eaae344c3e1935641805569e9dc2aae8, type: 3}
+  - {fileID: 827026664377514088, guid: bef5f5c7f432e1844804fe33a28e89d0, type: 3}
+  - {fileID: 3411677126881676309, guid: 39ee70678aa2f0646b18107bd0104e52, type: 3}
+  - {fileID: 931216335945499242, guid: 6ff51998b364a9740927b107b9a55ef2, type: 3}
+  - {fileID: 2110042355460383670, guid: 807c4923ca82ba9479ff2743fb3b2a8a, type: 3}
+  - {fileID: 6686994654661238254, guid: 1295f3e8db4ab0e43824c18ece20e7a7, type: 3}
+  - {fileID: 9021738499054048329, guid: 74fc2e9ca07201a40887487bd3790ec8, type: 3}
+  - {fileID: 1811540630454103158, guid: 5daae145e0ef521448a8be10dec31d1e, type: 3}
+  - {fileID: 7219726215886603503, guid: bf633bd326fb33b4d823b13be9a808d3, type: 3}
+  - {fileID: 9048814835331755539, guid: abf2f8eddb9173247aa9344e58aa9f90, type: 3}
+  - {fileID: 8235196818858111326, guid: f871e0d818fd40c4ab33ece9a116f6d6, type: 3}
+  - {fileID: 8671222076881652507, guid: 7570c67e3775b444c819812ab70298d1, type: 3}
+  - {fileID: 3498705238267189274, guid: 3827312a2e761084d9e2d8793b729811, type: 3}
+  maxRoomExtension: 15
