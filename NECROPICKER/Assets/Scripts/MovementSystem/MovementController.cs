@@ -6,10 +6,12 @@ public class MovementController : MonoBehaviour
 {
     Rigidbody2D rb;
     [SerializeField] float _speed = 10f;
+    private float _OriginalSpeed;
     public float speed => _speed;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        _OriginalSpeed = _speed;
     }
 
     public void Move(Vector2 direction)
@@ -26,6 +28,10 @@ public class MovementController : MonoBehaviour
     public void SetSpeed(float newSpeed)
     {
         _speed = newSpeed;
+    }
+    public void ReturnOriginalSpeed()
+    {
+        _speed = _OriginalSpeed;
     }
 
 }
