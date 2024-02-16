@@ -16,7 +16,7 @@ public class DropComponent : MonoBehaviour
    //     foreach (int rate in dropRate) dropRate.Add(rate);
     }
     public void DropItems()
-    { int j = 0;
+    { int j = 990;
         int randomPercentage = UnityEngine.Random.Range(0, 101);
         Debug.Log(randomPercentage);
         for (int i = 0; i < dropItems.Count; i++)
@@ -24,6 +24,7 @@ public class DropComponent : MonoBehaviour
             //de esta manera termina instanciando el objeto que menor droprate tenga en caso de tener mas objetos instanciados
             if (dropItems[i] != null&& randomPercentage < dropRate[i]) j=i;
         }
+        if (j == 990) return;
         Instantiate(dropItems[j], _transform.position, _transform.rotation);
     }
 }
