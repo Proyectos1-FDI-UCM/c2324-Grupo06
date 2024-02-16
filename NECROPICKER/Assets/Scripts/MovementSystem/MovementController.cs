@@ -6,6 +6,7 @@ public class MovementController : MonoBehaviour
 {
     Rigidbody2D rb;
     [SerializeField] float _speed = 10f;
+    //No deberiamos tener que checkear si es un jugador puesto que se trata de código reutilizable
     [SerializeField] bool _isPlayer = false;
     private float _OriginalSpeed;
     public float speed => _speed;
@@ -25,6 +26,14 @@ public class MovementController : MonoBehaviour
         Vector2 direction = target - (Vector2)transform.position;
         Move(direction.normalized * multiplier);
     }
+
+    //Nos podemos ahorrar este Update, en este caso es mejor que cada vez que se actualice _speed se actualice el valor de rb.velocity.
+    
+    //Para ello utiliza un accesor de la variable _speed y en el set de dicho accesor actualiza el valor de rb.velocity, puede ser
+    //algo como "rb.velocity = rb.velocity.normalized * value", de esa forma no la dirección pero si la velocidad.
+
+    //De todas formas esto tampoco está mal, pero si se puede evitar un Update mejor. Y sobre todo evitar la
+    //comprobación de si es un jugador o no. BUEN TRABAJO :D!!
     private void Update()
     {
         if (_isPlayer)
