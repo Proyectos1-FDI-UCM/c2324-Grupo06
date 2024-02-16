@@ -7,7 +7,6 @@ public class RandomChildren : MonoBehaviour
 {
     UnityEvent<GameObject[]> OnChildrenDisplayed = new UnityEvent<GameObject[]>();
 
-
     [SerializeField] float[] percentages;
 
     private void Start()
@@ -28,6 +27,8 @@ public class RandomChildren : MonoBehaviour
     }
     private void OnValidate()
     {
+        //Hacer aquí la copia del array de porcentajes, asignar el nuevo array con el tamaño del número de hijos
+        //y luego copiar los valores del array antiguo al nuevo.
         percentages = new float[transform.childCount];
     }
 }
