@@ -10,14 +10,14 @@ public class IAAcklemon : MonoBehaviour
     #region Methods
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent<MovementController>(out MovementController _movementController) != null) 
+        if (collision.gameObject.TryGetComponent(out MovementController _movementController)) 
         { 
             _movementController.SetSpeed(_SlowedSpeed); //Llamada al método new speed para igualar la velocidad a SlowedSpeed
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent<MovementController>(out MovementController _movementController) != null)
+        if (collision.gameObject.TryGetComponent(out MovementController _movementController))
         {
             _movementController.ReturnOriginalSpeed(); //Llamada al método Return speed para devolver la velocidad original
         }

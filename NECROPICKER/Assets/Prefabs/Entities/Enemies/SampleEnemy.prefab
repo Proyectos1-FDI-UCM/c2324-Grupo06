@@ -90,14 +90,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cea6a7c29b5624eb3e58e9dc294545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onEnterPerformers: []
-  onUpdatePerformers:
-  - conditionContainer: {fileID: 5868816169857766955}
-    behaviourContainers: {fileID: 6708854668824872596}
-  onExitPerformers:
-  - conditionContainer: {fileID: 5868816169857766955}
-    behaviourContainers: {fileID: 6095082264989658154}
-  exitConditionContainer: {fileID: 248544157891275822}
   _onStateEnter:
     m_PersistentCalls:
       m_Calls:
@@ -113,6 +105,15 @@ MonoBehaviour:
           m_StringArgument: Move
           m_BoolArgument: 0
         m_CallState: 2
+  stateAnimation: 
+  onEnterPerformers: []
+  onUpdatePerformers:
+  - conditionContainer: {fileID: 5868816169857766955}
+    behaviourContainers: {fileID: 6708854668824872596}
+  onExitPerformers:
+  - conditionContainer: {fileID: 5868816169857766955}
+    behaviourContainers: {fileID: 6095082264989658154}
+  exitConditionContainer: {fileID: 248544157891275822}
   _nextState: {fileID: 7775957336810951499}
 --- !u!1 &1020533315598685499
 GameObject:
@@ -158,10 +159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cea6a7c29b5624eb3e58e9dc294545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onEnterPerformers: []
-  onUpdatePerformers: []
-  onExitPerformers: []
-  exitConditionContainer: {fileID: 5156448512569556380}
   _onStateEnter:
     m_PersistentCalls:
       m_Calls:
@@ -177,6 +174,11 @@ MonoBehaviour:
           m_StringArgument: GetDamage
           m_BoolArgument: 0
         m_CallState: 2
+  stateAnimation: 
+  onEnterPerformers: []
+  onUpdatePerformers: []
+  onExitPerformers: []
+  exitConditionContainer: {fileID: 5156448512569556380}
   _nextState: {fileID: 7775957336810951499}
 --- !u!1 &1133388009218672476
 GameObject:
@@ -435,10 +437,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cea6a7c29b5624eb3e58e9dc294545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onEnterPerformers: []
-  onUpdatePerformers: []
-  onExitPerformers: []
-  exitConditionContainer: {fileID: 248544157891275822}
   _onStateEnter:
     m_PersistentCalls:
       m_Calls:
@@ -454,6 +452,11 @@ MonoBehaviour:
           m_StringArgument: Idle
           m_BoolArgument: 0
         m_CallState: 2
+  stateAnimation: 
+  onEnterPerformers: []
+  onUpdatePerformers: []
+  onExitPerformers: []
+  exitConditionContainer: {fileID: 248544157891275822}
   _nextState: {fileID: 6974208907770366731}
 --- !u!1 &2426278918095098802
 GameObject:

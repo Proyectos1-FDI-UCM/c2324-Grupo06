@@ -27,7 +27,7 @@ public class Room : MonoBehaviour
     }
 
     private void OnDrawGizmos() {
-        Gizmos.DrawCube(transform.position, new Vector3(5, 5, 5));
+        //Gizmos.DrawCube(transform.position, new Vector3(5, 5, 5));
     }
 
     Vector2Int AccessValueToVector2(RoomAccess accessValue)
