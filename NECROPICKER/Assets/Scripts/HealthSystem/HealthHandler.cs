@@ -35,7 +35,9 @@ public class HealthHandler : MonoBehaviour
             {
                 GetComponent<MovementController>().SetSpeed(20);
                 gameObject.AddComponent<ThrowableItem>();
+                GetComponent<DropComponent>().DropItems();
                 OnDeath?.Invoke();
+               
             }
         }
     }
