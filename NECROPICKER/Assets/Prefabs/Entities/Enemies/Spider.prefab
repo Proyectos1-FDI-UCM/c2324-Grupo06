@@ -327,13 +327,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cea6a7c29b5624eb3e58e9dc294545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onStateEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  stateAnimation: 
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers: []
   exitConditionContainer: {fileID: 873588196368445990}
-  _onStateEnter:
-    m_PersistentCalls:
-      m_Calls: []
   _nextState: {fileID: 583097348282539303}
 --- !u!1 &5590283083436477423
 GameObject:
@@ -629,13 +630,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cea6a7c29b5624eb3e58e9dc294545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onStateEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  stateAnimation: 
   onEnterPerformers:
   - conditionContainer: {fileID: 7114645329953091931}
     behaviourContainers: {fileID: 6481417771440989730}
   onUpdatePerformers: []
   onExitPerformers: []
   exitConditionContainer: {fileID: 873588196368445990}
-  _onStateEnter:
-    m_PersistentCalls:
-      m_Calls: []
   _nextState: {fileID: 1529450452750619879}
