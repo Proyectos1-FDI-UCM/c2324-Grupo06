@@ -6,6 +6,7 @@ public class MovementController : MonoBehaviour
 {
     Rigidbody2D rb;
     [SerializeField] float _speed = 10f;
+    [SerializeField] bool _isPlayer = false;
     private float _OriginalSpeed;
     public float speed => _speed;
     private void Awake()
@@ -26,7 +27,10 @@ public class MovementController : MonoBehaviour
     }
     private void Update()
     {
-        Move(rb.velocity.normalized);
+        if (_isPlayer)
+        {
+            Move(rb.velocity.normalized);
+        }
     }
     public void SetSpeed(float newSpeed)
     {
