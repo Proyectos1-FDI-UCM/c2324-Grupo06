@@ -24,7 +24,10 @@ public class MovementController : MonoBehaviour
         Vector2 direction = target - (Vector2)transform.position;
         Move(direction.normalized * multiplier);
     }
-
+    private void Update()
+    {
+        Move(rb.velocity.normalized);
+    }
     public void SetSpeed(float newSpeed)
     {
         _speed = newSpeed;
@@ -33,5 +36,4 @@ public class MovementController : MonoBehaviour
     {
         _speed = _OriginalSpeed;
     }
-
 }
