@@ -33,9 +33,9 @@ public class HealthHandler : MonoBehaviour
 
             if (value <= 0) 
             {
-                GetComponent<MovementController>().SetSpeed(20);
-                gameObject.AddComponent<ThrowableItem>();
-                GetComponent<DropComponent>().DropItems();
+                GetComponent<MovementController>().SetSpeed(20); //Esto debe ser eliminado
+                gameObject.AddComponent<ThrowableItem>(); //Esto debe ser eliminado
+                GetComponent<DropComponent>().DropItems(); //Esto debe ser manejado desde fuera, no es responsabilidad de la salud
                 OnDeath?.Invoke();
                
             }
