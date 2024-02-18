@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 3932810092511083360}
   - component: {fileID: 4092516436690704475}
   - component: {fileID: 1666383803708877384}
+  - component: {fileID: 447552837958183979}
   m_Layer: 0
   m_Name: EnemyTemplate
   m_TagString: Untagged
@@ -333,6 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
+  _isPlayer: 0
 --- !u!95 &3932810092511083360
 Animator:
   serializedVersion: 5
@@ -421,6 +423,20 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   maxHealth: 0
+--- !u!114 &447552837958183979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6247058447108451499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db3854b59a86d24fafb549315d50371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropItems: []
+  dropRate: 
 --- !u!1 &9081950855958463931
 GameObject:
   m_ObjectHideFlags: 0
