@@ -34,7 +34,6 @@ public class HealthHandler : MonoBehaviour
             if (value <= 0) 
             {
                 OnDeath?.Invoke();
-               
             }
         }
     }
