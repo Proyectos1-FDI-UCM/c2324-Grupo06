@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd6c89df896d9d4db52844020ecc3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  states: []
+  initialState: {fileID: 0}
   permanentBehaviours: []
 --- !u!114 &2363496926857828811
 MonoBehaviour:
@@ -447,8 +447,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db3854b59a86d24fafb549315d50371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropItems: []
-  dropChance: 
+  dropItems:
+  - {fileID: 5968818402616178479, guid: 4f7d6f79525550743a107688242a402b, type: 3}
+  dropChance: 64000000
 --- !u!1 &9081950855958463931
 GameObject:
   m_ObjectHideFlags: 0
