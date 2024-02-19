@@ -1110,6 +1110,7 @@ GameObject:
   - component: {fileID: 600356532844597784}
   - component: {fileID: -3769154521112825460}
   - component: {fileID: 3647752671373626414}
+  - component: {fileID: -5639790056296982614}
   m_Layer: 0
   m_Name: SampleEnemy
   m_TagString: Untagged
@@ -1351,6 +1352,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropItems: []
   dropChance: 
+--- !u!114 &-5639790056296982614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8132545937157486091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5048ee46d0ac746aa8418310010649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8381495617325840647
 GameObject:
   m_ObjectHideFlags: 0

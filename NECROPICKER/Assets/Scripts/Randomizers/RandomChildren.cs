@@ -27,8 +27,20 @@ public class RandomChildren : MonoBehaviour
     }
     private void OnValidate()
     {
-        //Hacer aquí la copia del array de porcentajes, asignar el nuevo array con el tamaño del número de hijos
-        //y luego copiar los valores del array antiguo al nuevo.
+        float[] copy = Copy(percentages);
         percentages = new float[transform.childCount];
+        for(int i = 0; i < copy.Length; i++)
+        {
+            percentages[i] = copy[i];
+        }
+    }
+    private float[] Copy(float[] array)
+    {
+        float[] copy = new float[array.Length];
+        for(int i = 0; i < array.Length; i++)
+        {
+            copy[i] = array[i];
+        }
+        return copy;
     }
 }

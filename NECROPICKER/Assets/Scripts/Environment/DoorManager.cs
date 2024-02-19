@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class DoorManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    EnemyCounter _myCounter;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+
+    }
+    private void DoorBehaviour(int enemies)
+    {
+        if (enemies > 0) Open();
+        else Close();
+    }
+    private void Open()
+    {
+        foreach(Transform child  in transform)
+        {
+            child.GetComponent<Animator>().SetBool("EnemiesDeployed", false);
+        }
+    }
+    private void Close()
+    {
+        foreach (Transform child in transform)
+        {
+            child.GetComponent<Animator>().SetBool("EnemiesDeployed", true);
+        }
     }
 }

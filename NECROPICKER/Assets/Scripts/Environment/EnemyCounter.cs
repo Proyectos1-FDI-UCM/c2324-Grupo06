@@ -1,18 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyCounter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //List<GameObject> enemies = new List<GameObject>();
 
-    // Update is called once per frame
-    void Update()
+    private int _totalEnemies = 0;
+    public int TotalEnemies { get { return _totalEnemies; } }
+
+    public UnityEvent<int> OnEnemyNumberChanged = new UnityEvent<int>();
+
+    /*private void Start()
     {
+        foreach(RandomInstance instance in transform)
+        {
+            if (instance.TryGetComponent(out HealthHandler enemyHealth)) enemies.Add(instance.gameObject);
+        }
         
+        _totalEnemies = enemies.ToArray().Length;
+    }*/
+    public void RegisterEnemy()
+    {
+        _totalEnemies++;
+        OnEnemyNumberChanged?.Invoke(_totalEnemies);
+    }
+    public void UnregisterEnemy()
+    {
+        _totalEnemies--;
+        OnEnemyNumberChanged?.Invoke(_totalEnemies);
     }
 }
