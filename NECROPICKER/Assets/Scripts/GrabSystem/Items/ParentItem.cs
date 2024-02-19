@@ -23,26 +23,12 @@ public class ParentItem : MonoBehaviour, IItem
         return true;
     }
 
-    public void Drop(ItemHandler handler)
-    {
-        DropAllItems(handler);
-    }
-
     void UseAllItems(ItemHandler handler)
     {
         if(items == null) return;
         foreach(IItem item in items)
         {
             item.Use(handler);
-        }
-    }
-
-    void DropAllItems(ItemHandler handler)
-    {
-        if(items == null) return;
-        foreach(IItem item in items)
-        {
-            item.Drop(handler);
         }
     }
 }

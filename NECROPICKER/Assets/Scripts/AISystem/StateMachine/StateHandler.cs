@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class StateHandler : MonoBehaviour
 {
-    [SerializeField] State[] states;
+    [SerializeField] State initialState;
     State currentState;
     [SerializeField] BehaviourPerformer[] permanentBehaviours;
 
     void Start()
     {
-        currentState = states[0];
-        currentState.OnStateEnter();
+        currentState = initialState;
     }
 
     private void Update() {
@@ -27,7 +26,6 @@ public class StateHandler : MonoBehaviour
     {
         currentState.OnStateExit();
         currentState = newState;
-        currentState.OnStateEnter();
     }
 
     void PerformPermanentBehaviours()

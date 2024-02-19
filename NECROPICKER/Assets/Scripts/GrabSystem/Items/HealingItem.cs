@@ -17,9 +17,4 @@ public class HealingItem : MonoBehaviour, IItem
         Destroy(gameObject);
         return true;
     }
-
-    public void Drop(ItemHandler handler)
-    {
-        // Destroy(gameObject);
-    }
 }

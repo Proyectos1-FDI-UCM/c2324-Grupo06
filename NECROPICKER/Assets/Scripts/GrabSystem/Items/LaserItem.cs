@@ -31,11 +31,6 @@ public class LaserItem : MonoBehaviour, IItem
         return true;
     }
 
-    public void Drop(ItemHandler handler)
-    {
-        Destroy(gameObject);
-    }
-
     public void SetLineWidht(float width)
     {
         lineRenderer.startWidth = width;

@@ -12,9 +12,4 @@ public class NecronomiconItem : MonoBehaviour, IItem
         Debug.Log("NecronomiconItem used");
         return true;
     }
-
-    public void Drop(ItemHandler handler)
-    {
-        Debug.Log("NecronomiconItem dropped");
-    }
 }

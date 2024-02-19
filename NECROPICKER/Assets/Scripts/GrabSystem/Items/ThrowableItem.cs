@@ -22,11 +22,4 @@ public class ThrowableItem : MonoBehaviour, IItem
         movementController.Move(transform.up);
         return true;
     }
-
-    public virtual void Drop(ItemHandler handler)
-    {
-        transform.parent.gameObject.layer = LayerMask.NameToLayer("Item");
-        rb.isKinematic = false;
-        transform.parent.parent = null;
-    }
 }

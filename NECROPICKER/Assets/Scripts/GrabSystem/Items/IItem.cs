@@ -7,5 +7,4 @@ public interface IItem
     ItemData ItemData { get; }
     GameObject gameObject { get; }
     bool Use(ItemHandler handler);
-    void Drop(ItemHandler handler);
 }

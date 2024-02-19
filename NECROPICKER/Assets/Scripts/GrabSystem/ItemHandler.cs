@@ -43,8 +43,11 @@ public class ItemHandler : MonoBehaviour
 
     public void DropItem()
     {
-        selectedItem.Drop(this);
         selectedItem = null;
         onItemDrop?.Invoke();
+        transform.parent.gameObject.layer = LayerMask.NameToLayer("Item");
+        Rigidbody2D rb = selectedItem.gameObject.GetComponent<Rigidbody2D>();
+        rb.isKinematic = false;
+        transform.parent.parent = null;
     }
 }

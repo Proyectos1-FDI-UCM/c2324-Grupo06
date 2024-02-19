@@ -196,6 +196,38 @@ PrefabInstance:
       propertyPath: _speed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3551466474988166717, guid: 52392dd2900a5df45ba092fb81ab9b77, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551466474988166717, guid: 52392dd2900a5df45ba092fb81ab9b77, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551466474988166717, guid: 52392dd2900a5df45ba092fb81ab9b77, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11500000, guid: 3db3854b59a86d24fafb549315d50371, type: 3}
+    - target: {fileID: 3551466474988166717, guid: 52392dd2900a5df45ba092fb81ab9b77, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551466474988166717, guid: 52392dd2900a5df45ba092fb81ab9b77, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551466474988166717, guid: 52392dd2900a5df45ba092fb81ab9b77, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AnimationPlayer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551466474988166717, guid: 52392dd2900a5df45ba092fb81ab9b77, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Death
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551466474988166717, guid: 52392dd2900a5df45ba092fb81ab9b77, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4808623109780096404, guid: 52392dd2900a5df45ba092fb81ab9b77, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.3

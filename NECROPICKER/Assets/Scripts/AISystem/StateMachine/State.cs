@@ -28,13 +28,6 @@ public class State : MonoBehaviour
     [SerializeField] State _nextState;
     public State nextState => _nextState;
 
-    public void OnStateEnter()
-    {
-        _onStateEnter?.Invoke();
-        if(animationPlayer != null) animationPlayer.PlayAnimation(stateAnimation);
-        if(onEnterPerformers != null) Perform(onEnterPerformers);
-    }
-
     public void OnStateUpdate()
     {
         if(onUpdatePerformers != null) Perform(onUpdatePerformers);
