@@ -10,7 +10,7 @@ public class InputManager : MonoBehaviour
     Pointer pointer;
     [SerializeField] Inventory inventory;
     GrabHandler grabHandler;
-    bool usingController;
+    // bool usingController;
 
     private void Awake()
     {
@@ -55,7 +55,7 @@ public class InputManager : MonoBehaviour
     {
         if(context.performed)
         {
-            usingController = true;
+            // usingController = true;
             Vector2 pointer_direction = context.ReadValue<Vector2>();
             pointer.SetPointer(pointer_direction);
         }
