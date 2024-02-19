@@ -4,19 +4,11 @@ using UnityEngine;
 
 public class LifeUI : MonoBehaviour
 {
-    public GameObject[] HalfHearts = new GameObject[6];
+    
     public HealthHandler healthHandler;
     private void Awake()
     {
-        HealthHandler healthHandler = FindAnyObjectByType<HealthHandler>();
-        //Transform parentTransform = transform;
-        
-       /* int i = 0;
-        foreach (GameObject child in parentTransform)
-       {
-           HalfHearts[i] = child;
-           i++;
-       }*/
+        HealthHandler healthHandler = FindAnyObjectByType<HealthHandler>(); 
         UIlife(healthHandler.currentHealth);
     }
     private void Update()
@@ -25,10 +17,10 @@ public class LifeUI : MonoBehaviour
     }
     public void UIlife(float actuallife)
     {
-        for (int i = 0; i < HalfHearts.Length; i++) 
+        for (int i = 0; i < transform.childCount; i++) 
         {
-            if (i< actuallife) HalfHearts[i].gameObject.SetActive (true);
-            else HalfHearts[i].gameObject.SetActive (false);
+            if (i< actuallife) transform.GetChild(i).gameObject.SetActive (true);
+            else transform.GetChild(i).gameObject.SetActive (false);
         }
     }
 }
