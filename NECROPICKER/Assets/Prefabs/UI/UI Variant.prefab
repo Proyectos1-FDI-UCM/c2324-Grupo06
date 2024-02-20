@@ -898,6 +898,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7413134193076107917, guid: c45b48da72e8d6f48a3561f8725b2417, type: 3}
+      propertyPath: healthHandler
+      value: 
+      objectReference: {fileID: 4442171015663069573, guid: 2139000fbb321fd449875778d7a5fdd1, type: 3}
+    - target: {fileID: 7413134193076107917, guid: c45b48da72e8d6f48a3561f8725b2417, type: 3}
       propertyPath: HalfHearts.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -919,7 +923,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8841944121773649786, guid: c45b48da72e8d6f48a3561f8725b2417, type: 3}
       insertIndex: 0
-      addedObject: {fileID: 7434755240426733155}
+      addedObject: {fileID: 1236316921218153817}
     - targetCorrespondingSourceObject: {fileID: 2295157314153981465, guid: c45b48da72e8d6f48a3561f8725b2417, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5124718970937806633}
@@ -1290,7 +1294,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc15767542433a8469f79ffafe91a991, type: 3}
---- !u!224 &7434755240426733155 stripped
+--- !u!224 &1236316921218153817 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6826911301676919384, guid: dc15767542433a8469f79ffafe91a991, type: 3}
   m_PrefabInstance: {fileID: 5734850443663529729}
