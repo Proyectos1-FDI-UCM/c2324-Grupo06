@@ -39,7 +39,7 @@ public class InputManager : MonoBehaviour
 
     public void OnScroll(InputAction.CallbackContext context)
     {
-        if(context.ReadValue<Vector2>().y != 0)
+        if(context.performed)
         {
             int signo = (int)Mathf.Sign(context.ReadValue<Vector2>().y);
             inventory.SumToIndex(signo);

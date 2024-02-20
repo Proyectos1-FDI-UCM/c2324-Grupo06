@@ -15,7 +15,6 @@ public class Inventory : ScriptableObject
         get => _selectedItemIndex;
         private set
         {
-            Debug.Log(value);
             _selectedItemIndex = value;
             UpdateInventory();
         }
@@ -47,8 +46,6 @@ public class Inventory : ScriptableObject
         {
             if (items[i] != Necronomicon)
             {
-                Debug.Log(i);
-                Debug.Log(items[i]);
                 SelectedItemIndex = i;
                 return;
             }
