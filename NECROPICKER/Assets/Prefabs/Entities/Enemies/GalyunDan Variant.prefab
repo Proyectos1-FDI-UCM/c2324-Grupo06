@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 739507746994651890}
   - component: {fileID: 8123837340971508878}
   m_Layer: 0
-  m_Name: 'Orbit: 5 m'
+  m_Name: 'Orbit: 20 m'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6867d8b0c708d345b906c013419c56d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orbit_radius: 5
+  orbit_radius: 20
 --- !u!1 &1357449953780448728
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4313636c7671d4a4dac7c755ed145fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2344540694813069235
+--- !u!1 &1980965371571030647
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,8 +97,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6146181719957097227}
-  - component: {fileID: 2221276378151959728}
+  - component: {fileID: 4421463894668521029}
+  - component: {fileID: 687482320641333811}
   m_Layer: 0
   m_Name: PointerRenderer
   m_TagString: Untagged
@@ -106,28 +106,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6146181719957097227
+--- !u!4 &4421463894668521029
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2344540694813069235}
+  m_GameObject: {fileID: 1980965371571030647}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1000.85046, y: -1012.83075, z: 0}
+  m_LocalPosition: {x: -0.010009766, y: 1.0599976, z: 0.019017326}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555745860777288647}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2221276378151959728
+--- !u!212 &687482320641333811
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2344540694813069235}
+  m_GameObject: {fileID: 1980965371571030647}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 2870493918399009665}
   - component: {fileID: 1934637805533370577}
   m_Layer: 0
-  m_Name: 'Look Target: 20 rad/s'
+  m_Name: 'Look Target: 5 rad/s'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945531b2e41d63145a5ffc8e05e1408b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 20
+  rotationSpeed: 5
 --- !u!1 &6713438938118241117
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,9 +550,7 @@ MonoBehaviour:
   - conditionContainer: {fileID: 3857433715154128709}
     behaviourContainers: {fileID: 3334733598758309410}
   onUpdatePerformers: []
-  onExitPerformers:
-  - conditionContainer: {fileID: 0}
-    behaviourContainers: {fileID: 0}
+  onExitPerformers: []
   exitConditionContainer: {fileID: 2519474382645715982}
   _nextState: {fileID: 5894163231594983358}
 --- !u!1001 &6816184777472266266
@@ -563,6 +561,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3847993717283742919, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: initialState
+      value: 
+      objectReference: {fileID: 5894163231594983358}
     - target: {fileID: 6247058447108451499, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: m_Name
       value: GalyunDan Variant
@@ -631,7 +633,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5404580614391395293, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6146181719957097227}
+      addedObject: {fileID: 4421463894668521029}
     - targetCorrespondingSourceObject: {fileID: 6308001002921379271, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6872800897348139296}

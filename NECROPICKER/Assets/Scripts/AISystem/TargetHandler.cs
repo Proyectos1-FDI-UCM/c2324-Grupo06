@@ -7,7 +7,7 @@ public class TargetHandler : MonoBehaviour
     [SerializeField] Transform _target;
     public Transform target => _target;
 
-    private void Awake() {
+    private void Start() {
         if(_target == null)
             _target = GameObject.FindGameObjectWithTag("Player").transform;
     }
