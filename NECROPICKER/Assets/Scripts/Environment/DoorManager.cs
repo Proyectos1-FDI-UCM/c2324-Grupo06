@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class DoorManager : MonoBehaviour
 {
-    EnemyCounter _myCounter;
+    [SerializeField] EnemyCounter _myCounter;
 
     private void Start()
     {
-
-    }
-    private void DoorBehaviour(int enemies)
-    {
-        if (enemies > 0) Open();
-        else Close();
+        _myCounter.OnEnemiesDisplayed.AddListener(Close);
+        _myCounter.OnEnemiesDefeated.AddListener(Open);
     }
     private void Open()
     {
