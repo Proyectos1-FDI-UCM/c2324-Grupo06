@@ -8,19 +8,22 @@ public class DropComponent : MonoBehaviour
     [SerializeField] List<GameObject> dropItems = new List<GameObject>();
     [SerializeField]List<int> dropChance = new List<int>();
     private Transform _transform;
+    private Collider2D _collider;
   
     private void Start()
     {
         _transform = transform;
+        
    //     foreach (GameObject item in dropItems) dropItems.Add(item);
    //     foreach (int rate in dropChance) dropRate.Add(rate);
     }
     public void DropItems()
     {
+      
         int numofitem=0;
         bool noInstanciate = true;
         int randomPercentage = UnityEngine.Random.Range(0, 101); 
-        Debug.Log(randomPercentage);
+       // Debug.Log(randomPercentage);
         for (int i = 0; i < dropItems.Count; i++)
         {
             //de esta manera termina instanciando el objeto que menor droprate tenga en caso de tener mas objetos instanciados
@@ -31,6 +34,8 @@ public class DropComponent : MonoBehaviour
             }
         }
         if (!noInstanciate)Instantiate(dropItems[numofitem], _transform.position, _transform.rotation);
+        gameObject.SetActive(false);
+        
     }
     //El código está genial, esto son solo algunas sugerencias para mejorar la legibilidad y mantenibilidad del código
     //buen trabajo David! :D

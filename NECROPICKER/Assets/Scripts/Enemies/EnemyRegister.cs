@@ -12,11 +12,11 @@ public class EnemyRegister : MonoBehaviour
         _myHealthHandler = GetComponent<HealthHandler>();
         _myHealthHandler.OnDeath.AddListener(UnregisterEnemy);
         _myCounter = GetComponentInParent<EnemyCounter>();
-        _myCounter.RegisterEnemy();
+        //_myCounter.RegisterEnemy();
     }
     private void UnregisterEnemy()
     {
-        _myCounter.UnregisterEnemy();
+        //_myCounter.UnregisterEnemy();
     }
     private void OnDisable()
     {
