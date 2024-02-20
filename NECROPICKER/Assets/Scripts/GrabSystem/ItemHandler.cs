@@ -26,7 +26,7 @@ public class ItemHandler : MonoBehaviour
 
     public void OnItemChanged(ItemData newItem)
     {
-        print("ItemChsnged");
+        //print("ItemChsnged");
         if(selectedItem != null) Destroy(selectedItem.gameObject);
 
         SetUpItem(newItem);
@@ -43,11 +43,15 @@ public class ItemHandler : MonoBehaviour
 
     public void DropItem()
     {
-        selectedItem = null;
-        onItemDrop?.Invoke();
-        transform.parent.gameObject.layer = LayerMask.NameToLayer("Item");
+        print("drop item");
+        
+      
+     
+        selectedItem.gameObject.layer = LayerMask.NameToLayer("Item");
         Rigidbody2D rb = selectedItem.gameObject.GetComponent<Rigidbody2D>();
         rb.isKinematic = false;
-        transform.parent.parent = null;
+        selectedItem.gameObject.transform.SetParent(null);
+        selectedItem = null; 
+        onItemDrop?.Invoke();
     }
 }

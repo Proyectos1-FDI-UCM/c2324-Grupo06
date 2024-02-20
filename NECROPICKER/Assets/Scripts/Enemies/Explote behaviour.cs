@@ -6,7 +6,7 @@ using UnityEngine;
 public class Explotebehaviour : MonoBehaviour, IBehaviour
 {
     [SerializeField ]Collider2D collider2D;
-    void Awake()
+    private void Start()
     {
         collider2D = GetComponent<Collider2D>();
     }
@@ -14,7 +14,7 @@ public class Explotebehaviour : MonoBehaviour, IBehaviour
     {
         UnityEngine.Debug.Log("Explotaaaaaaaaaaaa mondongo");
         collider2D.enabled = true;
-      //  Destroy(gameObject);
+        
 
     }
     private void OnValidate() => name = $"explote Behaviour";

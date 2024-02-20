@@ -11,7 +11,8 @@ public class SHItem : MonoBehaviour, IItem
     public bool Use(ItemHandler handler)
     {
         HealthHandler health = GetComponentInParent<HealthHandler>();
-        health.TakeDamage(damage);
+        print(health);
+        if (health != null) health.TakeDamage(damage);
         return true;
     }
 }

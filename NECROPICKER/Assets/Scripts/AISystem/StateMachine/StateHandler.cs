@@ -15,11 +15,14 @@ public class StateHandler : MonoBehaviour
 
     private void Update() {
         currentState.OnStateUpdate();
-        
-        if(currentState.exitCondition != null)
-            if(currentState.exitCondition.CheckCondition()) ChangeState(currentState.nextState);
-        
+
+        if (currentState.exitCondition != null)
+        {
+
+            if (currentState.exitCondition.CheckCondition()) ChangeState(currentState.nextState);
+        }
         if(permanentBehaviours != null) PerformPermanentBehaviours();
+        
     }
 
     public void ChangeState(State newState)

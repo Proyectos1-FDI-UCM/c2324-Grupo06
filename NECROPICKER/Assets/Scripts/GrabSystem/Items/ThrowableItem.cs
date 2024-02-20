@@ -18,6 +18,7 @@ public class ThrowableItem : MonoBehaviour, IItem
 
     public virtual bool Use(ItemHandler handler)
     {
+        print("item throwed");
         handler.DropItem();
         movementController.Move(transform.up);
         return true;
