@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class EnemyRegister : MonoBehaviour
 {
-    EnemyCounter _myCounter;
+    [SerializeField] EnemyCounter _myCounter;
     HealthHandler _myHealthHandler;
 
     private void Start()
     {
         _myHealthHandler = GetComponent<HealthHandler>();
         _myHealthHandler.OnDeath.AddListener(UnregisterEnemy);
-        _myCounter = GetComponentInParent<EnemyCounter>();
-        //_myCounter.RegisterEnemy();
+        _myCounter.RegisterEnemy();
     }
     private void UnregisterEnemy()
     {
-        //_myCounter.UnregisterEnemy();
+        _myCounter.UnregisterEnemy();
     }
     private void OnDisable()
     {

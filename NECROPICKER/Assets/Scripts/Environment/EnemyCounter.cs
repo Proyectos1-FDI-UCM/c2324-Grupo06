@@ -1,34 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class EnemyCounter : MonoBehaviour
+[CreateAssetMenu(fileName = "Counter")]
+public class EnemyCounter : ScriptableObject
 {
-    //List<GameObject> enemies = new List<GameObject>();
+    public int _totalEnemies;
 
-    private int _totalEnemies = 0;
-    public int TotalEnemies { get { return _totalEnemies; } }
+    public UnityEvent OnEnemiesDisplayed = new UnityEvent();
+    public UnityEvent OnEnemiesDefeated = new UnityEvent();
 
-    public UnityEvent<int> OnEnemyNumberChanged = new UnityEvent<int>();
-
-    /*private void Start()
-    {
-        foreach(RandomInstance instance in transform)
-        {
-            if (instance.TryGetComponent(out HealthHandler enemyHealth)) enemies.Add(instance.gameObject);
-        }
-        
-        _totalEnemies = enemies.ToArray().Length;
-    }*/
     public void RegisterEnemy()
     {
         _totalEnemies++;
-        OnEnemyNumberChanged?.Invoke(_totalEnemies);
+        if(_totalEnemies == 1) OnEnemiesDisplayed?.Invoke();
     }
     public void UnregisterEnemy()
     {
         _totalEnemies--;
-        OnEnemyNumberChanged?.Invoke(_totalEnemies);
+        if(_totalEnemies == 0) OnEnemiesDefeated?.Invoke();
     }
 }
