@@ -5,8 +5,6 @@ using UnityEngine.Events;
 
 public class State : MonoBehaviour
 {
-    [SerializeField] UnityEvent _onStateEnter = new UnityEvent();
-    public UnityEvent onStateEnter => _onStateEnter;
     AnimationPlayer animationPlayer;
     [SerializeField] string stateAnimation = "";
 
@@ -27,6 +25,12 @@ public class State : MonoBehaviour
 
     [SerializeField] State _nextState;
     public State nextState => _nextState;
+
+    public void OnStateEnter()
+    {
+        if(animationPlayer != null) animationPlayer.PlayAnimation(stateAnimation);
+        if(onEnterPerformers != null) Perform(onEnterPerformers);
+    }
 
     public void OnStateUpdate()
     {
