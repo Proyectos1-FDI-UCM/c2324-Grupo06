@@ -7,9 +7,9 @@ public class LifeUI : MonoBehaviour
 {
     
     [SerializeField] private HealthHandler healthHandler;
-    private void Awake()
+    private void Start()
     {
-        //HealthHandler healthHandler = FindAnyObjectByType<HealthHandler>(); 
+        HealthHandler healthHandler = FindAnyObjectByType<HealthHandler>();
         UIlife(healthHandler.currentHealth);
         healthHandler.OnHealthChanged.AddListener(UIlife);
     }
