@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 1666383803708877384}
   - component: {fileID: 447552837958183979}
   - component: {fileID: 1972955714959230097}
+  - component: {fileID: 9002305974362389560}
   m_Layer: 0
   m_Name: EnemyTemplate
   m_TagString: Untagged
@@ -468,6 +469,19 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &9002305974362389560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6247058447108451499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5048ee46d0ac746aa8418310010649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myCounter: {fileID: 11400000, guid: c875523af8399e04fb8e0cd3bb659194, type: 2}
 --- !u!1 &9081950855958463931
 GameObject:
   m_ObjectHideFlags: 0
