@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,8 +15,9 @@ public class Inventory : ScriptableObject
         get => _selectedItemIndex;
         private set
         {
+            Debug.Log(value);
             _selectedItemIndex = value;
-           UpdateInventory();
+            UpdateInventory();
         }
     }
 
@@ -45,6 +47,8 @@ public class Inventory : ScriptableObject
         {
             if (items[i] != Necronomicon)
             {
+                Debug.Log(i);
+                Debug.Log(items[i]);
                 SelectedItemIndex = i;
                 return;
             }
@@ -57,9 +61,9 @@ public class Inventory : ScriptableObject
         UpdateInventory();
     }
 
-    public void SumToIndex(int index){
-        if(SelectedItemIndex + index < 0) SelectedItemIndex = items.Length - 1;
-        else if(SelectedItemIndex + index >= items.Length) SelectedItemIndex = 0;
+    public void SumToIndex(int index) {
+        if (SelectedItemIndex + index < 0) SelectedItemIndex = items.Length - 1;
+        else if (SelectedItemIndex + index >= items.Length) SelectedItemIndex = 0;
         else SelectedItemIndex += index;
     }
 

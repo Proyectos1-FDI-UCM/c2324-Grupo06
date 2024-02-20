@@ -39,7 +39,11 @@ public class InputManager : MonoBehaviour
 
     public void OnScroll(InputAction.CallbackContext context)
     {
-        inventory.SumToIndex((int)context.ReadValue<Vector2>().y);
+        if(context.ReadValue<Vector2>().y != 0)
+        {
+            int signo = (int)Mathf.Sign(context.ReadValue<Vector2>().y);
+            inventory.SumToIndex(signo);
+        }
     }
 
     public void SetPointerByMouseInput(InputAction.CallbackContext context)
