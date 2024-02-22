@@ -20,8 +20,6 @@ public class DamageOnCollisionI : MonoBehaviour, ICollidable
         && rb.velocity.magnitude > minSpeed && targetLayer == (targetLayer | (1 << other.gameObject.layer)))
         {
             healthHandler.TakeDamage(damage);
-            print("collided " + name);
-            print("collided with " + other.gameObject.name);
         }
     }
 
