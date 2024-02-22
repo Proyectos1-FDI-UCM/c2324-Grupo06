@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cea6a7c29b5624eb3e58e9dc294545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAnimation: 
+  stateAnimation: Idle GalyunDan
   onEnterPerformers: []
   onUpdatePerformers:
   - conditionContainer: {fileID: 3857433715154128709}
@@ -565,10 +565,18 @@ PrefabInstance:
       propertyPath: _speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Death GalyunDan
+      objectReference: {fileID: 0}
     - target: {fileID: 3847993717283742919, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: initialState
       value: 
       objectReference: {fileID: 5894163231594983358}
+    - target: {fileID: 3932810092511083360, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 394c79287ecfeb149845d71d043959e5, type: 2}
     - target: {fileID: 6247058447108451499, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: m_Name
       value: GalyunDan Variant

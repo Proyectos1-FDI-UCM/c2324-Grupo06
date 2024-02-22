@@ -17,7 +17,6 @@ public class PointToTargetBehaviour : MonoBehaviour, IBehaviour
 
     public void ExecuteBehaviour() {
         Vector2 direction = Vector2.Lerp(transform.up, (targetHandler.target.position - transform.position).normalized, Time.deltaTime * rotationSpeed);
-        Debug.Log(direction);
         pointer.SetPointer(direction);
     }
 

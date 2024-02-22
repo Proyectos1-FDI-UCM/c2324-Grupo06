@@ -5,14 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class AnimationPlayer : MonoBehaviour
 {
+    [SerializeField]
     Animator _animator;
-
-    private void Awake() {
-        _animator = GetComponent<Animator>();
-    }
 
     public void PlayAnimation(string animationName)
     {
+        Debug.Log(animationName);
         _animator.Play(animationName);
     }
 

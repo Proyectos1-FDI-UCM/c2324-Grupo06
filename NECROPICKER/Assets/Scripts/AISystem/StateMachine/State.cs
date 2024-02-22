@@ -28,8 +28,8 @@ public class State : MonoBehaviour
 
     public void OnStateEnter()
     {
-        if(animationPlayer != null) animationPlayer.PlayAnimation(stateAnimation);
-        if(onEnterPerformers != null) Perform(onEnterPerformers);
+        if(animationPlayer != null) animationPlayer.PlayAnimation(stateAnimation); Debug.Log("Mal, no hace cosas");
+        if(onEnterPerformers != null) Perform(onEnterPerformers); Debug.Log("Mal, no lo pilla bien");
     }
 
     public void OnStateUpdate()
