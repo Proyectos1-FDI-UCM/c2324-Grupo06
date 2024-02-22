@@ -17,6 +17,7 @@ public class BehaviourPerformer
     {
         if(!initialized)
         {
+            CheckNulls();
             condition = conditionContainer.GetComponent<ICondition>();
             behaviours = behaviourContainers.GetComponents<IBehaviour>();
             initialized = true;
@@ -31,5 +32,11 @@ public class BehaviourPerformer
         }
         
         return condition.CheckCondition();
+    }
+
+    void CheckNulls()
+    {
+        if(conditionContainer == null) Debug.LogError("Behaviour Performer is missing a condition container");
+        if(behaviourContainers == null) Debug.LogError("Behaviour Performer is missing a behaviour container");
     }
 }
