@@ -13,7 +13,7 @@ public class RandomMovementBehaviour : MonoBehaviour, IBehaviour
     }
     public void ExecuteBehaviour()
     {
-          Debug.Log("dsd"+direction);
+      ///    Debug.Log("dsd"+direction);
         int randomDirection = UnityEngine.Random.Range(1,5);
         if (randomDirection == 1) direction = Vector2.up;
         if (randomDirection == 2) direction = Vector2.down;
