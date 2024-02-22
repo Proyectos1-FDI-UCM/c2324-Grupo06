@@ -55,12 +55,13 @@ GameObject:
   m_Component:
   - component: {fileID: 8440672493235509252}
   - component: {fileID: 1430921763139518127}
-  - component: {fileID: 2438962956284935792}
   - component: {fileID: 5198463564237220276}
   - component: {fileID: 5355229650534963117}
   - component: {fileID: 3539840974544427357}
   - component: {fileID: 6925085687411353876}
   - component: {fileID: 4328106777127381649}
+  - component: {fileID: 5308381265470373847}
+  - component: {fileID: -3889503986392215613}
   m_Layer: 6
   m_Name: LaserBox
   m_TagString: Untagged
@@ -98,23 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 20
---- !u!114 &2438962956284935792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4860833332323022716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d90ae57c15aadd4bacfde23fa427b20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 5
-  minSpeed: 6
-  targetLayer:
-    serializedVersion: 2
-    m_Bits: 1
+  _isPlayer: 0
 --- !u!212 &5198463564237220276
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -265,6 +250,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
+  _isPlayer: 0
+--- !u!114 &5308381265470373847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4860833332323022716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af29d14ca9ba2194da6f3c5a0bf2ef46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3889503986392215613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4860833332323022716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79da746c559355e4c8b87b688c25ba79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  minSpeed: 6
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1001 &4072489886798512553
 PrefabInstance:
   m_ObjectHideFlags: 0

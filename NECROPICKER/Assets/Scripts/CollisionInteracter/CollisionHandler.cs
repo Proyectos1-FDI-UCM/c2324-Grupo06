@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class CollisionHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-    }
+        ICollidable[] collidables = GetComponents<ICollidable>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        foreach(ICollidable collidable in collidables)
+        {
+            collidable.OnCollide(collision.collider);
+        }
     }
 }

@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyOnCollision : MonoBehaviour, ICollidable
+public class InstantiateOnCollision : MonoBehaviour, ICollidable
 {
     [SerializeField] float minSpeed = 2;
     Rigidbody rb;
     [SerializeField] LayerMask targetLayer;
+    [SerializeField] private GameObject prefab;
 
     private void Awake()
     {
@@ -14,6 +15,6 @@ public class DestroyOnCollision : MonoBehaviour, ICollidable
     }
     public void OnCollide(Collider2D other)
     {
-        if (rb.velocity.magnitude > minSpeed && targetLayer == (targetLayer | (1 << other.gameObject.layer))) Destroy(gameObject);
+        if (rb.velocity.magnitude > minSpeed && targetLayer == (targetLayer | (1 << other.gameObject.layer))) Instantiate(prefab, transform.position, Quaternion.identity);
     }
 }

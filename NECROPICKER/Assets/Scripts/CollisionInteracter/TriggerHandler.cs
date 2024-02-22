@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class TriggerHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
-    }
+        ICollidable[] collidables = GetComponents<ICollidable>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        foreach (ICollidable collidable in collidables)
+        {
+            collidable.OnCollide(other);
+        }
     }
 }
