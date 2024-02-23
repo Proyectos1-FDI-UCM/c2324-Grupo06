@@ -70,3 +70,15 @@ public class Inventory : ScriptableObject
         onItemChanged?.Invoke(items[SelectedItemIndex]);
     }
 }
+
+// public struct ItemStack
+// {
+//     public ItemData item;
+//     public int amount;
+
+//     public ItemStack(ItemData item, int amount)
+//     {
+//         this.item = item;
+//         this.amount = amount;
+//     }
+// }
