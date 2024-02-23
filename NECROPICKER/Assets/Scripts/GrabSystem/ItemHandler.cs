@@ -43,10 +43,6 @@ public class ItemHandler : MonoBehaviour
 
     public void DropItem()
     {
-        print("drop item");
-        
-      
-     
         selectedItem.gameObject.layer = LayerMask.NameToLayer("Item");
         Rigidbody2D rb = selectedItem.gameObject.GetComponent<Rigidbody2D>();
         rb.isKinematic = false;

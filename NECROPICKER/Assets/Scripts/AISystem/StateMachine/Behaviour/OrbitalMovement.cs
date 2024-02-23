@@ -20,9 +20,9 @@ public class OrbitalMovement : MonoBehaviour, IBehaviour
         Vector2 perpendicular = new Vector2(-direction.y, direction.x).normalized;
 
         if(Vector2.Distance(targetHandler.target.position, transform.position) < orbit_radius + 0.5f)
-            perpendicular += direction;
-        else if(Vector2.Distance(targetHandler.target.position, transform.position) > orbit_radius - 0.5f)
             perpendicular -= direction;
+        else if(Vector2.Distance(targetHandler.target.position, transform.position) > orbit_radius - 0.5f)
+            perpendicular += direction;
         else
             perpendicular = Vector2.zero;
 
