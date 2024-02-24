@@ -13,8 +13,6 @@ public class Inventory : ScriptableObject
     [SerializeField] ItemData Necronomicon;
     [SerializeField] int _selectedItemIndex = 0;
 
-
-   
     public int SelectedItemIndex
     {
         get => _selectedItemIndex;
@@ -30,8 +28,6 @@ public class Inventory : ScriptableObject
 
     public bool AddItem(ItemData itemToAdd)
     {
-        
-
         for(int i = 0; i < items.Length; i++)
         {
             if (items[i].item == itemToAdd && items[i].amount < items[i].item.maxStackSize)
@@ -40,8 +36,6 @@ public class Inventory : ScriptableObject
                 UpdateInventory();
                 return true;
             }
-
-
         } 
         
         for (int i = 0; i < items.Length; i++)
@@ -81,9 +75,9 @@ public class Inventory : ScriptableObject
             if (items[SelectedItemIndex].amount == 1)
             {
                 items[SelectedItemIndex].item = Necronomicon;
-                UpdateInventory();
             }
             else items[SelectedItemIndex].amount--;
+            UpdateInventory();
         }
     }
 

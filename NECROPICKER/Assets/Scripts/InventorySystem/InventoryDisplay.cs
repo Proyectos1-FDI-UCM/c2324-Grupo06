@@ -10,6 +10,7 @@ public class InventoryDisplay : MonoBehaviour
     {
         UpdateInventory(null);
         inventory.OnItemChanged.AddListener(UpdateInventory);
+        inventory.UpdateInventory();
     }
 
     void UpdateInventory(ItemData itemData)
