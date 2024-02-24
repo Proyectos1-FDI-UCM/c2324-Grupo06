@@ -17,10 +17,10 @@ public class InventoryDisplay : MonoBehaviour
         slotPointer.transform.position = slots[inventory.SelectedItemIndex].transform.position;
         for (int i = 0; i < slots.Length; i++)
         {
-            if (i < inventory.items.Length && inventory.items[i] != null)
+            if (i < inventory.items.Length && inventory.items[i].item.icon != null)
             {
                 slots[i].gameObject.SetActive(true);
-                slots[i].sprite = inventory.items[i].icon;
+                slots[i].sprite = inventory.items[i].item.icon;
             }
             else 
             {

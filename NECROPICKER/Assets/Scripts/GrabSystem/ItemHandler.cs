@@ -26,7 +26,7 @@ public class ItemHandler : MonoBehaviour
 
     public void OnItemChanged(ItemData newItem)
     {
-        //print("ItemChsnged");
+        print("ItemChsnged");
         if(selectedItem != null) Destroy(selectedItem.gameObject);
 
         SetUpItem(newItem);
