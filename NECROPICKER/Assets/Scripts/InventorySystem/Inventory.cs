@@ -13,6 +13,14 @@ public class Inventory : ScriptableObject
     [SerializeField] ItemData Necronomicon;
     [SerializeField] int _selectedItemIndex = 0;
 
+    private void Awake()
+    {
+        for (int i = 0; i < items.Length; i++)
+        {
+            items[i].item = Necronomicon; 
+            UpdateInventory();
+        }
+    }
     public int SelectedItemIndex
     {
         get => _selectedItemIndex;

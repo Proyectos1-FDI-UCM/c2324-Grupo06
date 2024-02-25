@@ -1,9 +1,11 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 public class InventoryDisplay : MonoBehaviour
 {
     public Inventory inventory;
     public Image[] slots = new Image[5];
+    public  TextMeshProUGUI[] nobjects = new TextMeshProUGUI[5];
     [SerializeField] GameObject slotPointer;
 
     private void Start()
@@ -22,6 +24,12 @@ public class InventoryDisplay : MonoBehaviour
             {
                 slots[i].gameObject.SetActive(true);
                 slots[i].sprite = inventory.items[i].item.icon;
+                if (inventory.items[i].amount >= 2)
+                {
+                    nobjects[i].gameObject.SetActive(true);
+                    nobjects[i].text = inventory.items[i].amount.ToString();
+                }
+                else nobjects[i].gameObject.SetActive(false);
             }
             else 
             {
