@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1050425685786978470}
   - component: {fileID: 4442171015663069573}
   - component: {fileID: 119600144967311043}
+  - component: {fileID: 9189826971720174113}
   - component: {fileID: 3681831507792798267}
   - component: {fileID: 1345480627232488797}
   m_Layer: 3
@@ -219,6 +220,18 @@ MonoBehaviour:
           m_StringArgument: GetDamage
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9189826971720174113}
+        m_TargetAssemblyTypeName: InmuneComponent, Assembly-CSharp
+        m_MethodName: OnTakeDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GetDamage
+          m_BoolArgument: 0
+        m_CallState: 2
   onDeath:
     m_PersistentCalls:
       m_Calls:
@@ -256,6 +269,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9189826971720174113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7096676606624458962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887119da0a5e74249b54fe6969a67480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cont: 1.5
 --- !u!114 &3681831507792798267
 MonoBehaviour:
   m_ObjectHideFlags: 0

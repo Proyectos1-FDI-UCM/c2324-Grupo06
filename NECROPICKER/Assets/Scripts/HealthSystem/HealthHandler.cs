@@ -40,9 +40,22 @@ public class HealthHandler : MonoBehaviour
 
     [SerializeField] float maxHealth;
 
+    private bool _inmune;
+
+    [SerializeField] private bool _isBullet;
+
     void Start() => SetCurrentHealth(maxHealth);
-    public void TakeDamage(float damage) => currentHealth -= damage;
+    public void TakeDamage(float damage)
+    {
+        if (!_inmune)
+        {
+            currentHealth -= damage;
+        }
+        Debug.Log(currentHealth);
+    }
     public void Heal(float healAmount) => currentHealth += healAmount;
     public void SetMaxHealth(float newMaxHealth) => maxHealth = newMaxHealth;
     public void SetCurrentHealth(float newCurrentHealth) => currentHealth = newCurrentHealth;
+
+    public void SetInmune(bool value) => _inmune = value;
 }
