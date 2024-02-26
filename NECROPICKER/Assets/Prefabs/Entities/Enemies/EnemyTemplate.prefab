@@ -439,6 +439,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   maxHealth: 1
+  _isBullet: 0
 --- !u!114 &447552837958183979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,7 +511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _SpeedMultiplicater: 2
   _minSpeed: 0
-  _playerLayer:
+  _ColisionLayer:
     serializedVersion: 2
     m_Bits: 8
 --- !u!1 &9081950855958463931
