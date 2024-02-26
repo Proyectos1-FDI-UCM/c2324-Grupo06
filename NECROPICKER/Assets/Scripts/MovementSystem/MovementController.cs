@@ -36,10 +36,7 @@ public class MovementController : MonoBehaviour
     //comprobación de si es un jugador o no. BUEN TRABAJO :D!!
     private void Update()
     {
-        if (_isPlayer)
-        {
             Move(rb.velocity.normalized);
-        }
     }
     public void SetSpeed(float newSpeed)
     {

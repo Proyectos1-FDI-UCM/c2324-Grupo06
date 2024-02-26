@@ -6,6 +6,7 @@ public class IAAcklemon : MonoBehaviour
 {
     #region parameters
     [SerializeField] private float _SlowedSpeed = 1.0f; //Nueva variable de Velocidad para el jugador si entra en rango del enemigo
+    [SerializeField] private LayerMask _playerLayer;
     #endregion
     #region Methods
     private void OnTriggerEnter2D(Collider2D collision)
