@@ -17,9 +17,6 @@ public class DestroyOnCollision : MonoBehaviour, ICollidable
         if (rb.velocity.magnitude > minSpeed && targetLayer == (targetLayer | (1 << other.gameObject.layer)))
         {
             Destroy(gameObject);
-            Debug.Log("AAa");
         }
-        Debug.Log($"{rb.velocity.magnitude > minSpeed} velocity");
-        Debug.Log($"{targetLayer == (targetLayer | (1 << other.gameObject.layer))} layer");
     }
 }
