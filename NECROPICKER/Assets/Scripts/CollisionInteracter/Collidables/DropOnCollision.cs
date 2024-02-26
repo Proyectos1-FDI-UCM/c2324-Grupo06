@@ -6,14 +6,14 @@ using UnityEngine;
 public class DropOnCollision : MonoBehaviour
 {
     [SerializeField] float minSpeed = 2;
-    Rigidbody rb;
+    Rigidbody2D rb;
     DropComponent drop;
     [SerializeField] LayerMask targetLayer;
     [SerializeField] private GameObject prefab;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         drop = GetComponent<DropComponent>();
     }
     public void OnCollide(Collider2D other)
