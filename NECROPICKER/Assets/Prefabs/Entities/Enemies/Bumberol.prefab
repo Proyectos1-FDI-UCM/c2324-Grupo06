@@ -640,6 +640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9096547457412526197}
   - component: {fileID: 4984547337275787871}
+  - component: {fileID: 1165628054784034638}
   m_Layer: 0
   m_Name: ChangeToState => GetDamage
   m_TagString: Untagged
@@ -675,6 +676,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateToChangeTo: {fileID: 7780496437329353840}
+--- !u!114 &1165628054784034638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6596691961231691655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef76340760308e242bfc6008bf3a8626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnExecuteBehaviour:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6181021496834626240}
+        m_TargetAssemblyTypeName: StateHandler, Assembly-CSharp
+        m_MethodName: ChangeState
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7780496437329353840}
+          m_ObjectArgumentAssemblyTypeName: State, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6807900189870368811
 GameObject:
   m_ObjectHideFlags: 0
