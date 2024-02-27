@@ -952,7 +952,7 @@ GameObject:
   - component: {fileID: 6022092786048272885}
   - component: {fileID: 6911864841547702754}
   m_Layer: 0
-  m_Name: Wait 1s
+  m_Name: Wait 0,5s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -985,7 +985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da4b90bc677b294eac913160882da8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToWait: 1
+  timeToWait: 0.5
 --- !u!1 &8256111250389019805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,9 +1141,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 447552837958183979, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: dropItems.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447552837958183979, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: dropChance.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: maxHealth
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target

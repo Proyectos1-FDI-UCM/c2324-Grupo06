@@ -62,6 +62,7 @@ GameObject:
   - component: {fileID: 4807415378208495944}
   - component: {fileID: 2703727519139232820}
   - component: {fileID: 4860781550568061281}
+  - component: {fileID: 4357350237343826402}
   m_Layer: 6
   m_Name: GalyunDan Cadaver
   m_TagString: Untagged
@@ -279,3 +280,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af29d14ca9ba2194da6f3c5a0bf2ef46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4357350237343826402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5968818402616178479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec57dfbe24a2054898a2cbbeef65181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpeed: 2
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 1
