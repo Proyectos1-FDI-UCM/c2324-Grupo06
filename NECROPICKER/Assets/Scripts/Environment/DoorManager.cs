@@ -13,16 +13,14 @@ public class DoorManager : MonoBehaviour
     }
     private void Open()
     {
-        foreach(Transform child  in transform)
-        {
-            child.GetComponent<Animator>().SetBool("EnemiesDeployed", false);
-        }
+
+        GetComponent<Animator>().SetBool("EnemiesDeployed", false);
+
     }
     private void Close()
     {
-        foreach (Transform child in transform)
-        {
-            child.GetComponent<Animator>().SetBool("EnemiesDeployed", true);
-        }
+
+        GetComponent<Animator>().SetBool("EnemiesDeployed", true);
+
     }
 }
