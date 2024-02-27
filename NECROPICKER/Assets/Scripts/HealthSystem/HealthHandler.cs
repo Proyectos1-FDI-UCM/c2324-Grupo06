@@ -42,8 +42,6 @@ public class HealthHandler : MonoBehaviour
 
     private bool _inmune;
 
-    [SerializeField] private bool _isBullet;
-
     void Start() => SetCurrentHealth(maxHealth);
     public void TakeDamage(float damage)
     {
