@@ -23,6 +23,6 @@ public class InmuneComponent : MonoBehaviour
     {                                                  //primero hace esto
         healthHandler.SetInmune(true);
         yield return new WaitForSecondsRealtime(_cont);// luego se espera
-        healthHandler.SetInmune(false);               //y finalmente hace esto
+        healthHandler.SetInmune(false);                //y finalmente hace esto
     }
 }
