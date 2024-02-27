@@ -305,7 +305,7 @@ Transform:
   - {fileID: 7916631405747952890}
   - {fileID: 4165843537196867692}
   - {fileID: 1871524994773700603}
-  m_Father: {fileID: 5899315497216618234}
+  m_Father: {fileID: 1968586447121265530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4833355804536023115
 MonoBehaviour:
@@ -610,7 +610,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5899315497216618234}
+  m_Father: {fileID: 1968586447121265530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3822506879872409371
 SpriteRenderer:
@@ -711,7 +711,7 @@ MonoBehaviour:
   OnExecuteBehaviour:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2462460729542849875}
+      - m_Target: {fileID: 7539918843364387027}
         m_TargetAssemblyTypeName: HealthHandler, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 4
@@ -1159,11 +1159,11 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 7c547fc8fc0183b40912a1b61b58a8fb, type: 2}
     - target: {fileID: 6247058447108451499, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: m_Name
-      value: Bumberol
+      value: Bumberol - Copy
       objectReference: {fileID: 0}
     - target: {fileID: 6247058447108451499, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7265099983593255393, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1218,7 +1218,12 @@ PrefabInstance:
       addedObject: {fileID: 7267896249826568359}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
---- !u!114 &2462460729542849875 stripped
+--- !u!4 &1968586447121265530 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7265099983593255393, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+  m_PrefabInstance: {fileID: 9188190967353180827}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7539918843364387027 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
   m_PrefabInstance: {fileID: 9188190967353180827}
@@ -1229,8 +1234,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3114ac147e81d3747b2c59292564fd6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &5899315497216618234 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7265099983593255393, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
-  m_PrefabInstance: {fileID: 9188190967353180827}
-  m_PrefabAsset: {fileID: 0}

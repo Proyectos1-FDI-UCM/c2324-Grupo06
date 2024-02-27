@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 5402138555839588280}
   - component: {fileID: 6201726051833654824}
   - component: {fileID: 7291370155856233881}
-  - component: {fileID: 6177531178354290269}
-  - component: {fileID: 3788476551192668776}
+  - component: {fileID: -8202058996682883812}
+  - component: {fileID: 1774521105393416186}
+  - component: {fileID: -8191348867533865086}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
@@ -49,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3fcffb2e09430941abea0deb4a63e93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroytime: 3
+  destroytime: 1
   GameObject: {fileID: 818950269931313274}
 --- !u!58 &6201726051833654824
 CircleCollider2D:
@@ -80,7 +81,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.049589157}
@@ -113,7 +114,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6177531178354290269
+--- !u!114 &-8202058996682883812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818950269931313274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1b5cc79db0b49d4d86f1d16ce070e13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1774521105393416186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818950269931313274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32235c58a2650146b824fd51a66c2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: {x: 0, y: 0}
+  radius: 3
+--- !u!114 &-8191348867533865086
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,19 +156,7 @@ MonoBehaviour:
   minSpeed: 0
   targetLayer:
     serializedVersion: 2
-    m_Bits: 8
---- !u!114 &3788476551192668776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 818950269931313274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af29d14ca9ba2194da6f3c5a0bf2ef46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+    m_Bits: 4294967295
 --- !u!1 &5367503526371965999
 GameObject:
   m_ObjectHideFlags: 0
