@@ -17,7 +17,7 @@ public class DamageOnCollisionI : MonoBehaviour, ICollidable
     public void OnCollide(Collider2D other)
     {
         if (other.gameObject.TryGetComponent(out HealthHandler healthHandler)
-        && rb.velocity.magnitude > minSpeed && targetLayer == (targetLayer | (1 << other.gameObject.layer)))
+        && rb.velocity.magnitude >= minSpeed && targetLayer == (targetLayer | (1 << other.gameObject.layer)))
         {
             healthHandler.TakeDamage(damage);
         }

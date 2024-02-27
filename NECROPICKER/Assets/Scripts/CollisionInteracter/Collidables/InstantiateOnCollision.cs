@@ -15,6 +15,6 @@ public class InstantiateOnCollision : MonoBehaviour, ICollidable
     }
     public void OnCollide(Collider2D other)
     {
-        if (rb.velocity.magnitude > minSpeed && targetLayer == (targetLayer | (1 << other.gameObject.layer))) Instantiate(prefab, transform.position, Quaternion.identity);
+        if (rb.velocity.magnitude >= minSpeed && targetLayer == (targetLayer | (1 << other.gameObject.layer))) Instantiate(prefab, transform.position, Quaternion.identity);
     }
 }

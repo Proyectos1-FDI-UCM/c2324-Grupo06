@@ -17,6 +17,6 @@ public class DropOnCollision : MonoBehaviour, ICollidable
     }
     public void OnCollide(Collider2D other)
     {
-        if (rb.velocity.magnitude > minSpeed && targetLayer == (targetLayer | (1 << other.gameObject.layer))) drop.DropItems(); 
+        if (rb.velocity.magnitude >= minSpeed && targetLayer == (targetLayer | (1 << other.gameObject.layer))) drop.DropItems(); 
     }
 }
