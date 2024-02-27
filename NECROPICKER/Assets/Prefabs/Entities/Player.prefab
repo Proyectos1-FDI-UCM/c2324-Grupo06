@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 9189826971720174113}
   - component: {fileID: 3681831507792798267}
   - component: {fileID: 1345480627232488797}
+  - component: {fileID: -8279774020021314623}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -421,6 +422,32 @@ MonoBehaviour:
   m_DefaultActionMap: Playing
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &-8279774020021314623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7096676606624458962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612af64c72a05ba48934effececaf3ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthSetted: 12
+  _maxHealthSetted: 20
+  _healthToHeal: 4
+  _objectsToInstantiate:
+  - {fileID: 5968818402616178479, guid: 4f7d6f79525550743a107688242a402b, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &8135096051482086053
 GameObject:
   m_ObjectHideFlags: 0

@@ -53,7 +53,14 @@ public class HealthHandler : MonoBehaviour
         }
         Debug.Log(currentHealth);
     }
-    public void Heal(float healAmount) => currentHealth += healAmount;
+    public void Heal(float healAmount)
+    {
+        if (healAmount > maxHealth - currentHealth) 
+        {
+            currentHealth += maxHealth - currentHealth;
+        }
+        else currentHealth += healAmount;
+    }
     public void SetMaxHealth(float newMaxHealth) => maxHealth = newMaxHealth;
     public void SetCurrentHealth(float newCurrentHealth) => currentHealth = newCurrentHealth;
 
