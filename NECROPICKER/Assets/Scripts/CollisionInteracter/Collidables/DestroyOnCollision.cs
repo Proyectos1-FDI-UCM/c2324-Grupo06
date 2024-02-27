@@ -14,7 +14,7 @@ public class DestroyOnCollision : MonoBehaviour, ICollidable
     }
     public void OnCollide(Collider2D other)
     {
-        if (rb.velocity.magnitude > minSpeed && targetLayer == (targetLayer | (1 << other.gameObject.layer)))
+        if (rb.velocity.magnitude >= minSpeed && targetLayer == (targetLayer | (1 << other.gameObject.layer)))
         {
             Destroy(gameObject);
         }
