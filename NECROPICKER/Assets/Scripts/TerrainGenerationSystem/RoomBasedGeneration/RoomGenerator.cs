@@ -9,33 +9,43 @@ public class RoomGenerator : MonoBehaviour
     [SerializeField] GameObject[] nextFloorRooms;
 
     [SerializeField] GameObject[] roomPrefabs;
-    [SerializeField] GameObject[] strictRoomPrefabs;
-
     Room[,] createdRooms = new Room[100, 100];
     List<Vector2Int> lastRoomsPositions = new List<Vector2Int>();
-    const int roomSize = 20;
+    [SerializeField]
+    Vector2Int roomSize = new Vector2Int();
     [SerializeField] int maxRoomExtension = 40;
     int extensionCounter = 0;
 
-    private void Awake(){
-        transform.position = new Vector2(createdRooms.GetLength(0) / 2 * roomSize, createdRooms.GetLength(1) / 2 * roomSize);
-        GenerateRoom((int)transform.position.x / roomSize, (int)transform.position.y / roomSize, initialRoom);
+    private void Awake()
+    {
+        transform.position = new Vector2(createdRooms.GetLength(0) / 2 * roomSize.x, createdRooms.GetLength(1) / 2 * roomSize.y);
+        GenerateRoom((int)transform.position.x / roomSize.x, (int)transform.position.y / roomSize.y, initialRoom);
         GenerateRooms();
     }
 
-    Room GenerateRoom(int x, int y, RoomAccess accessValue)
+    Room GenerateRoom(int x, int y, RoomAccess accessValue) //Sala aleatoria
     {
-        Room newRoom = Instantiate(ReturnRandomRoom(accessValue) , new Vector2(x * roomSize, y * roomSize), Quaternion.identity).GetComponent<Room>();
+        Room newRoom = Instantiate(ReturnRandomRoom() , new Vector2(x * roomSize.x, y * roomSize.y), Quaternion.identity).GetComponent<Room>();
+        newRoom.SetAccess(ReturnRandomAccess(accessValue));
         lastRoomsPositions.Add(new Vector2Int(x, y));
         createdRooms[x, y] = newRoom;
         extensionCounter++;
-
         return newRoom;
     }
-
-    void GenerateRoom(int x, int y, GameObject room)
+    GameObject ReturnRandomRoom() => roomPrefabs[Random.Range(0,roomPrefabs.Length)];
+    RoomAccess ReturnRandomAccess(RoomAccess accesValue)
     {
-        Room newRoom = Instantiate(room , new Vector2(x * roomSize, y * roomSize), Quaternion.identity).GetComponent<Room>();
+        RoomAccess newAccess = (RoomAccess)Random.Range(1, 15);
+        while (accesValue == newAccess)
+        {           
+            newAccess = (RoomAccess)Random.Range(1, 15);
+        }
+        accesValue |= newAccess;
+        return accesValue;
+    }
+    void GenerateRoom(int x, int y, GameObject room) // Sala Inicial
+    {
+        Room newRoom = Instantiate(room , new Vector2(x * roomSize.x, y * roomSize.y), Quaternion.identity).GetComponent<Room>();
         lastRoomsPositions.Add(new Vector2Int(x, y));
         createdRooms[x, y] = newRoom;
         extensionCounter++;
@@ -43,7 +53,8 @@ public class RoomGenerator : MonoBehaviour
 
     Room GenerateStrictRoom(int x, int y, RoomAccess accessValue, GameObject[] roomsToTakeFrom)
     {
-        Room newRoom = Instantiate(ReturnStrictRandomRoom(accessValue, roomsToTakeFrom) , new Vector2(x * roomSize, y * roomSize), Quaternion.identity).GetComponent<Room>();
+        Room newRoom = Instantiate(ReturnRandomRoom(), new Vector2(x * roomSize.x, y * roomSize.y), Quaternion.identity).GetComponent<Room>();
+        newRoom.SetAccess(accessValue);
         createdRooms[x, y] = newRoom;
         return newRoom;
     }
@@ -65,7 +76,7 @@ public class RoomGenerator : MonoBehaviour
         }
     }
 
-    GameObject ReturnRandomRoom(RoomAccess accessValue)
+   /* GameObject ReturnRandomRoom(RoomAccess accessValue)
     {
         List<GameObject> possibleRooms = new List<GameObject>();
         foreach (GameObject room in roomPrefabs)
@@ -77,9 +88,9 @@ public class RoomGenerator : MonoBehaviour
             }
         }
         return possibleRooms[Random.Range(0, possibleRooms.Count)];
-    }
+    }*/
 
-    GameObject ReturnStrictRandomRoom(RoomAccess accessValue, GameObject[] roomsToTakeFrom)
+   /* GameObject ReturnStrictRandomRoom(RoomAccess accessValue, GameObject[] roomsToTakeFrom)
     {
         List<GameObject> possibleRooms = new List<GameObject>();
         foreach (GameObject room in roomsToTakeFrom)
@@ -95,8 +106,8 @@ public class RoomGenerator : MonoBehaviour
         print(accessValue);
         print(possibleRooms[0]);
         return possibleRooms[Random.Range(0, possibleRooms.Count)];
-    }
-
+    }*/
+    
     bool CheckPosition(int x, int y) => createdRooms[x, y] == null;
 
     Vector2Int AccessValueToVector2(RoomAccess accessValue)
@@ -138,11 +149,11 @@ public class RoomGenerator : MonoBehaviour
                         {
                             GenerateRoom(nextRoomPosition.x, nextRoomPosition.y, nextRoomAccess);
                         }
-                        else if(!createdRooms[nextRoomPosition.x, nextRoomPosition.y].totalAccess.HasFlag(nextRoomAccess))
+                        else if(!createdRooms[nextRoomPosition.x, nextRoomPosition.y].totalAccess.HasFlag(nextRoomAccess)) //POSIBLE ACTUALIZACIÓN
                         {
                             RoomAccess fixedAccess = createdRooms[nextRoomPosition.x, nextRoomPosition.y].totalAccess | nextRoomAccess;
                             Destroy(createdRooms[nextRoomPosition.x, nextRoomPosition.y].gameObject);
-                            GenerateStrictRoom(nextRoomPosition.x, nextRoomPosition.y, fixedAccess, strictRoomPrefabs);
+                            GenerateStrictRoom(nextRoomPosition.x, nextRoomPosition.y, fixedAccess, roomPrefabs);
                         }
                     }
                 }
@@ -164,14 +175,14 @@ public class RoomGenerator : MonoBehaviour
                             }
                             else
                             {
-                                GenerateStrictRoom(nextRoomPosition.x, nextRoomPosition.y, nextRoomAccess, strictRoomPrefabs);
+                                GenerateStrictRoom(nextRoomPosition.x, nextRoomPosition.y, nextRoomAccess, roomPrefabs);
                             }
                         }
-                        else
+                        else if (!createdRooms[nextRoomPosition.x, nextRoomPosition.y].totalAccess.HasFlag(nextRoomAccess))//POSIBLE ACTUALIZACIÓN
                         {
                             RoomAccess fixedAccess = createdRooms[nextRoomPosition.x, nextRoomPosition.y].totalAccess | nextRoomAccess;
                             Destroy(createdRooms[nextRoomPosition.x, nextRoomPosition.y].gameObject);
-                            GenerateStrictRoom(nextRoomPosition.x, nextRoomPosition.y, fixedAccess, strictRoomPrefabs);
+                            GenerateStrictRoom(nextRoomPosition.x, nextRoomPosition.y, fixedAccess, roomPrefabs);
                         }
                     }
                 }
