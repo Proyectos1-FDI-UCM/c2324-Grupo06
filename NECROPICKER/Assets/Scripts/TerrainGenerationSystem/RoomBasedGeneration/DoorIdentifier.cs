@@ -20,7 +20,6 @@ public class DoorIdentifier : MonoBehaviour
         if (_DoorRoom.totalAccess.HasFlag(roomAccess))
         {
             _tileSeter.SetTiles();
-            Debug.Log(roomAccess);
         }
         else
         {

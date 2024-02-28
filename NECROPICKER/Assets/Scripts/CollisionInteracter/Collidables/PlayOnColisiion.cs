@@ -23,7 +23,6 @@ public class PlayOnColisiion : MonoBehaviour, ICollidable
     }
     private IEnumerator Timer()
     {
-        Debug.Log("Hola");
         animator.Play("Explosion");
         yield return new WaitForSeconds(tiempoAnim);
         Destroy(prefab);
