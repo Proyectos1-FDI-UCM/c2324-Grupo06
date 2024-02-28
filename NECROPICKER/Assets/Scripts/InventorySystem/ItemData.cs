@@ -16,4 +16,34 @@ public class ItemData : ScriptableObject
 
     [SerializeField] int _maxStackSize;
     public int maxStackSize => _maxStackSize;
+
+    [SerializeField] Recipe recipe;
+    public Recipe Recipe => recipe;
+
+    [SerializeField] Ingredient[] ingredients;
+    public Ingredient[] Ingredients => ingredients;
+}
+
+[System.Serializable]
+public struct Recipe
+{
+    [SerializeField] int amount;
+    public int Amount => amount;
+
+    [SerializeField] Ingredient[] ingredients;
+    public Ingredient[] Ingredients => ingredients;
+}
+
+
+[System.Serializable]
+public struct Ingredient
+{
+    public string ingredientName;
+    public int amount;
+
+    public Ingredient(string ingredientName, int amount)
+    {
+        this.ingredientName = ingredientName;
+        this.amount = amount;
+    }
 }
