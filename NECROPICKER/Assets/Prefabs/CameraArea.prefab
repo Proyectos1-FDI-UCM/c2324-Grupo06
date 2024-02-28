@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9089872531047617259}
   - component: {fileID: 8001289188929237016}
   - component: {fileID: 6248502477564989051}
+  - component: {fileID: 5445587603159886877}
   m_Layer: 0
   m_Name: CameraArea
   m_TagString: Untagged
@@ -164,6 +165,20 @@ MonoBehaviour:
   triggerLayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &5445587603159886877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4202787806702908917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f01f7b216c8b4a46b1138468b5ab7bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraEffects: {fileID: 11400000, guid: d65e42c8fa3657449b23b071403dceb6, type: 2}
+  shakeTime: 0.2
 --- !u!1 &5007796072619344869
 GameObject:
   m_ObjectHideFlags: 0

@@ -98,13 +98,9 @@ public class RoomGenerator : MonoBehaviour
             Room roomScript = room.GetComponent<Room>();
             if (roomScript.totalAccess == accessValue)
             {
-                print("Room found!");
                 possibleRooms.Add(room);
             }
         }
-        print(possibleRooms.Count);
-        print(accessValue);
-        print(possibleRooms[0]);
         return possibleRooms[Random.Range(0, possibleRooms.Count)];
     }*/
     
