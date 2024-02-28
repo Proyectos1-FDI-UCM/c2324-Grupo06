@@ -9,10 +9,17 @@ public class LaserItem : MonoBehaviour, IItem
     public ItemData ItemData => itemData;
     [SerializeField] LayerMask targetLayer;
     [SerializeField] float damage = 2f;
+    [SerializeField] float laserWidth = 1.5f;
     LineRenderer lineRenderer;
 
     private void Awake() {
         lineRenderer = GetComponent<LineRenderer>();
+    }
+
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(transform.position, transform.up * 20);
+        Gizmos.DrawWireCube(transform.position + transform.up * 10, new Vector3(laserWidth, 20, 0));
     }
 
     public bool Use(ItemHandler handler)
@@ -20,6 +27,7 @@ public class LaserItem : MonoBehaviour, IItem
         SetLineWidht(1.5f);
         DrawRay();
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, 20, targetLayer);
+        Physics2D.OverlapBox(transform.position + transform.up * 10 , new Vector2(laserWidth, 20), transform.rotation.z, targetLayer);
 
         if(hit == false) return false;
 

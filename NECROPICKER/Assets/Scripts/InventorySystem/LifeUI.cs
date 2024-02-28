@@ -9,7 +9,7 @@ public class LifeUI : MonoBehaviour
     [SerializeField] private HealthHandler healthHandler;
     private void Start()
     {
-        HealthHandler healthHandler = FindAnyObjectByType<HealthHandler>();
+        HealthHandler healthHandler = FindAnyObjectByType<InputManager>(FindObjectsInactive.Include).GetComponent<HealthHandler>();
         UIlife(healthHandler.currentHealth);
         healthHandler.OnHealthChanged.AddListener(UIlife);
     }
