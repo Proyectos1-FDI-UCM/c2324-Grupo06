@@ -34,7 +34,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1241139989525902773}
   - {fileID: 2183902430908154970}
   - {fileID: 9106778235649447346}
   - {fileID: 8375123916169771937}
@@ -2101,10 +2100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentages:
-  - 0
-  - 0
-  - 0
-  - 0
+  - 50
+  - 50
+  - 50
+  - 50
 --- !u!1 &714308966826489675
 GameObject:
   m_ObjectHideFlags: 0
@@ -18135,12 +18134,12 @@ Transform:
   m_GameObject: {fileID: 8088293477672714138}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.5739684, y: 0.5135879, z: 0.24001616}
+  m_LocalPosition: {x: 5.5739684, y: 1.973588, z: 20.240017}
   m_LocalScale: {x: 0.8682194, y: 0.88366807, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6128754047767848668}
-  m_Father: {fileID: 5660460080827892399}
+  m_Father: {fileID: 2183902430908154970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8225992704557602265
 GameObject:
@@ -18819,7 +18818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6248502477564989051, guid: 735bb32a1fd34ce4abc24e246a0fc0ac, type: 3}
       propertyPath: <onTriggerExit>k__BackingField.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248502477564989051, guid: 735bb32a1fd34ce4abc24e246a0fc0ac, type: 3}
       propertyPath: <onTriggerEnter>k__BackingField.m_PersistentCalls.m_Calls.Array.size
@@ -18848,7 +18847,7 @@ PrefabInstance:
     - target: {fileID: 6248502477564989051, guid: 735bb32a1fd34ce4abc24e246a0fc0ac, type: 3}
       propertyPath: <onTriggerEnter>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8088293477672714138}
     - target: {fileID: 6248502477564989051, guid: 735bb32a1fd34ce4abc24e246a0fc0ac, type: 3}
       propertyPath: <onTriggerExit>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -18980,7 +18979,10 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8001289188929237016, guid: 735bb32a1fd34ce4abc24e246a0fc0ac, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6608546958807155189, guid: 735bb32a1fd34ce4abc24e246a0fc0ac, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1241139989525902773}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 735bb32a1fd34ce4abc24e246a0fc0ac, type: 3}
 --- !u!4 &2183902430908154970 stripped
