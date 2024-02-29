@@ -9,8 +9,7 @@ using UnityEngine;
     North = 1,
     East = 2,
     South = 4,
-    West = 8,
-    Extra = 16
+    West = 8
 }
 
 public class Room : MonoBehaviour
