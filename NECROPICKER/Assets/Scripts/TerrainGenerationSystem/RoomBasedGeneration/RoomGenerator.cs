@@ -1,25 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RoomGenerator : MonoBehaviour
 {
     [SerializeField] RoomSetting initialRoom;
-    bool nextFloorRoomGenerated = false;
-    [SerializeField] RoomSettingStack nextFloorRooms;
-    [SerializeField] RoomSettingStack roomSettings;
+    RoomSettingStack roomSettings;
+    [SerializeField] RoomSetting[] Rooms;
     RoomSetting[,] createdRooms = new RoomSetting[100, 100];
+    List<Vector2Int> roomPositions = new List<Vector2Int>();
     List<Vector2Int> lastRoomsPositions = new List<Vector2Int>();
-    [SerializeField]
-    Vector2Int roomSize = new Vector2Int();
+    [SerializeField] Vector2Int roomSize = new Vector2Int();
     [SerializeField] int maxRoomExtension = 40;
     int extensionCounter = 0;
 
     private void Awake()
     {
+        roomSettings = new RoomSettingStack(Rooms);
         transform.position = new Vector2(createdRooms.GetLength(0) / 2 * roomSize.x, createdRooms.GetLength(1) / 2 * roomSize.y);
-        GenerateRoom((int)transform.position.x / roomSize.x, (int)transform.position.y / roomSize.y, initialRoom);
-        GenerateRooms();
+        GenerateRoom((int)transform.position.x / roomSize.x, (int)transform.position.y / roomSize.y, initialRoom, (RoomAccess)15);
+        StartCoroutine(GenerateRooms());
     }
 
     RoomSetting GenerateRandomRoom(int x, int y, RoomAccess accessValue) //Sala aleatoria
@@ -29,6 +30,7 @@ public class RoomGenerator : MonoBehaviour
         newRoom.Room.SetAccess(ReturnRandomAccess(accessValue));
         lastRoomsPositions.Add(new Vector2Int(x, y));
         createdRooms[x, y] = newRoom;
+        // roomPositions.Add(new Vector2Int(x, y));
         extensionCounter++;
         return newRoom;
     }
@@ -38,6 +40,7 @@ public class RoomGenerator : MonoBehaviour
         RoomSetting newRoom = ReturnRandomRoom(x, y, roomSettings);
         newRoom.Room.SetAccess(accessValue);
         createdRooms[x, y] = newRoom;
+        // roomPositions.Add(new Vector2Int(x, y));
         return newRoom;
     }
 
@@ -61,10 +64,11 @@ public class RoomGenerator : MonoBehaviour
         return accesValue;
     }
     
-    void GenerateRoom(int x, int y, RoomSetting room) // Sala Inicial
+    void GenerateRoom(int x, int y, RoomSetting room, RoomAccess roomAccess) // Sala Inicial
     {
         GameObject newRoomGameObject = Instantiate(room.RoomPrefab, new Vector2(x * roomSize.x, y * roomSize.y), Quaternion.identity);
         RoomSetting newRoom = new RoomSetting(newRoomGameObject, room.Probability, room.MinNumOfInstances);
+        newRoom.Room.SetAccess(roomAccess);
         lastRoomsPositions.Add(new Vector2Int(x, y));
         createdRooms[x, y] = newRoom;
         extensionCounter++;
@@ -107,7 +111,7 @@ public class RoomGenerator : MonoBehaviour
         }
     }
 
-    void GenerateRooms()
+    IEnumerator GenerateRooms()
     {
         while(lastRoomsPositions.Count > 0)
         {
@@ -145,18 +149,10 @@ public class RoomGenerator : MonoBehaviour
                         Vector2Int nextRoomPosition = _roomPosition + direction;
                         RoomAccess nextRoomAccess = OppossiteAccess(access);
 
-
                         if (CheckPosition(nextRoomPosition.x, nextRoomPosition.y))
                         {
-                            if(!nextFloorRoomGenerated)
-                            {
-                                nextFloorRoomGenerated = true;
-                                GenerateStrictRoom(nextRoomPosition.x, nextRoomPosition.y, nextRoomAccess, nextFloorRooms);
-                            }
-                            else
-                            {
-                                GenerateStrictRoom(nextRoomPosition.x, nextRoomPosition.y, nextRoomAccess, roomSettings);
-                            }
+                            GenerateStrictRoom(nextRoomPosition.x, nextRoomPosition.y, nextRoomAccess, roomSettings);
+                            this.roomPositions.Add(nextRoomPosition);
                         }
                         else if (!createdRooms[nextRoomPosition.x, nextRoomPosition.y].Room.totalAccess.HasFlag(nextRoomAccess))//POSIBLE ACTUALIZACI�N
                         {
@@ -165,6 +161,26 @@ public class RoomGenerator : MonoBehaviour
                             GenerateStrictRoom(nextRoomPosition.x, nextRoomPosition.y, fixedAccess, roomSettings);
                         }
                     }
+                }
+            }
+
+            yield return new WaitForSeconds(0.01f);
+        }
+        
+        foreach(RoomSetting roomSetting in roomSettings.RoomSettings)
+        {
+            if(roomSettings.RoomSettingInstances[roomSetting] < roomSetting.MinNumOfInstances)
+            {
+                for(int i = 0; i < roomSetting.MinNumOfInstances - roomSettings.RoomSettingInstances[roomSetting]; i++)
+                {
+                    Vector2Int randomRoomPosition;
+                    randomRoomPosition = roomPositions[Random.Range(0, roomPositions.Count)];
+                    
+                    RoomAccess access = createdRooms[randomRoomPosition.x, randomRoomPosition.y].Room.totalAccess;
+                    Destroy(createdRooms[randomRoomPosition.x, randomRoomPosition.y].Room.gameObject);
+                    GenerateRoom(randomRoomPosition.x, randomRoomPosition.y, roomSetting, access);
+
+                    roomPositions.Remove(randomRoomPosition);
                 }
             }
         }
@@ -204,9 +220,17 @@ public class RoomSettingStack
     [SerializeField] RoomSetting[] roomSettings;
     public RoomSetting[] RoomSettings => roomSettings;
 
+    Dictionary<RoomSetting, int> roomSettingInstances = new Dictionary<RoomSetting, int>();
+    public Dictionary<RoomSetting, int> RoomSettingInstances => roomSettingInstances;
+
     public RoomSettingStack(RoomSetting[] roomSettings)
     {
         this.roomSettings = roomSettings;
+
+        foreach(RoomSetting roomSetting in roomSettings)
+        {
+            roomSettingInstances.Add(roomSetting, 0);
+        }
     }
 
     public RoomSetting RandomRoomSetting()
@@ -218,9 +242,11 @@ public class RoomSettingStack
             probabilitySum += roomSetting.Probability;
             if(randomValue <= probabilitySum)
             {
+                roomSettingInstances[roomSetting]++;
                 return roomSetting;
             }
         }
+        roomSettingInstances[roomSettings[roomSettings.Length - 1]]++;
         return roomSettings[roomSettings.Length - 1];
     }
 }
