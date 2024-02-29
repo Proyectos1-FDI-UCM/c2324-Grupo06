@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class RoomGenerator : MonoBehaviour
 {
-    [SerializeField] GameObject initialRoom;
+    [SerializeField] RoomSetting initialRoom;
     bool nextFloorRoomGenerated = false;
-    [SerializeField] GameObject[] nextFloorRooms;
-
-    [SerializeField] GameObject[] roomPrefabs;
-    Room[,] createdRooms = new Room[100, 100];
+    [SerializeField] RoomSettingStack nextFloorRooms;
+    [SerializeField] RoomSettingStack roomSettings;
+    RoomSetting[,] createdRooms = new RoomSetting[100, 100];
     List<Vector2Int> lastRoomsPositions = new List<Vector2Int>();
     [SerializeField]
     Vector2Int roomSize = new Vector2Int();
@@ -23,16 +22,34 @@ public class RoomGenerator : MonoBehaviour
         GenerateRooms();
     }
 
-    Room GenerateRoom(int x, int y, RoomAccess accessValue) //Sala aleatoria
+    RoomSetting GenerateRandomRoom(int x, int y, RoomAccess accessValue) //Sala aleatoria
     {
-        Room newRoom = Instantiate(ReturnRandomRoom() , new Vector2(x * roomSize.x, y * roomSize.y), Quaternion.identity).GetComponent<Room>();
-        newRoom.SetAccess(ReturnRandomAccess(accessValue));
+        RoomSetting newRoom = ReturnRandomRoom(x, y, roomSettings);
+
+        newRoom.Room.SetAccess(ReturnRandomAccess(accessValue));
         lastRoomsPositions.Add(new Vector2Int(x, y));
         createdRooms[x, y] = newRoom;
         extensionCounter++;
         return newRoom;
     }
-    GameObject ReturnRandomRoom() => roomPrefabs[Random.Range(0,roomPrefabs.Length)];
+
+    RoomSetting GenerateStrictRoom(int x, int y, RoomAccess accessValue, RoomSettingStack roomSettings)
+    {
+        RoomSetting newRoom = ReturnRandomRoom(x, y, roomSettings);
+        newRoom.Room.SetAccess(accessValue);
+        createdRooms[x, y] = newRoom;
+        return newRoom;
+    }
+
+    RoomSetting ReturnRandomRoom(int x, int y, RoomSettingStack roomSettingStack)
+    {
+        RoomSetting randomRoom = roomSettingStack.RandomRoomSetting();
+
+        GameObject newRoomGameObject = Instantiate(randomRoom.RoomPrefab, new Vector2(x * roomSize.x, y * roomSize.y), Quaternion.identity);
+        RoomSetting newRoom = new RoomSetting(newRoomGameObject, randomRoom.Probability, randomRoom.MinNumOfInstances);
+        return newRoom;
+    }
+
     RoomAccess ReturnRandomAccess(RoomAccess accesValue)
     {
         RoomAccess newAccess = (RoomAccess)Random.Range(1, 15);
@@ -43,21 +60,16 @@ public class RoomGenerator : MonoBehaviour
         accesValue |= newAccess;
         return accesValue;
     }
-    void GenerateRoom(int x, int y, GameObject room) // Sala Inicial
+    
+    void GenerateRoom(int x, int y, RoomSetting room) // Sala Inicial
     {
-        Room newRoom = Instantiate(room , new Vector2(x * roomSize.x, y * roomSize.y), Quaternion.identity).GetComponent<Room>();
+        GameObject newRoomGameObject = Instantiate(room.RoomPrefab, new Vector2(x * roomSize.x, y * roomSize.y), Quaternion.identity);
+        RoomSetting newRoom = new RoomSetting(newRoomGameObject, room.Probability, room.MinNumOfInstances);
         lastRoomsPositions.Add(new Vector2Int(x, y));
         createdRooms[x, y] = newRoom;
         extensionCounter++;
     }
 
-    Room GenerateStrictRoom(int x, int y, RoomAccess accessValue, GameObject[] roomsToTakeFrom)
-    {
-        Room newRoom = Instantiate(ReturnRandomRoom(), new Vector2(x * roomSize.x, y * roomSize.y), Quaternion.identity).GetComponent<Room>();
-        newRoom.SetAccess(accessValue);
-        createdRooms[x, y] = newRoom;
-        return newRoom;
-    }
 
     RoomAccess OppossiteAccess(RoomAccess accessValue)
     {
@@ -76,34 +88,6 @@ public class RoomGenerator : MonoBehaviour
         }
     }
 
-   /* GameObject ReturnRandomRoom(RoomAccess accessValue)
-    {
-        List<GameObject> possibleRooms = new List<GameObject>();
-        foreach (GameObject room in roomPrefabs)
-        {
-            Room roomScript = room.GetComponent<Room>();
-            if (roomScript.totalAccess.HasFlag(accessValue))
-            {
-                possibleRooms.Add(room);
-            }
-        }
-        return possibleRooms[Random.Range(0, possibleRooms.Count)];
-    }*/
-
-   /* GameObject ReturnStrictRandomRoom(RoomAccess accessValue, GameObject[] roomsToTakeFrom)
-    {
-        List<GameObject> possibleRooms = new List<GameObject>();
-        foreach (GameObject room in roomsToTakeFrom)
-        {
-            Room roomScript = room.GetComponent<Room>();
-            if (roomScript.totalAccess == accessValue)
-            {
-                possibleRooms.Add(room);
-            }
-        }
-        return possibleRooms[Random.Range(0, possibleRooms.Count)];
-    }*/
-    
     bool CheckPosition(int x, int y) => createdRooms[x, y] == null;
 
     Vector2Int AccessValueToVector2(RoomAccess accessValue)
@@ -132,7 +116,7 @@ public class RoomGenerator : MonoBehaviour
 
             foreach(Vector2Int _roomPosition in roomPositions)
             {
-                Room selectedRoom = createdRooms[_roomPosition.x, _roomPosition.y];
+                Room selectedRoom = createdRooms[_roomPosition.x, _roomPosition.y].Room;
                 if(extensionCounter < maxRoomExtension)
                 {
                     foreach (RoomAccess access in selectedRoom.GetAllAccess())
@@ -143,13 +127,13 @@ public class RoomGenerator : MonoBehaviour
 
                         if (CheckPosition(nextRoomPosition.x, nextRoomPosition.y))
                         {
-                            GenerateRoom(nextRoomPosition.x, nextRoomPosition.y, nextRoomAccess);
+                            GenerateRandomRoom(nextRoomPosition.x, nextRoomPosition.y, nextRoomAccess);
                         }
-                        else if(!createdRooms[nextRoomPosition.x, nextRoomPosition.y].totalAccess.HasFlag(nextRoomAccess)) //POSIBLE ACTUALIZACIÓN
+                        else if(!createdRooms[nextRoomPosition.x, nextRoomPosition.y].Room.totalAccess.HasFlag(nextRoomAccess)) //POSIBLE ACTUALIZACIï¿½N
                         {
-                            RoomAccess fixedAccess = createdRooms[nextRoomPosition.x, nextRoomPosition.y].totalAccess | nextRoomAccess;
-                            Destroy(createdRooms[nextRoomPosition.x, nextRoomPosition.y].gameObject);
-                            GenerateStrictRoom(nextRoomPosition.x, nextRoomPosition.y, fixedAccess, roomPrefabs);
+                            RoomAccess fixedAccess = createdRooms[nextRoomPosition.x, nextRoomPosition.y].Room.totalAccess | nextRoomAccess;
+                            Destroy(createdRooms[nextRoomPosition.x, nextRoomPosition.y].Room.gameObject);
+                            GenerateStrictRoom(nextRoomPosition.x, nextRoomPosition.y, fixedAccess, roomSettings);
                         }
                     }
                 }
@@ -171,18 +155,72 @@ public class RoomGenerator : MonoBehaviour
                             }
                             else
                             {
-                                GenerateStrictRoom(nextRoomPosition.x, nextRoomPosition.y, nextRoomAccess, roomPrefabs);
+                                GenerateStrictRoom(nextRoomPosition.x, nextRoomPosition.y, nextRoomAccess, roomSettings);
                             }
                         }
-                        else if (!createdRooms[nextRoomPosition.x, nextRoomPosition.y].totalAccess.HasFlag(nextRoomAccess))//POSIBLE ACTUALIZACIÓN
+                        else if (!createdRooms[nextRoomPosition.x, nextRoomPosition.y].Room.totalAccess.HasFlag(nextRoomAccess))//POSIBLE ACTUALIZACIï¿½N
                         {
-                            RoomAccess fixedAccess = createdRooms[nextRoomPosition.x, nextRoomPosition.y].totalAccess | nextRoomAccess;
-                            Destroy(createdRooms[nextRoomPosition.x, nextRoomPosition.y].gameObject);
-                            GenerateStrictRoom(nextRoomPosition.x, nextRoomPosition.y, fixedAccess, roomPrefabs);
+                            RoomAccess fixedAccess = createdRooms[nextRoomPosition.x, nextRoomPosition.y].Room.totalAccess | nextRoomAccess;
+                            Destroy(createdRooms[nextRoomPosition.x, nextRoomPosition.y].Room.gameObject);
+                            GenerateStrictRoom(nextRoomPosition.x, nextRoomPosition.y, fixedAccess, roomSettings);
                         }
                     }
                 }
             }
         }
+    }
+}
+
+[System.Serializable]
+public class RoomSetting
+{
+    [SerializeField] GameObject roomPrefab;
+    public GameObject RoomPrefab => roomPrefab;
+
+    Room room;
+    public Room Room => room;
+
+    [Range(0,1)] 
+    [SerializeField] float probability;
+    public float Probability => probability;
+
+    [SerializeField] int minNumOfInstances;
+    public int MinNumOfInstances => minNumOfInstances;
+
+    public RoomSetting(GameObject roomPrefab, float probability, int minNumOfInstances)
+    {
+        this.roomPrefab = roomPrefab;
+        this.probability = probability;
+        this.minNumOfInstances = minNumOfInstances;
+        room = roomPrefab.GetComponent<Room>();
+    }
+
+    public void SetProbability(float probability) => this.probability = probability;
+}
+
+[System.Serializable]
+public class RoomSettingStack
+{
+    [SerializeField] RoomSetting[] roomSettings;
+    public RoomSetting[] RoomSettings => roomSettings;
+
+    public RoomSettingStack(RoomSetting[] roomSettings)
+    {
+        this.roomSettings = roomSettings;
+    }
+
+    public RoomSetting RandomRoomSetting()
+    {
+        float randomValue = Random.value;
+        float probabilitySum = 0;
+        foreach(RoomSetting roomSetting in roomSettings)
+        {
+            probabilitySum += roomSetting.Probability;
+            if(randomValue <= probabilitySum)
+            {
+                return roomSetting;
+            }
+        }
+        return roomSettings[roomSettings.Length - 1];
     }
 }

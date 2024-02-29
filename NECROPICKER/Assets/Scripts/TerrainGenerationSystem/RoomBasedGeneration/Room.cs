@@ -57,8 +57,5 @@ public class Room : MonoBehaviour
         return accessList.ToArray();
     }
 
-    private void OnValidate() {
-        gameObject.name = _totalAccess.ToString();
-    }
     public void SetAccess(RoomAccess roomAccess) => _totalAccess = roomAccess;
 }
