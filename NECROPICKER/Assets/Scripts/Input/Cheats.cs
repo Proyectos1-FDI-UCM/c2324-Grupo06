@@ -17,6 +17,7 @@ public class Cheats : MonoBehaviour
     private void Start()
     {
         _myHealthHandler = GetComponent<HealthHandler>();
+
     }
     private void Update()
     {
@@ -51,5 +52,6 @@ public class Cheats : MonoBehaviour
             }
             else _myHealthHandler.SetInmune(false); _inmunePressed = false;
         }
+
     }
 }
