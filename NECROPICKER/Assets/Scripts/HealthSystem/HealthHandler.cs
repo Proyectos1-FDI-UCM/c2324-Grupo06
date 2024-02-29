@@ -49,8 +49,13 @@ public class HealthHandler : MonoBehaviour
         {
             currentHealth -= damage;
         }
-        Debug.Log(currentHealth);
     }
+
+    public void NecroDamage(float damage)
+    {
+            currentHealth -= damage;
+    }
+
     public void Heal(float healAmount)
     {
         if (healAmount > maxHealth - currentHealth) 
