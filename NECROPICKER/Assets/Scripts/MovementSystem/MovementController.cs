@@ -5,6 +5,7 @@ using UnityEngine;
 public class MovementController : MonoBehaviour
 {
     Rigidbody2D rb;
+    public Rigidbody2D Rb => rb;
     [SerializeField] float _speed = 10f;
     //No deberiamos tener que checkear si es un jugador puesto que se trata de código reutilizable
     [SerializeField] bool _isPlayer = false;

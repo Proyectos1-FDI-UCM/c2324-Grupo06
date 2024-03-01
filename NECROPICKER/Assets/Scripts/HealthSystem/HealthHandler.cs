@@ -49,7 +49,6 @@ public class HealthHandler : MonoBehaviour
         {
             currentHealth -= damage;
         }
-        Debug.Log(currentHealth);
     }
     public void Heal(float healAmount)
     {
