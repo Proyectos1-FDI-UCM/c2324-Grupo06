@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 1247907586766923168}
   - component: {fileID: 940998140871903050}
   m_Layer: 0
-  m_Name: Stop
+  m_Name: Stop -> 50%
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -530,6 +530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4313636c7671d4a4dac7c755ed145fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopVelocity: 0.5
 --- !u!1 &6131125750403927340
 GameObject:
   m_ObjectHideFlags: 0
