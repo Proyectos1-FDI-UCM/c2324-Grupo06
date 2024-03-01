@@ -50,6 +50,12 @@ public class HealthHandler : MonoBehaviour
             currentHealth -= damage;
         }
     }
+
+    public void NecroDamage(float damage)
+    {
+            currentHealth -= damage;
+    }
+
     public void Heal(float healAmount)
     {
         if (healAmount > maxHealth - currentHealth) 

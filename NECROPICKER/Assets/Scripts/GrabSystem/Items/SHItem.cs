@@ -12,7 +12,7 @@ public class SHItem : MonoBehaviour, IItem
     {
         HealthHandler health = GetComponentInParent<HealthHandler>();
         print(health);
-        if (health != null) health.TakeDamage(damage);
+        if (health != null) health.NecroDamage(damage);
         return true;
     }
 }
