@@ -7,6 +7,8 @@ public class FollowTarget : MonoBehaviour, IBehaviour
     TargetHandler targetHandler;
     MovementController movementController;
     [SerializeField]float multiplier = 1;
+    [Range(0, 1)]
+    [SerializeField] float weight = 1f;
 
     private void Awake()
     { 
@@ -14,7 +16,12 @@ public class FollowTarget : MonoBehaviour, IBehaviour
         movementController = GetComponentInParent<MovementController>();
     }
 
-    public void ExecuteBehaviour() => movementController.MoveTowards(targetHandler.target.position, multiplier);
+    public void ExecuteBehaviour()
+    {
+        Vector2 direction = (targetHandler.target.position - transform.position).normalized * multiplier;
+        Vector2 fixedDirection = Vector2.Lerp(movementController.Rb.velocity.normalized, direction, Time.deltaTime * weight * 10);
+        movementController.Move(fixedDirection);
+    }
 
     private void OnValidate() {
         movementController = GetComponentInParent<MovementController>();

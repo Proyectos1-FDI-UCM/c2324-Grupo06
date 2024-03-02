@@ -6,7 +6,7 @@ public class StopBehaviour : MonoBehaviour, IBehaviour
 {
     MovementController movementController;
     [Range(0, 1)]
-    [SerializeField] float stopVelocity = 0.5f;
+    [SerializeField] float stopVelocity = 1f;
 
     private void Awake() => movementController = GetComponentInParent<MovementController>();
 

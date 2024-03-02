@@ -27,9 +27,9 @@ public class OrbitalMovement : MonoBehaviour, IBehaviour
         Vector2 finalDirection;
 
         if(Vector2.Distance(targetHandler.target.position, transform.position) < orbit_radius + 0.5f)
-            finalDirection = Vector2.Lerp(perpendicular, -direction, Time.deltaTime * adjustFactor * 60).normalized;
+            finalDirection = Vector2.Lerp(perpendicular, -direction, Time.deltaTime * adjustFactor * 100).normalized;
         else if(Vector2.Distance(targetHandler.target.position, transform.position) > orbit_radius - 0.5f)
-            finalDirection = Vector2.Lerp(perpendicular, direction, Time.deltaTime * adjustFactor * 60).normalized;
+            finalDirection = Vector2.Lerp(perpendicular, direction, Time.deltaTime * adjustFactor * 100).normalized;
         else
             finalDirection = perpendicular;
 

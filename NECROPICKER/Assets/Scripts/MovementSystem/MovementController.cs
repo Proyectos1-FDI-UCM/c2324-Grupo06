@@ -11,6 +11,7 @@ public class MovementController : MonoBehaviour
     [SerializeField] bool _isPlayer = false;
     private float _OriginalSpeed;
     public float speed => _speed;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -20,12 +21,6 @@ public class MovementController : MonoBehaviour
     public void Move(Vector2 direction)
     {
         rb.velocity = direction * speed;
-    }
-
-    public void MoveTowards(Vector2 target, float multiplier)
-    {
-        Vector2 direction = target - (Vector2)transform.position;
-        Move(direction.normalized * multiplier);
     }
 
     //Nos podemos ahorrar este Update, en este caso es mejor que cada vez que se actualice _speed se actualice el valor de rb.velocity.
