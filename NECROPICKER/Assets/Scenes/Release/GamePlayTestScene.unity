@@ -144,6 +144,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1565287536060672417, guid: dc0de4799ba0221418c591bad70bbbed, type: 3}
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
+      propertyPath: Rooms.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
+      propertyPath: initialRoom.roomPrefab
+      value: 
+      objectReference: {fileID: 168292651923293047, guid: e0704046ee05349418babe2e7055bef5, type: 3}
+    - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: roomPrefabs.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -159,6 +167,30 @@ PrefabInstance:
       propertyPath: nextFloorRooms.Array.data[0]
       value: 
       objectReference: {fileID: 168292651923293047, guid: 519d248a507254d41a255dd261fa40f5, type: 3}
+    - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
+      propertyPath: Rooms.Array.data[0].roomPrefab
+      value: 
+      objectReference: {fileID: 1953806277259749121, guid: 93fba0db1337fd74f8f140d8ddac282e, type: 3}
+    - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
+      propertyPath: Rooms.Array.data[1].roomPrefab
+      value: 
+      objectReference: {fileID: 4588333738580742897, guid: ed277d83d47e8604baad011fea387945, type: 3}
+    - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
+      propertyPath: Rooms.Array.data[2].roomPrefab
+      value: 
+      objectReference: {fileID: 2741341949905470546, guid: 034f7e5160ca2064eaf2f0b28bb27f61, type: 3}
+    - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
+      propertyPath: Rooms.Array.data[0].probability
+      value: 0.237
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
+      propertyPath: Rooms.Array.data[1].probability
+      value: 0.319
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
+      propertyPath: Rooms.Array.data[2].probability
+      value: 0.331
+      objectReference: {fileID: 0}
     - target: {fileID: 2635493839846716923, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: m_Name
       value: SampleSceneGenerator
@@ -220,21 +252,29 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1500994101}
+    - target: {fileID: 3144850447187439447, guid: 088c309a4d34213418a23691fe2d0f2b, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3144850447187439447, guid: 088c309a4d34213418a23691fe2d0f2b, type: 3}
+      propertyPath: m_UpdateRectTransformForStandalone
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7848451863475576571, guid: 088c309a4d34213418a23691fe2d0f2b, type: 3}
       propertyPath: m_Name
       value: UI Variant 1 - Copy
       objectReference: {fileID: 0}
     - target: {fileID: 8463484042760446112, guid: 088c309a4d34213418a23691fe2d0f2b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8463484042760446112, guid: 088c309a4d34213418a23691fe2d0f2b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.589401
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8463484042760446112, guid: 088c309a4d34213418a23691fe2d0f2b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.03883124
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8463484042760446112, guid: 088c309a4d34213418a23691fe2d0f2b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -436,7 +476,7 @@ Transform:
   m_GameObject: {fileID: 1500994097}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 0.08, z: -20}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

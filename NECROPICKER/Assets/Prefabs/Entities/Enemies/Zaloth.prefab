@@ -144,10 +144,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cea6a7c29b5624eb3e58e9dc294545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAnimation: Damage
+  stateAnimation: GetDamage
   onEnterPerformers: []
   onUpdatePerformers: []
-  onExitPerformers: []
+  onExitPerformers:
+  - conditionContainer: {fileID: 5868816169857766955}
+    behaviourContainers: {fileID: 6095082264989658154}
   exitConditionContainer: {fileID: 5156448512569556380}
   _nextState: {fileID: 7775957336810951499}
 --- !u!1 &2033270493601490881
@@ -223,7 +225,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 0edf9c1bf5e18bc48a109b334e27cb52, type: 3}
+  m_Sprite: {fileID: -347689621, guid: 9e4ceb8c60cc85749ab2d6328cbd1241, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -375,7 +377,7 @@ GameObject:
   - component: {fileID: 8144079545442303635}
   - component: {fileID: 3942137978286833538}
   m_Layer: 0
-  m_Name: Wait 0,4s
+  m_Name: Wait 0,15s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -408,7 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da4b90bc677b294eac913160882da8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToWait: 0.4
+  timeToWait: 0.15
 --- !u!1 &5410599801278726967
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +652,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1013895885409191479, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: _speedMultiplier
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -1013895885409191479, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: targetLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 447552837958183979, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: dropItems.Array.data[0]
       value: 
@@ -659,17 +669,93 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: maxHealth
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7175076567112922902}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4931352786207020802}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeState
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayAnimation
       objectReference: {fileID: 0}
     - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: Death
       objectReference: {fileID: 0}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StateHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AnimationPlayer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 6749902001467455910}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: GetDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: State, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3932810092511083360, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 1b67c3f9691ae8d44bd7aeb21862a554, type: 2}
+    - target: {fileID: 5714122640315372556, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: m_Size.x
+      value: 1.071592
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714122640315372556, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8031214
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714122640315372556, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.035795987
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714122640315372556, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.43253586
+      objectReference: {fileID: 0}
     - target: {fileID: 5714122640315372556, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 1.3125
@@ -764,3 +850,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7265099983593255393, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
   m_PrefabInstance: {fileID: 8981344510779133785}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4931352786207020802 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4092516436690704475, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+  m_PrefabInstance: {fileID: 8981344510779133785}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f0f43c01de6cd478952a2a6f5319b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
