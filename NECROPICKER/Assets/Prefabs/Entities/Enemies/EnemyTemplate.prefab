@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7241106415184382405}
   - component: {fileID: 7539320087938121701}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: sr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8109345373264887320}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: States
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5043813179072919959}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Behaviours
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 5404580614391395293}
   - component: {fileID: 3847993717283742919}
   - component: {fileID: 2363496926857828811}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 2500752826839522197}
   - component: {fileID: 8960345816765295423}
   - component: {fileID: -1013895885409191479}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyTemplate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -439,7 +439,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   maxHealth: 1
-  _isBullet: 0
 --- !u!114 &447552837958183979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,7 +522,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6308001002921379271}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Conditions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
