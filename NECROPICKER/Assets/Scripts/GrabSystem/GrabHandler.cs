@@ -10,6 +10,31 @@ public class GrabHandler : MonoBehaviour
     [SerializeField] float grabOffset = 1f;
     [SerializeField] Inventory _inventory;
     IItem takeAbleItem;
+    IItem TakeAbleItem
+    {
+        set
+        {
+            if(takeAbleItem != value)
+            {
+                if (takeAbleItem != null) onItemDeselected.Invoke(takeAbleItem.gameObject);
+
+                if(value != null) onItemSelected.Invoke(value.gameObject);
+
+                takeAbleItem = value;
+            }
+        }
+    }
+
+    #region Events
+    UnityEvent<GameObject> onItemSelected = new UnityEvent<GameObject>();
+    public UnityEvent<GameObject> OnItemSelected => onItemSelected;
+
+    UnityEvent<GameObject> onItemDeselected = new UnityEvent<GameObject>();
+    public UnityEvent<GameObject> OnItemDeselected => onItemDeselected;
+
+    UnityEvent onItemTaken = new UnityEvent();
+    public UnityEvent OnItemTaken => onItemTaken;
+    #endregion
 
     private void Awake()
     {
@@ -21,13 +46,13 @@ public class GrabHandler : MonoBehaviour
 
         if(hit == null)
         {
-            takeAbleItem = null;
+            TakeAbleItem = null;
             return;
         }
 
         if(hit.TryGetComponent(out IItem item))
         {
-            takeAbleItem = item;
+            TakeAbleItem = item;
         }
     }
 
@@ -39,7 +64,8 @@ public class GrabHandler : MonoBehaviour
             {
                 _inventory.UpdateInventory();
                 Destroy(takeAbleItem.gameObject);
-                takeAbleItem = null;
+                TakeAbleItem = null;
+                onItemTaken.Invoke();
             }
         }
     }
