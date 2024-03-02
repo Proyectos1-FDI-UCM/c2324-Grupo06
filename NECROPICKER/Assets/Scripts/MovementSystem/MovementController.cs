@@ -8,7 +8,6 @@ public class MovementController : MonoBehaviour
     public Rigidbody2D Rb => rb;
     [SerializeField] float _speed = 10f;
     //No deberiamos tener que checkear si es un jugador puesto que se trata de código reutilizable
-    [SerializeField] bool _isPlayer = false;
     private float _OriginalSpeed;
     public float speed => _speed;
 
@@ -30,13 +29,6 @@ public class MovementController : MonoBehaviour
 
     //De todas formas esto tampoco está mal, pero si se puede evitar un Update mejor. Y sobre todo evitar la
     //comprobación de si es un jugador o no. BUEN TRABAJO :D!!
-    private void Update()
-    {
-         if (_isPlayer)
-        {
-            Move(rb.velocity.normalized);
-        }
-    }
     public void SetSpeed(float newSpeed)
     {
         _speed = newSpeed;

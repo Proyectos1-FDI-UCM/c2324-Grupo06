@@ -10,7 +10,6 @@ public class CollisionHandler : MonoBehaviour
 
         foreach(ICollidable collidable in collidables)
         {
-            Debug.Log(collidable);
             collidable.OnCollide(collision.collider);
         }
     }

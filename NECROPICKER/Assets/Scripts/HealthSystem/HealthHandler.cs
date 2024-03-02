@@ -26,8 +26,6 @@ public class HealthHandler : MonoBehaviour
             float difer = value - _currentHealth;
             OnHealthDifer?.Invoke(difer);
 
-            if (value < _currentHealth) OnTakeDamage?.Invoke();
-
             _currentHealth = value;
             OnHealthChanged?.Invoke(_currentHealth);
 
@@ -47,13 +45,14 @@ public class HealthHandler : MonoBehaviour
     {
         if (!_inmune)
         {
+            OnTakeDamage?.Invoke();
             currentHealth -= damage;
         }
     }
 
     public void NecroDamage(float damage)
     {
-            currentHealth -= damage;
+        currentHealth -= damage;
     }
 
     public void Heal(float healAmount)
