@@ -9,7 +9,7 @@ public class LaserItem : MonoBehaviour, IItem
     public ItemData ItemData => itemData;
     [SerializeField] LayerMask targetLayer;
     [SerializeField] float damage = 2f;
-    [SerializeField] float laserWidth = 1.5f;
+    // [SerializeField] float laserWidth = 1.5f;
     LineRenderer lineRenderer;
 
     private void Awake() {
