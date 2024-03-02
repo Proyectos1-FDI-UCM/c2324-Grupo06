@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12becc06b3c645b42882e011079dfb34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 20
+  _speed: 111
   _isPlayer: 0
 --- !u!212 &4291424293962612534
 SpriteRenderer:
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12becc06b3c645b42882e011079dfb34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 10
+  _speed: 25
   _isPlayer: 0
 --- !u!114 &-4661028878130148487
 MonoBehaviour:
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
-  minSpeed: 3
+  minSpeed: 1
   targetLayer:
     serializedVersion: 2
     m_Bits: 129

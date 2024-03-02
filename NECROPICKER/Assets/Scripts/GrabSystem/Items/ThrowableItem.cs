@@ -19,6 +19,7 @@ public class ThrowableItem : MonoBehaviour, IItem
     public virtual bool Use(ItemHandler handler)
     {
         handler.DropItem();
+        transform.parent.gameObject.layer = LayerMask.NameToLayer("bullet");
         movementController.Move(transform.up);
         return true;
     }
