@@ -22,11 +22,25 @@ public class GlobalStateManager : ScriptableObject
 
     public void Pause()
     {
+        Time.timeScale = 0;
         onPause?.Invoke();
     }
 
     public void Resume()
     {
+        Time.timeScale = 1;
         onResume?.Invoke();
+    }
+
+    public void SwitchPause()
+    {
+        if (Time.timeScale == 0)
+        {
+            Resume();
+        }
+        else
+        {
+            Pause();
+        }
     }
 }
