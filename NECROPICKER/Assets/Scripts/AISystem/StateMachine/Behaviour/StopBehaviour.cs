@@ -5,18 +5,25 @@ using UnityEngine;
 public class StopBehaviour : MonoBehaviour, IBehaviour
 {
     MovementController movementController;
-    [Range(0, 1)]
-    [SerializeField] float stopVelocity = 1f;
 
     private void Awake() => movementController = GetComponentInParent<MovementController>();
 
     public void ExecuteBehaviour()
     {
-        movementController.Rb.velocity = Vector2.Lerp(movementController.Rb.velocity, Vector2.zero, 
-        stopVelocity * 35 * Time.deltaTime * movementController.Rb.velocity.magnitude);
+        movementController.Rb.velocity = Vector2.zero;
     }
 
+    // IEnumerator Stop()
+    // {
+    //     while (movementController.Rb.velocity.magnitude > 0.1f)
+    //     {
+    //         movementController.Rb.velocity = Vector2.Lerp(movementController.Rb.velocity, Vector2.zero, 
+    //         stopVelocity);
+    //         yield return new WaitForSeconds(0.01f);
+    //     }
+    // }
+
     private void OnValidate() {
-        name = "Stop -> " + stopVelocity * 100 + "%";
+        name = "Stop";
     }
 }

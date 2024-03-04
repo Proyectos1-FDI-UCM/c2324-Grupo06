@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class TargetHandler : MonoBehaviour
 {
@@ -10,5 +11,10 @@ public class TargetHandler : MonoBehaviour
     private void OnEnable() {
         if(_target == null)
             _target = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
+    public void SetTarget(Transform target)
+    {
+        _target = target;
     }
 }
