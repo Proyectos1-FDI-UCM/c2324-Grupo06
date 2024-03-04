@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
+
+[CreateAssetMenu(fileName = "GlobalStateManager", menuName = "GlobalStateManager")]
+public class GlobalStateManager : ScriptableObject
+{
+    UnityEvent onGameOver = new UnityEvent();
+    public UnityEvent OnGameOver => onGameOver;
+
+    UnityEvent onPause = new UnityEvent();
+    public UnityEvent OnPause => onPause;
+
+    UnityEvent onResume = new UnityEvent();
+    public UnityEvent OnResume => onResume;
+
+    public void GameOver()
+    {
+        onGameOver?.Invoke();
+    }
+
+    public void Pause()
+    {
+        onPause?.Invoke();
+    }
+
+    public void Resume()
+    {
+        onResume?.Invoke();
+    }
+}
