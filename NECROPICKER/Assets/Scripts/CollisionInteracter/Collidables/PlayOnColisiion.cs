@@ -8,9 +8,8 @@ public class PlayOnColisiion : MonoBehaviour, ICollidable
     [SerializeField] float minSpeed = 2;
     Rigidbody2D rb;
     [SerializeField] Animator animator;
-    [SerializeField] float tiempoAnim = 0.3f;
+    [SerializeField] AnimationClip collisionAnimation;
     [SerializeField] LayerMask targetLayer;
-    [SerializeField] private GameObject prefab;
 
     private void Awake()
     {
@@ -23,8 +22,9 @@ public class PlayOnColisiion : MonoBehaviour, ICollidable
     }
     private IEnumerator Timer()
     {
-        animator.Play("Explosion");
-        yield return new WaitForSeconds(tiempoAnim);
-        Destroy(prefab);
+        animator.Play(collisionAnimation.name);
+        rb.isKinematic = true;
+        yield return new WaitForSeconds(collisionAnimation.length);
+        Destroy(gameObject);
     }
 }

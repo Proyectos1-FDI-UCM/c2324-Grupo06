@@ -209,7 +209,19 @@ MonoBehaviour:
   itemData: {fileID: 11400000, guid: 2d962e3fb97bc604aaceb51b0709a310, type: 2}
   onUse:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 99107950788134876}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Jelly
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &99107950788134876
 Animator:
   serializedVersion: 5

@@ -22,6 +22,7 @@ public class ParentItem : MonoBehaviour, IItem
 
     public bool Use(ItemHandler handler)
     {
+        onUse?.Invoke();
         UseAllItems(handler);
         return true;
     }
