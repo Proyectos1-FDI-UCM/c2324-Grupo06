@@ -7,7 +7,7 @@ public class PlayOnColisiion : MonoBehaviour, ICollidable
     // Start is called before the first frame update
     [SerializeField] float minSpeed = 2;
     Rigidbody2D rb;
-    [SerializeField] Animator animator;
+    Animator animator;
     [SerializeField] AnimationClip collisionAnimation;
     [SerializeField] LayerMask targetLayer;
 
