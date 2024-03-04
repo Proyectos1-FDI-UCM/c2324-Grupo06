@@ -54,6 +54,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8320126249473170509, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+      propertyPath: minSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8320126249473170509, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+      propertyPath: requiredLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: -8166464752845091290, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+      propertyPath: minSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2105600899019646030, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.665335
@@ -147,7 +159,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropItems:
   - {fileID: 2033584835309065513, guid: e29727cc05acdf447ab33c5b72865789, type: 3}
-  dropChance: 64000000
+  - {fileID: 4818368143737297233, guid: 91cc9db742c8e2e4d95f1425fda7fee2, type: 3}
+  - {fileID: 6013614536782353629, guid: 920515f8ea8e96c459c9cb4327d6158f, type: 3}
+  dropChance: 640000003200000032000000
 --- !u!114 &-8730428897597844027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,10 +174,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2800175a6182f4841a5751af5a054c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 2
   targetLayer:
     serializedVersion: 2
     m_Bits: 4294967295
+  exclusiveDrop: 0
+  requiredLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &4774977885484584964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +194,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speedMultiplier: 1
-  minSpeed: 0
   targetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295

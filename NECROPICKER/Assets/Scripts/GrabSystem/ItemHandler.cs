@@ -37,6 +37,7 @@ public class ItemHandler : MonoBehaviour
         item.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
         selectedItem = item.GetComponent<IItem>();
         item.GetComponent<Rigidbody2D>().isKinematic = true;
+        item.GetComponent<Rigidbody2D>().drag = 0;
         item.layer = 1;
     }
 

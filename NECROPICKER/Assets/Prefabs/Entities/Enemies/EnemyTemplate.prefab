@@ -328,6 +328,7 @@ GameObject:
   - component: {fileID: 2500752826839522197}
   - component: {fileID: 8960345816765295423}
   - component: {fileID: -1013895885409191479}
+  - component: {fileID: 8578050659581177820}
   m_Layer: 7
   m_Name: EnemyTemplate
   m_TagString: Untagged
@@ -485,16 +486,28 @@ MonoBehaviour:
   onTakeDamage:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4092516436690704475}
-        m_TargetAssemblyTypeName: AnimationPlayer, Assembly-CSharp
-        m_MethodName: PlayAnimation
+      - m_Target: {fileID: 8578050659581177820}
+        m_TargetAssemblyTypeName: PoolTaker, Assembly-CSharp
+        m_MethodName: TakeFromPool
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: GetDamage
+          m_StringArgument: hit
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3847993717283742919}
+        m_TargetAssemblyTypeName: StateHandler, Assembly-CSharp
+        m_MethodName: ChangeState
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2859700523652173628}
+          m_ObjectArgumentAssemblyTypeName: State, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hit
           m_BoolArgument: 0
         m_CallState: 2
   onDeath:
@@ -610,7 +623,20 @@ MonoBehaviour:
   minSpeed: 0
   targetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
+--- !u!114 &8578050659581177820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6247058447108451499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c648818175ef7b24cb745b50efe4faa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 0}
 --- !u!1 &7467190979149019529
 GameObject:
   m_ObjectHideFlags: 0

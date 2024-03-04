@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class DestroyOnCollision : MonoBehaviour, ICollidable
 {
-    [SerializeField] float minSpeed = 2;
     Rigidbody2D rb;
     [SerializeField] LayerMask targetLayer;
+    [SerializeField] LayerMask requiredLayer = 9;
 
     private void Awake()
     {
@@ -14,7 +14,7 @@ public class DestroyOnCollision : MonoBehaviour, ICollidable
     }
     public void OnCollide(Collider2D other)
     {
-        if (rb.velocity.magnitude >= minSpeed && targetLayer == (targetLayer | (1 << other.gameObject.layer)))
+        if (requiredLayer == (requiredLayer | (1 << gameObject.layer)) && targetLayer == (targetLayer | (1 << other.gameObject.layer)))
         {
             Destroy(gameObject);
         }
