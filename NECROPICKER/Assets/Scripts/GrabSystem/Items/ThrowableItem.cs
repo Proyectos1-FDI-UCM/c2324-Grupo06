@@ -9,6 +9,7 @@ public class ThrowableItem : MonoBehaviour, IItem
 
     protected MovementController movementController;
     protected Rigidbody2D rb;
+    [SerializeField] float multiplier = 1f;
 
     public virtual void Awake()
     {
@@ -20,7 +21,7 @@ public class ThrowableItem : MonoBehaviour, IItem
     {
         handler.DropItem();
         transform.parent.gameObject.layer = LayerMask.NameToLayer("bullet");
-        movementController.Move(transform.up);
+        movementController.Move(transform.up * multiplier);
         return true;
     }
 }
