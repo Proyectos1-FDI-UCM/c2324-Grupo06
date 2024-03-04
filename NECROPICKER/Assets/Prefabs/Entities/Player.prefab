@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cea6a7c29b5624eb3e58e9dc294545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAnimation: 
+  stateAnimation: Jefferson_Idle
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers: []
@@ -500,10 +500,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cea6a7c29b5624eb3e58e9dc294545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAnimation: 
-  onEnterPerformers:
-  - conditionContainer: {fileID: 2808724939306014726}
-    behaviourContainers: {fileID: 3026077106815396053}
+  stateAnimation: Inmunity
+  onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers:
   - conditionContainer: {fileID: 2808724939306014726}
@@ -1066,7 +1064,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 596506449, guid: adc3a88b92355894db0a7c63ec1b667b, type: 3}
+  m_Sprite: {fileID: -329155445, guid: adc3a88b92355894db0a7c63ec1b667b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1384,6 +1382,8 @@ MonoBehaviour:
   stateAnimation: GetDamage
   onEnterPerformers:
   - conditionContainer: {fileID: 2808724939306014726}
+    behaviourContainers: {fileID: 7296819733081874719}
+  - conditionContainer: {fileID: 3026077106815396053}
     behaviourContainers: {fileID: 7296819733081874719}
   onUpdatePerformers: []
   onExitPerformers:
