@@ -24,6 +24,7 @@ public class PlayOnColisiion : MonoBehaviour, ICollidable
     {
         animator.Play(collisionAnimation.name);
         rb.isKinematic = true;
+        rb.velocity = Vector2.zero;
         yield return new WaitForSeconds(collisionAnimation.length);
         Destroy(gameObject);
     }
