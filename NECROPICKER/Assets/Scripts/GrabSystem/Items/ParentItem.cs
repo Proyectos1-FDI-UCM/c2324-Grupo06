@@ -15,8 +15,10 @@ public class ParentItem : MonoBehaviour, IItem
     private void Awake() {
         for(int i = 0; i < transform.childCount; i++)
         {
-            if(transform.GetChild(i).TryGetComponent(out IItem item))
-                items.Add(item);
+            if(transform.GetChild(i).GetComponents<IItem>() != null)
+            {
+                items.AddRange(transform.GetChild(i).GetComponents<IItem>());
+            }
         }
     }
 
