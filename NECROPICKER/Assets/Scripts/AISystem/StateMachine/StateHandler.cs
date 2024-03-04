@@ -28,8 +28,12 @@ public class StateHandler : MonoBehaviour
     public void ChangeState(State newState)
     {
         currentState.OnStateExit();
+        currentState.gameObject.SetActive(false);
+
         currentState = newState;
+        
         currentState.OnStateEnter();
+        currentState.gameObject.SetActive(true);
     }
 
     void PerformPermanentBehaviours()
