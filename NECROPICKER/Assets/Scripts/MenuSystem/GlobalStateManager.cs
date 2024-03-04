@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 [CreateAssetMenu(fileName = "GlobalStateManager", menuName = "GlobalStateManager")]
 public class GlobalStateManager : ScriptableObject
@@ -15,6 +16,9 @@ public class GlobalStateManager : ScriptableObject
     UnityEvent onResume = new UnityEvent();
     public UnityEvent OnResume => onResume;
 
+    [SerializeField] InputActionMap inputActionMap;
+    [SerializeField] ScenesManager scenesManager;
+
     public void GameOver()
     {
         onGameOver?.Invoke();
@@ -23,12 +27,14 @@ public class GlobalStateManager : ScriptableObject
     public void Pause()
     {
         Time.timeScale = 0;
+        inputActionMap.Disable();
         onPause?.Invoke();
     }
 
     public void Resume()
     {
         Time.timeScale = 1;
+        inputActionMap.Enable();
         onResume?.Invoke();
     }
 
@@ -42,5 +48,10 @@ public class GlobalStateManager : ScriptableObject
         {
             Pause();
         }
+    }
+
+    public void Restart()
+    {
+        scenesManager.ReloadScene();
     }
 }

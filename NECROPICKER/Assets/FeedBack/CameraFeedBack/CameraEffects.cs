@@ -8,6 +8,10 @@ public class CameraEffects : ScriptableObject
 {
     UnityEvent<float> shakeEvent = new UnityEvent<float>();
     public UnityEvent<float> ShakeEvent => shakeEvent;
+
+    UnityEvent<float> onHitStop = new UnityEvent<float>();
+    public UnityEvent<float> OnHitStop => onHitStop;
     
     public void Shake(float shakeValue) => shakeEvent.Invoke(shakeValue);
+    public void HitStop(float hitStopValue) => onHitStop.Invoke(hitStopValue);
 }
