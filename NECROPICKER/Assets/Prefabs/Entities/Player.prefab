@@ -177,8 +177,10 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers: []
+  _negated: 0
   exitConditionContainer: {fileID: 0}
-  _nextState: {fileID: 0}
+  _nextStates:
+  - {fileID: 0}
 --- !u!1 &3026077106815396053
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,8 +288,10 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers: []
+  _negated: 0
   exitConditionContainer: {fileID: 0}
-  _nextState: {fileID: 0}
+  _nextStates:
+  - {fileID: 0}
 --- !u!1 &3867841667033881342
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,8 +561,10 @@ MonoBehaviour:
   - negated: 0
     conditionContainer: {fileID: 2808724939306014726}
     behaviourContainers: {fileID: 4042702075959453716}
+  _negated: 0
   exitConditionContainer: {fileID: 6425297195236048114}
-  _nextState: {fileID: 8029101254340552344}
+  _nextStates:
+  - {fileID: 0}
 --- !u!1 &7096676606624458962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,8 +1500,10 @@ MonoBehaviour:
   - negated: 0
     conditionContainer: {fileID: 2808724939306014726}
     behaviourContainers: {fileID: 8825567218998545405}
+  _negated: 0
   exitConditionContainer: {fileID: 7144362698587863308}
-  _nextState: {fileID: 6431556631841238763}
+  _nextStates:
+  - {fileID: 0}
 --- !u!1 &8825567218998545405
 GameObject:
   m_ObjectHideFlags: 0
