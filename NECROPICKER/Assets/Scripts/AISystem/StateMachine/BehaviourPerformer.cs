@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class BehaviourPerformer
 {
+    [SerializeField] bool negated;
     [SerializeField] GameObject conditionContainer;
     ICondition condition;
 
@@ -23,7 +24,7 @@ public class BehaviourPerformer
             initialized = true;
         }
 
-        if(condition.CheckCondition())
+        if(condition.CheckCondition() != negated)
         {
             foreach(IBehaviour behaviour in behaviours)
             {
@@ -31,7 +32,7 @@ public class BehaviourPerformer
             }
         }
         
-        return condition.CheckCondition();
+        return condition.CheckCondition() != negated;
     }
 
     void CheckNulls()
