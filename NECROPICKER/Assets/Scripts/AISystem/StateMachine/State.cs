@@ -12,6 +12,9 @@ public class State : MonoBehaviour
     [SerializeField] BehaviourPerformer[] onUpdatePerformers;
     [SerializeField] BehaviourPerformer[] onExitPerformers;
 
+    [SerializeField] bool _negated;
+    public bool negated => _negated;
+
     [SerializeField] GameObject exitConditionContainer;
     ICondition _exitCondition;
     public ICondition exitCondition => _exitCondition;
@@ -23,8 +26,8 @@ public class State : MonoBehaviour
         animationPlayer = GetComponentInParent<AnimationPlayer>();
     }
 
-    [SerializeField] State _nextState;
-    public State nextState => _nextState;
+    [SerializeField] State[] _nextStates = new State[1];
+    public State[] nextStates => _nextStates;
 
     public void OnStateEnter()
     {

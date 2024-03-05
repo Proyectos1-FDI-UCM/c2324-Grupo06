@@ -100,8 +100,10 @@ MonoBehaviour:
   - negated: 0
     conditionContainer: {fileID: 5868816169857766955}
     behaviourContainers: {fileID: 6095082264989658154}
+  _negated: 0
   exitConditionContainer: {fileID: 248544157891275822}
-  _nextState: {fileID: 7775957336810951499}
+  _nextStates:
+  - {fileID: 7775957336810951499}
 --- !u!1 &1020533315598685499
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,8 +155,10 @@ MonoBehaviour:
   - negated: 0
     conditionContainer: {fileID: 5868816169857766955}
     behaviourContainers: {fileID: 6095082264989658154}
+  _negated: 0
   exitConditionContainer: {fileID: 5156448512569556380}
-  _nextState: {fileID: 7775957336810951499}
+  _nextStates:
+  - {fileID: 7775957336810951499}
 --- !u!1 &2033270493601490881
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,8 +291,10 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers: []
+  _negated: 0
   exitConditionContainer: {fileID: 248544157891275822}
-  _nextState: {fileID: 6974208907770366731}
+  _nextStates:
+  - {fileID: 6974208907770366731}
 --- !u!1 &3333437348492206825
 GameObject:
   m_ObjectHideFlags: 0

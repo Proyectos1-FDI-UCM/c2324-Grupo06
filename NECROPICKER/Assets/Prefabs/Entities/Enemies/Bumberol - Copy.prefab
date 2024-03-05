@@ -259,16 +259,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAnimation: Esplode
   onEnterPerformers:
-  - conditionContainer: {fileID: 6292783396413637400}
+  - negated: 0
+    conditionContainer: {fileID: 6292783396413637400}
     behaviourContainers: {fileID: 8256111250389019805}
-  - conditionContainer: {fileID: 6292783396413637400}
+  - negated: 0
+    conditionContainer: {fileID: 6292783396413637400}
     behaviourContainers: {fileID: 6850386355204984679}
   onUpdatePerformers: []
   onExitPerformers:
-  - conditionContainer: {fileID: 6292783396413637400}
+  - negated: 0
+    conditionContainer: {fileID: 6292783396413637400}
     behaviourContainers: {fileID: 5328109087517626085}
+  _negated: 0
   exitConditionContainer: {fileID: 7420096732585481861}
-  _nextState: {fileID: 7128764478453160799}
+  _nextStates:
+  - {fileID: 7128764478453160799}
 --- !u!1 &3621919816031687155
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,14 +488,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAnimation: Iddle
   onEnterPerformers:
-  - conditionContainer: {fileID: 6292783396413637400}
+  - negated: 0
+    conditionContainer: {fileID: 6292783396413637400}
     behaviourContainers: {fileID: 4699488518177325670}
   onUpdatePerformers:
-  - conditionContainer: {fileID: 7064774798161874461}
+  - negated: 0
+    conditionContainer: {fileID: 7064774798161874461}
     behaviourContainers: {fileID: 420933495506142498}
   onExitPerformers: []
+  _negated: 0
   exitConditionContainer: {fileID: 3642139994876439849}
-  _nextState: {fileID: 7128764478453160799}
+  _nextStates:
+  - {fileID: 7128764478453160799}
 --- !u!1 &4699488518177325670
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,7 +788,7 @@ GameObject:
   - component: {fileID: 2009737131133663554}
   - component: {fileID: 4078764414351345531}
   m_Layer: 0
-  m_Name: Stop -> 50%
+  m_Name: Stop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -812,7 +821,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4313636c7671d4a4dac7c755ed145fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopVelocity: 0.5
 --- !u!1 &6937025221378256901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,8 +1088,10 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers: []
+  _negated: 0
   exitConditionContainer: {fileID: 1364912080639985989}
-  _nextState: {fileID: 7128764478453160799}
+  _nextStates:
+  - {fileID: 7128764478453160799}
 --- !u!1 &8513260073200429853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,11 +1139,14 @@ MonoBehaviour:
   stateAnimation: Idle
   onEnterPerformers: []
   onUpdatePerformers:
-  - conditionContainer: {fileID: 7064774798161874461}
+  - negated: 0
+    conditionContainer: {fileID: 7064774798161874461}
     behaviourContainers: {fileID: 420933495506142498}
   onExitPerformers: []
+  _negated: 0
   exitConditionContainer: {fileID: 3642139994876439849}
-  _nextState: {fileID: 6756299985513553550}
+  _nextStates:
+  - {fileID: 6756299985513553550}
 --- !u!1001 &9188190967353180827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1159,8 +1172,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3621919816031687155}
     - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3932810092511083360, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: m_Controller

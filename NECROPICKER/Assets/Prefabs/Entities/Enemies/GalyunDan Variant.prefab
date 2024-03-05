@@ -360,8 +360,10 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers: []
+  _negated: 0
   exitConditionContainer: {fileID: 0}
-  _nextState: {fileID: 0}
+  _nextStates:
+  - {fileID: 0}
 --- !u!1 &6688369336328558098
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,8 +511,10 @@ MonoBehaviour:
     conditionContainer: {fileID: 3857433715154128709}
     behaviourContainers: {fileID: 4953130146848939855}
   onExitPerformers: []
+  _negated: 0
   exitConditionContainer: {fileID: 6713438938118241117}
-  _nextState: {fileID: 3017221068943998550}
+  _nextStates:
+  - {fileID: 3017221068943998550}
 --- !u!1 &8433905495211054770
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,8 +569,10 @@ MonoBehaviour:
   - negated: 0
     conditionContainer: {fileID: 3857433715154128709}
     behaviourContainers: {fileID: 3334733598758309410}
+  _negated: 0
   exitConditionContainer: {fileID: 2519474382645715982}
-  _nextState: {fileID: 5894163231594983358}
+  _nextStates:
+  - {fileID: 5894163231594983358}
 --- !u!1001 &6816184777472266266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -591,6 +597,10 @@ PrefabInstance:
       propertyPath: exitConditionContainer
       value: 
       objectReference: {fileID: 2519474382645715982}
+    - target: {fileID: 2859700523652173628, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: _nextStates.Array.data[0]
+      value: 
+      objectReference: {fileID: 5894163231594983358}
     - target: {fileID: 3847993717283742919, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: initialState
       value: 
