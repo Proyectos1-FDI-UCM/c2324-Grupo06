@@ -11,6 +11,8 @@ public class ItemInventorySubscriber : MonoBehaviour
         _itemHandler = GetComponent<ItemHandler>();
         _inventory.OnItemChanged.AddListener(_itemHandler.OnItemChanged);
         _itemHandler.OnItemDrop.AddListener(_inventory.RemoveItem);
+
+        _inventory.UpdateInventory();
     }
 
     private void OnDestroy() {

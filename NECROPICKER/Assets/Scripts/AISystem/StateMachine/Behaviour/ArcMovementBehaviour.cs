@@ -22,7 +22,7 @@ public class ArcMovementBehaviour : MonoBehaviour, IBehaviour
     public void ExecuteBehaviour()
     {
         Vector2 start = transform.position;
-        Vector2 end = new Vector2(Random.Range(-range.x, range.x), Random.Range(-range.y, range.y));
+        Vector2 end = new Vector2(Random.Range(-range.x, range.x), Random.Range(-range.y, range.y)) + (Vector2)transform.position;
 
         StartCoroutine(Curve(start, end));
     }
@@ -37,7 +37,7 @@ public class ArcMovementBehaviour : MonoBehaviour, IBehaviour
             Vector2 position = Vector2.Lerp(start, end, t);
             position.y += curve.Evaluate(t) * height;
 
-            movementController.transform.position = position;
+            transform.position = position;
 
             timePassed += Time.deltaTime;
             yield return null;
@@ -45,6 +45,6 @@ public class ArcMovementBehaviour : MonoBehaviour, IBehaviour
     }
 
     private void OnValidate() {
-        name = $"ArcMovementBehaviour {duration}s";
+        // name = $"ArcMovementBehaviour {duration}s";
     }
 }
