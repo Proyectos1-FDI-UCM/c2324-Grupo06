@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeProfile: {fileID: 11400000, guid: a07439d6c69dad34bb89ef5fbf6ce622, type: 2}
-  intensity: 1
+  intensity: 0.75
 --- !u!1 &7144362698587863308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,7 +1141,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: -876546973899608171, guid: 2cd5d15b925ad9744bc54170c183464e, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1482,7 +1482,7 @@ MonoBehaviour:
   - conditionContainer: {fileID: 2808724939306014726}
     behaviourContainers: {fileID: 7296819733081874719}
   - conditionContainer: {fileID: 2808724939306014726}
-    behaviourContainers: {fileID: 7296819733081874719}
+    behaviourContainers: {fileID: 3026077106815396053}
   onUpdatePerformers: []
   onExitPerformers:
   - conditionContainer: {fileID: 2808724939306014726}

@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemData: {fileID: 11400000, guid: 3b5e297f8c58e4f43bf70cb4e2cb856a, type: 2}
+  multiplier: 1
 --- !u!1001 &6653425205539333202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55,15 +56,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8166464752845091290, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       propertyPath: targetLayer.m_Bits
-      value: 0
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: -1005988595442207404, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+      propertyPath: m_Size.x
+      value: 1.3973205
       objectReference: {fileID: 0}
     - target: {fileID: -1005988595442207404, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       propertyPath: m_Size.y
-      value: 0.32714868
+      value: 1.1880095
+      objectReference: {fileID: 0}
+    - target: {fileID: -1005988595442207404, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.012416244
       objectReference: {fileID: 0}
     - target: {fileID: -1005988595442207404, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       propertyPath: m_Offset.y
-      value: 0.0045462847
+      value: -0.016147494
       objectReference: {fileID: 0}
     - target: {fileID: 2105600899019646030, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       propertyPath: m_LocalPosition.x

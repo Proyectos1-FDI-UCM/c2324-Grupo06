@@ -33,13 +33,13 @@ public class RandomInstancerOnGridArea : MonoBehaviour
                 for(int i = 0; i < instance.Amount; i++)
                 {
                     Vector3 randomOffset = new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), 0);
-                    Vector3 randomPosition = tilemap.WorldToCell(transform.position + randomOffset);
+                    Vector3 randomPosition = transform.position + randomOffset;
 
-                    while(Physics2D.OverlapBox(randomPosition, new Vector2(0.5f, 0.5f), 0) != null)
-                    {
-                        randomOffset = new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), 0);
-                        randomPosition = tilemap.WorldToCell(transform.position + randomOffset);
-                    }
+                    // while(Physics2D.OverlapBox(randomPosition, new Vector2(0.5f, 0.5f), 0) != null)
+                    // {
+                    //     randomOffset = new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), 0);
+                    //     randomPosition = transform.position + randomOffset;
+                    // }
 
                     Instantiate(instance.Prefab, randomPosition, Quaternion.identity);
                 }
