@@ -418,10 +418,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec57dfbe24a2054898a2cbbeef65181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 2
   targetLayer:
     serializedVersion: 2
     m_Bits: 4294967295
+  requiredLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!4 &2273148807198837860 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2105600899019646030, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}

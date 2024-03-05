@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 7204166686157451126}
   - component: {fileID: 9188580237525665907}
   - component: {fileID: 2670096651792955070}
-  - component: {fileID: 2933055341558394460}
   m_Layer: 8
   m_Name: Bullet
   m_TagString: Untagged
@@ -183,7 +182,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speedMultiplier: 15
-  minSpeed: 0
   targetLayer:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -199,6 +197,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af29d14ca9ba2194da6f3c5a0bf2ef46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onCollision:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2670096651792955070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,22 +212,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec57dfbe24a2054898a2cbbeef65181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 0
   targetLayer:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2933055341558394460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4567352639947266525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2c3d3bc805837c4c93615bd07b25379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraEffects: {fileID: 11400000, guid: d65e42c8fa3657449b23b071403dceb6, type: 2}
-  hitStopValue: 0.1
-  shakeValue: 0.75
+  requiredLayer:
+    serializedVersion: 2
+    m_Bits: 256
