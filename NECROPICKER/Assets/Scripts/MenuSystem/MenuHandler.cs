@@ -8,7 +8,6 @@ public class MenuHandler : MonoBehaviour
 
     private void Awake()
     {
-        globalStateManager.OnGameOver.AddListener(() => ChangeMenu(MenuType.GameOver));
         globalStateManager.OnPause.AddListener(() => ChangeMenu(MenuType.Pause));
         globalStateManager.OnResume.AddListener(() => ChangeMenu(MenuType.none));
     }
@@ -25,6 +24,5 @@ public class MenuHandler : MonoBehaviour
 public enum MenuType
 {
     none,
-    Pause,
-    GameOver
+    Pause
 }

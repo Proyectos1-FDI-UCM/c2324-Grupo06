@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5782795355629275301}
   - component: {fileID: -1132469893432273640}
   - component: {fileID: -8320126249473170509}
+  - component: {fileID: -2842221976607793085}
   m_Layer: 6
   m_Name: ItemTemplate
   m_TagString: Untagged
@@ -241,6 +242,54 @@ MonoBehaviour:
   requiredLayer:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &-2842221976607793085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2201132897841741059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f61b1206e1f5f84eb482bc46a96d3c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.47644553
+      value: 0.9796454
+      inSlope: 0.10226611
+      outSlope: 0.10226611
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.98829186
+      value: 0.009388983
+      inSlope: -4.0218654
+      outSlope: -4.0218654
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.20925094
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  duration: 0.75
+  height: 3
+  range: {x: -5, y: 5}
 --- !u!1 &3148872780604231532
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,9 +7,6 @@ using UnityEngine.InputSystem;
 [CreateAssetMenu(fileName = "GlobalStateManager", menuName = "GlobalStateManager")]
 public class GlobalStateManager : ScriptableObject
 {
-    UnityEvent onGameOver = new UnityEvent();
-    public UnityEvent OnGameOver => onGameOver;
-
     UnityEvent onPause = new UnityEvent();
     public UnityEvent OnPause => onPause;
 
@@ -19,10 +16,6 @@ public class GlobalStateManager : ScriptableObject
     [SerializeField] InputActionMap inputActionMap;
     [SerializeField] ScenesManager scenesManager;
 
-    public void GameOver()
-    {
-        onGameOver?.Invoke();
-    }
 
     public void Pause()
     {

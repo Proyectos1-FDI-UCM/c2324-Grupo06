@@ -64,7 +64,7 @@ public class WaveFunctionCollapse : MonoBehaviour
                     }
                 }
             }
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.001f);
             wavesToComplete = newWavesPositions;
         }
     }
