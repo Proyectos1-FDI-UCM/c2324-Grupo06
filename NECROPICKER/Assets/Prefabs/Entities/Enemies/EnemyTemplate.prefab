@@ -132,7 +132,8 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers:
-  - conditionContainer: {fileID: 3902890432214048737}
+  - negated: 0
+    conditionContainer: {fileID: 3902890432214048737}
     behaviourContainers: {fileID: 7467190979149019529}
   exitConditionContainer: {fileID: 0}
   _nextState: {fileID: 0}

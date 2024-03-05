@@ -499,11 +499,14 @@ MonoBehaviour:
   stateAnimation: Idle
   onEnterPerformers: []
   onUpdatePerformers:
-  - conditionContainer: {fileID: 3857433715154128709}
+  - negated: 0
+    conditionContainer: {fileID: 3857433715154128709}
     behaviourContainers: {fileID: 6688369336328558098}
-  - conditionContainer: {fileID: 3857433715154128709}
+  - negated: 0
+    conditionContainer: {fileID: 3857433715154128709}
     behaviourContainers: {fileID: 1221535672200724006}
-  - conditionContainer: {fileID: 3857433715154128709}
+  - negated: 0
+    conditionContainer: {fileID: 3857433715154128709}
     behaviourContainers: {fileID: 4953130146848939855}
   onExitPerformers: []
   exitConditionContainer: {fileID: 6713438938118241117}
@@ -554,11 +557,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAnimation: Attacking
   onEnterPerformers:
-  - conditionContainer: {fileID: 3857433715154128709}
+  - negated: 0
+    conditionContainer: {fileID: 3857433715154128709}
     behaviourContainers: {fileID: 4122827003777083795}
   onUpdatePerformers: []
   onExitPerformers:
-  - conditionContainer: {fileID: 3857433715154128709}
+  - negated: 0
+    conditionContainer: {fileID: 3857433715154128709}
     behaviourContainers: {fileID: 3334733598758309410}
   exitConditionContainer: {fileID: 2519474382645715982}
   _nextState: {fileID: 5894163231594983358}

@@ -93,10 +93,12 @@ MonoBehaviour:
   stateAnimation: Move
   onEnterPerformers: []
   onUpdatePerformers:
-  - conditionContainer: {fileID: 5868816169857766955}
+  - negated: 0
+    conditionContainer: {fileID: 5868816169857766955}
     behaviourContainers: {fileID: 3333437348492206825}
   onExitPerformers:
-  - conditionContainer: {fileID: 5868816169857766955}
+  - negated: 0
+    conditionContainer: {fileID: 5868816169857766955}
     behaviourContainers: {fileID: 6095082264989658154}
   exitConditionContainer: {fileID: 248544157891275822}
   _nextState: {fileID: 7775957336810951499}
@@ -148,7 +150,8 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers:
-  - conditionContainer: {fileID: 5868816169857766955}
+  - negated: 0
+    conditionContainer: {fileID: 5868816169857766955}
     behaviourContainers: {fileID: 6095082264989658154}
   exitConditionContainer: {fileID: 5156448512569556380}
   _nextState: {fileID: 7775957336810951499}

@@ -554,7 +554,8 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers:
-  - conditionContainer: {fileID: 2808724939306014726}
+  - negated: 0
+    conditionContainer: {fileID: 2808724939306014726}
     behaviourContainers: {fileID: 4042702075959453716}
   exitConditionContainer: {fileID: 6425297195236048114}
   _nextState: {fileID: 8029101254340552344}
@@ -1479,15 +1480,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAnimation: GetDamage
   onEnterPerformers:
-  - conditionContainer: {fileID: 2808724939306014726}
+  - negated: 0
+    conditionContainer: {fileID: 2808724939306014726}
     behaviourContainers: {fileID: 7296819733081874719}
-  - conditionContainer: {fileID: 2808724939306014726}
+  - negated: 0
+    conditionContainer: {fileID: 2808724939306014726}
     behaviourContainers: {fileID: 3026077106815396053}
   onUpdatePerformers: []
   onExitPerformers:
-  - conditionContainer: {fileID: 2808724939306014726}
+  - negated: 0
+    conditionContainer: {fileID: 2808724939306014726}
     behaviourContainers: {fileID: 4249752744029082576}
-  - conditionContainer: {fileID: 2808724939306014726}
+  - negated: 0
+    conditionContainer: {fileID: 2808724939306014726}
     behaviourContainers: {fileID: 8825567218998545405}
   exitConditionContainer: {fileID: 7144362698587863308}
   _nextState: {fileID: 6431556631841238763}
