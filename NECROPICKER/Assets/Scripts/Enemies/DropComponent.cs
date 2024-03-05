@@ -47,7 +47,6 @@ public class DropComponent : MonoBehaviour
 
     void LaunchItem(GameObject item)
     {
-        print("Lanzando item");
         if(physicDrop)
         {
             if (item.TryGetComponent(out Rigidbody2D rb))
@@ -60,7 +59,6 @@ public class DropComponent : MonoBehaviour
         {
             if(item.TryGetComponent(out IBehaviour behaviour))
             {
-                print("Ejecutando comportamiento");
                 behaviour.ExecuteBehaviour();
             }
         }

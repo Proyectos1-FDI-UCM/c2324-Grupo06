@@ -18,7 +18,7 @@ public class StateHandler : MonoBehaviour
 
         if (currentState.exitCondition != null)
         {
-            int randomState = Random.Range(0, currentState.nextStates.Length - 1);
+            int randomState = Random.Range(0, currentState.nextStates.Length);
             if (currentState.exitCondition.CheckCondition() != currentState.negated) ChangeState(currentState.nextStates[randomState]);
         }
         if(permanentBehaviours != null) PerformPermanentBehaviours();
