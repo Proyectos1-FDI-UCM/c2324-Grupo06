@@ -9,7 +9,7 @@ public class InstantiateBehaviour : MonoBehaviour, IBehaviour
 
     public void ExecuteBehaviour()
     {
-        Instantiate(prefab, transform.position, quaternion.identity, transform.parent);
+        Instantiate(prefab, transform.position, quaternion.identity);
     }
 
     private void OnValidate()

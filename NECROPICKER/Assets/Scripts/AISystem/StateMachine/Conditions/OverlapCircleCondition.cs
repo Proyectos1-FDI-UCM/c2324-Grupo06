@@ -16,4 +16,15 @@ public class OverlapCircleCondition : MonoBehaviour, ICondition
     {
         return Physics2D.OverlapCircle(center.position, radius, layerMask);
     }
+
+    private void OnValidate() {
+        name = "Overlap Circle Condition " + radius + "m";
+    }
+
+    private void OnDrawGizmos() {
+        if(center == null) center = transform;
+        
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(center.position, radius);
+    }
 }
