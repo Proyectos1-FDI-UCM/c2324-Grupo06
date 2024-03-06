@@ -12,8 +12,8 @@ using UnityEngine.Events;
 public class AudioPlayer : ScriptableObject
 {
     public AudioClip[] clips;
-    public Vector2 volume;
-    public Vector2 pitch;
+    public Vector2 volume = new Vector2(1f, 1f);
+    public Vector2 pitch = new Vector2(1f, 1f);
     [SerializeField] int playIndex;
     [SerializeField] private SoundClipOrder playOrder;
 
