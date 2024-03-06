@@ -813,13 +813,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11500000, guid: d706f0e6e63fac547929bb7f97c9d511, type: 3}
-        m_TargetAssemblyTypeName: StateHandler, Assembly-CSharp
-        m_MethodName: ChangeState
-        m_Mode: 2
+      - m_Target: {fileID: 11400000, guid: 2ab6ab99117bb6a4785aa034683d96f5, type: 2}
+        m_TargetAssemblyTypeName: GlobalStateManager, Assembly-CSharp
+        m_MethodName: Death
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 6079593398602963538}
-          m_ObjectArgumentAssemblyTypeName: State, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
