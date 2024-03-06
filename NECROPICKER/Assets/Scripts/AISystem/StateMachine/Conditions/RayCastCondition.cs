@@ -4,19 +4,11 @@ using UnityEngine;
 
 public class RayCastCondition : MonoBehaviour, ICondition
 {
-    TargetHandler targetHandler;
-    Pointer pointer;
     [SerializeField] float length = 10;
-
-    private void Awake()
-    {
-        targetHandler = GetComponentInParent<TargetHandler>();
-        pointer = GetComponentInParent<Pointer>();
-    }
+    [SerializeField] LayerMask targetLayer;
 
     public bool CheckCondition()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, pointer.GetDirection(), length, targetHandler.gameObject.layer);
-        return hit;
+        return Physics2D.Raycast(transform.position, transform.up, length, targetLayer);
     }
 }
