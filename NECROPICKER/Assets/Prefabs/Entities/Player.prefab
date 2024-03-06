@@ -813,6 +813,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11500000, guid: d706f0e6e63fac547929bb7f97c9d511, type: 3}
+        m_TargetAssemblyTypeName: StateHandler, Assembly-CSharp
+        m_MethodName: ChangeState
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 6079593398602963538}
+          m_ObjectArgumentAssemblyTypeName: State, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   maxHealth: 12
 --- !u!95 &119600144967311043
 Animator:
