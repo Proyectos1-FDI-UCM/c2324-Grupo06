@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b57c8e60ee890ed4ea19cb9657a9175a, type: 3}
-  m_Name: EnemyDeathSfx
+  m_Name: Death_theme
   m_EditorClassIdentifier: 
-  clips: []
-  volume: {x: 0, y: 0}
-  pitch: {x: 0, y: 0}
+  clips:
+  - {fileID: 8300000, guid: 7a31a4f21972e0743aa53c29ff7bbe28, type: 3}
+  volume: {x: 1, y: 1}
+  pitch: {x: 1, y: 1}
   playIndex: 0
   playOrder: 0

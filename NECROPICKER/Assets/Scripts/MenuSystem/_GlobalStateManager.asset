@@ -12,5 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d706f0e6e63fac547929bb7f97c9d511, type: 3}
   m_Name: _GlobalStateManager
   m_EditorClassIdentifier: 
+  onPause:
+    m_PersistentCalls:
+      m_Calls: []
+  onResume:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: cedc9ad35c3f90b4d9eb52286ef0dafa, type: 2}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   inputActionAsset: {fileID: -944628639613478452, guid: 167d68811d0269249af63e6c593c7c31, type: 3}
   scenesManager: {fileID: 11400000, guid: dcd41b88c4a42b3418b30d67140e6d1e, type: 2}

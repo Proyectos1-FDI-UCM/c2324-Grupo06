@@ -5,10 +5,13 @@ using UnityEngine;
 public class AudioPerformer : MonoBehaviour
 {
 
-    [SerializeField] AudioPlayer[] _audioPlayer;
+    AudioPlayer[] _audioPlayer;
 
     private void Awake()
     {
+        _audioPlayer = Resources.LoadAll<AudioPlayer>("SoundPlayers");
+        print(_audioPlayer.Length);
+
         for (int i = 0; i < _audioPlayer.Length; i++)
         {
             AudioSource currentSource = gameObject.AddComponent<AudioSource>();
