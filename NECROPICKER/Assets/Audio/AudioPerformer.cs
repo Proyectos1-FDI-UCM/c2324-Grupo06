@@ -6,9 +6,20 @@ public class AudioPerformer : MonoBehaviour
 {
 
     AudioPlayer[] _audioPlayer;
-
-    private void Awake()
+    static private AudioPerformer _instance;
+    static public AudioPerformer Instance
     {
+        get { return _instance; }
+    }
+    private void Awake()
+        
+    {
+        if (_instance != null)
+        {
+            Destroy(_instance.gameObject);
+        }
+
+         DontDestroyOnLoad(this.gameObject);
         _audioPlayer = Resources.LoadAll<AudioPlayer>("SoundPlayers");
 
         for (int i = 0; i < _audioPlayer.Length; i++)
@@ -27,4 +38,5 @@ public class AudioPerformer : MonoBehaviour
         }
 
     }
+    
 }
