@@ -11,6 +11,7 @@ public class StateHandler : MonoBehaviour
     void Start()
     {
         currentState = initialState;
+        currentState.OnStateEnter();
     }
 
     private void Update() {
