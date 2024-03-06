@@ -10,7 +10,6 @@ public class AudioPerformer : MonoBehaviour
     private void Awake()
     {
         _audioPlayer = Resources.LoadAll<AudioPlayer>("SoundPlayers");
-        print(_audioPlayer.Length);
 
         for (int i = 0; i < _audioPlayer.Length; i++)
         {

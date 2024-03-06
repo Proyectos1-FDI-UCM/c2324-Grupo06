@@ -25,7 +25,7 @@ public class GlobalStateManager : ScriptableObject
     public void Pause()
     {
         Time.timeScale = 0;
-        inputActionAsset.Disable();
+        // inputActionAsset.Disable();
 
         onPause?.Invoke();
     }
