@@ -52,6 +52,7 @@ public class GlobalStateManager : ScriptableObject
     public void Restart()
     {
         scenesManager.ReloadScene();
+        Resume();
     }
     public void Exit()
     {
