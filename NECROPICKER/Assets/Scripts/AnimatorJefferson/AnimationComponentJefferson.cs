@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class AnimationComponentJefferson : MonoBehaviour
 {
-    [SerializeField]
     Animator animator;
-    [SerializeField]
     Rigidbody2D rb;
     float previousX;
     float previousY;
     bool isMooving;
-
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+    }
     // Update is called once per frame
     void Update()
     {
