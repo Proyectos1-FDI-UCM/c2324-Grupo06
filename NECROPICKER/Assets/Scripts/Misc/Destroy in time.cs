@@ -9,6 +9,7 @@ public class Destroyintime : MonoBehaviour
     [SerializeField] GameObject GameObject;
     void Start()
     {
+        if(GameObject == null) GameObject = gameObject;
         Destroy(GameObject, destroytime);
     }
 }

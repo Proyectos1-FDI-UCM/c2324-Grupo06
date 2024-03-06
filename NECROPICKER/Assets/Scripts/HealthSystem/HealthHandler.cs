@@ -29,10 +29,7 @@ public class HealthHandler : MonoBehaviour
             _currentHealth = value;
             OnHealthChanged?.Invoke(_currentHealth);
 
-            if (value <= 0) 
-            {
-                OnDeath?.Invoke();
-            }
+            if (value <= 0) Death();
         }
     }
 
@@ -41,6 +38,9 @@ public class HealthHandler : MonoBehaviour
     private bool _inmune;
 
     void Start() => SetCurrentHealth(maxHealth);
+
+    public void Death() => onDeath?.Invoke();
+
     public void TakeDamage(float damage)
     {
         if (!_inmune)
