@@ -219,11 +219,14 @@ MonoBehaviour:
   stateAnimation: 
   onEnterPerformers: []
   onUpdatePerformers:
-  - conditionContainer: {fileID: 8137820739575007529}
+  - negated: 0
+    conditionContainer: {fileID: 8137820739575007529}
     behaviourContainers: {fileID: 6817237036538369376}
   onExitPerformers: []
+  _negated: 0
   exitConditionContainer: {fileID: 0}
-  _nextState: {fileID: 0}
+  _nextStates:
+  - {fileID: 0}
 --- !u!1 &6817237036538369376
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class RepeatBehaviour : MonoBehaviour, IBehaviour
 {
-    [SerializeField] private int _numberOfIterations;
+    [SerializeField] private int _minNumberOfIterations;
+    [SerializeField] private int _maxNumberOfIterations;
+    private int _numberOfIterations;
     [SerializeField] BehaviourIteration[] _behavioursToRepeat;
     public void ExecuteBehaviour()
     {
@@ -12,6 +14,7 @@ public class RepeatBehaviour : MonoBehaviour, IBehaviour
     }
     private IEnumerator Repeat()
     {
+        _numberOfIterations = Random.Range(_minNumberOfIterations, _maxNumberOfIterations + 1);
         for(int i = 0; i < _numberOfIterations; i++)
         {
             foreach (BehaviourIteration iteration in _behavioursToRepeat)

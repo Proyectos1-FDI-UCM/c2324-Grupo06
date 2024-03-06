@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.Events;
 
 public class RandomInstancerOnGridArea : MonoBehaviour
 {
@@ -44,6 +45,21 @@ public class RandomInstancerOnGridArea : MonoBehaviour
 
                     Instantiate(instance.Prefab, randomPosition, Quaternion.identity);
                 }
+            }
+        }
+    }
+    public void InstanceRandomExclusive()
+    {
+        foreach(InstanceWithProbability instance in instances)
+        {
+            float sumOfProbabilities = 0;
+            sumOfProbabilities += instance.Probability;
+            if (Random.value < sumOfProbabilities)
+            {
+                Vector3 randomOffset = new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), 0);
+                Vector3 randomPosition = transform.position + randomOffset;
+                Instantiate(instance.Prefab, randomPosition, Quaternion.identity);
+                return;
             }
         }
     }
