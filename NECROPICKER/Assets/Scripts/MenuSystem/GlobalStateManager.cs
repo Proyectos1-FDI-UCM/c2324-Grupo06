@@ -13,21 +13,22 @@ public class GlobalStateManager : ScriptableObject
     UnityEvent onResume = new UnityEvent();
     public UnityEvent OnResume => onResume;
 
-    [SerializeField] InputActionMap inputActionMap;
+    [SerializeField] InputActionAsset inputActionAsset;
     [SerializeField] ScenesManager scenesManager;
 
 
     public void Pause()
     {
         Time.timeScale = 0;
-        inputActionMap.Disable();
+        inputActionAsset.Disable();
+
         onPause?.Invoke();
     }
 
     public void Resume()
     {
         Time.timeScale = 1;
-        inputActionMap.Enable();
+        inputActionAsset.Enable();
         onResume?.Invoke();
     }
 
