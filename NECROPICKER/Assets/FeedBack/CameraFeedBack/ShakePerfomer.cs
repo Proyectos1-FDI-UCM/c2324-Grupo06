@@ -34,12 +34,11 @@ public class ShakePerfomer : MonoBehaviour
     {
         cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = shakeValue;
         cinemachineBasicMultiChannelPerlin.m_FrequencyGain = shakeValue;
-        print(Gamepad.current.name);
-        Gamepad.current.SetMotorSpeeds(3f, 3f);
+        //Gamepad.current.SetMotorSpeeds(3f, 3f);
 
         yield return new WaitForSecondsRealtime(shakeTime);
 
-        Gamepad.current.SetMotorSpeeds(0, 0);
+        //Gamepad.current.SetMotorSpeeds(0, 0);
         cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 0;
         cinemachineBasicMultiChannelPerlin.m_FrequencyGain = 0;
     }

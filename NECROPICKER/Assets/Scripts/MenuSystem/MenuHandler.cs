@@ -10,6 +10,7 @@ public class MenuHandler : MonoBehaviour
     {
         globalStateManager.OnPause.AddListener(() => ChangeMenu(MenuType.Pause));
         globalStateManager.OnResume.AddListener(() => ChangeMenu(MenuType.none));
+        globalStateManager.OnDeath.AddListener(() => ChangeMenu(MenuType.Death));
     }
 
     void ChangeMenu(MenuType menuType)
@@ -24,5 +25,6 @@ public class MenuHandler : MonoBehaviour
 public enum MenuType
 {
     none,
-    Pause
+    Pause,
+    Death
 }

@@ -6,15 +6,19 @@ using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "NewSoundEffect", menuName = "Audio/New Sound Effect")]
-public class AudioManager : ScriptableObject
+public class AudioPlayer : ScriptableObject
 {
     public AudioClip[] clips;
     public Vector2 volume;
     public Vector2 pitch;
     [SerializeField] int playIndex;
     [SerializeField] private SoundClipOrder playOrder;
+
+    private UnityEvent<AudioClip, float, float> _onAudiPlay;
+    public UnityEvent<AudioClip, float, float> OnAudioPlay => _onAudiPlay;
 
 
     private AudioClip audioClip()
@@ -41,33 +45,22 @@ public class AudioManager : ScriptableObject
         return clip;
     }
 
-    public AudioSource Play(AudioSource audioSourceParam = null)
+    public void Play()
     {
+        
+
         if (clips.Length == 0)  //por si acaso falta una pista de audio
         {
             Debug.Log($"Falta el clip de audio {name}");
-            return null;
         }
-
-        var source = audioSourceParam;
-        if (source == null)  //si la fuente de audio no es nula crea una fuente de audio
-        {
-            var _obj = new GameObject("sound", typeof(AudioSource));
-            source = _obj.AddComponent<AudioSource>();
-        }
-
 
         //configuracion del audio:
-        source.clip = clips[0];
-        source.volume = Random.Range(volume.x, volume.y);
-        source.pitch = Random.Range(pitch.x, pitch.y);
-        source.Play();
+        //source.clip = clips[0];
+        float actualVolume = Random.Range(volume.x, volume.y);
+        float actualPitch = Random.Range(pitch.x, pitch.y);
+        //source.Play();
 
-
-        Destroy(source.gameObject, source.clip.length / source.pitch);
-
-        return source;
-
+        _onAudiPlay?.Invoke(audioClip(), actualVolume, actualPitch);
     }
 
     enum SoundClipOrder

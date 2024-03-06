@@ -9,8 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d706f0e6e63fac547929bb7f97c9d511, type: 3}
-  m_Name: _GlobalStateManager
+  m_Script: {fileID: 11500000, guid: b57c8e60ee890ed4ea19cb9657a9175a, type: 3}
+  m_Name: PlayerDamageSfx
   m_EditorClassIdentifier: 
-  inputActionAsset: {fileID: -944628639613478452, guid: 167d68811d0269249af63e6c593c7c31, type: 3}
-  scenesManager: {fileID: 11400000, guid: dcd41b88c4a42b3418b30d67140e6d1e, type: 2}
+  clips:
+  - {fileID: 8300000, guid: 9e0adefca841fb74cb0e2c5b0fc0f582, type: 3}
+  volume: {x: 1, y: 1}
+  pitch: {x: 1, y: 1}
+  playIndex: 0
+  playOrder: 0

@@ -11,23 +11,29 @@ public class GlobalStateManager : ScriptableObject
     public UnityEvent OnPause => onPause;
 
     UnityEvent onResume = new UnityEvent();
+
     public UnityEvent OnResume => onResume;
 
-    [SerializeField] InputActionMap inputActionMap;
+    UnityEvent onDeath = new UnityEvent();
+
+    public UnityEvent OnDeath => onDeath;
+
+    [SerializeField] InputActionAsset inputActionAsset;
     [SerializeField] ScenesManager scenesManager;
 
 
     public void Pause()
     {
         Time.timeScale = 0;
-        inputActionMap.Disable();
+        inputActionAsset.Disable();
+
         onPause?.Invoke();
     }
 
     public void Resume()
     {
         Time.timeScale = 1;
-        inputActionMap.Enable();
+        inputActionAsset.Enable();
         onResume?.Invoke();
     }
 
@@ -46,5 +52,17 @@ public class GlobalStateManager : ScriptableObject
     public void Restart()
     {
         scenesManager.ReloadScene();
+        Resume();
+    }
+    public void Exit()
+    {
+        Application.Quit();
+    }
+    public void Death()
+    {
+        Time.timeScale = 0;
+        inputActionAsset.Disable();
+
+        onDeath?.Invoke();
     }
 }
