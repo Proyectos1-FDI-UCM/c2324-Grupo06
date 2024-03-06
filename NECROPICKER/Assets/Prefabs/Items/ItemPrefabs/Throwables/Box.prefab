@@ -75,7 +75,15 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -3087249472022360179, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -3087249472022360179, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2131724936906906901}
+    - target: {fileID: -3087249472022360179, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2131724936906906901}
     - target: {fileID: -3087249472022360179, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
@@ -83,7 +91,15 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -3087249472022360179, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3087249472022360179, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TakeFromPool
+      objectReference: {fileID: 0}
+    - target: {fileID: -3087249472022360179, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: TakeFromPool
       objectReference: {fileID: 0}
     - target: {fileID: -3087249472022360179, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
@@ -91,11 +107,23 @@ PrefabInstance:
       value: PoolTaker, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: -3087249472022360179, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PoolTaker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -3087249472022360179, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: smoke
       objectReference: {fileID: 0}
     - target: {fileID: -3087249472022360179, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: smoke
+      objectReference: {fileID: 0}
+    - target: {fileID: -3087249472022360179, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: -3087249472022360179, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2105600899019646030, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
