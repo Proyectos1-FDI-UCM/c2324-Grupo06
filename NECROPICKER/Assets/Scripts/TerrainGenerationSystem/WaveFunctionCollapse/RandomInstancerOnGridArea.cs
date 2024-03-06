@@ -9,6 +9,7 @@ public class RandomInstancerOnGridArea : MonoBehaviour
     Grid grid;
     [SerializeField] Vector2Int size;
     [SerializeField] InstanceWithProbability[] instances;
+    [SerializeField] bool _instanceOnAwake = true;
 
     private void OnDrawGizmos()
     {
@@ -22,9 +23,9 @@ public class RandomInstancerOnGridArea : MonoBehaviour
     {
         tilemap = GetComponentInParent<Tilemap>();
         grid = GetComponentInParent<Grid>();
-        InstanceRandom();
+        if(_instanceOnAwake) InstanceRandom();
     }
-    void InstanceRandom()
+    public void InstanceRandom()
     {
         foreach(InstanceWithProbability instance in instances)
         {
