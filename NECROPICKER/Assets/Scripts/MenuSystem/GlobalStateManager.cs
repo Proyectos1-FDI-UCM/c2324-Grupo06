@@ -48,4 +48,8 @@ public class GlobalStateManager : ScriptableObject
     {
         scenesManager.ReloadScene();
     }
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
