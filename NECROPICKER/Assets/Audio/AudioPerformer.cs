@@ -35,8 +35,8 @@ public class AudioPerformer : MonoBehaviour
                     currentSource.Play();
                 }
             );
-        }
 
+            _audioPlayer[i].OnAudioStop.AddListener(() => currentSource.Stop());
+        }
     }
-    
 }

@@ -17,8 +17,11 @@ public class AudioPlayer : ScriptableObject
     [SerializeField] int playIndex;
     [SerializeField] private SoundClipOrder playOrder;
 
-    private UnityEvent<AudioClip, float, float> _onAudiPlay;
-    public UnityEvent<AudioClip, float, float> OnAudioPlay => _onAudiPlay;
+    private UnityEvent<AudioClip, float, float> _onAudioPlay;
+    public UnityEvent<AudioClip, float, float> OnAudioPlay => _onAudioPlay;
+
+    private UnityEvent onAudioStop = new UnityEvent();
+    public UnityEvent OnAudioStop => onAudioStop;
 
 
     private AudioClip audioClip()
@@ -60,8 +63,10 @@ public class AudioPlayer : ScriptableObject
         float actualPitch = Random.Range(pitch.x, pitch.y);
         //source.Play();
 
-        _onAudiPlay?.Invoke(audioClip(), actualVolume, actualPitch);
+        _onAudioPlay?.Invoke(audioClip(), actualVolume, actualPitch);
     }
+
+    public void Stop() => onAudioStop?.Invoke();
 
     enum SoundClipOrder
     {
