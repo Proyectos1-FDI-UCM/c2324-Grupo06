@@ -74,7 +74,6 @@ public class RoomGenerator : MonoBehaviour
         extensionCounter++;
     }
 
-
     RoomAccess OppossiteAccess(RoomAccess accessValue)
     {
         switch (accessValue)
