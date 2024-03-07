@@ -5,6 +5,7 @@ using UnityEngine;
 public class MovementController : MonoBehaviour
 {
     Rigidbody2D rb;
+    [SerializeField] bool isPlayer = false;
     public Rigidbody2D Rb => rb;
     [SerializeField] float _speed = 10f;
     //No deberiamos tener que checkear si es un jugador puesto que se trata de código reutilizable
@@ -21,7 +22,13 @@ public class MovementController : MonoBehaviour
     {
         rb.velocity = direction * speed;
     }
-
+    private void Update()
+    {
+        if (isPlayer)
+        {
+            Move(rb.velocity.normalized);
+        }
+    }
     //Nos podemos ahorrar este Update, en este caso es mejor que cada vez que se actualice _speed se actualice el valor de rb.velocity.
     
     //Para ello utiliza un accesor de la variable _speed y en el set de dicho accesor actualiza el valor de rb.velocity, puede ser

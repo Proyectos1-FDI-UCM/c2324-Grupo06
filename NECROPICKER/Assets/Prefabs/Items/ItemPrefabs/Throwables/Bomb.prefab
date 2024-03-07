@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemData: {fileID: 11400000, guid: 3b5e297f8c58e4f43bf70cb4e2cb856a, type: 2}
+  multiplier: 1
 --- !u!1 &6659248377822599460
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,6 +204,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2201132897841741059, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 124512607605174976}
+    - targetCorrespondingSourceObject: {fileID: 2201132897841741059, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3805849193603332516}
   m_SourcePrefab: {fileID: 100100000, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
 --- !u!1 &3848557150264641513 stripped
 GameObject:
@@ -221,7 +225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d3b4694eaa847445b14b5b67d928e1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 2
   collisionAnimation: {fileID: 0}
   targetLayer:
     serializedVersion: 2
@@ -261,6 +264,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.084079996}
   serializedVersion: 2
   m_Radius: 0.58408
+--- !u!114 &3805849193603332516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848557150264641513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38fb445f1c9fc7945bca1ab1660895db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 129
+  prefab: {fileID: 818950269931313274, guid: cbb0c6507875d31479812496f08a8aac, type: 3}
 --- !u!4 &3952951283456351908 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2105600899019646030, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
