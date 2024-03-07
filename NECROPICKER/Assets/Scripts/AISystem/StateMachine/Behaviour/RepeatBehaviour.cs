@@ -20,7 +20,7 @@ public class RepeatBehaviour : MonoBehaviour, IBehaviour
             foreach (BehaviourIteration iteration in _behavioursToRepeat)
             {
                 iteration.BehaviourContainer.GetComponent<IBehaviour>().ExecuteBehaviour();
-                float _waitTime = Random.Range(_behavioursToRepeat[i].MinTime, _behavioursToRepeat[i].MaxTime);
+                float _waitTime = Random.Range(iteration.MinTime, iteration.MaxTime);
                 yield return new WaitForSeconds(_waitTime);
             }
         }

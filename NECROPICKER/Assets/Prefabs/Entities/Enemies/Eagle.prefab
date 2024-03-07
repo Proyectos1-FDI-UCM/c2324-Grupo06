@@ -115,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 854470542288997619}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.844201, y: -5.71521, z: 0.099461675}
+  m_LocalPosition: {x: 15.37, y: -4.54, z: 0.099461675}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -182,6 +182,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 474569609747946852}
+  - component: {fileID: 7644357656794144296}
   m_Layer: 0
   m_Name: Eagle
   m_TagString: Untagged
@@ -206,6 +207,19 @@ Transform:
   - {fileID: 2187344444542622799}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7644357656794144296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238914852863389535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12becc06b3c645b42882e011079dfb34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 10
 --- !u!1 &4676949174989590996
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,11 +557,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAnimation: 
-  onEnterPerformers: []
-  onUpdatePerformers:
+  onEnterPerformers:
   - negated: 0
     conditionContainer: {fileID: 4805266706572121842}
     behaviourContainers: {fileID: 8668461157346980057}
+  onUpdatePerformers:
   - negated: 0
     conditionContainer: {fileID: 4805266706572121842}
     behaviourContainers: {fileID: 8405949154614667889}
@@ -636,7 +650,7 @@ Transform:
   m_GameObject: {fileID: 8516420426115926156}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.844201, y: -5.71521, z: 0.099461675}
+  m_LocalPosition: {x: 0, y: 0, z: 0.099461675}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -657,7 +671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd6c89df896d9d4db52844020ecc3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialState: {fileID: 0}
+  initialState: {fileID: 9110667007292021227}
   permanentBehaviours: []
 --- !u!114 &595335402492021703
 MonoBehaviour:
@@ -745,17 +759,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: -2.2066357
-      outSlope: -2.2066357
+      time: -0.0051568747
+      value: -0.0012122691
+      inSlope: -2.2066355
+      outSlope: -2.2066355
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.09636064
-      value: 0.78736717
+      time: 0.09120378
+      value: -0.2138451
       inSlope: -1.3556433
       outSlope: -1.3556433
       tangentMode: 34
@@ -763,8 +777,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.49680507
-      value: 0.5852825
+      time: 0.4916482
+      value: -0.41592976
       inSlope: -0.042204753
       outSlope: -0.042204753
       tangentMode: 34
@@ -772,8 +786,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.8722217
-      value: 0.74304813
+      time: 0.86706483
+      value: -0.25816414
       inSlope: 1.2155805
       outSlope: 1.2155805
       tangentMode: 34
@@ -781,8 +795,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
-      value: 1
+      time: 0.9948431
+      value: -0.0012122691
       inSlope: 2.0109196
       outSlope: 2.0109196
       tangentMode: 34
@@ -792,9 +806,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  duration: 5
-  height: 1
-  rangeX: {x: 0, y: 0}
+  duration: 2
+  height: 10
+  rangeX: {x: -50, y: -50}
   rangeY: {x: 0, y: 0}
 --- !u!1 &8912125683095151276
 GameObject:
