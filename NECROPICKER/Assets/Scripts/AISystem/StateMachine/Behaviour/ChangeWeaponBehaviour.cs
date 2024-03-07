@@ -9,7 +9,7 @@ public class ChangeWeaponBehaviour : MonoBehaviour, IBehaviour
 
     private void Awake()
     {
-        _itemHandler = GetComponentInParent<ItemHandler>();
+        _itemHandler = GetComponentInParent<StateHandler>().GetComponentInChildren<ItemHandler>();
     }
 
     public void ExecuteBehaviour()
@@ -19,6 +19,7 @@ public class ChangeWeaponBehaviour : MonoBehaviour, IBehaviour
 
     private void OnValidate()
     {
-        name = $"Change to {_weapon.name}";
+        if(_weapon == null) name = $"Disarm";
+        else name = $"Change to {_weapon.name}";
     }
 }
