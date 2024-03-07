@@ -588,6 +588,7 @@ GameObject:
   - component: {fileID: 1345480627232488797}
   - component: {fileID: -8279774020021314623}
   - component: {fileID: 9039509038530449924}
+  - component: {fileID: 6148283224164941932}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -994,21 +995,9 @@ MonoBehaviour:
     m_ActionId: 5288dd4b-d67e-4b71-af20-5c899530b209
     m_ActionName: Playing/ChangeItem[/Mouse/scroll]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 2ab6ab99117bb6a4785aa034683d96f5, type: 2}
-        m_TargetAssemblyTypeName: GlobalStateManager, Assembly-CSharp
-        m_MethodName: SwitchPause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 90a1be40-ae3c-4f58-b8b4-7766ebd35010
-    m_ActionName: Playing/PauseMenu[/Keyboard/escape]
+      m_Calls: []
+    m_ActionId: 126dc1b3-4f70-4688-bce6-91e005e3b6a7
+    m_ActionName: Playing/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Playing
@@ -1054,6 +1043,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeProfile: {fileID: 11400000, guid: a07439d6c69dad34bb89ef5fbf6ce622, type: 2}
   intensity: 0.75
+--- !u!114 &6148283224164941932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7096676606624458962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7c9a8c66a4afa43bc55d547536d6c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7144362698587863308
 GameObject:
   m_ObjectHideFlags: 0
