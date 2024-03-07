@@ -18,23 +18,18 @@ public class GlobalStateManager : ScriptableObject
 
     [SerializeField] UnityEvent onRestart = new UnityEvent();
     public UnityEvent OnRestart => onRestart;
-
-    [SerializeField] InputActionAsset inputActionAsset;
     [SerializeField] ScenesManager scenesManager;
 
 
     public void Pause()
     {
         Time.timeScale = 0;
-        // inputActionAsset.Disable();
-
         onPause?.Invoke();
     }
 
     public void Resume()
     {
         Time.timeScale = 1;
-        inputActionAsset.Enable();
         onResume?.Invoke();
     }
 
@@ -53,7 +48,7 @@ public class GlobalStateManager : ScriptableObject
     public void Restart()
     {
         onRestart?.Invoke();
-        scenesManager.ReloadScene();
+        scenesManager.LoadScene("Level1");
         Resume();
     }
 
@@ -65,8 +60,6 @@ public class GlobalStateManager : ScriptableObject
     public void Death()
     {
         Time.timeScale = 0;
-        inputActionAsset.Disable();
-
         onDeath?.Invoke();
     }
 }

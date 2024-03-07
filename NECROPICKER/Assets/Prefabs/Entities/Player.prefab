@@ -700,7 +700,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.024404287, y: -0.5058187}
+  m_Offset: {x: -0.024404287, y: -0.3834611}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -711,7 +711,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9208312, y: 1.071502}
+  m_Size: {x: 0.9208312, y: 0.8267867}
   m_EdgeRadius: 0
 --- !u!114 &4442171015663069573
 MonoBehaviour:
@@ -987,7 +987,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 2ab6ab99117bb6a4785aa034683d96f5, type: 2}
         m_TargetAssemblyTypeName: GlobalStateManager, Assembly-CSharp
-        m_MethodName: SwitchPause
+        m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -997,8 +997,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 90a1be40-ae3c-4f58-b8b4-7766ebd35010
-    m_ActionName: Playing/PauseMenu[/Keyboard/escape]
+    m_ActionId: 126dc1b3-4f70-4688-bce6-91e005e3b6a7
+    m_ActionName: Playing/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Playing
