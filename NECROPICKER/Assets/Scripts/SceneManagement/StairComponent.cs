@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class StairComponent : MonoBehaviour
 {
-    [SerializeField] int numeroescena = 0;
+    [SerializeField] string sceneName;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision != GetComponent<InputManager>())
         {
-            SceneManager.LoadScene(numeroescena);
+            SceneManager.LoadScene(sceneName);
         }
 
     }
