@@ -33,6 +33,7 @@ public class ItemHandler : MonoBehaviour
 
     void SetUpItem(ItemData newItem)
     {
+        if(newItem == null) return;
         GameObject item = Instantiate(newItem.prefab, transform);
         item.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
         selectedItem = item.GetComponent<IItem>();

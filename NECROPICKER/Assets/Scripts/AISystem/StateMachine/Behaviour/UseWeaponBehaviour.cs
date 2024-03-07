@@ -8,7 +8,7 @@ public class UseWeaponBehaviour : MonoBehaviour, IBehaviour
 
     private void Awake()
     {
-        itemHandler = GetComponentInParent<ItemHandler>();
+        itemHandler = GetComponentInParent<StateHandler>().GetComponentInChildren<ItemHandler>();
     }
 
     public void ExecuteBehaviour()

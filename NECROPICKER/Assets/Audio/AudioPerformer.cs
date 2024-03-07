@@ -14,6 +14,7 @@ public class AudioPerformer : MonoBehaviour
     private void Awake()
         
     {
+        Screen.SetResolution(1280, 960, true);
         if (_instance != null)
         {
             Destroy(_instance.gameObject);
