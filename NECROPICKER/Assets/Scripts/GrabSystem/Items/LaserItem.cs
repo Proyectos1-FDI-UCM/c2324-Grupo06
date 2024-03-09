@@ -9,11 +9,14 @@ public class LaserItem : MonoBehaviour, IItem
     public ItemData ItemData => itemData;
     [SerializeField] LayerMask targetLayer;
     [SerializeField] float damage = 2f;
-    // [SerializeField] float laserWidth = 1.5f;
     LineRenderer lineRenderer;
+
+    [SerializeField] float pointWidth = 0.1f;
+    [SerializeField] float laserWidth = 1.5f;
 
     private void Awake() {
         lineRenderer = GetComponent<LineRenderer>();
+        SetLineWidht(pointWidth);
     }
 
     private void OnDrawGizmos() {
@@ -23,10 +26,9 @@ public class LaserItem : MonoBehaviour, IItem
 
     public bool Use(ItemHandler handler)
     {
-        SetLineWidht(1.5f);
+        SetLineWidht(laserWidth);
         DrawRay();
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, 20, targetLayer);
-        // Collider2D hit = Physics2D.OverlapBox(transform.position, new Vector2(laserWidth, 30), transform.eulerAngles.z, targetLayer);
 
         if(hit == false) return false;
 
@@ -52,7 +54,7 @@ public class LaserItem : MonoBehaviour, IItem
 
     private void Update()
     {
-        SetLineWidht(Mathf.Lerp(lineRenderer.startWidth, 0.1f, Time.deltaTime * 3));
+        SetLineWidht(Mathf.Lerp(lineRenderer.startWidth, pointWidth, Time.deltaTime * 5));
         DrawRay();
     }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8648119529217160711}
   - component: {fileID: 1864776828965091923}
   m_Layer: 7
-  m_Name: Wait 2,5s
+  m_Name: Wait 1s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da4b90bc677b294eac913160882da8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToWait: 2.5
+  timeToWait: 1
 --- !u!1 &787395735376644009
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 854470542288997619}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.37, y: -4.54, z: 0.099461675}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 493177350119060071}
   - component: {fileID: 4250365807680600291}
   m_Layer: 7
-  m_Name: Use Weapon
+  m_Name: Use Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 4087663649403865066}
   - component: {fileID: 7624085403197939262}
   m_Layer: 7
-  m_Name: Wait 5s
+  m_Name: Wait 2s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -476,7 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da4b90bc677b294eac913160882da8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToWait: 5
+  timeToWait: 2
 --- !u!1 &7064383583526513824
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,7 +588,7 @@ GameObject:
   - component: {fileID: 3076323292250320299}
   - component: {fileID: 3649515834629816209}
   m_Layer: 7
-  m_Name: 'Look Target: 10 rad/s'
+  m_Name: 'Look Target: 100 rad/s'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -621,7 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945531b2e41d63145a5ffc8e05e1408b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 10
+  rotationSpeed: 100
 --- !u!1 &8516420426115926156
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,7 +711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 929024a047174444ba45acd8871c3447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialItem: {fileID: 0}
+  _initialItem: {fileID: 11400000, guid: 3b5e297f8c58e4f43bf70cb4e2cb856a, type: 2}
 --- !u!1 &8668461157346980057
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,7 +809,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   duration: 2
   height: 10
-  rangeX: {x: -50, y: -50}
+  rangeX: {x: -70, y: -70}
   rangeY: {x: 0, y: 0}
 --- !u!1 &8912125683095151276
 GameObject:

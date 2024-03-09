@@ -27,7 +27,10 @@ public class RepeatBehaviour : MonoBehaviour, IBehaviour
     }
     private void OnValidate()
     {
-        name = "Repeat behaviour";
+        if(_behavioursToRepeat.Length > 0)
+            name = "Repeat " + _behavioursToRepeat[0].BehaviourContainer.name 
+            + (_minNumberOfIterations == _maxNumberOfIterations ? $" {_minNumberOfIterations} times" 
+            : $" {_minNumberOfIterations}-{_maxNumberOfIterations} times");
     }
 }
 [System.Serializable]
