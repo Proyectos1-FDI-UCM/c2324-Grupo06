@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 2404710008033449893}
   - component: {fileID: 3355923833361626142}
   m_Layer: 0
-  m_Name: Follow Target 5 m/s
+  m_Name: Follow Target 10 m/s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -674,7 +674,11 @@ PrefabInstance:
       objectReference: {fileID: 4818368143737297233, guid: 91cc9db742c8e2e4d95f1425fda7fee2, type: 3}
     - target: {fileID: 521055722192496110, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: _speed
-      value: 5
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: maxHealth
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
@@ -704,6 +708,10 @@ PrefabInstance:
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 3032655038052148210}
+    - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayAnimation

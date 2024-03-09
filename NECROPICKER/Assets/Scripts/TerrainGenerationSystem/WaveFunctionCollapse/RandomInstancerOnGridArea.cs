@@ -37,11 +37,14 @@ public class RandomInstancerOnGridArea : MonoBehaviour
                     Vector3 randomOffset = new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), 0);
                     Vector3 randomPosition = transform.position + randomOffset;
 
-                    // while(Physics2D.OverlapBox(randomPosition, new Vector2(0.5f, 0.5f), 0) != null)
-                    // {
-                    //     randomOffset = new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), 0);
-                    //     randomPosition = transform.position + randomOffset;
-                    // }
+                    int numberOfTries = 0;
+                    while(Physics2D.OverlapBox(randomPosition, new Vector2(0.5f, 0.5f), 0) != null)
+                    {
+                        randomOffset = new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), 0);
+                        randomPosition = transform.position + randomOffset;
+                        numberOfTries++;
+                        if(numberOfTries > 100) break;
+                    }
 
                     Instantiate(instance.Prefab, randomPosition, Quaternion.identity);
                 }

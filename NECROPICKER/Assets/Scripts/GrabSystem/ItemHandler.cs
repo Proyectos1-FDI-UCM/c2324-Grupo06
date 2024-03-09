@@ -26,6 +26,13 @@ public class ItemHandler : MonoBehaviour
 
     public void OnItemChanged(ItemData newItem)
     {
+        if(newItem == null)
+        {
+            if(selectedItem != null) Destroy(selectedItem.gameObject);
+            selectedItem = null;
+            return;
+        }
+        
         if(selectedItem != null) Destroy(selectedItem.gameObject);
 
         SetUpItem(newItem);
@@ -33,7 +40,6 @@ public class ItemHandler : MonoBehaviour
 
     void SetUpItem(ItemData newItem)
     {
-        if(newItem == null) return;
         GameObject item = Instantiate(newItem.prefab, transform);
         item.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
         selectedItem = item.GetComponent<IItem>();

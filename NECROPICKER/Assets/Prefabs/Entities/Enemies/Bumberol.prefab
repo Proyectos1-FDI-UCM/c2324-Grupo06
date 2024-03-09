@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cea6a7c29b5624eb3e58e9dc294545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAnimation: 
+  stateAnimation: GetDamage
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers: []
@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cea6a7c29b5624eb3e58e9dc294545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAnimation: Iddle
+  stateAnimation: 
   onEnterPerformers: []
   onUpdatePerformers:
   - negated: 0
@@ -1359,7 +1359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cea6a7c29b5624eb3e58e9dc294545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAnimation: Esplode
+  stateAnimation: Explode
   onEnterPerformers:
   - negated: 0
     conditionContainer: {fileID: 3767711272233246666}
