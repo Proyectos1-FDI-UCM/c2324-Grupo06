@@ -1009,8 +1009,29 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< Updated upstream
     m_ActionId: 126dc1b3-4f70-4688-bce6-91e005e3b6a7
     m_ActionName: Playing/Pause[/Keyboard/escape]
+=======
+    m_ActionId: 90a1be40-ae3c-4f58-b8b4-7766ebd35010
+    m_ActionName: Playing/PauseMenu[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1109475844806078467}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: OnDrop
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9e55f49a-4471-46e2-bebf-79383c2d4b1c
+    m_ActionName: Playing/Drop[/Keyboard/q]
+>>>>>>> Stashed changes
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Playing
@@ -1365,6 +1386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 929024a047174444ba45acd8871c3447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _necronomicon: {fileID: 11400000, guid: 2d962e3fb97bc604aaceb51b0709a310, type: 2}
   _initialItem: {fileID: 0}
 --- !u!114 &4319015261540716097
 MonoBehaviour:

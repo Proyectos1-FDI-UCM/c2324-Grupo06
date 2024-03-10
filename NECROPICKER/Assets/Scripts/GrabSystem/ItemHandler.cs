@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class ItemHandler : MonoBehaviour
 {
+    [SerializeField] ItemData _necronomicon;
     [SerializeField] ItemData _initialItem;
     public ItemData initialItem => _initialItem;
 
@@ -50,11 +51,15 @@ public class ItemHandler : MonoBehaviour
 
     public void DropItem()
     {
-        selectedItem.gameObject.layer = LayerMask.NameToLayer("Item");
-        Rigidbody2D rb = selectedItem.gameObject.GetComponent<Rigidbody2D>();
-        rb.isKinematic = false;
-        selectedItem.gameObject.transform.SetParent(null);
-        selectedItem = null; 
-        onItemDrop?.Invoke();
+        if (selectedItem.ItemData != _necronomicon)
+        {
+            print("caca de vaca");
+            selectedItem.gameObject.layer = LayerMask.NameToLayer("Item");
+            Rigidbody2D rb = selectedItem.gameObject.GetComponent<Rigidbody2D>();
+            rb.isKinematic = false;
+            selectedItem.gameObject.transform.SetParent(null);
+            selectedItem = null;
+            onItemDrop?.Invoke();
+        }
     }
 }
