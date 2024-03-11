@@ -1512,7 +1512,13 @@ MonoBehaviour:
   - condition: []
     behaviourContainers:
     - {fileID: 4249752744029082576}
-  nextStates: []
+  nextStates:
+  - conditions:
+    - conditionContainer: {fileID: 7144362698587863308}
+      negated: 0
+    nextStates:
+    - conditions: []
+      stateContainer: {fileID: 0}
 --- !u!1 &8825567218998545405
 GameObject:
   m_ObjectHideFlags: 0

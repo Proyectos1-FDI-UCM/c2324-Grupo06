@@ -15,17 +15,14 @@ public class State : MonoBehaviour, IState
     [SerializeField] BehaviourPerformer[] onExitPerformers;
 
     [Header("EXIT")]
-    [SerializeField] NextStatePerformerNestingConditional[] nextStates;
-    public NextStatePerformerNestingConditional[] NextStates => nextStates;
+    [SerializeField] NextStatePerformer[] nextStates;
+    public NextStatePerformer[] NextStates => nextStates;
 
     private void Awake()
     {
         animationPlayer = GetComponentInParent<AnimationPlayer>();
+        NextStatePerformer.InitializeAll(nextStates);
 
-        foreach(NextStatePerformerNestingConditional nextState in nextStates)
-        {
-            nextState.Initialize();
-        }
     }
 
     public void OnStateEnter()
@@ -52,7 +49,7 @@ public class State : MonoBehaviour, IState
         }
     }
 
-    public IState GetNextState() => NextStatePerformerNestingConditional.GetNextState(nextStates);
+    public IState GetNextState() => NextStatePerformer.GetNextState(nextStates);
 }
 
 [System.Serializable]
@@ -76,25 +73,8 @@ public class NextStatePerformer
     {
         state = stateContainer.GetComponent<IState>();
     }
-}
 
-[System.Serializable]
-public class NextStatePerformerNestingConditional
-{
-    [SerializeField] Condition[] conditions;
-    public bool value => Condition.CheckAllConditions(conditions);
-    [SerializeField] NextStatePerformer[] nextStates;
-
-    public static IState GetNextState(NextStatePerformerNestingConditional[] nextStates)
-    {
-        foreach(NextStatePerformerNestingConditional nextState in nextStates)
-        {
-            if(nextState.value) return NextStatePerformer.GetNextState(nextState.nextStates);
-        }
-        return null;
-    }
-
-    public void Initialize()
+    public static void InitializeAll(NextStatePerformer[] nextStates)
     {
         foreach(NextStatePerformer nextState in nextStates)
         {
@@ -102,3 +82,30 @@ public class NextStatePerformerNestingConditional
         }
     }
 }
+
+
+
+// // [System.Serializable]
+// // public class NextStatePerformerNestingConditional
+// {
+//     [SerializeField] Condition[] conditions;
+//     public bool value => Condition.CheckAllConditions(conditions);
+//     [SerializeField] NextStatePerformer[] nextStates;
+
+//     public static IState GetNextState(NextStatePerformerNestingConditional[] nextStates)
+//     {
+//         foreach(NextStatePerformerNestingConditional nextState in nextStates)
+//         {
+//             if(nextState.value) return NextStatePerformer.GetNextState(nextState.nextStates);
+//         }
+//         return null;
+//     }
+
+//     public void Initialize()
+//     {
+//         foreach(NextStatePerformer nextState in nextStates)
+//         {
+//             nextState.Initialize();
+//         }
+//     }
+// }
