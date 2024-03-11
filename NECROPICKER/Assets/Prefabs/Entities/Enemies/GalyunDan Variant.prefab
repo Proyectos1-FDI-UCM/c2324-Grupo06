@@ -176,51 +176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToWait: 0.5
---- !u!1 &2709627655534934903
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2011590845804573741}
-  - component: {fileID: 1463425919701549987}
-  m_Layer: 0
-  m_Name: Wait 2s
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2011590845804573741
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2709627655534934903}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 656811467240576477}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1463425919701549987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2709627655534934903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da4b90bc677b294eac913160882da8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToWait: 2
 --- !u!1 &3334733598758309410
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,21 +359,9 @@ MonoBehaviour:
   stateAnimation: Death
   onEnterPerformers: []
   onUpdatePerformers: []
-<<<<<<< Updated upstream
   onExitPerformers: []
   nextStates: []
 --- !u!1 &5955646056820654088
-=======
-  onExitPerformers:
-  - condition: []
-    behaviourContainers: []
-  nextStates:
-  - conditions:
-    - conditionContainer: {fileID: 6713438938118241117}
-      negated: 0
-    stateContainer: {fileID: 6328450958497388534}
---- !u!1 &6328450958497388534
->>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -426,60 +369,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
   - component: {fileID: 5792580252995352192}
   - component: {fileID: 6872237856980851720}
   m_Layer: 0
   m_Name: Wait 1,5s
-=======
-  - component: {fileID: 4976469821180287358}
-  - component: {fileID: 9158749956861733399}
-  m_Layer: 7
-  m_Name: Death
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
 --- !u!4 &5792580252995352192
-=======
---- !u!4 &4976469821180287358
->>>>>>> Stashed changes
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 5955646056820654088}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-=======
-  m_GameObject: {fileID: 6328450958497388534}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
->>>>>>> Stashed changes
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-<<<<<<< Updated upstream
   m_Father: {fileID: 656811467240576477}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6872237856980851720
-=======
-  m_Father: {fileID: 1975051285086071181}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9158749956861733399
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 5955646056820654088}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -487,41 +406,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToWait: 1.5
-=======
-  m_GameObject: {fileID: 6328450958497388534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef76340760308e242bfc6008bf3a8626, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnExecuteBehaviour:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5311957056773749330}
-        m_TargetAssemblyTypeName: HealthHandler, Assembly-CSharp
-        m_MethodName: Death
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 587140850709462193}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
->>>>>>> Stashed changes
 --- !u!1 &6688369336328558098
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +462,7 @@ GameObject:
   - component: {fileID: 6872800897348139296}
   - component: {fileID: 4406914696588653622}
   m_Layer: 0
-  m_Name: Wait 0,07s
+  m_Name: Wait 2s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -611,7 +495,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da4b90bc677b294eac913160882da8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   timeToWait: 2
 --- !u!1 &6879389868657529210
 GameObject:
@@ -658,9 +541,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToWait: 0.3
-=======
-  timeToWait: 0.07
->>>>>>> Stashed changes
 --- !u!1 &7078288737309434906
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,7 +590,6 @@ MonoBehaviour:
   onUpdatePerformers:
   - condition: []
     behaviourContainers:
-<<<<<<< Updated upstream
     - {fileID: 6688369336328558098}
     - {fileID: 1221535672200724006}
     - {fileID: 4953130146848939855}
@@ -720,17 +599,6 @@ MonoBehaviour:
     - conditionContainer: {fileID: 6713438938118241117}
       negated: 0
     stateContainer: {fileID: 8433905495211054770}
-=======
-    - {fileID: 0}
-  - condition: []
-    behaviourContainers:
-    - {fileID: 0}
-  - condition: []
-    behaviourContainers:
-    - {fileID: 0}
-  onExitPerformers: []
-  nextStates: []
->>>>>>> Stashed changes
 --- !u!1 &8433905495211054770
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,26 +647,17 @@ MonoBehaviour:
   onEnterPerformers:
   - condition: []
     behaviourContainers:
-<<<<<<< Updated upstream
     - {fileID: 4122827003777083795}
-=======
-    - {fileID: 0}
->>>>>>> Stashed changes
   onUpdatePerformers: []
   onExitPerformers:
   - condition: []
     behaviourContainers:
-<<<<<<< Updated upstream
     - {fileID: 3334733598758309410}
   nextStates:
   - conditions:
     - conditionContainer: {fileID: 2519474382645715982}
       negated: 0
     stateContainer: {fileID: 7078288737309434906}
-=======
-    - {fileID: 0}
-  nextStates: []
->>>>>>> Stashed changes
 --- !u!1001 &6816184777472266266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -961,9 +820,6 @@ PrefabInstance:
       addedObject: {fileID: 6872800897348139296}
     - targetCorrespondingSourceObject: {fileID: 6308001002921379271, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2011590845804573741}
-    - targetCorrespondingSourceObject: {fileID: 6308001002921379271, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 4760409697972977548}
     - targetCorrespondingSourceObject: {fileID: 6308001002921379271, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       insertIndex: -1
@@ -986,9 +842,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5043813179072919959, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5297541368805636208}
-    - targetCorrespondingSourceObject: {fileID: 5043813179072919959, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4976469821180287358}
     - targetCorrespondingSourceObject: {fileID: 8109345373264887320, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1612891774652521503}
@@ -1100,14 +953,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8109345373264887320, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
   m_PrefabInstance: {fileID: 6816184777472266266}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5311957056773749330 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1666383803708877384, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+--- !u!1 &4122827003777083795 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7467190979149019529, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
   m_PrefabInstance: {fileID: 6816184777472266266}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 587140850709462193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3114ac147e81d3747b2c59292564fd6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
