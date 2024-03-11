@@ -5,11 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public class BehaviourPerformer
 {
-    [SerializeField] bool negated;
-    [SerializeField] GameObject conditionContainer;
-    ICondition condition;
+    [SerializeField] Condition[] condition;
 
-    [SerializeField] GameObject behaviourContainers;
+    [SerializeField] GameObject[] behaviourContainers;
     IBehaviour[] behaviours;
 
     bool initialized = false;
@@ -18,13 +16,21 @@ public class BehaviourPerformer
     {
         if(!initialized)
         {
-            CheckNulls();
-            condition = conditionContainer.GetComponent<ICondition>();
-            behaviours = behaviourContainers.GetComponents<IBehaviour>();
+            foreach(Condition cond in condition)
+            {
+                cond.Initialize();
+            }
+
+            behaviours = new IBehaviour[behaviourContainers.Length];
+            for(int i = 0; i < behaviourContainers.Length; i++)
+            {
+                behaviours[i] = behaviourContainers[i].GetComponent<IBehaviour>();
+            }
+
             initialized = true;
         }
 
-        if(condition.CheckCondition() != negated)
+        if(Condition.CheckAllConditions(condition))
         {
             foreach(IBehaviour behaviour in behaviours)
             {
@@ -32,12 +38,37 @@ public class BehaviourPerformer
             }
         }
         
-        return condition.CheckCondition() != negated;
+        return Condition.CheckAllConditions(condition);
+    }
+}
+
+[System.Serializable]
+public class Condition
+{
+    [SerializeField] private GameObject conditionContainer;
+
+    ICondition condition;
+    public ICondition Cond => condition;
+
+    [SerializeField] private bool negated;
+    public bool Negated => negated;
+
+    public void Initialize()
+    {
+        condition = conditionContainer.GetComponent<ICondition>();
     }
 
-    void CheckNulls()
+    public static bool CheckAllConditions(Condition[] condition)
     {
-        if(conditionContainer == null) Debug.LogError("Behaviour Performer is missing a condition container");
-        if(behaviourContainers == null) Debug.LogError("Behaviour Performer is missing a behaviour container");
+        if(condition.Length == 0) return true;
+        
+        foreach(Condition cond in condition)
+        {
+            if(cond.Cond.CheckCondition() == cond.Negated)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }

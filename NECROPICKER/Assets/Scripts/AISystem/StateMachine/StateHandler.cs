@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class StateHandler : MonoBehaviour
 {
-    [SerializeField] State initialState;
-    State currentState;
+    [SerializeField] GameObject initialStateContainer;
+    IState initialState;
+    IState currentState;
     [SerializeField] BehaviourPerformer[] permanentBehaviours;
 
     void Start()
     {
+        initialState = initialStateContainer.GetComponent<IState>();
         currentState = initialState;
         currentState.OnStateEnter();
     }
@@ -17,11 +19,8 @@ public class StateHandler : MonoBehaviour
     private void Update() {
         currentState.OnStateUpdate();
 
-        if (currentState.exitCondition != null)
-        {
-            int randomState = Random.Range(0, currentState.nextStates.Length);
-            if (currentState.exitCondition.CheckCondition() != currentState.negated) ChangeState(currentState.nextStates[randomState]);
-        }
+        if(currentState.GetNextState() != null) ChangeState(currentState.GetNextState());
+
         if(permanentBehaviours != null) PerformPermanentBehaviours();
         
     }

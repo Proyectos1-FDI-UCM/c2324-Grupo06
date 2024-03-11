@@ -3,30 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class State : MonoBehaviour, IState
+public class ComplexState : MonoBehaviour, IState
 {
     AnimationPlayer animationPlayer;
     [SerializeField] string stateAnimation = "";
+
+    [Header("PERFORMERS")]
 
     [SerializeField] BehaviourPerformer[] onEnterPerformers;
     [SerializeField] BehaviourPerformer[] onUpdatePerformers;
     [SerializeField] BehaviourPerformer[] onExitPerformers;
 
-    [SerializeField] bool _negated;
-    public bool negated => _negated;
-
-    [SerializeField] GameObject exitConditionContainer;
-    ICondition _exitCondition;
-    public ICondition exitCondition => _exitCondition;
-    [SerializeField] State[] _nextStates = new State[1];
-    public State[] nextStates => _nextStates;
-
+    [Header("EXIT")]
+    [SerializeField] NextStatePerformer[] nextStates;
+    public NextStatePerformer[] NextStates => nextStates;
 
     private void Awake()
     {
-        if(exitConditionContainer != null) _exitCondition = exitConditionContainer.GetComponent<ICondition>();
         animationPlayer = GetComponentInParent<AnimationPlayer>();
     }
+
 
 
     public void OnStateEnter()
@@ -53,9 +49,22 @@ public class State : MonoBehaviour, IState
         }
     }
 
-    public State GetNextState()
+    public State GetNextState() => NextStatePerformer.GetNextState(nextStates);
+}
+
+[System.Serializable]
+public class NextStatePerformer
+{
+    [SerializeField] Condition[] conditions;
+    public bool value => Condition.CheckAllConditions(conditions);
+    [SerializeField] State state;
+
+    public static State GetNextState(NextStatePerformer[] nextStates)
     {
-        if(exitCondition.CheckCondition() == !_negated) return _nextStates[Random.Range(0, _nextStates.Length)];
-        else return null;
+        foreach(NextStatePerformer nextState in nextStates)
+        {
+            if(nextState.value) return nextState.state;
+        }
+        return null;
     }
 }
