@@ -13,6 +13,7 @@ public class UseWeaponBehaviour : MonoBehaviour, IBehaviour
 
     public void ExecuteBehaviour()
     {
+        Debug.Log("MONDONGO");
         itemHandler.UseItem();
     }
 
