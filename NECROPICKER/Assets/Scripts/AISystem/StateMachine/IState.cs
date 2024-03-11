@@ -8,4 +8,5 @@ public interface IState
     void OnStateUpdate();
     void OnStateExit();
     IState GetNextState();
+    Transform transform { get; }
 }

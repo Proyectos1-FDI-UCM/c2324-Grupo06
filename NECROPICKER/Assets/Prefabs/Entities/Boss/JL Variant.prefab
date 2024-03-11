@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 8581758380352799617}
   - component: {fileID: 1912534141833585153}
   m_Layer: 7
-  m_Name: Instanciate Enemies
+  m_Name: EnemyInstanceArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -314,10 +314,7 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers: []
-  _negated: 0
-  exitConditionContainer: {fileID: 0}
-  _nextStates:
-  - {fileID: 0}
+  nextStates: []
 --- !u!1 &1498958389341081894
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +449,7 @@ GameObject:
   - component: {fileID: 5491140562487458660}
   - component: {fileID: 8731891727687418261}
   m_Layer: 0
-  m_Name: InitialState
+  m_Name: IdleState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -472,6 +469,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7663438308987836223}
+  - {fileID: 9019789788679924959}
+  - {fileID: 1983757403277542524}
   m_Father: {fileID: 5007367036955506471}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8731891727687418261
@@ -490,10 +489,76 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers: []
-  _negated: 0
-  exitConditionContainer: {fileID: 7250788565858368021}
-  _nextStates:
-  - {fileID: 8344837490231204735}
+  nextStates:
+  - conditions:
+    - conditionContainer: {fileID: 7250788565858368021}
+      negated: 0
+    - conditionContainer: {fileID: 3385044303629859248}
+      negated: 0
+    stateContainer: {fileID: 6798534438641193414}
+  - conditions:
+    - conditionContainer: {fileID: 7250788565858368021}
+      negated: 0
+    - conditionContainer: {fileID: 3385044303629859248}
+      negated: 0
+    stateContainer: {fileID: 4749419831250833899}
+  - conditions:
+    - conditionContainer: {fileID: 7250788565858368021}
+      negated: 0
+    - conditionContainer: {fileID: 3385044303629859248}
+      negated: 0
+    stateContainer: {fileID: 4636116125568162318}
+  - conditions:
+    - conditionContainer: {fileID: 7250788565858368021}
+      negated: 0
+    - conditionContainer: {fileID: 4515991248696392177}
+      negated: 0
+    stateContainer: {fileID: 8655579971173655884}
+--- !u!1 &3385044303629859248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9019789788679924959}
+  - component: {fileID: 3345830543970490923}
+  m_Layer: 0
+  m_Name: Probability 25%
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9019789788679924959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3385044303629859248}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5491140562487458660}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3345830543970490923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3385044303629859248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e862a3cf3d1ed4f86da6665633eaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  probability: 25
 --- !u!1 &3803142238587953574
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,7 +615,7 @@ GameObject:
   - component: {fileID: 5702536497731398977}
   - component: {fileID: 2471759889518241567}
   m_Layer: 7
-  m_Name: Repeat Instanciate Enemies 3-5 times
+  m_Name: Repeat EnemyInstanceArea 3-5 times
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -699,6 +764,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weapon: {fileID: 11400000, guid: bd8b06f2b2de52b4db38ef2aef52255b, type: 2}
+--- !u!1 &4515991248696392177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1983757403277542524}
+  - component: {fileID: 5812659833677906183}
+  m_Layer: 0
+  m_Name: Probability 100%
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1983757403277542524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4515991248696392177}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5491140562487458660}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5812659833677906183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4515991248696392177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e862a3cf3d1ed4f86da6665633eaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  probability: 100
 --- !u!1 &4636116125568162318
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,18 +856,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAnimation: 
   onEnterPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 278740798763243230}
-    behaviourContainers: {fileID: 6196382545592892370}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 6196382545592892370}
   onUpdatePerformers:
-  - negated: 0
-    conditionContainer: {fileID: 278740798763243230}
-    behaviourContainers: {fileID: 7380295091120442333}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 7380295091120442333}
   onExitPerformers: []
-  _negated: 0
-  exitConditionContainer: {fileID: 8406375317804852848}
-  _nextStates:
-  - {fileID: 8344837490231204735}
+  nextStates:
+  - conditions:
+    - conditionContainer: {fileID: 8406375317804852848}
+      negated: 0
+    stateContainer: {fileID: 3187313391016791535}
 --- !u!1 &4749419831250833899
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,15 +916,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAnimation: 
   onEnterPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 278740798763243230}
-    behaviourContainers: {fileID: 4162281587265081015}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 4162281587265081015}
   onUpdatePerformers: []
   onExitPerformers: []
-  _negated: 0
-  exitConditionContainer: {fileID: 8497923878494612226}
-  _nextStates:
-  - {fileID: 8344837490231204735}
+  nextStates:
+  - conditions:
+    - conditionContainer: {fileID: 8497923878494612226}
+      negated: 0
+    stateContainer: {fileID: 3187313391016791535}
 --- !u!1 &4891978638564189450
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,7 +1072,7 @@ GameObject:
   - component: {fileID: 1106861768002273167}
   - component: {fileID: 8344837490231204735}
   m_Layer: 0
-  m_Name: IdleState
+  m_Name: InitialState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -998,12 +1110,11 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers: []
-  _negated: 0
-  exitConditionContainer: {fileID: 4998993339264905366}
-  _nextStates:
-  - {fileID: 3602814350607138947}
-  - {fileID: 308176968385861193}
-  - {fileID: 9153332113582337448}
+  nextStates:
+  - conditions:
+    - conditionContainer: {fileID: 4998993339264905366}
+      negated: 0
+    stateContainer: {fileID: 3187313391016791535}
 --- !u!1 &5902674412860548274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,24 +1404,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAnimation: 
   onEnterPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 278740798763243230}
-    behaviourContainers: {fileID: 6592230300411819870}
-  - negated: 0
-    conditionContainer: {fileID: 278740798763243230}
-    behaviourContainers: {fileID: 7380295091120442333}
-  - negated: 0
-    conditionContainer: {fileID: 278740798763243230}
-    behaviourContainers: {fileID: 4515788650613317853}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 6592230300411819870}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 7380295091120442333}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 1230748211637173022}
   onUpdatePerformers: []
   onExitPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 278740798763243230}
-    behaviourContainers: {fileID: 1230748211637173022}
-  _negated: 0
-  exitConditionContainer: {fileID: 8232684808764608940}
-  _nextStates:
-  - {fileID: 5793685458593977849}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 4515788650613317853}
+  nextStates:
+  - conditions:
+    - conditionContainer: {fileID: 8232684808764608940}
+      negated: 0
+    stateContainer: {fileID: 6931972466476901751}
 --- !u!1 &6931972466476901751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,20 +1471,21 @@ MonoBehaviour:
   stateAnimation: 
   onEnterPerformers: []
   onUpdatePerformers:
-  - negated: 0
-    conditionContainer: {fileID: 278740798763243230}
-    behaviourContainers: {fileID: 4891978638564189450}
-  - negated: 0
-    conditionContainer: {fileID: 278740798763243230}
-    behaviourContainers: {fileID: 1055084124865523584}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 4891978638564189450}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 1055084124865523584}
   onExitPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 278740798763243230}
-    behaviourContainers: {fileID: 5202799669430162169}
-  _negated: 0
-  exitConditionContainer: {fileID: 5902674412860548274}
-  _nextStates:
-  - {fileID: 8087240075070506811}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 5202799669430162169}
+  nextStates:
+  - conditions:
+    - conditionContainer: {fileID: 5902674412860548274}
+      negated: 0
+    stateContainer: {fileID: 7984004032837878558}
 --- !u!1 &7108897761357953725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,10 +1619,7 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers: []
-  _negated: 0
-  exitConditionContainer: {fileID: 161355404758154422}
-  _nextStates:
-  - {fileID: 8344837490231204735}
+  nextStates: []
 --- !u!1 &7250788565858368021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,13 +1758,14 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 278740798763243230}
-    behaviourContainers: {fileID: 2386412632178680079}
-  _negated: 0
-  exitConditionContainer: {fileID: 8232684808764608940}
-  _nextStates:
-  - {fileID: 5611519151545127626}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 2386412632178680079}
+  nextStates:
+  - conditions:
+    - conditionContainer: {fileID: 8232684808764608940}
+      negated: 0
+    stateContainer: {fileID: 3187313391016791535}
 --- !u!1 &8232684808764608940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1837,15 +1948,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAnimation: 
   onEnterPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 278740798763243230}
-    behaviourContainers: {fileID: 1498958389341081894}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 1498958389341081894}
   onUpdatePerformers: []
   onExitPerformers: []
-  _negated: 0
-  exitConditionContainer: {fileID: 983138509586259361}
-  _nextStates:
-  - {fileID: 8344837490231204735}
+  nextStates:
+  - conditions:
+    - conditionContainer: {fileID: 983138509586259361}
+      negated: 0
+    stateContainer: {fileID: 3187313391016791535}
 --- !u!1 &8759552665448970723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1981,6 +2093,10 @@ PrefabInstance:
       propertyPath: initialState
       value: 
       objectReference: {fileID: 8731891727687418261}
+    - target: {fileID: 3847993717283742919, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: initialStateContainer
+      value: 
+      objectReference: {fileID: 5325988568007480618}
     - target: {fileID: 3932810092511083360, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: m_Controller
       value: 
@@ -2080,6 +2196,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1127761649701111835, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+    - {fileID: 9081950855958463931, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7265099983593255393, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       insertIndex: 0
@@ -2134,10 +2251,10 @@ PrefabInstance:
       addedObject: {fileID: 8016382973162715449}
     - targetCorrespondingSourceObject: {fileID: 8109345373264887320, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5491140562487458660}
+      addedObject: {fileID: 1106861768002273167}
     - targetCorrespondingSourceObject: {fileID: 8109345373264887320, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1106861768002273167}
+      addedObject: {fileID: 5491140562487458660}
     - targetCorrespondingSourceObject: {fileID: 8109345373264887320, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5894803128524607119}
@@ -2164,11 +2281,6 @@ PrefabInstance:
 --- !u!95 &244239593772364383 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3932810092511083360, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
-  m_PrefabInstance: {fileID: 3888738899212798271}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &278740798763243230 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3902890432214048737, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
   m_PrefabInstance: {fileID: 3888738899212798271}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &5007367036955506471 stripped

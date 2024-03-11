@@ -14,12 +14,18 @@ public class StateHandler : MonoBehaviour
         initialState = initialStateContainer.GetComponent<IState>();
         currentState = initialState;
         currentState.OnStateEnter();
+        currentState.transform.gameObject.name = "current";
     }
 
     private void Update() {
         currentState.OnStateUpdate();
 
-        if(currentState.GetNextState() != null) ChangeState(currentState.GetNextState());
+        IState newState = currentState.GetNextState();
+
+        if(newState != null)
+        {
+            ChangeState(newState);
+        }
 
         if(permanentBehaviours != null) PerformPermanentBehaviours();
         
@@ -28,10 +34,12 @@ public class StateHandler : MonoBehaviour
     public void ChangeState(IState newState)
     {
         currentState.OnStateExit();
+        currentState.transform.gameObject.name = "passed";
 
         currentState = newState;
         
         currentState.OnStateEnter();
+        currentState.transform.gameObject.name = "current";
     }
 
     void PerformPermanentBehaviours()
