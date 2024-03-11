@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd6c89df896d9d4db52844020ecc3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialState: {fileID: 8029101254340552344}
+  initialStateContainer: {fileID: 0}
   permanentBehaviours: []
 --- !u!1 &2808724939306014726
 GameObject:
@@ -175,9 +175,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAnimation: Death
   onEnterPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 2808724939306014726}
-    behaviourContainers: {fileID: 7296819733081874719}
+  - condition: []
+    behaviourContainers: []
   onUpdatePerformers: []
   onExitPerformers: []
   _negated: 0
@@ -561,9 +560,9 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 2808724939306014726}
-    behaviourContainers: {fileID: 4042702075959453716}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 4042702075959453716}
   _negated: 0
   exitConditionContainer: {fileID: 6425297195236048114}
   _nextStates:
@@ -1009,29 +1008,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-<<<<<<< Updated upstream
     m_ActionId: 126dc1b3-4f70-4688-bce6-91e005e3b6a7
     m_ActionName: Playing/Pause[/Keyboard/escape]
-=======
-    m_ActionId: 90a1be40-ae3c-4f58-b8b4-7766ebd35010
-    m_ActionName: Playing/PauseMenu[/Keyboard/escape]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1109475844806078467}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: OnDrop
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 9e55f49a-4471-46e2-bebf-79383c2d4b1c
     m_ActionName: Playing/Drop[/Keyboard/q]
->>>>>>> Stashed changes
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Playing
@@ -1525,20 +1507,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAnimation: GetDamage
   onEnterPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 2808724939306014726}
-    behaviourContainers: {fileID: 7296819733081874719}
-  - negated: 0
-    conditionContainer: {fileID: 2808724939306014726}
-    behaviourContainers: {fileID: 3026077106815396053}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 7296819733081874719}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 3026077106815396053}
   onUpdatePerformers: []
   onExitPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 2808724939306014726}
-    behaviourContainers: {fileID: 4249752744029082576}
-  - negated: 0
-    conditionContainer: {fileID: 2808724939306014726}
-    behaviourContainers: {fileID: 8825567218998545405}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 8825567218998545405}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 4249752744029082576}
   _negated: 0
   exitConditionContainer: {fileID: 7144362698587863308}
   _nextStates:
