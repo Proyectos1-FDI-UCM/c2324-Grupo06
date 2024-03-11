@@ -15,14 +15,17 @@ public class ComplexState : MonoBehaviour, IState
     [SerializeField] BehaviourPerformer[] onExitPerformers;
 
     [Header("EXIT")]
-    [SerializeField] NextStatePerformer[] nextStates;
-    public NextStatePerformer[] NextStates => nextStates;
+    [SerializeField] NextStatePerformerNestingConditional[] nextStates;
+    public NextStatePerformerNestingConditional[] NextStates => nextStates;
 
     private void Awake()
     {
         animationPlayer = GetComponentInParent<AnimationPlayer>();
 
-        foreach(NextStatePerformer nextState in nextStates) nextState.Initialize();
+        foreach(NextStatePerformerNestingConditional nextState in nextStates)
+        {
+            nextState.Initialize();
+        }
     }
 
     public void OnStateEnter()
@@ -49,7 +52,7 @@ public class ComplexState : MonoBehaviour, IState
         }
     }
 
-    public IState GetNextState() => NextStatePerformer.GetNextState(nextStates);
+    public IState GetNextState() => NextStatePerformerNestingConditional.GetNextState(nextStates);
 }
 
 [System.Serializable]
@@ -72,5 +75,30 @@ public class NextStatePerformer
     public void Initialize()
     {
         state = stateContainer.GetComponent<IState>();
+    }
+}
+
+[System.Serializable]
+public class NextStatePerformerNestingConditional
+{
+    [SerializeField] Condition[] conditions;
+    public bool value => Condition.CheckAllConditions(conditions);
+    [SerializeField] NextStatePerformer[] nextStates;
+
+    public static IState GetNextState(NextStatePerformerNestingConditional[] nextStates)
+    {
+        foreach(NextStatePerformerNestingConditional nextState in nextStates)
+        {
+            if(nextState.value) return NextStatePerformer.GetNextState(nextState.nextStates);
+        }
+        return null;
+    }
+
+    public void Initialize()
+    {
+        foreach(NextStatePerformer nextState in nextStates)
+        {
+            nextState.Initialize();
+        }
     }
 }
