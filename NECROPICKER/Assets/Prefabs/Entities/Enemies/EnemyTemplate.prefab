@@ -132,13 +132,10 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 3902890432214048737}
-    behaviourContainers: {fileID: 7467190979149019529}
-  _negated: 0
-  exitConditionContainer: {fileID: 0}
-  _nextStates:
-  - {fileID: 0}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 0}
+  nextStates: []
 --- !u!1 &3902890432214048737
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd6c89df896d9d4db52844020ecc3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialState: {fileID: 0}
+  initialStateContainer: {fileID: 0}
   permanentBehaviours: []
 --- !u!114 &2363496926857828811
 MonoBehaviour:

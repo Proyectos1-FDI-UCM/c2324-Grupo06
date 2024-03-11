@@ -270,14 +270,11 @@ MonoBehaviour:
   stateAnimation: Idle
   onEnterPerformers: []
   onUpdatePerformers:
-  - negated: 0
-    conditionContainer: {fileID: 78517669725639375}
-    behaviourContainers: {fileID: 7406900284153240048}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 0}
   onExitPerformers: []
-  _negated: 0
-  exitConditionContainer: {fileID: 5879052799381008891}
-  _nextStates:
-  - {fileID: 4530303819712004700}
+  nextStates: []
 --- !u!1 &1633175555028565193
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,10 +323,7 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers: []
-  _negated: 0
-  exitConditionContainer: {fileID: 8209156219050071447}
-  _nextStates:
-  - {fileID: 140625191798245261}
+  nextStates: []
 --- !u!1 &2461784203276590772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,7 +1047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd6c89df896d9d4db52844020ecc3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialState: {fileID: 140625191798245261}
+  initialStateContainer: {fileID: 0}
   permanentBehaviours: []
 --- !u!114 &2854051592952831010
 MonoBehaviour:
@@ -1173,17 +1167,14 @@ MonoBehaviour:
   stateAnimation: 
   onEnterPerformers: []
   onUpdatePerformers:
-  - negated: 0
-    conditionContainer: {fileID: 78517669725639375}
-    behaviourContainers: {fileID: 7406900284153240048}
-  - negated: 0
-    conditionContainer: {fileID: 3767711272233246666}
-    behaviourContainers: {fileID: 2461784203276590772}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 0}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 0}
   onExitPerformers: []
-  _negated: 0
-  exitConditionContainer: {fileID: 5879052799381008891}
-  _nextStates:
-  - {fileID: 140625191798245261}
+  nextStates: []
 --- !u!1 &7199954223852578084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,15 +1352,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAnimation: Explode
   onEnterPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 3767711272233246666}
-    behaviourContainers: {fileID: 4327002942976136117}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 0}
   onUpdatePerformers: []
   onExitPerformers: []
-  _negated: 0
-  exitConditionContainer: {fileID: 424630231724182103}
-  _nextStates:
-  - {fileID: 3052441578276084066}
+  nextStates: []
 --- !u!1 &8089588533976214555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1416,17 +1404,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAnimation: 
   onEnterPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 3767711272233246666}
-    behaviourContainers: {fileID: 1265077362472497231}
-  - negated: 0
-    conditionContainer: {fileID: 3767711272233246666}
-    behaviourContainers: {fileID: 3093078647456682551}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 0}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 0}
   onUpdatePerformers: []
   onExitPerformers: []
-  _negated: 0
-  exitConditionContainer: {fileID: 0}
-  _nextStates: []
+  nextStates: []
 --- !u!1 &8209156219050071447
 GameObject:
   m_ObjectHideFlags: 0

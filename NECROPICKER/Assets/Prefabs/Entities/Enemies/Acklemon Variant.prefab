@@ -90,18 +90,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAnimation: 
   onEnterPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 6578100144971530335}
-    behaviourContainers: {fileID: 196132377083598556}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 0}
   onUpdatePerformers: []
   onExitPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 3251837150324161503}
-    behaviourContainers: {fileID: 3919830632581000003}
-  _negated: 0
-  exitConditionContainer: {fileID: 6578100144971530335}
-  _nextStates:
-  - {fileID: 0}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 0}
+  nextStates: []
 --- !u!1 &1651038450158602235
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd6c89df896d9d4db52844020ecc3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialState: {fileID: 8541200030242289281}
+  initialStateContainer: {fileID: 0}
   permanentBehaviours: []
 --- !u!114 &5905089577201183696
 MonoBehaviour:
