@@ -37,6 +37,12 @@ public class InputManager : MonoBehaviour
             grabHandler.TakeItem();
     }
 
+    public void OnDrop(InputAction.CallbackContext context)
+    {
+        if (context.started)
+            itemHandler.DropItem();
+    }
+
     public void OnScroll(InputAction.CallbackContext context)
     {
         if(context.performed)
