@@ -72,6 +72,7 @@ public class NextStatePerformer
     public void Initialize()
     {
         state = stateContainer.GetComponent<IState>();
+        Condition.InitializeAll(conditions);
     }
 
     public static void InitializeAll(NextStatePerformer[] nextStates)

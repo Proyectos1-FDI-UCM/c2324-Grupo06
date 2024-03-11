@@ -6,7 +6,6 @@ using UnityEngine;
 public class BehaviourPerformer
 {
     [SerializeField] Condition[] condition;
-
     [SerializeField] GameObject[] behaviourContainers;
     IBehaviour[] behaviours;
 
@@ -56,6 +55,14 @@ public class Condition
     public void Initialize()
     {
         condition = conditionContainer.GetComponent<ICondition>();
+    }
+
+    public static void InitializeAll(Condition[] conditions)
+    {
+        foreach(Condition cond in conditions)
+        {
+            cond.Initialize();
+        }
     }
 
     public static bool CheckAllConditions(Condition[] condition)
