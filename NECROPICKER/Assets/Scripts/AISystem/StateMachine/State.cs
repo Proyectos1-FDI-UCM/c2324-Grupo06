@@ -18,14 +18,21 @@ public class State : MonoBehaviour, IState
     [SerializeField] GameObject exitConditionContainer;
     ICondition _exitCondition;
     public ICondition exitCondition => _exitCondition;
-    [SerializeField] State[] _nextStates = new State[1];
-    public State[] nextStates => _nextStates;
+
+    [SerializeField] GameObject[] nextStateContainers;
+    IState[] _nextStates = new State[1];
+    public IState[] nextStates => _nextStates;
 
 
     private void Awake()
     {
         if(exitConditionContainer != null) _exitCondition = exitConditionContainer.GetComponent<ICondition>();
         animationPlayer = GetComponentInParent<AnimationPlayer>();
+
+        for(int i = 0; i < nextStateContainers.Length; i++)
+        {
+            _nextStates[i] = nextStateContainers[i].GetComponent<IState>();
+        }
     }
 
 
@@ -53,7 +60,7 @@ public class State : MonoBehaviour, IState
         }
     }
 
-    public State GetNextState()
+    public IState GetNextState()
     {
         if(exitCondition.CheckCondition() == !_negated) return _nextStates[Random.Range(0, _nextStates.Length)];
         else return null;

@@ -25,7 +25,7 @@ public class StateHandler : MonoBehaviour
         
     }
 
-    public void ChangeState(State newState)
+    public void ChangeState(IState newState)
     {
         currentState.OnStateExit();
 

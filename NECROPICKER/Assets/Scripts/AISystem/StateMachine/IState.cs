@@ -7,5 +7,5 @@ public interface IState
     void OnStateEnter();
     void OnStateUpdate();
     void OnStateExit();
-    State GetNextState();
+    IState GetNextState();
 }

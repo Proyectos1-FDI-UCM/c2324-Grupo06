@@ -21,9 +21,9 @@ public class ComplexState : MonoBehaviour, IState
     private void Awake()
     {
         animationPlayer = GetComponentInParent<AnimationPlayer>();
+
+        foreach(NextStatePerformer nextState in nextStates) nextState.Initialize();
     }
-
-
 
     public void OnStateEnter()
     {
@@ -49,7 +49,7 @@ public class ComplexState : MonoBehaviour, IState
         }
     }
 
-    public State GetNextState() => NextStatePerformer.GetNextState(nextStates);
+    public IState GetNextState() => NextStatePerformer.GetNextState(nextStates);
 }
 
 [System.Serializable]
@@ -57,14 +57,20 @@ public class NextStatePerformer
 {
     [SerializeField] Condition[] conditions;
     public bool value => Condition.CheckAllConditions(conditions);
-    [SerializeField] State state;
+    [SerializeField] GameObject stateContainer;
+    IState state;
 
-    public static State GetNextState(NextStatePerformer[] nextStates)
+    public static IState GetNextState(NextStatePerformer[] nextStates)
     {
         foreach(NextStatePerformer nextState in nextStates)
         {
             if(nextState.value) return nextState.state;
         }
         return null;
+    }
+
+    public void Initialize()
+    {
+        state = stateContainer.GetComponent<IState>();
     }
 }
