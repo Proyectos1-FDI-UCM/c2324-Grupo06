@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4140651207415757739}
   - component: {fileID: 5926193181856145082}
   m_Layer: 0
-  m_Name: Wait 2s to 3,5s
+  m_Name: Wait 1s to 2s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912ac8752512cd64c8a519131add756a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTime: 2
-  maxTime: 3.5
+  minTime: 1
+  maxTime: 2
 --- !u!1 &533354935224611911
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,12 +95,16 @@ MonoBehaviour:
   onUpdatePerformers:
   - condition: []
     behaviourContainers:
-    - {fileID: 0}
+    - {fileID: 3333437348492206825}
   onExitPerformers:
   - condition: []
     behaviourContainers:
-    - {fileID: 0}
-  nextStates: []
+    - {fileID: 6095082264989658154}
+  nextStates:
+  - conditions:
+    - conditionContainer: {fileID: 248544157891275822}
+      negated: 0
+    stateContainer: {fileID: 2051390786527230619}
 --- !u!1 &1020533315598685499
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,8 +155,12 @@ MonoBehaviour:
   onExitPerformers:
   - condition: []
     behaviourContainers:
-    - {fileID: 0}
-  nextStates: []
+    - {fileID: 6095082264989658154}
+  nextStates:
+  - conditions:
+    - conditionContainer: {fileID: 5156448512569556380}
+      negated: 0
+    stateContainer: {fileID: 2051390786527230619}
 --- !u!1 &2033270493601490881
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +293,11 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers: []
-  nextStates: []
+  nextStates:
+  - conditions:
+    - conditionContainer: {fileID: 248544157891275822}
+      negated: 0
+    stateContainer: {fileID: 533354935224611911}
 --- !u!1 &3333437348492206825
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,7 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd6c89df896d9d4db52844020ecc3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialStateContainer: {fileID: 0}
+  initialStateContainer: {fileID: 2051390786527230619}
   permanentBehaviours: []
 --- !u!114 &2835397485841901892
 MonoBehaviour:

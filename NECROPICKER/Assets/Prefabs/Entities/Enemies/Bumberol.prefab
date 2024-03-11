@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5413056787344254830}
   - component: {fileID: 7173950416896143739}
   m_Layer: 0
-  m_Name: Overlap Circle Condition 6m
+  m_Name: Overlap Circle Condition 5m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 8
-  radius: 6
+  radius: 5
   center: {fileID: 5413056787344254830}
 --- !u!1 &241136056599686359
 GameObject:
@@ -268,13 +268,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAnimation: Idle
-  onEnterPerformers: []
-  onUpdatePerformers:
+  onEnterPerformers:
   - condition: []
     behaviourContainers:
-    - {fileID: 0}
+    - {fileID: 4327002942976136117}
+  onUpdatePerformers: []
   onExitPerformers: []
-  nextStates: []
+  nextStates:
+  - conditions:
+    - conditionContainer: {fileID: 5879052799381008891}
+      negated: 0
+    stateContainer: {fileID: 6190604951225146750}
+  - conditions:
+    - conditionContainer: {fileID: 78517669725639375}
+      negated: 0
+    stateContainer: {fileID: 8081686509097493124}
 --- !u!1 &1633175555028565193
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +331,11 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers: []
-  nextStates: []
+  nextStates:
+  - conditions:
+    - conditionContainer: {fileID: 7514153666058790921}
+      negated: 0
+    stateContainer: {fileID: 1529183963516778447}
 --- !u!1 &2461784203276590772
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,8 +380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5918ed8c60f1b143a6000e552176c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directionChangeTime: {x: 2, y: 4}
-  maxDistanceToInitialPosition: 5
+  directionChangeTime: {x: 0.5, y: 1}
+  maxDistanceToInitialPosition: 4
   lerpFactor: 1
 --- !u!1 &3079145207542696284
 GameObject:
@@ -1047,7 +1059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd6c89df896d9d4db52844020ecc3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialStateContainer: {fileID: 0}
+  initialStateContainer: {fileID: 1529183963516778447}
   permanentBehaviours: []
 --- !u!114 &2854051592952831010
 MonoBehaviour:
@@ -1169,12 +1181,17 @@ MonoBehaviour:
   onUpdatePerformers:
   - condition: []
     behaviourContainers:
-    - {fileID: 0}
-  - condition: []
-    behaviourContainers:
-    - {fileID: 0}
+    - {fileID: 2461784203276590772}
   onExitPerformers: []
-  nextStates: []
+  nextStates:
+  - conditions:
+    - conditionContainer: {fileID: 5879052799381008891}
+      negated: 0
+    stateContainer: {fileID: 1529183963516778447}
+  - conditions:
+    - conditionContainer: {fileID: 78517669725639375}
+      negated: 0
+    stateContainer: {fileID: 8081686509097493124}
 --- !u!1 &7199954223852578084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,7 +1228,7 @@ Transform:
   - {fileID: 585629202757536925}
   m_Father: {fileID: 4731432910164690838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7406900284153240048
+--- !u!1 &7514153666058790921
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1219,57 +1236,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2111363392516872640}
-  - component: {fileID: 7592255489278147789}
+  - component: {fileID: 6553732087107995076}
+  - component: {fileID: 8656941721055506381}
   m_Layer: 0
-  m_Name: ChangeToState => exploteStage
+  m_Name: Wait 0,35s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2111363392516872640
+--- !u!4 &6553732087107995076
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7406900284153240048}
+  m_GameObject: {fileID: 7514153666058790921}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1062966102558654504}
+  m_Father: {fileID: 5742834528119424726}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7592255489278147789
+--- !u!114 &8656941721055506381
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7406900284153240048}
+  m_GameObject: {fileID: 7514153666058790921}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef76340760308e242bfc6008bf3a8626, type: 3}
+  m_Script: {fileID: 11500000, guid: 8da4b90bc677b294eac913160882da8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnExecuteBehaviour:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2309901473740600473}
-        m_TargetAssemblyTypeName: StateHandler, Assembly-CSharp
-        m_MethodName: ChangeState
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7293406683623356357}
-          m_ObjectArgumentAssemblyTypeName: State, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  timeToWait: 0.35
 --- !u!1 &7991840357400248656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,7 +1306,6 @@ Transform:
   - {fileID: 1883715495368147346}
   - {fileID: 1939401555519254490}
   - {fileID: 8717254867789735312}
-  - {fileID: 2111363392516872640}
   m_Father: {fileID: 4731432910164690838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8081686509097493124
@@ -1354,10 +1356,17 @@ MonoBehaviour:
   onEnterPerformers:
   - condition: []
     behaviourContainers:
-    - {fileID: 0}
+    - {fileID: 1265077362472497231}
   onUpdatePerformers: []
-  onExitPerformers: []
-  nextStates: []
+  onExitPerformers:
+  - condition: []
+    behaviourContainers:
+    - {fileID: 3093078647456682551}
+  nextStates:
+  - conditions:
+    - conditionContainer: {fileID: 5879052799381008891}
+      negated: 0
+    stateContainer: {fileID: 8089588533976214555}
 --- !u!1 &8089588533976214555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,57 +1416,9 @@ MonoBehaviour:
   - condition: []
     behaviourContainers:
     - {fileID: 0}
-  - condition: []
-    behaviourContainers:
-    - {fileID: 0}
   onUpdatePerformers: []
   onExitPerformers: []
   nextStates: []
---- !u!1 &8209156219050071447
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1814478692837997313}
-  - component: {fileID: 528316873085050726}
-  m_Layer: 0
-  m_Name: Wait 3s
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1814478692837997313
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8209156219050071447}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5742834528119424726}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &528316873085050726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8209156219050071447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da4b90bc677b294eac913160882da8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToWait: 3
 --- !u!1 &8281604562481069527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,9 +1449,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8940873889623147054}
-  - {fileID: 1814478692837997313}
   - {fileID: 3499060668321830183}
   - {fileID: 6475265441950407264}
+  - {fileID: 6553732087107995076}
   - {fileID: 5413056787344254830}
   m_Father: {fileID: 4731432910164690838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
