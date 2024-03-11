@@ -8,33 +8,25 @@ public class State : MonoBehaviour, IState
     AnimationPlayer animationPlayer;
     [SerializeField] string stateAnimation = "";
 
+    [Header("PERFORMERS")]
+
     [SerializeField] BehaviourPerformer[] onEnterPerformers;
     [SerializeField] BehaviourPerformer[] onUpdatePerformers;
     [SerializeField] BehaviourPerformer[] onExitPerformers;
 
-    [SerializeField] bool _negated;
-    public bool negated => _negated;
-
-    [SerializeField] GameObject exitConditionContainer;
-    ICondition _exitCondition;
-    public ICondition exitCondition => _exitCondition;
-
-    [SerializeField] GameObject[] nextStateContainers;
-    IState[] _nextStates = new State[1];
-    public IState[] nextStates => _nextStates;
-
+    [Header("EXIT")]
+    [SerializeField] NextStatePerformerNestingConditional[] nextStates;
+    public NextStatePerformerNestingConditional[] NextStates => nextStates;
 
     private void Awake()
     {
-        if(exitConditionContainer != null) _exitCondition = exitConditionContainer.GetComponent<ICondition>();
         animationPlayer = GetComponentInParent<AnimationPlayer>();
 
-        for(int i = 0; i < nextStateContainers.Length; i++)
+        foreach(NextStatePerformerNestingConditional nextState in nextStates)
         {
-            _nextStates[i] = nextStateContainers[i].GetComponent<IState>();
+            nextState.Initialize();
         }
     }
-
 
     public void OnStateEnter()
     {
@@ -60,9 +52,53 @@ public class State : MonoBehaviour, IState
         }
     }
 
-    public IState GetNextState()
+    public IState GetNextState() => NextStatePerformerNestingConditional.GetNextState(nextStates);
+}
+
+[System.Serializable]
+public class NextStatePerformer
+{
+    [SerializeField] Condition[] conditions;
+    public bool value => Condition.CheckAllConditions(conditions);
+    [SerializeField] GameObject stateContainer;
+    IState state;
+
+    public static IState GetNextState(NextStatePerformer[] nextStates)
     {
-        if(exitCondition.CheckCondition() == !_negated) return _nextStates[Random.Range(0, _nextStates.Length)];
-        else return null;
+        foreach(NextStatePerformer nextState in nextStates)
+        {
+            if(nextState.value) return nextState.state;
+        }
+        return null;
+    }
+
+    public void Initialize()
+    {
+        state = stateContainer.GetComponent<IState>();
+    }
+}
+
+[System.Serializable]
+public class NextStatePerformerNestingConditional
+{
+    [SerializeField] Condition[] conditions;
+    public bool value => Condition.CheckAllConditions(conditions);
+    [SerializeField] NextStatePerformer[] nextStates;
+
+    public static IState GetNextState(NextStatePerformerNestingConditional[] nextStates)
+    {
+        foreach(NextStatePerformerNestingConditional nextState in nextStates)
+        {
+            if(nextState.value) return NextStatePerformer.GetNextState(nextState.nextStates);
+        }
+        return null;
+    }
+
+    public void Initialize()
+    {
+        foreach(NextStatePerformer nextState in nextStates)
+        {
+            nextState.Initialize();
+        }
     }
 }

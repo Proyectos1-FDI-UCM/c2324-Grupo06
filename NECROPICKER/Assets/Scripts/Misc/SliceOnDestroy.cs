@@ -14,9 +14,8 @@ public class SliceOnDestroy : MonoBehaviour
     }
 
     private void Slice() {
-        Texture2D newTexture = new Texture2D(texture.width, texture.height);
-        newTexture.SetPixels(texture.GetPixels());
-        newTexture.Apply();
-        spriteRenderer.sprite = Sprite.Create(newTexture, new Rect(0, 0, newTexture.width, newTexture.height), new Vector2(0.5f, 0.5f));
+        var rect = new Rect(texture.width / 4, texture.height / 4, texture.width / 2, texture.height / 2);
+        var sprite = Sprite.Create(texture, rect, Vector2.one * 0.5f);
+        spriteRenderer.sprite = sprite;
     }
 }
