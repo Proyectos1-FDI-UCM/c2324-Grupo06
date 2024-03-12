@@ -15,4 +15,5 @@ public class ScenesManager : ScriptableObject
     public void ReloadScene() => SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     public void QuitGame() => Application.Quit();
+
 }

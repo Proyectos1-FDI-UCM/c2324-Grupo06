@@ -8,7 +8,8 @@ using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "Inventory", menuName = "InventorySystem/Inventory", order = 1)]
 public class Inventory : ScriptableObject
-{   [SerializeField] public ItemStack[] items = new ItemStack[5];
+{
+    [SerializeField] public ItemStack[] items = new ItemStack[5];
     
     [SerializeField] ItemData Necronomicon;
     [SerializeField] int _selectedItemIndex = 0;
@@ -17,7 +18,7 @@ public class Inventory : ScriptableObject
     {
         for (int i = 0; i < items.Length; i++)
         {
-            items[i].item = Necronomicon; 
+            items[i].item = Necronomicon;
             UpdateInventory();
         }
     }
@@ -96,9 +97,18 @@ public class Inventory : ScriptableObject
     }
 
     public void UpdateInventory()
-    { 
+    {
         LookForAnItem();
         onItemChanged?.Invoke(items[SelectedItemIndex].item);
+    }
+
+    public void EmptyInventory()
+    {
+        for (int i = 0; i < items.Length; i++)
+        {
+            items[i].amount = 1;
+            items[i].item = Necronomicon;
+        }
     }
 }
 
@@ -111,7 +121,7 @@ public class Inventory : ScriptableObject
      {
         this.item = item;
         this.amount = amount;
-    }
+     }
  }
 
 
