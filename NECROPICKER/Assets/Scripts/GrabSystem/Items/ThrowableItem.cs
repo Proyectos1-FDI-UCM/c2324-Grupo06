@@ -9,10 +9,13 @@ public class ThrowableItem : MonoBehaviour, IItem
 
     protected MovementController movementController;
     protected Rigidbody2D rb;
+    ParentItem parent;
     [SerializeField] float multiplier = 1f;
+
 
     public virtual void Awake()
     {
+        parent = GetComponentInParent<ParentItem>();
         movementController = GetComponentInParent<MovementController>();
         rb = GetComponentInParent<Rigidbody2D>();
     }
@@ -20,7 +23,7 @@ public class ThrowableItem : MonoBehaviour, IItem
     public virtual bool Use(ItemHandler handler)
     {
         handler.DropItem();
-        transform.parent.gameObject.layer = LayerMask.NameToLayer("bullet");
+        parent.transform.gameObject.layer = LayerMask.NameToLayer("bullet");
         movementController.Move(transform.up * multiplier);
         return true;
     }
