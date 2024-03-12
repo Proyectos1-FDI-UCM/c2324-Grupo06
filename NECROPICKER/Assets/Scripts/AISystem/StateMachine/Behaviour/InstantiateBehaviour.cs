@@ -7,7 +7,6 @@ public class InstantiateBehaviour : MonoBehaviour, IBehaviour
 {
     [SerializeField] GameObject prefab;
     [SerializeField] float velocity = 0.0f;
-
     public void ExecuteBehaviour()
     {
         GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
