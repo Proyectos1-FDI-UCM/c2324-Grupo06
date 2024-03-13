@@ -14,6 +14,7 @@ public class CollisionHandler : MonoBehaviour
 
         foreach(ICollidable collidable in collidables)
         {
+            print(collidable.GetType());
             collidable.OnCollide(collision.collider);
         }
     }

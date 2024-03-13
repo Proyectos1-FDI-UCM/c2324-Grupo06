@@ -31,6 +31,8 @@ public class StateHandler : MonoBehaviour
         
     }
 
+    public void ChangeState(GameObject state) => ChangeState(state.GetComponent<IState>());
+
     public void ChangeState(IState newState)
     {
         currentState.OnStateExit();
