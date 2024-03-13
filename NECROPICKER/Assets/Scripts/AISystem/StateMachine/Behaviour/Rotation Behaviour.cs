@@ -14,11 +14,7 @@ public class RotationBehaviour : MonoBehaviour, IBehaviour
             _myTransform = GetComponentInParent<Pointer>().transform;
         }
     }
-    public void ExecuteBehaviour()
-    {
-        StartCoroutine(Rotate());
-    }
-
+    public void ExecuteBehaviour() => StartCoroutine(Rotate());
     IEnumerator Rotate()
     {
         float time = 0;
