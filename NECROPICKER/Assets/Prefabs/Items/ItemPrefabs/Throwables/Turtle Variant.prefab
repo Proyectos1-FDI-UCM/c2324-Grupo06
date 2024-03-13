@@ -56,7 +56,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8320126249473170509, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       propertyPath: requiredLayer.m_Bits
-      value: 64
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: -1132469893432273640, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       propertyPath: targetLayer.m_Bits
@@ -120,8 +120,32 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2105600899019646030, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8276794470742418812}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2201132897841741059, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2986820530446021071}
   m_SourcePrefab: {fileID: 100100000, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+--- !u!1 &7841483644970437318 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2201132897841741059, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+  m_PrefabInstance: {fileID: 8239746053213517765}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2986820530446021071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7841483644970437318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38fb445f1c9fc7945bca1ab1660895db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  prefab: {fileID: 2929946993159871886, guid: 40c31c768069886459486b0649f4c803, type: 3}
 --- !u!4 &8025957409203213195 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2105600899019646030, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
