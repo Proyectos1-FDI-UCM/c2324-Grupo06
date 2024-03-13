@@ -7,7 +7,7 @@ public class RotationBehaviour : MonoBehaviour, IBehaviour
     [SerializeField] private float _rotationDegrees;
     [SerializeField] private float _rotationTime = 1;
 
-    private void Start()
+    private void Awake()
     {
         if (_myTransform == null)
         {
