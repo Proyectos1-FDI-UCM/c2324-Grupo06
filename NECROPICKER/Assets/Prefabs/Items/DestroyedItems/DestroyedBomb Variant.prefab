@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9178828748833968566}
-  m_Father: {fileID: 5422449725670486602}
+  m_Father: {fileID: 8073791198306335844}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &6843737037071933612
 Rigidbody2D:
@@ -47,8 +47,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 2
+  m_AngularDrag: 1.5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -180,7 +180,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 830707337, guid: c9be01c379bc4354cb6dcc328efe808c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -222,7 +222,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6401920675609591915}
-  m_Father: {fileID: 5422449725670486602}
+  m_Father: {fileID: 8073791198306335844}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &8647523848356540361
 Rigidbody2D:
@@ -237,8 +237,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 2
+  m_AngularDrag: 1.5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -370,7 +370,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -874909450, guid: c9be01c379bc4354cb6dcc328efe808c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -571,7 +571,7 @@ PrefabInstance:
       addedObject: {fileID: 6520182529898624719}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 291dd356f16f115498caf1e98224c7f7, type: 3}
---- !u!4 &5422449725670486602 stripped
+--- !u!4 &8073791198306335844 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5195972791840293170, guid: 291dd356f16f115498caf1e98224c7f7, type: 3}
   m_PrefabInstance: {fileID: 4039750756755389782}
