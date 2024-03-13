@@ -2,16 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 [RequireComponent(typeof(TileSeter))]
 public class DoorIdentifier : MonoBehaviour
 {
     private RoomAccess roomAccess;
-    private TileSeter _tileSeter;
     private Room _DoorRoom;
+    [SerializeField] UnityEvent onVerifyIdentity = new UnityEvent();
+    [SerializeField] UnityEvent onFailIdentity = new UnityEvent();
+
     private void Start() => CompareFlag();
     private void Awake()
     {
-        _tileSeter = GetComponent<TileSeter>();
         _DoorRoom = GetComponentInParent<Room>();   
     }
     private void CompareFlag() 
@@ -19,11 +21,11 @@ public class DoorIdentifier : MonoBehaviour
         roomAccess = PositionRoomAccess();
         if (_DoorRoom.totalAccess.HasFlag(roomAccess))
         {
-            _tileSeter.SetTiles();
+            onVerifyIdentity?.Invoke();
         }
         else
         {
-            gameObject.SetActive(false);
+            onFailIdentity?.Invoke();
         }
     }
     private RoomAccess PositionRoomAccess()
