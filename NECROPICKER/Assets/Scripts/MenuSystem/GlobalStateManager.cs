@@ -18,6 +18,9 @@ public class GlobalStateManager : ScriptableObject
 
     [SerializeField] UnityEvent onRestart = new UnityEvent();
     public UnityEvent OnRestart => onRestart;
+    [SerializeField] UnityEvent onLoading = new UnityEvent();
+    public UnityEvent OnLoading => onLoading;
+
     [SerializeField] ScenesManager scenesManager;
 
 
@@ -56,10 +59,16 @@ public class GlobalStateManager : ScriptableObject
     {
         Application.Quit();
     }
-    
+
     public void Death()
     {
         Time.timeScale = 0;
         onDeath?.Invoke();
     }
+
+    public void Loading()
+    {
+        onLoading?.Invoke();
+    }
 }
+  

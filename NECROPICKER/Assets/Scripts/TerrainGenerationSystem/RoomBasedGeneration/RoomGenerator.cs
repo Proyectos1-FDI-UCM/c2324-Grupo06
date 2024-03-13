@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RoomGenerator : MonoBehaviour
 {
@@ -15,13 +16,23 @@ public class RoomGenerator : MonoBehaviour
     [SerializeField] int maxRoomExtension = 40;
     int extensionCounter = 0;
 
+
+    [SerializeField] UnityEvent onLoading = new UnityEvent();
+    public UnityEvent OnLoading => onLoading;
+
+    [SerializeField] UnityEvent onLoaded = new UnityEvent();
+    public UnityEvent OnLoaded => onLoaded;
+
     private void Awake()
     {
+        //pantalla de carga
         roomSettings = new RoomSettingStack(Rooms);
         transform.position = new Vector2(createdRooms.GetLength(0) / 2 * roomSize.x, createdRooms.GetLength(1) / 2 * roomSize.y);
         GenerateRoom((int)transform.position.x / roomSize.x, (int)transform.position.y / roomSize.y, initialRoom, (RoomAccess)15);
         StartCoroutine(GenerateRooms());
     }
+
+    private void Start() => onLoading?.Invoke();
 
     RoomSetting GenerateRandomRoom(int x, int y, RoomAccess accessValue) //Sala aleatoria
     {
@@ -163,7 +174,7 @@ public class RoomGenerator : MonoBehaviour
                 }
             }
 
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(1.0f);
         }
         
         foreach(RoomSetting roomSetting in roomSettings.RoomSettings)
@@ -183,6 +194,8 @@ public class RoomGenerator : MonoBehaviour
                 }
             }
         }
+        ///desactivar Pantalla de carga
+        onLoaded?.Invoke();
     }
 }
 
