@@ -311,7 +311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionChangeTime: {x: 0.5, y: 0.55}
   maxDistanceToInitialPosition: 100000000
-  lerpFactor: 0.157
+  lerpFactor: 0.139
 --- !u!1 &4971645730542438167
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,9 +460,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6872800897348139296}
-  - component: {fileID: 4406914696588653622}
+  - component: {fileID: 3355131252258052320}
   m_Layer: 0
-  m_Name: Wait 2s
+  m_Name: Wait 1,5s to 2,5s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -483,7 +483,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 656811467240576477}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4406914696588653622
+--- !u!114 &3355131252258052320
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -492,10 +492,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6713438938118241117}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da4b90bc677b294eac913160882da8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 912ac8752512cd64c8a519131add756a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToWait: 2
+  minTime: 1.5
+  maxTime: 2.5
 --- !u!1 &6879389868657529210
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,7 +656,7 @@ MonoBehaviour:
     - {fileID: 3334733598758309410}
   nextStates:
   - conditions:
-    - conditionContainer: {fileID: 2519474382645715982}
+    - conditionContainer: {fileID: 6879389868657529210}
       negated: 0
     stateContainer: {fileID: 7078288737309434906}
 --- !u!1001 &6816184777472266266
@@ -709,7 +710,7 @@ PrefabInstance:
     - target: {fileID: 2859700523652173628, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: nextStates.Array.data[0].conditions.Array.data[0].conditionContainer
       value: 
-      objectReference: {fileID: 2519474382645715982}
+      objectReference: {fileID: 5955646056820654088}
     - target: {fileID: 3847993717283742919, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: initialState
       value: 
