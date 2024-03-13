@@ -14,15 +14,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2670096651792955070, guid: 4df9999c047550241b1c1a7d96052937, type: 3}
       propertyPath: targetLayer.m_Bits
-      value: 9
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2670096651792955070, guid: 4df9999c047550241b1c1a7d96052937, type: 3}
       propertyPath: requiredLayer.m_Bits
-      value: 256
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 4567352639947266525, guid: 4df9999c047550241b1c1a7d96052937, type: 3}
       propertyPath: m_Name
       value: AcklemonBullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567352639947266525, guid: 4df9999c047550241b1c1a7d96052937, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6502146709052401106, guid: 4df9999c047550241b1c1a7d96052937, type: 3}
       propertyPath: m_Radius

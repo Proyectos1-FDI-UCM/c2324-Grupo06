@@ -1,19 +1,34 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
-
 public class RotationBehaviour : MonoBehaviour, IBehaviour
 {
-    [SerializeField] private Transform _ParentTransform;
-   
-    private void Awake()
+    [SerializeField] private Transform _myTransform;
+
+    [SerializeField] private float _rotationDegrees;
+    [SerializeField] private float _rotationTime = 1;
+
+    private void Start()
     {
-        _ParentTransform = GetComponentInParent<Transform>();
+        if (_myTransform == null)
+        {
+            _myTransform = GetComponentInParent<Pointer>().transform;
+        }
     }
     public void ExecuteBehaviour()
     {
-        _ParentTransform.Rotate(0,0,45);
+        StartCoroutine(Rotate());
     }
 
+    IEnumerator Rotate()
+    {
+        float time = 0;
+        float targetRotation = _myTransform.eulerAngles.z + _rotationDegrees;
+        while (time < _rotationTime)
+        {
+            float rotation = Mathf.Lerp(_myTransform.eulerAngles.z, targetRotation, time / _rotationTime);
+            _myTransform.rotation = Quaternion.Euler(0, 0, rotation);
+            time += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
+        }
+    }
 }

@@ -23,7 +23,6 @@ public class BehaviourPerformer
             behaviours = new IBehaviour[behaviourContainers.Length];
             for(int i = 0; i < behaviourContainers.Length; i++)
             {
-                Debug.Log(behaviours[i]);
                 behaviours[i] = behaviourContainers[i].GetComponent<IBehaviour>();
             }
 
