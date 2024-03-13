@@ -8,7 +8,7 @@ public class StairComponent : MonoBehaviour
     [SerializeField] string sceneName;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision != GetComponent<InputManager>())
+        if (collision != GetComponent<AnimationComponentJefferson>())
         {
             SceneManager.LoadScene(sceneName);
         }

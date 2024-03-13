@@ -45,16 +45,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialRoom:
-    roomPrefab: {fileID: 1565287536060672417, guid: dc0de4799ba0221418c591bad70bbbed, type: 3}
+    roomPrefab: {fileID: 168292651923293047, guid: e0704046ee05349418babe2e7055bef5, type: 3}
     probability: 1
     minNumOfInstances: 0
-  nextFloorRooms:
-  - roomPrefab: {fileID: 168292651923293047, guid: 3d8d78b996914704eb9afeb1aeb3c020, type: 3}
+  Rooms:
+  - roomPrefab: {fileID: 2741341949905470546, guid: 034f7e5160ca2064eaf2f0b28bb27f61, type: 3}
     probability: 1
-    minNumOfInstances: 0
-  roomSettings:
-  - roomPrefab: {fileID: 168292651923293047, guid: 3d8d78b996914704eb9afeb1aeb3c020, type: 3}
-    probability: 1
-    minNumOfInstances: 0
+    minNumOfInstances: 9
+  - roomPrefab: {fileID: 4081519400070103902, guid: 3813d274fcafbaf4c9cefdd0a9d70d02, type: 3}
+    probability: 0
+    minNumOfInstances: 1
   roomSize: {x: 40, y: 30}
-  maxRoomExtension: 40
+  maxRoomExtension: 10
+  onLoading:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 2ab6ab99117bb6a4785aa034683d96f5, type: 2}
+        m_TargetAssemblyTypeName: GlobalStateManager, Assembly-CSharp
+        m_MethodName: Loading
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onLoaded:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 2ab6ab99117bb6a4785aa034683d96f5, type: 2}
+        m_TargetAssemblyTypeName: GlobalStateManager, Assembly-CSharp
+        m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

@@ -7,17 +7,18 @@ public class AudioPerformer : MonoBehaviour
 
     AudioPlayer[] _audioPlayer;
     static private AudioPerformer _instance;
-    static public AudioPerformer Instance
-    {
-        get { return _instance; }
-    }
     private void Awake()
         
     {
         Screen.SetResolution(1280, 960, true);
+
         if (_instance != null)
         {
-            Destroy(_instance.gameObject);
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
         }
 
          DontDestroyOnLoad(this.gameObject);
