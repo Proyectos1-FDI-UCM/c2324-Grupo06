@@ -33,8 +33,12 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7204166686157451126, guid: 4df9999c047550241b1c1a7d96052937, type: 3}
+      propertyPath: _speedMultiplier
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204166686157451126, guid: 4df9999c047550241b1c1a7d96052937, type: 3}
       propertyPath: targetLayer.m_Bits
-      value: 8
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8646341109574954228, guid: 4df9999c047550241b1c1a7d96052937, type: 3}
       propertyPath: m_LocalScale.x

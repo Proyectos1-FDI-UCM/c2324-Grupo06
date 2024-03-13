@@ -24,10 +24,7 @@ public class MovementController : MonoBehaviour
     }
     private void Update()
     {
-        if (isPlayer)
-        {
-            Move(rb.velocity.normalized);
-        }
+        SetSpeed(_speed);
     }
     //Nos podemos ahorrar este Update, en este caso es mejor que cada vez que se actualice _speed se actualice el valor de rb.velocity.
     
