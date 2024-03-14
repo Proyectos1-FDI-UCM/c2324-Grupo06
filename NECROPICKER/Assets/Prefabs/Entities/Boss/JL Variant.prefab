@@ -493,6 +493,12 @@ MonoBehaviour:
   - conditions:
     - conditionContainer: {fileID: 7250788565858368021}
       negated: 0
+    - conditionContainer: {fileID: 4515991248696392177}
+      negated: 0
+    stateContainer: {fileID: 8655579971173655884}
+  - conditions:
+    - conditionContainer: {fileID: 7250788565858368021}
+      negated: 0
     - conditionContainer: {fileID: 3385044303629859248}
       negated: 0
     stateContainer: {fileID: 6798534438641193414}
@@ -508,12 +514,6 @@ MonoBehaviour:
     - conditionContainer: {fileID: 3385044303629859248}
       negated: 0
     stateContainer: {fileID: 4636116125568162318}
-  - conditions:
-    - conditionContainer: {fileID: 7250788565858368021}
-      negated: 0
-    - conditionContainer: {fileID: 4515991248696392177}
-      negated: 0
-    stateContainer: {fileID: 8655579971173655884}
 --- !u!1 &3385044303629859248
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +525,7 @@ GameObject:
   - component: {fileID: 9019789788679924959}
   - component: {fileID: 3345830543970490923}
   m_Layer: 0
-  m_Name: Probability 25%
+  m_Name: Probability 22%
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -558,7 +558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e862a3cf3d1ed4f86da6665633eaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  probability: 25
+  probability: 22
 --- !u!1 &3803142238587953574
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +775,7 @@ GameObject:
   - component: {fileID: 1983757403277542524}
   - component: {fileID: 5812659833677906183}
   m_Layer: 0
-  m_Name: Probability 100%
+  m_Name: Probability 5%
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -808,7 +808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e862a3cf3d1ed4f86da6665633eaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  probability: 100
+  probability: 5
 --- !u!1 &4636116125568162318
 GameObject:
   m_ObjectHideFlags: 0
