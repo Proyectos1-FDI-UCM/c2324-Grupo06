@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbit_radius: 9.68
   adjustFactor: 1
-  weight: 0.321
+  weight: 0.2
 --- !u!1 &1980965371571030647
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionChangeTime: {x: 0.5, y: 0.55}
   maxDistanceToInitialPosition: 100000000
-  lerpFactor: 0.139
+  lerpFactor: 0.34
 --- !u!1 &4971645730542438167
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 2870493918399009665}
   - component: {fileID: 1934637805533370577}
   m_Layer: 0
-  m_Name: 'Look Target: 100 rad/s'
+  m_Name: 'Look Target: 10 rad/s'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -450,7 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945531b2e41d63145a5ffc8e05e1408b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 100
+  rotationSpeed: 10
 --- !u!1 &6713438938118241117
 GameObject:
   m_ObjectHideFlags: 0
