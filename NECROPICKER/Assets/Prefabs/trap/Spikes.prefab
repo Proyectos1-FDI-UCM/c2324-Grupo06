@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2206002416774681481}
   - component: {fileID: 6115519789746542835}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Desactive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,15 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAnimation: 
   onEnterPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 5333698291270749920}
-    behaviourContainers: {fileID: 9092848944207405899}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 0}
   onUpdatePerformers: []
   onExitPerformers: []
-  _negated: 0
-  exitConditionContainer: {fileID: 4288179363861962627}
-  _nextStates:
-  - {fileID: 7103775012635750039}
+  nextStates: []
 --- !u!1 &994844834848127399
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,7 +62,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7146084495290478578}
   - component: {fileID: 7103775012635750039}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Active
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,15 +98,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAnimation: 
   onEnterPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 5333698291270749920}
-    behaviourContainers: {fileID: 4029425145470945779}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 0}
   onUpdatePerformers: []
   onExitPerformers: []
-  _negated: 0
-  exitConditionContainer: {fileID: 4288179363861962627}
-  _nextStates:
-  - {fileID: 6115519789746542835}
+  nextStates: []
 --- !u!1 &2016228353428316437
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 62209882215844983}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Behaviours
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +147,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 183937180131836239}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Conditions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5055363115686304617}
   - component: {fileID: 2397017179382883004}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Stop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4215635331483139826}
   - component: {fileID: 5736730832638051855}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: sr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3898504713769200915}
   - component: {fileID: 8760293089931092884}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Active Collider2DTrue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6498402540125554078}
   - component: {fileID: 1797389497130857826}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wait 5s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,7 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 459869474126819821}
   - component: {fileID: 4656863909238973727}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: True
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,7 +445,7 @@ GameObject:
   - component: {fileID: 2625437136735185815}
   - component: {fileID: 666095893342806645}
   - component: {fileID: 5148448082751562100}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: AI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,7 +482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd6c89df896d9d4db52844020ecc3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialState: {fileID: 6115519789746542835}
+  initialStateContainer: {fileID: 0}
   permanentBehaviours: []
 --- !u!114 &5148448082751562100
 MonoBehaviour:
@@ -512,7 +506,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8918180362629912322}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: States
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -560,7 +554,7 @@ GameObject:
   - component: {fileID: 7098981419496452944}
   - component: {fileID: 8854907163962381374}
   - component: {fileID: 6824503485289653457}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -930,7 +924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5516933979097143954}
   - component: {fileID: 4568215819175074587}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Active Collider2DFalse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -975,7 +969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803311827702272557}
   - component: {fileID: 6520654751462935151}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: GetDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1013,10 +1007,7 @@ MonoBehaviour:
   onEnterPerformers: []
   onUpdatePerformers: []
   onExitPerformers:
-  - negated: 0
-    conditionContainer: {fileID: 5333698291270749920}
-    behaviourContainers: {fileID: 3035168781329183809}
-  _negated: 0
-  exitConditionContainer: {fileID: 0}
-  _nextStates:
-  - {fileID: 0}
+  - condition: []
+    behaviourContainers:
+    - {fileID: 0}
+  nextStates: []
