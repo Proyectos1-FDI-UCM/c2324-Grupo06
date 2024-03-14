@@ -18,11 +18,11 @@ public class Loadinjeferson : MonoBehaviour
     void Update()
     {
         
-       
+       /*
             image.sprite = jeferson[i];
             if (i == 3 - 1) i++;
             else i = 0;
        
-     
+     */
     }
 }

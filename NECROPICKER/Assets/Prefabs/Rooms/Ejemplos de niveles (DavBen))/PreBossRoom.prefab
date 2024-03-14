@@ -3758,8 +3758,8 @@ GameObject:
   - component: {fileID: 8835768124917991082}
   - component: {fileID: 7003055767842861162}
   - component: {fileID: 6905579507537817283}
-  - component: {fileID: 3820300616225849592}
   - component: {fileID: 6489764189908579609}
+  - component: {fileID: 898273527993470595}
   m_Layer: 0
   m_Name: Escalera a Boss
   m_TagString: Untagged
@@ -4679,8 +4679,21 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!19719996 &3820300616225849592
-TilemapCollider2D:
+--- !u!114 &6489764189908579609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4047628808080590524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67c1278ed26388348bc880358575d39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 
+--- !u!61 &898273527993470595
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4695,7 +4708,7 @@ TilemapCollider2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: -1
+  m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -4711,23 +4724,19 @@ TilemapCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0
-  m_UseDelaunayMesh: 0
---- !u!114 &6489764189908579609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4047628808080590524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67c1278ed26388348bc880358575d39b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: 
+  m_Offset: {x: -0.5709224, y: 10.609644}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.0500813, y: 5.99276}
+  m_EdgeRadius: 0
 --- !u!1001 &1739623775357779398
 PrefabInstance:
   m_ObjectHideFlags: 0
