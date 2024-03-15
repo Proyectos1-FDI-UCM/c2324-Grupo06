@@ -734,9 +734,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1995621664295373924}
-  - component: {fileID: 105272245573038610}
+  - component: {fileID: 8791340702856849455}
   m_Layer: 0
-  m_Name: Wait 2s
+  m_Name: Wait 2s to 4s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -757,7 +757,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2663316508883018831}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &105272245573038610
+--- !u!114 &8791340702856849455
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -766,10 +766,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6442934893472982851}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da4b90bc677b294eac913160882da8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 912ac8752512cd64c8a519131add756a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToWait: 2
+  minTime: 2
+  maxTime: 4
 --- !u!1 &6698086096706127542
 GameObject:
   m_ObjectHideFlags: 0
