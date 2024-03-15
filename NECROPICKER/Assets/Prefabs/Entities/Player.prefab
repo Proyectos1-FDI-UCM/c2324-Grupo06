@@ -994,7 +994,19 @@ MonoBehaviour:
     m_ActionId: 126dc1b3-4f70-4688-bce6-91e005e3b6a7
     m_ActionName: Playing/Pause[/Keyboard/escape]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1109475844806078467}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: OnDrop
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 9e55f49a-4471-46e2-bebf-79383c2d4b1c
     m_ActionName: Playing/Drop[/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 0
