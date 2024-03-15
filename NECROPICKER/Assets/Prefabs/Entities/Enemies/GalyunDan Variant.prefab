@@ -668,9 +668,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 447552837958183979, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: dropItems.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 447552837958183979, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: dropChance.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 447552837958183979, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: dropItems.Array.data[0]
       value: 
       objectReference: {fileID: 6013614536782353629, guid: 920515f8ea8e96c459c9cb4327d6158f, type: 3}
+    - target: {fileID: 447552837958183979, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: dropItems.Array.data[1]
+      value: 
+      objectReference: {fileID: 2033584835309065513, guid: 7cf4240957ba1c34884d966936fd2edd, type: 3}
+    - target: {fileID: 447552837958183979, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: dropChance.Array.data[1]
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 521055722192496110, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: _speed
       value: 10
