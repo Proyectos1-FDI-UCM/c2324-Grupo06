@@ -14,8 +14,6 @@ public class DestroyOnCollision : MonoBehaviour, ICollidable
     }
     public void OnCollide(Collider2D other)
     {
-        Debug.Log(requiredLayer == (requiredLayer | (1 << gameObject.layer)));
-        print(targetLayer == (targetLayer | (1 << other.gameObject.layer)));
         if (requiredLayer == (requiredLayer | (1 << gameObject.layer)) && targetLayer == (targetLayer | (1 << other.gameObject.layer)))
         {
             Destroy(gameObject);
