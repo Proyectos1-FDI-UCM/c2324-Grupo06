@@ -23,6 +23,7 @@ public class InputManager : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         movementController.Move(context.ReadValue<Vector2>());
+        movementController.QuitParticules();
     }
 
     public void OnUse(InputAction.CallbackContext context)
