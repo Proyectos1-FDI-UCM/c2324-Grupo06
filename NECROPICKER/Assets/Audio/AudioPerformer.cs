@@ -9,7 +9,6 @@ public class AudioPerformer : MonoBehaviour
     static private AudioPerformer _instance;
     private void Awake()
     {
-        Screen.SetResolution(1280, 960, true);
 
         if (_instance != null)
         {
