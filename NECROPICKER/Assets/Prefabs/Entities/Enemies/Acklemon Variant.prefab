@@ -1187,6 +1187,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 447552837958183979, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: dropItems.Array.data[0]
+      value: 
+      objectReference: {fileID: 7726276587543425325, guid: 4f7d6f79525550743a107688242a402b, type: 3}
+    - target: {fileID: 447552837958183979, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: dropChance.Array.data[0]
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 521055722192496110, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1408,7 +1416,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 447552837958183979, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
     - {fileID: -1013895885409191479, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5377563195350404431, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}

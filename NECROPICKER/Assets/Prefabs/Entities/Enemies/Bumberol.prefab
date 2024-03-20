@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5413056787344254830}
   - component: {fileID: 7173950416896143739}
   m_Layer: 0
-  m_Name: Overlap Circle Condition 5m
+  m_Name: Overlap Circle Condition 3,5m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 8
-  radius: 5
+  radius: 3.5
   center: {fileID: 5413056787344254830}
 --- !u!1 &241136056599686359
 GameObject:
@@ -5750,8 +5750,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db3854b59a86d24fafb549315d50371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropItems: []
-  dropChance: 
+  dropItems:
+  - {fileID: 3848557150264641513, guid: 0428fc602a330d94a920b19198e02ac5, type: 3}
+  dropChance: 19000000
 --- !u!114 &6949180456314184305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6246,7 +6247,7 @@ MonoBehaviour:
   onEnterPerformers:
   - condition: []
     behaviourContainers:
-    - {fileID: 0}
+    - {fileID: 3093078647456682551}
   onUpdatePerformers: []
   onExitPerformers: []
   nextStates: []

@@ -13367,7 +13367,7 @@ MonoBehaviour:
       m_Calls: []
   triggerLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 520
 --- !u!1 &7508668832293763499
 GameObject:
   m_ObjectHideFlags: 0
@@ -16087,6 +16087,10 @@ PrefabInstance:
     - target: {fileID: 4202787806702908917, guid: 735bb32a1fd34ce4abc24e246a0fc0ac, type: 3}
       propertyPath: m_Name
       value: CameraArea
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248502477564989051, guid: 735bb32a1fd34ce4abc24e246a0fc0ac, type: 3}
+      propertyPath: triggerLayer.m_Bits
+      value: 520
       objectReference: {fileID: 0}
     - target: {fileID: 6248502477564989051, guid: 735bb32a1fd34ce4abc24e246a0fc0ac, type: 3}
       propertyPath: <onTriggerExit>k__BackingField.m_PersistentCalls.m_Calls.Array.size

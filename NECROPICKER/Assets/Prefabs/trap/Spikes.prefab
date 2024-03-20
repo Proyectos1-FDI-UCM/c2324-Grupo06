@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2206002416774681481}
   - component: {fileID: 6115519789746542835}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: Desactive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,14 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cea6a7c29b5624eb3e58e9dc294545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAnimation: 
+  stateAnimation: desactivespikes
   onEnterPerformers:
   - condition: []
     behaviourContainers:
-    - {fileID: 0}
+    - {fileID: 9092848944207405899}
   onUpdatePerformers: []
   onExitPerformers: []
-  nextStates: []
+  nextStates:
+  - conditions:
+    - conditionContainer: {fileID: 4288179363861962627}
+      negated: 0
+    stateContainer: {fileID: 994844834848127399}
 --- !u!1 &994844834848127399
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,7 +66,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7146084495290478578}
   - component: {fileID: 7103775012635750039}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: Active
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,14 +100,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cea6a7c29b5624eb3e58e9dc294545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAnimation: 
+  stateAnimation: active spikes
   onEnterPerformers:
   - condition: []
     behaviourContainers:
-    - {fileID: 0}
+    - {fileID: 4029425145470945779}
   onUpdatePerformers: []
   onExitPerformers: []
-  nextStates: []
+  nextStates:
+  - conditions:
+    - conditionContainer: {fileID: 4288179363861962627}
+      negated: 0
+    stateContainer: {fileID: 602192001540452921}
 --- !u!1 &2016228353428316437
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,7 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 62209882215844983}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: Behaviours
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +155,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 183937180131836239}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: Conditions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5055363115686304617}
   - component: {fileID: 2397017179382883004}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: Stop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4215635331483139826}
   - component: {fileID: 5736730832638051855}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: sr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +296,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 73ea1f58f42ad5f46b169e19a4ad612c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 60ac36a31c30e534e97509f5c5111f1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -309,7 +317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3898504713769200915}
   - component: {fileID: 8760293089931092884}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: Active Collider2DTrue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6498402540125554078}
   - component: {fileID: 1797389497130857826}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: Wait 5s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 459869474126819821}
   - component: {fileID: 4656863909238973727}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: True
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +453,7 @@ GameObject:
   - component: {fileID: 2625437136735185815}
   - component: {fileID: 666095893342806645}
   - component: {fileID: 5148448082751562100}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: AI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -482,7 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd6c89df896d9d4db52844020ecc3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialStateContainer: {fileID: 0}
+  initialStateContainer: {fileID: 602192001540452921}
   permanentBehaviours: []
 --- !u!114 &5148448082751562100
 MonoBehaviour:
@@ -506,7 +514,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8918180362629912322}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: States
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -554,7 +562,8 @@ GameObject:
   - component: {fileID: 7098981419496452944}
   - component: {fileID: 8854907163962381374}
   - component: {fileID: 6824503485289653457}
-  m_Layer: 11
+  - component: {fileID: 109449850789684622}
+  m_Layer: 7
   m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -612,7 +621,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8649966345507681054}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -641,8 +650,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.8125, y: 0.875}
+    newSize: {x: 0.8125, y: 0.875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -675,7 +684,7 @@ Animator:
   m_GameObject: {fileID: 8649966345507681054}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 39d52637461ccd34ca1b55d6857186fe, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -915,6 +924,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b5cc79db0b49d4d86f1d16ce070e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &109449850789684622
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8649966345507681054}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 60ac36a31c30e534e97509f5c5111f1c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.8125, y: 0.875}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &9092848944207405899
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,7 +986,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5516933979097143954}
   - component: {fileID: 4568215819175074587}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: Active Collider2DFalse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -970,7 +1031,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803311827702272557}
   - component: {fileID: 6520654751462935151}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: GetDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
