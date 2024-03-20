@@ -18,7 +18,7 @@ public class AudioPlayer : ScriptableObject
     [SerializeField] private SoundClipOrder playOrder;
     [SerializeField] private bool _loop;
 
-    private UnityEvent<AudioClip, float, float, bool> _onAudioPlay;
+    private UnityEvent<AudioClip, float, float, bool> _onAudioPlay = new UnityEvent<AudioClip, float, float, bool>();
     public UnityEvent<AudioClip, float, float, bool> OnAudioPlay => _onAudioPlay;
 
     private UnityEvent onAudioStop = new UnityEvent();
@@ -63,7 +63,7 @@ public class AudioPlayer : ScriptableObject
         float actualPitch = Random.Range(pitch.x, pitch.y);
         //source.Play();
 
-        _onAudioPlay?.Invoke(audioClip(), actualVolume, actualPitch,_loop);
+        _onAudioPlay?.Invoke(audioClip(), actualVolume, actualPitch, _loop);
     }
 
     public void Stop() => onAudioStop?.Invoke();
