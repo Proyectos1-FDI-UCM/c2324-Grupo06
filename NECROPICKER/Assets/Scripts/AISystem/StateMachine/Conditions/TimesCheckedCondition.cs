@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TimesCheckedCondition : MonoBehaviour, ICondition
 {
-    [SerializeField] int timesChecked = 0;
+    int timesChecked = 0;
     [SerializeField] int timesToCheck = 5;
 
     public bool CheckCondition()
@@ -17,5 +17,9 @@ public class TimesCheckedCondition : MonoBehaviour, ICondition
             return true;
         }
         return false;
+    }
+
+    private void OnValidate() {
+        name = $"Check {timesToCheck} times";
     }
 }

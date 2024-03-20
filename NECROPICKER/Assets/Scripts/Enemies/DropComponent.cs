@@ -9,7 +9,9 @@ public class DropComponent : MonoBehaviour
     [SerializeField] List<GameObject> dropItems = new List<GameObject>();
     [SerializeField]List<int> dropChance = new List<int>();
     private Transform _transform;
-    bool physicDrop = false;
+
+    [SerializeField] bool exclusiveDrop = false;
+    [SerializeField] bool dropOnDestroy = true;
   
     private void Start()
     {
@@ -37,6 +39,7 @@ public class DropComponent : MonoBehaviour
         int randomPercentage = Random.Range(0, 101);
         for (int i = 0; i < dropItems.Count; i++)
         {
+            print(i);
             if (randomPercentage < dropChance[i])
             {
                 GameObject obj = Instantiate(dropItems[i], _transform.position, _transform.rotation);
@@ -47,22 +50,21 @@ public class DropComponent : MonoBehaviour
 
     void LaunchItem(GameObject item)
     {
-        if(physicDrop)
+        if(item.TryGetComponent(out IBehaviour behaviour))
         {
-            if (item.TryGetComponent(out Rigidbody2D rb))
-            {
-                int RandomNum = Random.Range(0, 360);
-                rb.velocity = new Vector2(Mathf.Sin(RandomNum), Mathf.Cos(RandomNum) * Random.Range(15f, 20f));
-            }
-        }
-        else
-        {
-            if(item.TryGetComponent(out IBehaviour behaviour))
-            {
-                behaviour.ExecuteBehaviour();
-            }
+            behaviour.ExecuteBehaviour();
         }
     }
+
+    private void OnDestroy()
+    {
+        if (dropOnDestroy)
+        {
+            if (exclusiveDrop) DropItemExclusive();
+            else DropItem();
+        }
+    }
+
     //El código está genial, esto son solo algunas sugerencias para mejorar la legibilidad y mantenibilidad del código
     //buen trabajo David! :D
     //Si tienes alguna duda, no dudes en preguntarme
