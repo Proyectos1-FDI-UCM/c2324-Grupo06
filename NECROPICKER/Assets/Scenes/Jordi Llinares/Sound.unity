@@ -243,6 +243,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6467142984948399674, guid: e0704046ee05349418babe2e7055bef5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -806,9 +810,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc2bf8ae556e844f8ad214740286171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioPlayer:
-  - {fileID: 11400000, guid: c7d78027e4577be4e9e87c140cc99739, type: 2}
-  - {fileID: 11400000, guid: dd18b78b0c066fd40af1d2c852d22b05, type: 2}
 --- !u!4 &1584375254
 Transform:
   m_ObjectHideFlags: 0
@@ -907,7 +908,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: c7d78027e4577be4e9e87c140cc99739, type: 2}
+      - m_Target: {fileID: 11400000, guid: b4dbf6d9704c6474c8d741866ba4ddaf, type: 2}
         m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1

@@ -668,9 +668,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 447552837958183979, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: dropItems.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 447552837958183979, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: dropChance.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 447552837958183979, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: dropItems.Array.data[0]
       value: 
       objectReference: {fileID: 6013614536782353629, guid: 920515f8ea8e96c459c9cb4327d6158f, type: 3}
+    - target: {fileID: 447552837958183979, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: dropItems.Array.data[1]
+      value: 
+      objectReference: {fileID: 2033584835309065513, guid: 7cf4240957ba1c34884d966936fd2edd, type: 3}
+    - target: {fileID: 447552837958183979, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: dropChance.Array.data[1]
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 521055722192496110, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: _speed
       value: 10
@@ -726,6 +742,10 @@ PrefabInstance:
     - target: {fileID: 6247058447108451499, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: m_Name
       value: GalyunDan Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6495407702569994225, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 6144
       objectReference: {fileID: 0}
     - target: {fileID: 7265099983593255393, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
       propertyPath: m_LocalScale.x
@@ -807,6 +827,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 8960345816765295423, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
+      propertyPath: damage
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5714122640315372556, guid: 68730445306515a438d5e26b99a1c8e8, type: 3}
     m_RemovedGameObjects:
@@ -883,7 +907,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 6144
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

@@ -138,6 +138,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8166464752845091290, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+      propertyPath: damage
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2105600899019646030, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.665335
@@ -182,6 +186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bomb
       objectReference: {fileID: 0}
+    - target: {fileID: 5071440089898402505, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3958fb552a4f8e3418058587624cb3c2, type: 2}
     - target: {fileID: 8736293030268394584, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       propertyPath: itemData
       value: 

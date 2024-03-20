@@ -53,7 +53,7 @@ public class ItemHandler : MonoBehaviour
     {
         if (selectedItem.ItemData != _necronomicon)
         {
-            print("caca de vaca");
+            print("entra");
             selectedItem.gameObject.layer = LayerMask.NameToLayer("Item");
             Rigidbody2D rb = selectedItem.gameObject.GetComponent<Rigidbody2D>();
             rb.isKinematic = false;

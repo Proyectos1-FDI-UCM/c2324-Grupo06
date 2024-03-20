@@ -9,7 +9,6 @@ public class AudioPerformer : MonoBehaviour
     static private AudioPerformer _instance;
     private void Awake()
     {
-        Screen.SetResolution(1280, 960, true);
 
         if (_instance != null)
         {
@@ -26,11 +25,12 @@ public class AudioPerformer : MonoBehaviour
                 AudioSource currentSource = gameObject.AddComponent<AudioSource>();
 
                 _audioPlayer[i].OnAudioPlay.
-                AddListener((AudioClip clip, float volume, float pitch) =>
+                AddListener((AudioClip clip, float volume, float pitch, bool loop) =>
                     {
                         currentSource.volume = volume;
                         currentSource.pitch = pitch;
                         currentSource.clip = clip;
+                        currentSource.loop = loop;
                         currentSource.Play();
                     }
                 );

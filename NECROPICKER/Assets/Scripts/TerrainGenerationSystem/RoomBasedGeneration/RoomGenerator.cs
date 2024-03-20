@@ -174,7 +174,7 @@ public class RoomGenerator : MonoBehaviour
                 }
             }
 
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(1.01f);
         }
         
         foreach(RoomSetting roomSetting in roomSettings.RoomSettings)
