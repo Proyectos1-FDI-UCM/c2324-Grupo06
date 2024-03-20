@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5413056787344254830}
   - component: {fileID: 7173950416896143739}
   m_Layer: 0
-  m_Name: Overlap Circle Condition 5m
+  m_Name: Overlap Circle Condition 3,5m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 8
-  radius: 5
+  radius: 3.5
   center: {fileID: 5413056787344254830}
 --- !u!1 &241136056599686359
 GameObject:
@@ -6247,7 +6247,7 @@ MonoBehaviour:
   onEnterPerformers:
   - condition: []
     behaviourContainers:
-    - {fileID: 0}
+    - {fileID: 3093078647456682551}
   onUpdatePerformers: []
   onExitPerformers: []
   nextStates: []
