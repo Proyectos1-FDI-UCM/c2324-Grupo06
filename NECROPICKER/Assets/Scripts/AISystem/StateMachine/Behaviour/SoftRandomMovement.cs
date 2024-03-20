@@ -12,26 +12,28 @@ public class SoftRandomMovement : MonoBehaviour, IBehaviour
     Vector2 initialPosition;
     [Range(0, 1)]
     [SerializeField] float lerpFactor = 1f;
+    float maxTime;
 
     private void Awake() {
         movementController = GetComponentInParent<MovementController>();
-        timer = Mathf.Abs(Random.Range(directionChangeTime.x, directionChangeTime.y));
+        maxTime = Mathf.Abs(Random.Range(directionChangeTime.x, directionChangeTime.y));
     }
 
     public void ExecuteBehaviour()
     {
-        if(timer <= 0)
+        if(timer >= maxTime)
         {
-            timer = Mathf.Abs(Random.Range(directionChangeTime.x, directionChangeTime.y));
+            timer = 0;
+            maxTime = Mathf.Abs(Random.Range(directionChangeTime.x, directionChangeTime.y));
             EvaluateDirection();
         }
         else
         {
             Vector2 lerpDirection = Vector2.Lerp(movementController.Rb.velocity.normalized,
-             randomDirection, timer * lerpFactor / Mathf.Abs(directionChangeTime.y));
+            randomDirection, timer / maxTime * lerpFactor);
 
             movementController.Move(lerpDirection);
-            timer -= Time.deltaTime;
+            timer += Time.deltaTime;
         }
     }
 

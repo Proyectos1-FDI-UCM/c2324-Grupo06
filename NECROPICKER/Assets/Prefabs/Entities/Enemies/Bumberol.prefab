@@ -5209,9 +5209,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5918ed8c60f1b143a6000e552176c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directionChangeTime: {x: 0.5, y: 1}
+  directionChangeTime: {x: 0.25, y: 0.67}
   maxDistanceToInitialPosition: 4
-  lerpFactor: 1
+  lerpFactor: 0.411
 --- !u!1 &3079145207542696284
 GameObject:
   m_ObjectHideFlags: 0
@@ -5781,6 +5781,12 @@ MonoBehaviour:
   onCollision:
     m_PersistentCalls:
       m_Calls: []
+  requiredLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &6973652855710119286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5841,6 +5847,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeProfile: {fileID: 11400000, guid: a07439d6c69dad34bb89ef5fbf6ce622, type: 2}
   intensity: 1
+--- !u!1 &5353588120017496739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5211418149414416629}
+  - component: {fileID: 513733018949580480}
+  m_Layer: 0
+  m_Name: Wait 4s to 6s
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5211418149414416629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5353588120017496739}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5742834528119424726}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &513733018949580480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5353588120017496739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 912ac8752512cd64c8a519131add756a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTime: 4
+  maxTime: 6
 --- !u!1 &5863203728944844065
 GameObject:
   m_ObjectHideFlags: 0
@@ -5929,7 +5981,7 @@ GameObject:
   - component: {fileID: 8940873889623147054}
   - component: {fileID: 5970427466887278702}
   m_Layer: 0
-  m_Name: Wait 1s to 1,5s
+  m_Name: Wait 1s to 1s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5963,7 +6015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minTime: 1
-  maxTime: 1.5
+  maxTime: 1
 --- !u!1 &6190604951225146750
 GameObject:
   m_ObjectHideFlags: 0
@@ -6017,7 +6069,7 @@ MonoBehaviour:
   onExitPerformers: []
   nextStates:
   - conditions:
-    - conditionContainer: {fileID: 5879052799381008891}
+    - conditionContainer: {fileID: 5353588120017496739}
       negated: 0
     stateContainer: {fileID: 1529183963516778447}
   - conditions:
@@ -6281,6 +6333,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8940873889623147054}
+  - {fileID: 5211418149414416629}
   - {fileID: 3499060668321830183}
   - {fileID: 6475265441950407264}
   - {fileID: 6553732087107995076}
