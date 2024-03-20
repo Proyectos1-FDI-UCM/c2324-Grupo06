@@ -27,4 +27,8 @@ public class OnGrabItemCondition : MonoBehaviour, ICondition
         
         return grabbedItem;
     }
+
+    private void OnValidate() {
+        name = $"if {grabHandlerToCheck.name} has grabbed";
+    }
 }

@@ -18,7 +18,12 @@ public class MoveTowardsDirectionCondition : MonoBehaviour, ICondition
         directionToCheck.Normalize();
     }
 
-    public bool CheckCondition() => Vector2.Dot(rbToCheck.velocity, directionToCheck) > dotProductThreshold;
+    public bool CheckCondition()
+    {
+        print(Vector2.Dot(rbToCheck.velocity, directionToCheck));
+        return Vector2.Dot(rbToCheck.velocity, directionToCheck) > dotProductThreshold;
+    }
+        
 
     private void OnValidate() 
     {

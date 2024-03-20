@@ -10,9 +10,6 @@ public class DropComponent : MonoBehaviour
     [SerializeField]List<int> dropChance = new List<int>();
     private Transform _transform;
 
-    [SerializeField] bool exclusiveDrop = false;
-    [SerializeField] bool dropOnDestroy = true;
-  
     private void Start()
     {
         _transform = transform;
@@ -53,15 +50,6 @@ public class DropComponent : MonoBehaviour
         if(item.TryGetComponent(out IBehaviour behaviour))
         {
             behaviour.ExecuteBehaviour();
-        }
-    }
-
-    private void OnDestroy()
-    {
-        if (dropOnDestroy)
-        {
-            if (exclusiveDrop) DropItemExclusive();
-            else DropItem();
         }
     }
 
