@@ -13,6 +13,9 @@ public class ItemHandler : MonoBehaviour
     UnityEvent onItemDrop = new UnityEvent();
     public UnityEvent OnItemDrop => onItemDrop;
 
+    UnityEvent onItemUse = new UnityEvent();
+    public UnityEvent OnItemUse => onItemUse;
+
     private void Awake() {
         if(initialItem != null) SetUpItem(initialItem);
     }
@@ -22,6 +25,7 @@ public class ItemHandler : MonoBehaviour
         if(selectedItem != null)
         {
             selectedItem.Use(this);
+            onItemUse?.Invoke();
         }
     }
 
@@ -53,7 +57,6 @@ public class ItemHandler : MonoBehaviour
     {
         if (selectedItem.ItemData != _necronomicon)
         {
-            print("entra");
             selectedItem.gameObject.layer = LayerMask.NameToLayer("Item");
             Rigidbody2D rb = selectedItem.gameObject.GetComponent<Rigidbody2D>();
             rb.isKinematic = false;

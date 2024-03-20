@@ -19,12 +19,10 @@ public class CollisionHandler : MonoBehaviour
     {
         if(targetLayer == (targetLayer | (1 << collision.gameObject.layer)) && requiredLayer == (requiredLayer | 1 << gameObject.layer))
         {
-            print("COLLISION");
             onCollision?.Invoke();
 
             foreach(ICollidable collidable in collidables)
             {
-                print("COLLIDABLE");
                 collidable.OnCollide(collision.collider);
             }
         }
