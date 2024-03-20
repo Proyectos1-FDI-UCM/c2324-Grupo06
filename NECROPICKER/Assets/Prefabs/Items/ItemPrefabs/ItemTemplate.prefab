@@ -207,6 +207,12 @@ MonoBehaviour:
   onCollision:
     m_PersistentCalls:
       m_Calls: []
+  requiredLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &5782795355629275301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,6 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12becc06b3c645b42882e011079dfb34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
   _speed: 70
 --- !u!114 &-1132469893432273640
 MonoBehaviour:
@@ -301,7 +308,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   duration: 0.75
   height: 3
-  range: {x: -5, y: 5}
+  rangeX: {x: 0, y: 0}
+  rangeY: {x: 0, y: 0}
 --- !u!1 &3148872780604231532
 GameObject:
   m_ObjectHideFlags: 0

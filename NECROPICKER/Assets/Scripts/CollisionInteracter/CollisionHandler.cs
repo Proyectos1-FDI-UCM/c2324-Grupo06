@@ -6,15 +6,22 @@ using UnityEngine.Events;
 public class CollisionHandler : MonoBehaviour
 {
     [SerializeField] UnityEvent onCollision = new UnityEvent();
+    [SerializeField] LayerMask requiredLayer;
+    [SerializeField] LayerMask targetLayer;
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        onCollision?.Invoke();
-        ICollidable[] collidables = GetComponents<ICollidable>();
-
-        foreach(ICollidable collidable in collidables)
+        if(targetLayer == (targetLayer | (1 << collision.gameObject.layer))
+               && requiredLayer == (requiredLayer | 1 << gameObject.layer))
         {
-            collidable.OnCollide(collision.collider);
+            onCollision?.Invoke();
+            ICollidable[] collidables = GetComponents<ICollidable>();
+
+            foreach(ICollidable collidable in collidables)
+            {
+                collidable.OnCollide(collision.collider);
+            }
         }
     }
 }
