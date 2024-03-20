@@ -104,6 +104,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1611454245, guid: f655c1c1efb2dd64da1245cf36a10fb0, type: 3}
+    - target: {fileID: 9188580237525665907, guid: 4df9999c047550241b1c1a7d96052937, type: 3}
+      propertyPath: requiredLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -130,4 +134,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
+  _particleSystem: {fileID: 0}
   _speed: 32.19

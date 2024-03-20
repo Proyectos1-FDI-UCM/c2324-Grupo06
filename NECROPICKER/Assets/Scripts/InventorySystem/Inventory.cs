@@ -75,6 +75,8 @@ public class Inventory : ScriptableObject
                 return;
             }
         }
+
+        UpdateInventory();
     }
 
     public void RemoveItem()
@@ -84,9 +86,13 @@ public class Inventory : ScriptableObject
             if (items[SelectedItemIndex].amount == 1)
             {
                 items[SelectedItemIndex].item = Necronomicon;
+                LookForAnItem();
             }
-            else items[SelectedItemIndex].amount--;
-            UpdateInventory();
+            else 
+            {
+                items[SelectedItemIndex].amount--;
+                UpdateInventory();
+            }
         }
     }
 
@@ -96,11 +102,7 @@ public class Inventory : ScriptableObject
         else SelectedItemIndex += index;
     }
 
-    public void UpdateInventory()
-    {
-        LookForAnItem();
-        onItemChanged?.Invoke(items[SelectedItemIndex].item);
-    }
+    public void UpdateInventory() => onItemChanged?.Invoke(items[SelectedItemIndex].item);
 
     public void EmptyInventory()
     {

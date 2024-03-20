@@ -5,8 +5,5 @@ using UnityEngine;
 public class InstanceParticulesBehaviour : MonoBehaviour, IBehaviour
 {
     [SerializeField] private ParticleSystem _particles;
-    public void ExecuteBehaviour()
-    {
-        _particles.Play();
-    }
+    public void ExecuteBehaviour() => _particles.Play();
 }
