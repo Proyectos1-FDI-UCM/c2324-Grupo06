@@ -22,7 +22,10 @@ public class MovementController : MonoBehaviour
     public void Move(Vector2 direction)
     {
         rb.velocity = direction * speed;
-        _particleSystem.Play();
+        if(_particleSystem != null)
+        {
+            _particleSystem.Play();
+        }
     }
     private void Update()
     {
