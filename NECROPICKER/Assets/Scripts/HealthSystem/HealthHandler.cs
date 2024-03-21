@@ -16,6 +16,7 @@ public class HealthHandler : MonoBehaviour
 
     [SerializeField] UnityEvent onDeath = new UnityEvent();
     public UnityEvent OnDeath => onDeath;
+    [SerializeField] private ParticleSystem _particleSystem;
 
     float _currentHealth = 1;
     public float currentHealth
@@ -47,6 +48,7 @@ public class HealthHandler : MonoBehaviour
         {
             OnTakeDamage?.Invoke();
             currentHealth -= damage;
+            _particleSystem.Play();
         }
     }
 
