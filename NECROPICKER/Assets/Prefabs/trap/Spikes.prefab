@@ -239,7 +239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4215635331483139826
 Transform:
   m_ObjectHideFlags: 0
@@ -580,8 +580,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.72, y: -1.1524478, z: 0.019017326}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.84, y: 1.84, z: 1.84}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2625437136735185815}
   - {fileID: 4215635331483139826}
@@ -809,6 +809,7 @@ MonoBehaviour:
           m_StringArgument: Death
           m_BoolArgument: 0
         m_CallState: 2
+  _particleSystem: {fileID: 0}
   maxHealth: 1
 --- !u!114 &23059129136071097
 MonoBehaviour:
@@ -852,6 +853,12 @@ MonoBehaviour:
   onCollision:
     m_PersistentCalls:
       m_Calls: []
+  requiredLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &7606222298936923174
 MonoBehaviour:
   m_ObjectHideFlags: 0
