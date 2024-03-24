@@ -67,6 +67,8 @@ public class HealthHandler : MonoBehaviour
     }
     public void SetMaxHealth(float newMaxHealth) => maxHealth = newMaxHealth;
     public void SetCurrentHealth(float newCurrentHealth) => currentHealth = newCurrentHealth;
+    public float GetCurrentHealth() => currentHealth;
+    public float GetMaxHealth() => maxHealth;
 
     public void SetInmune(bool value) => _inmune = value;
 }
