@@ -20,7 +20,6 @@ public class MoveTowardsDirectionCondition : MonoBehaviour, ICondition
 
     public bool CheckCondition()
     {
-        print(Vector2.Dot(rbToCheck.velocity, directionToCheck));
         return Vector2.Dot(rbToCheck.velocity, directionToCheck) > dotProductThreshold;
     }
         
