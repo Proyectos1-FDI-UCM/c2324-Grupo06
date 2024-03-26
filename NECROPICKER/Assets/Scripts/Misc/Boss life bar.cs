@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Bosslifebar : MonoBehaviour
 {
     [SerializeField] private HealthHandler healthHandler;
-    [SerializeField] Image bar;
+    [SerializeField] private Slider slider;
     
     private void Awake()
     {   
@@ -16,10 +16,10 @@ public class Bosslifebar : MonoBehaviour
     }
     private void Start()
     {
-        bar.fillAmount = 1;
+        slider.maxValue = healthHandler.GetMaxHealth();
     }
     public void Bossbar()
     {
-        bar.fillAmount = healthHandler.GetCurrentHealth()/healthHandler.GetMaxHealth();
+        slider.value = healthHandler.GetCurrentHealth();
     }
 }
