@@ -9,8 +9,8 @@ public class TargetHandler : MonoBehaviour
     public Transform target => _target;
 
     private void OnEnable() {
-        if(_target == null)
-            _target = GameObject.FindGameObjectWithTag("Player").transform;
+        if (_target == null)
+            _target = FindAnyObjectByType<InputManager>().transform;
     }
 
     public void SetTarget(Transform target)

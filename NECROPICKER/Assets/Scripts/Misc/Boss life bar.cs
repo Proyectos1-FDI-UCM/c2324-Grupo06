@@ -11,9 +11,10 @@ public class Bosslifebar : MonoBehaviour
     private void Start()
     {
         slider.maxValue = healthHandler.GetMaxHealth();
+        slider.value = healthHandler.GetMaxHealth();
     }
     public void Bossbar()
     {
-        slider.value = healthHandler.GetCurrentHealth();
+        slider.value = healthHandler.GetCurrentHealth() - 1;
     }
 }
