@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Dialogue : MonoBehaviour
 {
+    [SerializeField] private MovementController player;
     [SerializeField] private GameObject DialogueMark;
     private bool isPlayerInRange;
     [SerializeField, TextArea(4,6)] private string[] dialogueLines;

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &582079286536113634
+--- !u!1 &2904417887004076689
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2625560248208319551}
-  - component: {fileID: 4614776465477221184}
+  - component: {fileID: 1905703689968163743}
+  - component: {fileID: 2464282531136189386}
   m_Layer: 0
   m_Name: DialogueMark
   m_TagString: Untagged
@@ -17,28 +17,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!4 &2625560248208319551
+--- !u!4 &1905703689968163743
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582079286536113634}
+  m_GameObject: {fileID: 2904417887004076689}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.11, y: 1.26, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.1173406, y: 3.7177935, z: -0.01807864}
   m_LocalScale: {x: 0.3375, y: 0.35, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2320357913531627246}
+  m_Father: {fileID: 2401199400762405998}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4614776465477221184
+--- !u!212 &2464282531136189386
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582079286536113634}
+  m_GameObject: {fileID: 2904417887004076689}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &6193674281031466223
+--- !u!1 &6919865935308793779
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,41 +92,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2320357913531627246}
-  - component: {fileID: 8527222292628889376}
-  - component: {fileID: 8229615801942591489}
-  - component: {fileID: 4363983590023556426}
-  - component: {fileID: 8561068353029382387}
+  - component: {fileID: 2401199400762405998}
+  - component: {fileID: 2542093911540093816}
+  - component: {fileID: 8161659223038166248}
+  - component: {fileID: 5826904999603562805}
+  - component: {fileID: 791706694194565243}
   m_Layer: 0
-  m_Name: Daniel
+  m_Name: "Daniel_Di\xE1logo_1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2320357913531627246
+--- !u!4 &2401199400762405998
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6193674281031466223}
+  m_GameObject: {fileID: 6919865935308793779}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5646984, y: 0.07454695, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2625560248208319551}
+  - {fileID: 1905703689968163743}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8527222292628889376
+--- !u!212 &2542093911540093816
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6193674281031466223}
+  m_GameObject: {fileID: 6919865935308793779}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -172,13 +172,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &8229615801942591489
+--- !u!58 &8161659223038166248
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6193674281031466223}
+  m_GameObject: {fileID: 6919865935308793779}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -207,13 +207,13 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!58 &4363983590023556426
+--- !u!58 &5826904999603562805
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6193674281031466223}
+  m_GameObject: {fileID: 6919865935308793779}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -242,23 +242,41 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
---- !u!114 &8561068353029382387
+--- !u!114 &791706694194565243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6193674281031466223}
+  m_GameObject: {fileID: 6919865935308793779}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0060efdc1320044682513a9a2f57828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueMark: {fileID: 582079286536113634}
+  player: {fileID: 0}
+  DialogueMark: {fileID: 0}
   dialogueLines:
-  - "Hola, qu\xE9 tal est\xE1s???"
-  - Yo mal, la verdad
-  - "Pero y t\xFA??"
-  - ????
+  - uuuhhh... Hoooolaaa. Uuuuuhhhh....
+  - uuuuhhh...
+  - uh?
+  - "\xBFNo? \xBFNada?"
+  - "\u2026"
+  - Hola...??
+  - Vale, entiendo, tu ganas, soy David.
+  - "\xBFY tu eres?"
+  - "\u2026"
+  - "No vas a sobrevivir mucho aqu\xED con esa actitud."
+  - "Bueno, a mi tambi\xE9n me embrujaron para encerrarme aqu\xED dentro."
+  - Ya se lo que estas pensando.
+  - "\xBFEntonces porque no soy un fantasma mol\xF3n?"
+  - La respuesta es sencilla, tu aun no has muerto.
+  - 'Se que suena muy divertido, pero tambien es doloroso.
+
+    Vamos a intentar
+    que tu no te mueras.'
+  - "Empecemos por lo b\xE1sico, aqu\xED no te deber\xEDas quedar quieto."
+  - "As\xED que, a ver que tal te mueves."
+  - "Pulsa las teclas W A S D, no es tan dif\xEDcil."
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
