@@ -112,7 +112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5782795355629275301, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       propertyPath: _speed
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5819972994827441692, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       propertyPath: m_Sprite
@@ -154,6 +154,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   prefab: {fileID: 2929946993159871886, guid: 40c31c768069886459486b0649f4c803, type: 3}
+  maxNumOfInstances: 1
 --- !u!4 &8025957409203213195 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2105600899019646030, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
