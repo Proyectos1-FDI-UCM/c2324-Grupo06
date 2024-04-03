@@ -8,7 +8,7 @@ public class MovementController : MonoBehaviour
     [SerializeField] bool isPlayer = false;
     public Rigidbody2D Rb => rb;
     [SerializeField] private ParticleSystem _particleSystem;
-    [SerializeField] float _speed = 10f;
+    [SerializeField] public float _speed = 10f;
     //No deberiamos tener que checkear si es un jugador puesto que se trata de código reutilizable
     private float _OriginalSpeed;
     public float speed => _speed;
