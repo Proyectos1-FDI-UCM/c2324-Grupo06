@@ -144,16 +144,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8670412040024646132, guid: 0df222e41c54cad48befd92573f37512, type: 3}
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
+      propertyPath: Rooms.Array.data[0].probability
+      value: 0.827
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: Rooms.Array.data[2].probability
-      value: 1
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: Rooms.Array.data[0].minNumOfInstances
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: Rooms.Array.data[2].minNumOfInstances
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2635493839846716923, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: m_Name
@@ -462,11 +466,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4983815069632443135, guid: ff3a852478ff8a449a7206e6c87a40fc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.041208
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4983815069632443135, guid: ff3a852478ff8a449a7206e6c87a40fc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.956044
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4983815069632443135, guid: ff3a852478ff8a449a7206e6c87a40fc, type: 3}
       propertyPath: m_LocalPosition.z
