@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,9 +6,10 @@ using UnityEngine;
 public class LayerChangeDistanceItem : MonoBehaviour, IBehaviour
 {
     [SerializeField] GameObject item;
-    [SerializeField] LayerMask targetLayer;
+    [SerializeField] int targetLayer;
     public void ExecuteBehaviour()
     {
+        print("change to " + targetLayer);
         item.layer = targetLayer;
     }
 }
