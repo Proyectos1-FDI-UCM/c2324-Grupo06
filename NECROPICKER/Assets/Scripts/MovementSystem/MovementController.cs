@@ -48,6 +48,6 @@ public class MovementController : MonoBehaviour
     }
     public void QuitParticules()
     {
-            _particleSystem.Stop();
+         _particleSystem.Stop();
     }
 }
