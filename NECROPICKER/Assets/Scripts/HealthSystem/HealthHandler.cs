@@ -18,7 +18,7 @@ public class HealthHandler : MonoBehaviour
     public UnityEvent OnDeath => onDeath;
     [SerializeField] private ParticleSystem _particleSystem;
 
-    float _currentHealth = 1;
+    [SerializeField] float _currentHealth = 1;
     public float currentHealth
     {
         get => _currentHealth;
