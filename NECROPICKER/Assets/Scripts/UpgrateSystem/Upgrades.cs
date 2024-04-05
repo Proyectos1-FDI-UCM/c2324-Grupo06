@@ -13,7 +13,7 @@ public class Upgrades : ScriptableObject
     
     public void SetStats()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = FindAnyObjectByType<InputManager>().gameObject;
 
         player.GetComponent<HealthHandler>().SetMaxHealth(stats[0]);
         player.GetComponent<HealthHandler>().Heal(10000);
