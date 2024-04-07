@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour
 {
@@ -13,8 +15,16 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
 
+    [SerializeField] Image _characterIcon;
+    [SerializeField] SerializableDictionary<string, Sprite> characterIcons;
+
+    [SerializeField] UnityEvent onDialogueStarts;
+    [SerializeField] UnityEvent onDialogueEnds;
+
     private int currentDialogue = 0;
     private bool didDialogueStart;
+
+    [SerializeField] float timeBetweenCharacters = 0.05f;
 
     // Update is called once per frame
     void Update()
@@ -22,6 +32,7 @@ public class Dialogue : MonoBehaviour
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.X) && !didDialogueStart)
         {
             StartDialogue();
+            onDialogueStarts.Invoke();
         }
         else if(dialogueText.text == dialogueLines[currentDialogue] && Input.GetKeyDown(KeyCode.X) && didDialogueStart)
         {
@@ -29,7 +40,7 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    private void StartDialogue()
+    public void StartDialogue()
     {
         didDialogueStart = true;
         dialoguePanel.SetActive(true);
@@ -37,7 +48,7 @@ public class Dialogue : MonoBehaviour
         currentDialogue = 0;
         StartCoroutine(ShowLine());
     }
-    void NextDialogue()
+    public void NextDialogue()
     {
         currentDialogue++;
         if(currentDialogue < dialogueLines.Length)
@@ -46,18 +57,28 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            onDialogueEnds.Invoke();
             didDialogueStart = false;
-            dialoguePanel.SetActive(false);
+            enabled = false;
+            print("Has ended");
             DialogueMark.SetActive(true);
         }
     }
     private IEnumerator ShowLine()
     {
         dialogueText.text = string.Empty;
+
+        if(dialogueLines[currentDialogue].Contains(":"))
+        {
+            string[] parts = dialogueLines[currentDialogue].Split(':');
+            _characterIcon.sprite = characterIcons[parts[0]];
+            dialogueLines[currentDialogue] = parts[1];
+        }
+
         foreach(char ch in dialogueLines[currentDialogue])
         {
             dialogueText.text += ch;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(timeBetweenCharacters);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -66,7 +87,6 @@ public class Dialogue : MonoBehaviour
         {
             isPlayerInRange = true;
             DialogueMark.SetActive(true);
-            Debug.Log("Se puede iniciar diálogo");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -75,7 +95,6 @@ public class Dialogue : MonoBehaviour
         {
             isPlayerInRange = false;
             DialogueMark.SetActive(false);
-            Debug.Log("No se puede iniciar diálogo");
         }
     }
 }
