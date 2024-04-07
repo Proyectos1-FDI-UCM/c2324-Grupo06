@@ -138,11 +138,15 @@ PrefabInstance:
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: Rooms.Array.data[0].roomPrefab
       value: 
-      objectReference: {fileID: 2741341949905470546, guid: 034f7e5160ca2064eaf2f0b28bb27f61, type: 3}
+      objectReference: {fileID: 2741341949905470546, guid: d3b02749c728e0e448cfc22a036a3e20, type: 3}
+    - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
+      propertyPath: Rooms.Array.data[1].roomPrefab
+      value: 
+      objectReference: {fileID: 4081519400070103902, guid: e9d4729b5ff124140a8f9b4d7118a16d, type: 3}
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: Rooms.Array.data[2].roomPrefab
       value: 
-      objectReference: {fileID: 8670412040024646132, guid: 0df222e41c54cad48befd92573f37512, type: 3}
+      objectReference: {fileID: 8670412040024646132, guid: 71e2b1bb3f27b5144ad4a2b4ffeb79ee, type: 3}
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: Rooms.Array.data[0].probability
       value: 0.827
@@ -506,7 +510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8001245003875829739, guid: ff3a852478ff8a449a7206e6c87a40fc, type: 3}
       propertyPath: orthographic size
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

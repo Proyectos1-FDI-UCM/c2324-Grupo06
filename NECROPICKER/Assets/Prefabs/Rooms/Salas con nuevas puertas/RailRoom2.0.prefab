@@ -3704,6 +3704,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 350409735356077905, guid: 5bc734d2c74498d478c24a8c631e17c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.7
+      objectReference: {fileID: 0}
     - target: {fileID: 675558867392258116, guid: 5bc734d2c74498d478c24a8c631e17c5, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -8399,6 +8403,10 @@ PrefabInstance:
     - target: {fileID: 2972870251304900700, guid: 5bc734d2c74498d478c24a8c631e17c5, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3296028834179318102, guid: 5bc734d2c74498d478c24a8c631e17c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3585842929225767967, guid: 5bc734d2c74498d478c24a8c631e17c5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28265,8 +28273,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e7fbe824267ac65418fd93c53c6928e1, type: 2}
     - target: {fileID: 6843160139523306644, guid: 5bc734d2c74498d478c24a8c631e17c5, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843160139523306644, guid: 5bc734d2c74498d478c24a8c631e17c5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.7
       objectReference: {fileID: 0}
     - target: {fileID: 6940851850669162693, guid: 5bc734d2c74498d478c24a8c631e17c5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28282,7 +28294,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: e7fbe824267ac65418fd93c53c6928e1, type: 2}
     - target: {fileID: 7508668832293763499, guid: 5bc734d2c74498d478c24a8c631e17c5, type: 3}
       propertyPath: m_Name
-      value: RailRoom
+      value: RailRoom1
       objectReference: {fileID: 0}
     - target: {fileID: 8227229296819636440, guid: 5bc734d2c74498d478c24a8c631e17c5, type: 3}
       propertyPath: m_Tiles.Array.size
