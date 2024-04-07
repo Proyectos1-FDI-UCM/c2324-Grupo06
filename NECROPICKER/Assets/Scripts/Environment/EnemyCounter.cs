@@ -22,4 +22,10 @@ public class EnemyCounter : ScriptableObject
         _totalEnemies--;
         if(_totalEnemies == 0) OnEnemiesDefeated?.Invoke();
     }
+
+    public void ResetCounter()
+    {
+        _totalEnemies = 0;
+        OnEnemiesDefeated?.Invoke();
+    }
 }
