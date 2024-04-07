@@ -475,11 +475,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc7c3ae944cca4f4288a2b1b1b2428bd, type: 3}
---- !u!95 &660243047 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7100454776893441471, guid: 00b570099a52aef49a0d911d65f6a13f, type: 3}
-  m_PrefabInstance: {fileID: 1159367046}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &714601049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -846,23 +841,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4215116355534956201, guid: 083523dacde1c85449edb76df7ae08cf, type: 3}
       propertyPath: OnExecuteBehaviour.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4215116355534956201, guid: 083523dacde1c85449edb76df7ae08cf, type: 3}
       propertyPath: OnExecuteBehaviour.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 660243047}
+      objectReference: {fileID: 11400000, guid: c875523af8399e04fb8e0cd3bb659194, type: 2}
     - target: {fileID: 4215116355534956201, guid: 083523dacde1c85449edb76df7ae08cf, type: 3}
       propertyPath: OnExecuteBehaviour.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4215116355534956201, guid: 083523dacde1c85449edb76df7ae08cf, type: 3}
       propertyPath: OnExecuteBehaviour.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Play
+      value: UnregisterEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4215116355534956201, guid: 083523dacde1c85449edb76df7ae08cf, type: 3}
       propertyPath: OnExecuteBehaviour.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.Animator, UnityEngine
+      value: EnemyCounter, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4215116355534956201, guid: 083523dacde1c85449edb76df7ae08cf, type: 3}
       propertyPath: OnExecuteBehaviour.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
