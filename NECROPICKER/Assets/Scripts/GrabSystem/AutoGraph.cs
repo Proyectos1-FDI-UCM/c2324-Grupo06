@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class AutoGraph : MonoBehaviour
 {
-    [SerializeField] GameObject _gameObject;
-    private void OnTriggerEnter2D(Collider2D _playerCollider)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (_gameObject.transform == _playerCollider.transform)
+        if (!collision.gameObject.TryGetComponent(out EnemyRegister _enemyRegister))
         {
-
+            Debug.Log("Recogida");
         }
     }
 }
