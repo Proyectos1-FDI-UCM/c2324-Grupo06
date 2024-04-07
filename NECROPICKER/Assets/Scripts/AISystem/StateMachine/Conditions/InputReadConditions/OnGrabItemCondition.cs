@@ -14,7 +14,7 @@ public class OnGrabItemCondition : MonoBehaviour, ICondition
             grabHandlerToCheck = FindObjectOfType<GrabHandler>();
         }
 
-        grabHandlerToCheck.OnItemTaken.AddListener(() => grabbedItem = true);
+        grabHandlerToCheck.OnItemTaken.AddListener(() =>{ grabbedItem = true; print("grabbed");});
     }
 
     public bool CheckCondition()
@@ -29,6 +29,7 @@ public class OnGrabItemCondition : MonoBehaviour, ICondition
     }
 
     private void OnValidate() {
+        if(grabHandlerToCheck == null) grabHandlerToCheck = FindObjectOfType<GrabHandler>();
         name = $"if {grabHandlerToCheck.name} has grabbed";
     }
 }
