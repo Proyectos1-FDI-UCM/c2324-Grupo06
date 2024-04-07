@@ -12,7 +12,6 @@ public class HealingItem : MonoBehaviour, IItem
     public bool Use(ItemHandler handler)
     {
         GetComponentInParent<HealthHandler>().Heal(healAmount);
-        //Destroy(gameObject);
         return true;
     }
 }
