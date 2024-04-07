@@ -29,7 +29,7 @@ public class Cheats : MonoBehaviour
         {
             _myHealthHandler.Heal(_healthToHeal);
         }
-        if (Input.GetKeyDown(KeyCode.M)) //Setear vida máxima
+        if (Input.GetKeyDown(KeyCode.M)) //Setear vida mï¿½xima
         {
             _myHealthHandler.SetMaxHealth(_maxHealthSetted);
         }
@@ -43,15 +43,5 @@ public class Cheats : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            if (!_inmunePressed)
-            {
-                _myHealthHandler.SetInmune(true); 
-                _inmunePressed = true;
-            }
-            else _myHealthHandler.SetInmune(false); _inmunePressed = false;
-        }
-
     }
 }
