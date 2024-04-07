@@ -17,8 +17,12 @@ public class SelectTargetItem : MonoBehaviour, IItem
 
     public bool Use(ItemHandler handler)
     {
-        targetHandler.SetTarget(Physics2D.OverlapCircle(transform.position, 15f, targetLayer).transform);
-        Debug.Log(Physics2D.OverlapCircle(transform.position, 15f, targetLayer).name);
+        Transform target = Physics2D.OverlapCircle(transform.position, 15f, targetLayer).transform;
+
+        if (target == null) target = Physics2D.OverlapCircle(transform.position, 50f, 0).transform;
+
+        targetHandler.SetTarget(target);
+
         return true;
     }
 }
