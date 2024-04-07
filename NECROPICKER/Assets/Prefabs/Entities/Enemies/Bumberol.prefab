@@ -5254,9 +5254,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5918ed8c60f1b143a6000e552176c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directionChangeTime: {x: 0.27, y: 0.58}
+  directionChangeTime: {x: 0.25, y: 1}
   maxDistanceToInitialPosition: 4
-  lerpFactor: 0.35
+  lerpFactor: 0.062
 --- !u!1 &3079145207542696284
 GameObject:
   m_ObjectHideFlags: 0
@@ -5624,7 +5624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   _particleSystem: {fileID: 0}
-  _speed: 10
+  _speed: 7
 --- !u!95 &3029456530161214761
 Animator:
   serializedVersion: 5
@@ -5785,6 +5785,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _particleSystem: {fileID: 6383779893359885181}
+  _currentHealth: 1
   maxHealth: 3
 --- !u!114 &1921042216335815266
 MonoBehaviour:
@@ -5951,7 +5952,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4731432910164690838}
   - component: {fileID: 2309901473740600473}
-  - component: {fileID: 2854051592952831010}
   - component: {fileID: 8507424220730775339}
   m_Layer: 0
   m_Name: AI
@@ -5993,19 +5993,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialStateContainer: {fileID: 1529183963516778447}
   permanentBehaviours: []
---- !u!114 &2854051592952831010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5863203728944844065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 164dc154bca55f94a8d0715b8f43ddf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _target: {fileID: 0}
 --- !u!114 &8507424220730775339
 MonoBehaviour:
   m_ObjectHideFlags: 0

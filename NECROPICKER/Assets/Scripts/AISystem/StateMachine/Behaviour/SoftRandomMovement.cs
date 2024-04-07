@@ -17,6 +17,7 @@ public class SoftRandomMovement : MonoBehaviour, IBehaviour
     private void Awake() {
         movementController = GetComponentInParent<MovementController>();
         maxTime = Mathf.Abs(Random.Range(directionChangeTime.x, directionChangeTime.y));
+        initialPosition = transform.position;
     }
 
     public void ExecuteBehaviour()
@@ -39,6 +40,7 @@ public class SoftRandomMovement : MonoBehaviour, IBehaviour
 
     void EvaluateDirection()
     {
+        
         if(Vector2.Distance(transform.position, initialPosition) > maxDistanceToInitialPosition)
         {
             randomDirection = (initialPosition - (Vector2)transform.position).normalized;
@@ -46,7 +48,8 @@ public class SoftRandomMovement : MonoBehaviour, IBehaviour
         else
         {
             float angle = Random.Range(0, 360);
-            randomDirection = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)).normalized;
+            Debug.Log(angle);
+            randomDirection = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
         }
     }
 
