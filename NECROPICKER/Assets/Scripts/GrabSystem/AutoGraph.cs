@@ -10,7 +10,7 @@ public class AutoGraph : MonoBehaviour
     [SerializeField] ItemData _item;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.gameObject.TryGetComponent(out EnemyRegister _enemyRegister))
+        if (collision.gameObject.TryGetComponent(out InputManager inputManager))
         {
             if(_inventory.items[0].amount < _item.maxStackSize)
             {
