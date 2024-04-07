@@ -7,6 +7,7 @@ public class InventoryDisplay : MonoBehaviour
     public Image[] slots = new Image[5];
     public  TextMeshProUGUI[] nobjects = new TextMeshProUGUI[5];
     [SerializeField] GameObject slotPointer;
+    [SerializeField] Sprite defaultImage;
 
     private void Start()
     {
@@ -33,7 +34,12 @@ public class InventoryDisplay : MonoBehaviour
             }
             else 
             {
-                slots[i].gameObject.SetActive(false);
+                if (defaultImage == null) slots[i].gameObject.SetActive(false);
+                else
+                {
+                    slots[i].gameObject.SetActive(true);
+                    slots[i].sprite = defaultImage;
+                }
             }
         }
     }

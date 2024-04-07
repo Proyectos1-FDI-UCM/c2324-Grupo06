@@ -38,7 +38,6 @@ public class InputManager : MonoBehaviour
         if(context.started)
         {
             potionHandler.UseItem();
-            print("input");
         }
     }
 
