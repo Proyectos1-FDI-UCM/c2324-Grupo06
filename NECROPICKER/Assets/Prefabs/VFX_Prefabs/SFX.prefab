@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6688243935461487309
 Transform:
   m_ObjectHideFlags: 0
@@ -45,12 +45,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolObjects:
-  - tag: hit
-    prefab: {fileID: 4915200911047062835, guid: dc5b23cb6b8ed3f4bbacbb510d5b1d63, type: 3}
-    size: 10
-  - tag: smoke
-    prefab: {fileID: 7240857153131329318, guid: 2665bcaf633445341943871f2038b868, type: 3}
-    size: 10
+  - prefab: {fileID: 4915200911047062835, guid: dc5b23cb6b8ed3f4bbacbb510d5b1d63, type: 3}
+    size: 5
+  - prefab: {fileID: 7240857153131329318, guid: 2665bcaf633445341943871f2038b868, type: 3}
+    size: 5
+  - prefab: {fileID: 6100996962216258701, guid: 93059f3e8efb30e4d9588ec78cedf649, type: 3}
+    size: 5
+  - prefab: {fileID: 3880065285134877251, guid: 92db918c0d7d4d8429808220aa81ecea, type: 3}
+    size: 5
+  - prefab: {fileID: 3487331523157956052, guid: 42409b2a96d48a643b19bfc49ee6da2f, type: 3}
+    size: 5
+  - prefab: {fileID: 2118428386911409746, guid: 7a950fe8b2b0cf84280f0a668634ad77, type: 3}
+    size: 5
+  - prefab: {fileID: 2577639357821352930, guid: fece111029c840d49bfc8ad920fe1f8b, type: 3}
+    size: 5
+  - prefab: {fileID: 2929946993159871886, guid: 40c31c768069886459486b0649f4c803, type: 3}
+    size: 5
+  - prefab: {fileID: 7542734317958770253, guid: e4652011be09cbd44ac58d342a1ff373, type: 3}
+    size: 5
 --- !u!1 &2928698951785531246
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,7 +79,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2576220943810318732
 Transform:
   m_ObjectHideFlags: 0
@@ -116,7 +128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7594734337466262904
 Transform:
   m_ObjectHideFlags: 0
@@ -154,6 +166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1569136157409213297}
+  - component: {fileID: 2251269453128360720}
   m_Layer: 0
   m_Name: SFX
   m_TagString: Untagged
@@ -179,3 +192,15 @@ Transform:
   - {fileID: 2576220943810318732}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2251269453128360720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8748633217019200305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9e4eb1ad7fd224390a147e205f2674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

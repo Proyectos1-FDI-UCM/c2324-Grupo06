@@ -12,7 +12,31 @@ public class ChildrenThrower : MonoBehaviour
     [SerializeField] float minRotforce = -10;
     [SerializeField] float maxRotforce = 10;
 
-    private void Start()
+    Vector2[] initialPositions;
+    Quaternion[] initialRotations;
+
+    private void Awake() {
+        initialPositions = new Vector2[transform.childCount];
+        initialRotations = new Quaternion[transform.childCount];
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            initialPositions[i] = transform.GetChild(i).position;
+            initialRotations[i] = transform.GetChild(i).rotation;
+        }
+    }
+
+    private void OnEnable() {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).position = initialPositions[i];
+            transform.GetChild(i).rotation = initialRotations[i];
+        }
+
+        Throw();
+    }
+
+    void Throw()
     {
         foreach(Transform child in transform)
         {
