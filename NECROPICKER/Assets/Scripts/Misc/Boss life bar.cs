@@ -8,18 +8,13 @@ public class Bosslifebar : MonoBehaviour
     [SerializeField] private HealthHandler healthHandler;
     [SerializeField] private Slider slider;
     
-    private void Awake()
-    {   
-      
-        HealthHandler healthHandler = GetComponentInParent<HealthHandler>();
-
-    }
     private void Start()
     {
         slider.maxValue = healthHandler.GetMaxHealth();
+        slider.value = healthHandler.GetMaxHealth();
     }
     public void Bossbar()
     {
-        slider.value = healthHandler.GetCurrentHealth();
+        slider.value = healthHandler.GetCurrentHealth() - 1;
     }
 }

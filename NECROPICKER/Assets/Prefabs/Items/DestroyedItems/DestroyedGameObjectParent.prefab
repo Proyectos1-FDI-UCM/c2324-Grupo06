@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5195972791840293170}
   - component: {fileID: 8716607200555848862}
+  - component: {fileID: 4162073180167260160}
+  - component: {fileID: 8176859962517891403}
   m_Layer: 1
   m_Name: DestroyedGameObjectParent
   m_TagString: Untagged
@@ -54,6 +56,33 @@ MonoBehaviour:
   maxForce: 20
   minRotforce: -10
   maxRotforce: 10
+--- !u!114 &4162073180167260160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609514699521730690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bda266e852c901479c2841ffcd354a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deactivateTime: 10
+--- !u!114 &8176859962517891403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609514699521730690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e0fb21937815be4f9b88d63a02bc1d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 10
+  fadeStartPoint: 6
 --- !u!1 &656502809618313796
 GameObject:
   m_ObjectHideFlags: 0

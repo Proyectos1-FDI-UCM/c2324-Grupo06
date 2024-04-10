@@ -220,7 +220,7 @@ PrefabInstance:
       addedObject: {fileID: 2131724936906906901}
     - targetCorrespondingSourceObject: {fileID: 2201132897841741059, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2999025235387877336}
+      addedObject: {fileID: 5553910965351685950}
   m_SourcePrefab: {fileID: 100100000, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
 --- !u!4 &7532932244851533920 stripped
 Transform:
@@ -247,7 +247,8 @@ MonoBehaviour:
   dropItems:
   - {fileID: 2033584835309065513, guid: e29727cc05acdf447ab33c5b72865789, type: 3}
   - {fileID: 3848557150264641513, guid: 0428fc602a330d94a920b19198e02ac5, type: 3}
-  dropChance: 6400000019000000
+  - {fileID: 5135085853161962733, guid: b0e01bf8fcb3231449f52ee93a70ec5e, type: 3}
+  dropChance: 640000001900000005000000
 --- !u!114 &-8730428897597844027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,9 +265,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   exclusiveDrop: 0
-  requiredLayer:
-    serializedVersion: 2
-    m_Bits: 256
+  maxNumOfInstances: 1
 --- !u!114 &4774977885484584964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,7 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 0}
---- !u!114 &2999025235387877336
+--- !u!114 &5553910965351685950
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -305,10 +304,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7726276587543425325}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38fb445f1c9fc7945bca1ab1660895db, type: 3}
+  m_Script: {fileID: 11500000, guid: 580a56fdc43bd994e8b4ba6e29a2ceed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  prefab: {fileID: 3880065285134877251, guid: 92db918c0d7d4d8429808220aa81ecea, type: 3}
+  prefabs:
+  - {fileID: 3880065285134877251, guid: 92db918c0d7d4d8429808220aa81ecea, type: 3}
+  - {fileID: 7240857153131329318, guid: 2665bcaf633445341943871f2038b868, type: 3}

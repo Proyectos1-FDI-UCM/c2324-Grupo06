@@ -16,9 +16,8 @@ public class HealthHandler : MonoBehaviour
 
     [SerializeField] UnityEvent onDeath = new UnityEvent();
     public UnityEvent OnDeath => onDeath;
-    [SerializeField] private ParticleSystem _particleSystem;
 
-    float _currentHealth = 1;
+    [SerializeField] float _currentHealth = 1;
     public float currentHealth
     {
         get => _currentHealth;
@@ -36,20 +35,14 @@ public class HealthHandler : MonoBehaviour
 
     [SerializeField] float maxHealth;
 
-    private bool _inmune;
-
     void Start() => SetCurrentHealth(maxHealth);
 
     public void Death() => onDeath?.Invoke();
 
     public void TakeDamage(float damage)
     {
-        if (!_inmune)
-        {
-            OnTakeDamage?.Invoke();
-            currentHealth -= damage;
-            _particleSystem.Play();
-        }
+        OnTakeDamage?.Invoke();
+        currentHealth -= damage;
     }
 
     public void NecroDamage(float damage)
@@ -69,6 +62,4 @@ public class HealthHandler : MonoBehaviour
     public void SetCurrentHealth(float newCurrentHealth) => currentHealth = newCurrentHealth;
     public float GetCurrentHealth() => currentHealth;
     public float GetMaxHealth() => maxHealth;
-
-    public void SetInmune(bool value) => _inmune = value;
 }

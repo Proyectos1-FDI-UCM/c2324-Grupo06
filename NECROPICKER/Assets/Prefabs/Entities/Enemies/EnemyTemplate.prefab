@@ -492,10 +492,10 @@ MonoBehaviour:
       - m_Target: {fileID: 8578050659581177820}
         m_TargetAssemblyTypeName: PoolTaker, Assembly-CSharp
         m_MethodName: TakeFromPool
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 4915200911047062835, guid: dc5b23cb6b8ed3f4bbacbb510d5b1d63, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: hit
@@ -537,6 +537,30 @@ MonoBehaviour:
           m_StringArgument: hit
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: ca93e2d4db46f7a4198368f1f3dd5a27, type: 2}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 3
+          m_StringArgument: blood
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8578050659581177820}
+        m_TargetAssemblyTypeName: PoolTaker, Assembly-CSharp
+        m_MethodName: TakeFromPool
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 6100996962216258701, guid: 93059f3e8efb30e4d9588ec78cedf649, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 3
+          m_StringArgument: blood
+          m_BoolArgument: 0
+        m_CallState: 2
   onDeath:
     m_PersistentCalls:
       m_Calls:
@@ -564,7 +588,7 @@ MonoBehaviour:
           m_StringArgument: Death
           m_BoolArgument: 0
         m_CallState: 2
-  _particleSystem: {fileID: 0}
+  _currentHealth: 1
   maxHealth: 1
 --- !u!114 &447552837958183979
 MonoBehaviour:

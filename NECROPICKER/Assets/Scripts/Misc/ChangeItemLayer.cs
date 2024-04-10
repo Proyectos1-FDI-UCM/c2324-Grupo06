@@ -18,7 +18,7 @@ public class ChangeItemLayer : MonoBehaviour
     {
         if (rb.velocity !=Vector2.zero) 
         {
-            gameObject.layer = LayerMask.NameToLayer("bullet"); ;
+            gameObject.layer = LayerMask.NameToLayer("bullet");
         }
        
     }

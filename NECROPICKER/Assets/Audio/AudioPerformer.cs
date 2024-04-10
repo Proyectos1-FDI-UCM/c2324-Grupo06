@@ -31,7 +31,7 @@ public class AudioPerformer : MonoBehaviour
                         currentSource.pitch = pitch;
                         currentSource.clip = clip;
                         currentSource.loop = loop;
-                        currentSource.Play();
+                        currentSource.PlayOneShot(clip);
                     }
                 );
 

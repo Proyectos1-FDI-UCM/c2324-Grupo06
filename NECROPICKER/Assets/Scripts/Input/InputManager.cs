@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour
     ItemHandler itemHandler;
     Pointer pointer;
     [SerializeField] Inventory inventory;
+    [SerializeField] ItemHandler potionHandler;
     GrabHandler grabHandler;
     // bool usingController;
 
@@ -16,7 +17,7 @@ public class InputManager : MonoBehaviour
     {
         movementController = GetComponent<MovementController>();
         grabHandler = GetComponentInChildren<GrabHandler>();
-        itemHandler = GetComponentInChildren<ItemHandler>();
+       itemHandler = GetComponentInChildren<ItemHandler>();
         pointer = GetComponentInChildren<Pointer>();
     }
 
@@ -30,6 +31,14 @@ public class InputManager : MonoBehaviour
     {
         if(context.started)
             itemHandler.UseItem();
+    }
+
+    public void OnUsePotion(InputAction.CallbackContext context)
+    {
+        if(context.started)
+        {
+            potionHandler.UseItem();
+        }
     }
 
     public void OnGrab(InputAction.CallbackContext context)

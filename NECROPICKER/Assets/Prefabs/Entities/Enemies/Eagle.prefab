@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8648119529217160711}
   - component: {fileID: 5932332676189359254}
   m_Layer: 7
-  m_Name: Wait 0,25s to 1,5s
+  m_Name: Wait 0,25s to 0,75s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minTime: 0.25
-  maxTime: 1.5
+  maxTime: 0.75
 --- !u!1 &787395735376644009
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,6 +304,51 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &2996977854180452001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4264027699827013317}
+  - component: {fileID: 6450581115234020767}
+  m_Layer: 7
+  m_Name: distance(0, 20)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4264027699827013317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2996977854180452001}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 872570487145558035}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6450581115234020767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2996977854180452001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671e00617ba7bc3468eff93c719c5e43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: {x: 0, y: 20}
 --- !u!1 &4676949174989590996
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,6 +503,7 @@ Transform:
   - {fileID: 6308336099459534996}
   - {fileID: 4087663649403865066}
   - {fileID: 8648119529217160711}
+  - {fileID: 4264027699827013317}
   m_Father: {fileID: 738403784921849641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5958641044592431427

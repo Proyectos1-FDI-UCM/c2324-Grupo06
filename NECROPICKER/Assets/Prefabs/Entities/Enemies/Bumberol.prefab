@@ -1048,7 +1048,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 500
+      scalar: 100
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4955,7 +4955,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5254,9 +5254,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5918ed8c60f1b143a6000e552176c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directionChangeTime: {x: 0.25, y: 0.67}
+  directionChangeTime: {x: 0.25, y: 1}
   maxDistanceToInitialPosition: 4
-  lerpFactor: 0.411
+  lerpFactor: 0.062
 --- !u!1 &3079145207542696284
 GameObject:
   m_ObjectHideFlags: 0
@@ -5624,7 +5624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   _particleSystem: {fileID: 0}
-  _speed: 10
+  _speed: 7
 --- !u!95 &3029456530161214761
 Animator:
   serializedVersion: 5
@@ -5784,7 +5784,7 @@ MonoBehaviour:
           m_StringArgument: Death
           m_BoolArgument: 0
         m_CallState: 2
-  _particleSystem: {fileID: 6383779893359885181}
+  _currentHealth: 1
   maxHealth: 3
 --- !u!114 &1921042216335815266
 MonoBehaviour:
@@ -5951,7 +5951,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4731432910164690838}
   - component: {fileID: 2309901473740600473}
-  - component: {fileID: 2854051592952831010}
   - component: {fileID: 8507424220730775339}
   m_Layer: 0
   m_Name: AI
@@ -5993,19 +5992,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialStateContainer: {fileID: 1529183963516778447}
   permanentBehaviours: []
---- !u!114 &2854051592952831010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5863203728944844065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 164dc154bca55f94a8d0715b8f43ddf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _target: {fileID: 0}
 --- !u!114 &8507424220730775339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6395,7 +6381,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8177308235097535309}
   serializedVersion: 8
-  lengthInSec: 1.57
+  lengthInSec: 2
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -6470,7 +6456,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.64
+      scalar: 0.86
       minScalar: 0.25
       maxCurve:
         serializedVersion: 2
@@ -7224,7 +7210,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10000
+      scalar: 200
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -11131,7 +11117,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

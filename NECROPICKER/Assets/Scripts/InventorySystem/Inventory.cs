@@ -81,6 +81,7 @@ public class Inventory : ScriptableObject
 
     public void RemoveItem()
     {
+        Debug.Log("Remove");
         if (items[SelectedItemIndex].item != Necronomicon)
         {
             if (items[SelectedItemIndex].amount == 1)

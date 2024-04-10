@@ -22,8 +22,8 @@ public class PoolTaker : MonoBehaviour
         }
     }
 
-    public void TakeFromPool(string tag)
+    public void TakeFromPool(GameObject prefab)
     {
-        objectPooler.SpawnFromPool(spawnPoint.position, spawnPoint.rotation, tag);
+        objectPooler.SpawnFromPool(spawnPoint.position, spawnPoint.rotation, prefab);
     }
 }
