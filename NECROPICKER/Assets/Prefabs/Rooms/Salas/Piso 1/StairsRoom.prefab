@@ -1598,7 +1598,7 @@ Transform:
   m_GameObject: {fileID: 2613164248447213559}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 8.3, z: 0}
+  m_LocalPosition: {x: -0.1, y: 6.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1616,13 +1616,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3b6a261e11b907428aa75165d3a61e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 10, y: 10}
+  size: {x: 5, y: 5}
   instances:
   - prefab: {fileID: 7726276587543425325, guid: 4f7d6f79525550743a107688242a402b, type: 3}
-    probability: 0.81
+    probability: 0.331
     amount: 1
   - prefab: {fileID: 7726276587543425325, guid: 4f7d6f79525550743a107688242a402b, type: 3}
-    probability: 0.65
+    probability: 0.525
     amount: 1
   _instanceOnAwake: 1
 --- !u!1 &2908935248634003571
@@ -17934,15 +17934,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5298629770135005276, guid: 5bc734d2c74498d478c24a8c631e17c5, type: 3}
       propertyPath: size.x
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5298629770135005276, guid: 5bc734d2c74498d478c24a8c631e17c5, type: 3}
       propertyPath: size.y
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5298629770135005276, guid: 5bc734d2c74498d478c24a8c631e17c5, type: 3}
       propertyPath: instances.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298629770135005276, guid: 5bc734d2c74498d478c24a8c631e17c5, type: 3}
+      propertyPath: instances.Array.data[0].probability
+      value: 0.641
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298629770135005276, guid: 5bc734d2c74498d478c24a8c631e17c5, type: 3}
+      propertyPath: instances.Array.data[1].probability
+      value: 0.269
       objectReference: {fileID: 0}
     - target: {fileID: 6489589087688186293, guid: 5bc734d2c74498d478c24a8c631e17c5, type: 3}
       propertyPath: m_ChunkCullingBounds.x
