@@ -29,17 +29,14 @@ public class InputManager : MonoBehaviour
 
     public void OnUse(InputAction.CallbackContext context)
     {
-        if(context.started)
+        if (context.started)
             itemHandler.UseItem();
     }
 
     public void OnUsePotion(InputAction.CallbackContext context)
     {
-        if(context.started)
-        {
+        if (context.started) 
             potionHandler.UseItem();
-            print("usado");
-        }
     }
 
     public void OnGrab(InputAction.CallbackContext context)
