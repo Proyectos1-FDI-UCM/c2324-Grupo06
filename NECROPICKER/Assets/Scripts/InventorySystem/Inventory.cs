@@ -13,6 +13,8 @@ public class Inventory : ScriptableObject
     
     [SerializeField] ItemData Necronomicon;
     [SerializeField] int _selectedItemIndex = 0;
+    [SerializeField] ItemData initialItem;
+    [SerializeField] int numberOfInitials;
 
     private void Awake()
     {
@@ -20,6 +22,13 @@ public class Inventory : ScriptableObject
         {
             items[i].item = Necronomicon;
             UpdateInventory();
+        }
+        if (initialItem != null)
+        {
+            for(int i = 0; i < numberOfInitials; i++)
+            {
+                AddItem(initialItem);
+            }
         }
     }
     public int SelectedItemIndex
@@ -81,7 +90,6 @@ public class Inventory : ScriptableObject
 
     public void RemoveItem()
     {
-        Debug.Log("Remove");
         if (items[SelectedItemIndex].item != Necronomicon)
         {
             if (items[SelectedItemIndex].amount == 1)
