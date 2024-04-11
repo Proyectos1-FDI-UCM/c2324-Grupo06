@@ -11,7 +11,11 @@ public class CameraEffects : ScriptableObject
 
     UnityEvent<float> onHitStop = new UnityEvent<float>();
     public UnityEvent<float> OnHitStop => onHitStop;
+
+    UnityEvent<AnimationCurve, float> onDramaticHitStop = new UnityEvent<AnimationCurve, float>();
+    public UnityEvent<AnimationCurve, float> OnDramaticHitStop => onDramaticHitStop;
     
     public void Shake(float shakeValue) => shakeEvent.Invoke(shakeValue);
     public void HitStop(float hitStopValue) => onHitStop.Invoke(hitStopValue);
+    public void DramaticHitStop(AnimationCurve curve, float duration) => onDramaticHitStop.Invoke(curve, duration);
 }

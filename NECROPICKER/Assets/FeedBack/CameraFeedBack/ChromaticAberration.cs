@@ -18,4 +18,30 @@ public class ChromaticAberration : MonoBehaviour
         chromaticAberration.intensity.Override(0);
     }
 
+    public void PlayFilmGrain(float duration) => StartCoroutine(ExecuteFilmGrain(duration));
+    IEnumerator ExecuteFilmGrain(float duration)
+    {
+        volumeProfile.TryGet(out UnityEngine.Rendering.Universal.FilmGrain filmGrain);
+        filmGrain.active = true;
+        yield return new WaitForSeconds(duration);
+        filmGrain.active = false;
+    }
+
+    public void PlayColorAdjustments(float duration) => StartCoroutine(ExecuteColorAdjustments(duration));
+    IEnumerator ExecuteColorAdjustments(float duration)
+    {
+        volumeProfile.TryGet(out UnityEngine.Rendering.Universal.ColorAdjustments colorAdjustments);
+        colorAdjustments.active = true;
+        yield return new WaitForSeconds(duration);
+        colorAdjustments.active = false;
+    }
+
+    private void OnDestroy() {
+        volumeProfile.TryGet(out UnityEngine.Rendering.Universal.ChromaticAberration chromaticAberration);
+        chromaticAberration.intensity.Override(0);
+        volumeProfile.TryGet(out UnityEngine.Rendering.Universal.FilmGrain filmGrain);
+        filmGrain.active = false;
+        volumeProfile.TryGet(out UnityEngine.Rendering.Universal.ColorAdjustments colorAdjustments);
+        colorAdjustments.active = false;
+    }
 }

@@ -13,7 +13,6 @@ public class Cheats : MonoBehaviour
     [SerializeField] private int _healthToHeal;
     [SerializeField] private GameObject[] _objectsToInstantiate = new GameObject[10];
 
-    private bool _inmunePressed = false;
     private void Start()
     {
         _myHealthHandler = GetComponent<HealthHandler>();
@@ -28,6 +27,10 @@ public class Cheats : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.H))
         {
             _myHealthHandler.Heal(_healthToHeal);
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            _myHealthHandler.Death();
         }
         if (Input.GetKeyDown(KeyCode.M)) //Setear vida m�xima
         {

@@ -32,6 +32,8 @@ public class GrabHandler : MonoBehaviour
     UnityEvent<GameObject> onItemDeselected = new UnityEvent<GameObject>();
     public UnityEvent<GameObject> OnItemDeselected => onItemDeselected;
 
+    [SerializeField] UnityEvent onFullInventory = new UnityEvent();
+
     UnityEvent onItemTaken = new UnityEvent();
     public UnityEvent OnItemTaken => onItemTaken;
     #endregion
@@ -66,6 +68,10 @@ public class GrabHandler : MonoBehaviour
                 Destroy(takeAbleItem.gameObject);
                 TakeAbleItem = null;
                 onItemTaken.Invoke();
+            }
+            else
+            {
+                onFullInventory.Invoke();
             }
         }
     }

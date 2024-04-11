@@ -26,7 +26,13 @@ public class FadeInTime : MonoBehaviour
         } 
     }
 
-    private void OnEnable() {
+    private void OnEnable() 
+    {
+        foreach(SpriteRenderer sr in spriteRenderers)
+        {
+            sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 1);
+        }
+
         timer = duration;
     }
 }
