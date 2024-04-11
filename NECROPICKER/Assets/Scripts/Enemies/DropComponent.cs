@@ -52,10 +52,7 @@ public class DropComponent : MonoBehaviour
             behaviour.ExecuteBehaviour();
         }
     }
-    public void DropToCero(int i)
-    {
-        dropChance[i] = 0;
-    }
+
     //El código está genial, esto son solo algunas sugerencias para mejorar la legibilidad y mantenibilidad del código
     //buen trabajo David! :D
     //Si tienes alguna duda, no dudes en preguntarme
