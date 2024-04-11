@@ -5549,7 +5549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: f6d81b7acdfb2e747b1093ad5d20de2c, type: 2}
-  potionHandler: {fileID: 0}
+  potionHandler: {fileID: 3148430209718792076}
 --- !u!61 &1050425685786978470
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5915,10 +5915,10 @@ MonoBehaviour:
     m_ActionName: Playing/Interact[/Keyboard/e]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3148430209718792076}
-        m_TargetAssemblyTypeName: ItemHandler, Assembly-CSharp
-        m_MethodName: UseItem
-        m_Mode: 1
+      - m_Target: {fileID: 1109475844806078467}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: OnUsePotion
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

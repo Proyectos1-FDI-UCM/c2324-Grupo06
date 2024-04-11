@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: _PlayerInventory
   m_EditorClassIdentifier: 
   items:
-  - item: {fileID: 11400000, guid: 2d962e3fb97bc604aaceb51b0709a310, type: 2}
-    amount: 1
-  - item: {fileID: 11400000, guid: 2d962e3fb97bc604aaceb51b0709a310, type: 2}
+  - item: {fileID: 11400000, guid: d0b3532012fd18a4baeb0849307a11e6, type: 2}
+    amount: 3
+  - item: {fileID: 11400000, guid: 360736ec3b0e0cd459b835c90700d391, type: 2}
     amount: 1
   - item: {fileID: 11400000, guid: 2d962e3fb97bc604aaceb51b0709a310, type: 2}
     amount: 1
@@ -24,4 +24,6 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: 2d962e3fb97bc604aaceb51b0709a310, type: 2}
     amount: 1
   Necronomicon: {fileID: 11400000, guid: 2d962e3fb97bc604aaceb51b0709a310, type: 2}
-  _selectedItemIndex: 2
+  _selectedItemIndex: 1
+  initialItem: {fileID: 0}
+  numberOfInitials: 0

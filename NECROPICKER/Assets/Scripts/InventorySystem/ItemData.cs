@@ -17,6 +17,8 @@ public class ItemData : ScriptableObject
     [SerializeField] int _maxStackSize;
     public int maxStackSize => _maxStackSize;
 
+    public void SetMaxStackSize(int newSize) => _maxStackSize = newSize;
+
     [SerializeField] Recipe recipe;
     public Recipe Recipe => recipe;
 
