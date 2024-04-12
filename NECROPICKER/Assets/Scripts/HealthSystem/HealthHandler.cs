@@ -42,7 +42,7 @@ public class HealthHandler : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        if(currentHealth >= 0) OnTakeDamage?.Invoke();
+        if(currentHealth > 0) OnTakeDamage?.Invoke();
     }
 
     public void NecroDamage(float damage)
