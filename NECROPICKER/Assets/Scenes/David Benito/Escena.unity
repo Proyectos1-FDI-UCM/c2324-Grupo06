@@ -176,8 +176,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8001245003875829739, guid: ff3a852478ff8a449a7206e6c87a40fc, type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8001245003875829739, guid: ff3a852478ff8a449a7206e6c87a40fc, type: 3}
       propertyPath: orthographic size
-      value: 17.625
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -232,9 +236,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6504278636391477124, guid: 46193cabfc57461448c6c9f2532da734, type: 3}
+      propertyPath: X
+      value: 0.07172251
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504278636391477124, guid: 46193cabfc57461448c6c9f2532da734, type: 3}
+      propertyPath: Y
+      value: -11.17235
+      objectReference: {fileID: 0}
     - target: {fileID: 7284544468771626862, guid: 46193cabfc57461448c6c9f2532da734, type: 3}
       propertyPath: m_Name
       value: OriginalRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8031845823533860440, guid: 46193cabfc57461448c6c9f2532da734, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
