@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-public class ChromaticAberration : MonoBehaviour
+public class PostProcessingHandler : MonoBehaviour
 {
     [SerializeField] VolumeProfile volumeProfile;
     [SerializeField] float intensity = 1;
