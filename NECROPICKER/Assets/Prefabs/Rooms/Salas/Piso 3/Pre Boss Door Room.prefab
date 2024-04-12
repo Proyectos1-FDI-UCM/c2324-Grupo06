@@ -2926,7 +2926,7 @@ GameObject:
   - component: {fileID: 3957041836526876905}
   - component: {fileID: 7254892319237032512}
   - component: {fileID: 8031845823533860440}
-  - component: {fileID: 2749368987706573005}
+  - component: {fileID: 6504278636391477124}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -3942,7 +3942,7 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!114 &2749368987706573005
+--- !u!114 &6504278636391477124
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3951,30 +3951,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5007946564720742489}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7a598752bbe377438343d7af0e36343, type: 3}
+  m_Script: {fileID: 11500000, guid: e0b26f26e6da7eb49962772df3d1a310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <onTriggerEnter>k__BackingField:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: dcd41b88c4a42b3418b30d67140e6d1e, type: 2}
-        m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Sala Boss
-          m_BoolArgument: 0
-        m_CallState: 2
-  <onTriggerExit>k__BackingField:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerLayer:
-    serializedVersion: 2
-    m_Bits: 8
+  _playerTransform: {fileID: 5483191749440003192}
+  X: 0
+  Y: 0
 --- !u!1 &7113378352979479180
 GameObject:
   m_ObjectHideFlags: 0
