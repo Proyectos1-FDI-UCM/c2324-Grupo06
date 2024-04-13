@@ -16,10 +16,6 @@ public class LifeUI : MonoBehaviour
     }
     public void UIlife(float actuallife)
     {
-       /* for (int i = 0; i < healthHandler.GetMaxHealth(); i++)
-        {
-            margenes[i].SetActive(true);
-        }*/
         for (int i = 0; i < transform.childCount; i++) 
         {
             if (i < actuallife) transform.GetChild(i).gameObject.SetActive (true);
