@@ -14,8 +14,9 @@ public class Upgrades : ScriptableObject
     
     public GameObject FindPlayer() => FindAnyObjectByType<InputManager>().gameObject;
 
-    void SetStats(GameObject player)
+    public void SetStats()
     {
+        GameObject player = FindPlayer();
         player.GetComponent<HealthHandler>().SetMaxHealth(stats[0]);
         Pociones.SetMaxStackSize((int)stats[1]);
         player.GetComponent<MovementController>().SetSpeed(stats[2]);
@@ -26,13 +27,13 @@ public class Upgrades : ScriptableObject
         stats[0] = Ini_maxhealth;
         stats[1] = Ini_maxpotionsize;
         stats[2] = Ini_speed;
-        SetStats(FindPlayer());
+        SetStats();
 
     }
     public void AddSpeed(float aumento)
     {
         stats[2] += aumento;
-        SetStats(FindPlayer());
+        SetStats();
     }
 
     public void AddMaxHealth(float aumento)
@@ -41,7 +42,7 @@ public class Upgrades : ScriptableObject
 
         stats[0] += aumento;
 
-        SetStats(player);
+        SetStats();
 
         player.GetComponent<HealthHandler>().Heal(10000);
     }
@@ -49,6 +50,6 @@ public class Upgrades : ScriptableObject
     {
         GameObject player = FindPlayer();
         stats[1] += aumento;
-        SetStats(player);
+        SetStats();
     }
 }
