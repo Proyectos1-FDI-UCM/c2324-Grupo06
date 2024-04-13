@@ -10,7 +10,7 @@ public class TPPlayer : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out InputManager _input))
         {
-            collision.transform.position = _vector.position.normalized;
+            collision.transform.position = _vector.position;
         }
     }
 }
