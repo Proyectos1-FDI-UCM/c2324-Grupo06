@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEditorInternal;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class InstantiateBehaviour : MonoBehaviour, IBehaviour
 {
     [SerializeField] GameObject prefab;
     [SerializeField] float velocity = 0.0f;
-    [SerializeField] bool setAnimationOn;
     public void ExecuteBehaviour()
     {
         GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
@@ -16,10 +16,6 @@ public class InstantiateBehaviour : MonoBehaviour, IBehaviour
         {
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.velocity = transform.up * velocity;
-        }
-        if (setAnimationOn)
-        {
-            bullet.AddComponent<Animator>();
         }
     }
 
