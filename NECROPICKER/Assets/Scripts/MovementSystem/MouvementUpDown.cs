@@ -11,7 +11,7 @@ public class MouvementUpDown : MonoBehaviour
     private Rigidbody2D _myRigidBody;
 
     [SerializeField]
-    private float distance = 0.5f, force = 1f; //distancia para cambiar de direccion
+    private float distance = 0.5f, force = 1f, inicialForce = 50f; //distancia para cambiar de direccion
 
     void Start()
     {
@@ -20,11 +20,11 @@ public class MouvementUpDown : MonoBehaviour
         distance = Mathf.Abs(distance);
         force = Mathf.Abs(force);
 
-        _myRigidBody.AddForce(new Vector2(0,force*100));
+        _myRigidBody.AddForce(new Vector2(0,inicialForce));
         
     }
 
-    void Update()
+    void LateUpdate()
     {
         //comprueba si nos acercamos al punto de arriba o al de abajo
         if (_myTransform.position.y + distance >= _up.position.y)
