@@ -7,6 +7,8 @@ public class HealthHandler : MonoBehaviour
 {
     UnityEvent<float> onHealthChanged = new UnityEvent<float>();
     public UnityEvent<float> OnHealthChanged => onHealthChanged;
+    UnityEvent<float> onMaxHealthChanged = new UnityEvent<float>();
+    public UnityEvent<float> OnMaxHealthChanged => onMaxHealthChanged;
 
     UnityEvent<float> onHealthDifer = new UnityEvent<float>();
     public UnityEvent<float> OnHealthDifer => onHealthDifer;
@@ -33,7 +35,15 @@ public class HealthHandler : MonoBehaviour
         }
     }
 
-    [SerializeField] float maxHealth;
+    [SerializeField] public float _maxHealth = 1;
+    public float maxHealth
+    {
+        get => _maxHealth;
+        set
+        {
+            OnMaxHealthChanged?.Invoke(_maxHealth);
+        }
+    }
 
     void Start() => SetCurrentHealth(maxHealth);
 
@@ -41,8 +51,8 @@ public class HealthHandler : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        OnTakeDamage?.Invoke();
         currentHealth -= damage;
+        if(currentHealth > 0) OnTakeDamage?.Invoke();
     }
 
     public void NecroDamage(float damage)
@@ -52,14 +62,18 @@ public class HealthHandler : MonoBehaviour
 
     public void Heal(float healAmount)
     {
-        if (healAmount > maxHealth - currentHealth) 
+        if (healAmount > _maxHealth - currentHealth) 
         {
-            currentHealth += maxHealth - currentHealth;
+            currentHealth += _maxHealth - currentHealth;
         }
         else currentHealth += healAmount;
     }
-    public void SetMaxHealth(float newMaxHealth) => maxHealth = newMaxHealth;
+    public void SetMaxHealth(float newMaxHealth)
+    {
+        _maxHealth = newMaxHealth;
+        maxHealth = newMaxHealth;
+    }
     public void SetCurrentHealth(float newCurrentHealth) => currentHealth = newCurrentHealth;
     public float GetCurrentHealth() => currentHealth;
-    public float GetMaxHealth() => maxHealth;
+    public float GetMaxHealth() => _maxHealth;
 }
