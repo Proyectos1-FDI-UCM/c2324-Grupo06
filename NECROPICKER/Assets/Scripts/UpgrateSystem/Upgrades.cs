@@ -13,7 +13,6 @@ public class Upgrades : ScriptableObject
     [SerializeField] private float Ini_speed = 0;
     
     public GameObject FindPlayer() => FindAnyObjectByType<InputManager>().gameObject;
-
     public void SetStats()
     {
         GameObject player = FindPlayer();

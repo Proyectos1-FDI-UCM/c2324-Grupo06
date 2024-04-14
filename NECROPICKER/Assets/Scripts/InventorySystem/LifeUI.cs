@@ -8,18 +8,33 @@ public class LifeUI : MonoBehaviour
     
     [SerializeField] private HealthHandler healthHandler;
     [SerializeField] private GameObject[] margenes = new GameObject[5];
+    private int margenesCount = 0;
     private void Start()
     {
         HealthHandler healthHandler = FindAnyObjectByType<InputManager>(FindObjectsInactive.Include).GetComponent<HealthHandler>();
         UIlife(healthHandler.currentHealth);
         healthHandler.OnHealthChanged.AddListener(UIlife);
+        UIContainers(healthHandler._maxHealth);
+        healthHandler.OnMaxHealthChanged.AddListener(UIContainers);
+        
+    }
+    public void UIContainers(float maxhealth)
+    {
+        for (int i = 0; i < maxhealth; i++)
+        {
+            if (i % 4 == 0)
+            {
+                margenes[margenesCount].SetActive(true);
+                margenesCount++;
+            }
+        }
     }
     public void UIlife(float actuallife)
     {
-        for (int i = 0; i < transform.childCount; i++) 
+        for (int i = 0; i < transform.childCount; i++)
         {
-            if (i < actuallife) transform.GetChild(i).gameObject.SetActive (true);
-            else transform.GetChild(i).gameObject.SetActive (false);
+            if (i < actuallife) transform.GetChild(i).gameObject.SetActive(true);
+            else transform.GetChild(i).gameObject.SetActive(false);
         }
     }
 }
