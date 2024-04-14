@@ -28,7 +28,7 @@ public class LaserItem : MonoBehaviour, IItem
     {
         SetLineWidht(laserWidth);
         DrawRay();
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, 20, targetLayer);
+        RaycastHit2D hit = Physics2D.CircleCast(transform.position, laserWidth, transform.up, 100, targetLayer);
 
         if(hit == false) return false;
 
