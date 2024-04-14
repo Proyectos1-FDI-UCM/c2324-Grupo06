@@ -456,7 +456,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: Rooms.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: maxRoomExtension
@@ -868,7 +868,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1266100010
+--- !u!1001 &1332192410
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -876,33 +876,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3284310162210141015, guid: ebeeeaba95a00c14f851aa9f080e7509, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 165.51971
-      objectReference: {fileID: 0}
     - target: {fileID: 3759958992580643194, guid: ebeeeaba95a00c14f851aa9f080e7509, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 1500994101}
+      objectReference: {fileID: 0}
     - target: {fileID: 3759958992580643194, guid: ebeeeaba95a00c14f851aa9f080e7509, type: 3}
       propertyPath: m_RenderMode
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3759958992580643194, guid: ebeeeaba95a00c14f851aa9f080e7509, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 5108566430495567002, guid: ebeeeaba95a00c14f851aa9f080e7509, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2201452
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5108566430495567002, guid: ebeeeaba95a00c14f851aa9f080e7509, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.6218567
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5108566430495567002, guid: ebeeeaba95a00c14f851aa9f080e7509, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.03883124
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5108566430495567002, guid: ebeeeaba95a00c14f851aa9f080e7509, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1126,11 +1118,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1610129653}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &1500994101 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 8001245003875829739, guid: ff3a852478ff8a449a7206e6c87a40fc, type: 3}
-  m_PrefabInstance: {fileID: 7198855756630118525}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1610129651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,5 +1575,5 @@ SceneRoots:
   - {fileID: 8102144503875647637}
   - {fileID: 8538908922217228697}
   - {fileID: 1337998964}
-  - {fileID: 1266100010}
+  - {fileID: 1332192410}
   - {fileID: 1255181842}
