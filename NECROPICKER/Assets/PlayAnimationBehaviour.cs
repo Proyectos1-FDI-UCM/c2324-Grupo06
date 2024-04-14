@@ -8,7 +8,7 @@ public class PlayAnimationBehaviour : MonoBehaviour, IBehaviour
     
     public void ExecuteBehaviour()
     {
-        if (TryGetComponent<Animator>(out Animator animator)) animator.Play(animation);
+        if (TryGetComponent<Animator>(out Animator animator)) animator.Play(animation); //Está mal hecho, hay que repasarlo si queremos implementarlo finalmente
     }
 
     private void OnValidate()
