@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEditorInternal;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class InstantiateBehaviour : MonoBehaviour, IBehaviour
@@ -9,6 +10,7 @@ public class InstantiateBehaviour : MonoBehaviour, IBehaviour
     [SerializeField] GameObject prefab;
     [SerializeField] float velocity = 0.0f;
     [SerializeField] bool setAnimationOn;
+    [SerializeField] string animation;
     public void ExecuteBehaviour()
     {
         GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
@@ -19,7 +21,7 @@ public class InstantiateBehaviour : MonoBehaviour, IBehaviour
         }
         if (setAnimationOn)
         {
-            bullet.AddComponent<Animator>();
+            bullet.GetComponent<Animator>().Play(animation);
         }
     }
 
