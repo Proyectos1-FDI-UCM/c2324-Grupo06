@@ -301,9 +301,6 @@ MonoBehaviour:
   - condition: []
     behaviourContainers:
     - {fileID: 5303278598141818422}
-  - condition: []
-    behaviourContainers:
-    - {fileID: 2022944091960739838}
   nextStates:
   - conditions:
     - conditionContainer: {fileID: 1390938419608202218}
@@ -720,7 +717,7 @@ GameObject:
   - component: {fileID: 2995281795597245116}
   - component: {fileID: 2280278747792079889}
   m_Layer: 0
-  m_Name: Wait 0,4s
+  m_Name: Wait 0,6s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -753,4 +750,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da4b90bc677b294eac913160882da8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToWait: 0.4
+  timeToWait: 0.6
