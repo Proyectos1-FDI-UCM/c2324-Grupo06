@@ -36,7 +36,12 @@ public class PostProcessingHandler : MonoBehaviour
         colorAdjustments.active = false;
     }
 
-    private void OnDestroy() {
+    private void OnDestroy() => Reset();
+
+    private void Awake() => Reset();
+
+    private void Reset()
+    {
         volumeProfile.TryGet(out UnityEngine.Rendering.Universal.ChromaticAberration chromaticAberration);
         chromaticAberration.intensity.Override(0);
         volumeProfile.TryGet(out UnityEngine.Rendering.Universal.FilmGrain filmGrain);
