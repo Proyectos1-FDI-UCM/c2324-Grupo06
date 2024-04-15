@@ -8,7 +8,7 @@ public class LifeUI : MonoBehaviour
     
     [SerializeField] private HealthHandler healthHandler;
     [SerializeField] private GameObject[] margenes = new GameObject[5];
-    private int margenesCount = 0;
+    private int margenesCount;
     private void Start()
     {
         HealthHandler healthHandler = FindAnyObjectByType<InputManager>(FindObjectsInactive.Include).GetComponent<HealthHandler>();
@@ -20,12 +20,14 @@ public class LifeUI : MonoBehaviour
     }
     public void UIContainers(float maxhealth)
     {
-        for (int i = 0; i < maxhealth; i++)
+        margenesCount = 0;
+        for (int i = 0; i <= maxhealth; i++)
         {
-            if (i % 4 == 0)
+            if (i % 4 == 0 && i != 0)
             {
                 margenes[margenesCount].SetActive(true);
                 margenesCount++;
+                Debug.Log(margenesCount);
             }
         }
     }

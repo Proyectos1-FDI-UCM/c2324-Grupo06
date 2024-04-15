@@ -186,7 +186,7 @@ PrefabInstance:
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: Rooms.Array.data[3].roomPrefab
       value: 
-      objectReference: {fileID: 5243942785830454164, guid: 9101dddb43b0da841977321391793db7, type: 3}
+      objectReference: {fileID: 3156200202445372448, guid: 9101dddb43b0da841977321391793db7, type: 3}
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: Rooms.Array.data[0].probability
       value: 0.56
@@ -404,11 +404,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.01
+  near clip plane: 0.1
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -519,7 +519,7 @@ Transform:
   m_GameObject: {fileID: 784301085}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.919897, y: 9.153931, z: -20}
+  m_LocalPosition: {x: 1500, y: 1500, z: -20.053131}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
