@@ -29,6 +29,6 @@ public class UseItemCondition : MonoBehaviour, ICondition
     }
 
     private void OnValidate() {
-        name = $"if {itemHandlerToCheck.name} used";
+        if(itemHandlerToCheck != null) name = $"if {itemHandlerToCheck.name} used";
     }
 }
