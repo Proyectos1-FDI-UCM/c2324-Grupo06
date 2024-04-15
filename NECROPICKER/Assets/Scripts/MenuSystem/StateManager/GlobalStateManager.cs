@@ -21,6 +21,9 @@ public class GlobalStateManager : ScriptableObject
     [SerializeField] UnityEvent onLoading = new UnityEvent();
     public UnityEvent OnLoading => onLoading;
 
+    [SerializeField] UnityEvent onMinimap = new UnityEvent();
+    public UnityEvent OnMinimap => onMinimap;
+
     [SerializeField] ScenesManager scenesManager;
 
 
@@ -68,6 +71,12 @@ public class GlobalStateManager : ScriptableObject
     public void Loading()
     {
         onLoading?.Invoke();
+    }
+
+    public void Minimap()
+    {
+        Time.timeScale = 0;
+        onMinimap?.Invoke();
     }
 
     public void SetTimeScale(float timeScale)

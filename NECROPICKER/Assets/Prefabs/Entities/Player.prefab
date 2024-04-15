@@ -5965,6 +5965,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 6885810b-c60d-4bc0-a1d1-6a107cda47d0
     m_ActionName: Playing/UsePotion[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 2ab6ab99117bb6a4785aa034683d96f5, type: 2}
+        m_TargetAssemblyTypeName: GlobalStateManager, Assembly-CSharp
+        m_MethodName: Minimap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: deebcf3b-feea-4ede-9dc6-1eedab7dd308
+    m_ActionName: Playing/Minimap[/Keyboard/m]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Playing
