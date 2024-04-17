@@ -1,0 +1,45 @@
+{
+    "name": "dialogueInputMap",
+    "maps": [
+        {
+            "name": "dialogue",
+            "id": "f9b7381c-5be5-4f68-8882-4b44f0f51245",
+            "actions": [
+                {
+                    "name": "pass",
+                    "type": "Button",
+                    "id": "3d55e6cc-d69d-40cc-8357-91c614cc774d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3bb294ef-295d-448e-9816-c9c3a4e26040",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "pass",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a018124-dd66-4c9e-9fd4-4e991ac6c48d",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "pass",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

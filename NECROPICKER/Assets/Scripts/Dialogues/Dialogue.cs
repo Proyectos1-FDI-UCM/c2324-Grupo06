@@ -12,7 +12,10 @@ public class Dialogue : MonoBehaviour
 
     [SerializeField] GameObject conditionContainer;
 
+    [SerializeField] private GameObject dgconditioncontainer;
+
     ICondition condition;
+    ICondition conditiondg;
    
 
     [SerializeField] private GameObject DialogueMark;
@@ -37,7 +40,7 @@ public class Dialogue : MonoBehaviour
     private void Awake()
     {
         condition = conditionContainer.GetComponent<ICondition>();
-        print(condition);
+        conditiondg = dgconditioncontainer.GetComponent<ICondition>();
        
     }
 
@@ -49,7 +52,7 @@ public class Dialogue : MonoBehaviour
             StartDialogue();
         }
 
-         else   if (dialogueText.text == dialogueLines[currentDialogue] && condition.CheckCondition() && didDialogueStart)
+         else   if (dialogueText.text == dialogueLines[currentDialogue] && conditiondg.CheckCondition() && didDialogueStart)
         {
             
             NextDialogue();
