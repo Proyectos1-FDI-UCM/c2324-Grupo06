@@ -19,6 +19,7 @@ public class OnButtonLoad : MonoBehaviour
             {
                 scenesManager.LoadScene(scene);
             }
+
         }
     }
 
