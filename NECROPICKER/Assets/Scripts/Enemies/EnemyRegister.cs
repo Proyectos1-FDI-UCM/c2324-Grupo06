@@ -15,7 +15,7 @@ public class EnemyRegister : MonoBehaviour
     }
     private void UnregisterEnemy()
     {
-        _myCounter.UnregisterEnemy();
+       // _myCounter.UnregisterEnemy();
     }
     private void OnDisable()
     {

@@ -576,9 +576,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 447552837958183979}
-        m_TargetAssemblyTypeName: DropComponent, Assembly-CSharp
-        m_MethodName: DropItemExclusive
+      - m_Target: {fileID: 11400000, guid: c875523af8399e04fb8e0cd3bb659194, type: 2}
+        m_TargetAssemblyTypeName: EnemyCounter, Assembly-CSharp
+        m_MethodName: UnregisterEnemy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

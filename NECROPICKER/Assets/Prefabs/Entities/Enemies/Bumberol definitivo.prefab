@@ -10323,7 +10323,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2085505420367996992}
+  m_Father: {fileID: 3472183225199847069}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7189964384986630056
 MonoBehaviour:
@@ -10687,7 +10687,6 @@ Transform:
   - {fileID: 3612129986434627921}
   - {fileID: 3289782059979269340}
   - {fileID: 7544506252836990612}
-  - {fileID: 4409998867902508095}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &6717715877629266366
@@ -10960,6 +10959,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: c875523af8399e04fb8e0cd3bb659194, type: 2}
+        m_TargetAssemblyTypeName: EnemyCounter, Assembly-CSharp
+        m_MethodName: UnregisterEnemy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.15
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _currentHealth: 1
   _maxHealth: 1
 --- !u!114 &2096359875708346128
@@ -11148,6 +11159,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4482102163235642942}
+  - {fileID: 4409998867902508095}
   - {fileID: 6979334253589688314}
   - {fileID: 5635584923403721379}
   - {fileID: 6343018861663129046}
