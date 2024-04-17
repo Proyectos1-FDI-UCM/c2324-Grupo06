@@ -15,7 +15,11 @@ public class ChangeItemMaterial : MonoBehaviour
         GetComponent<GrabHandler>().OnItemDeselected.AddListener(ChangeToDefaultMaterial);
     }
 
-    void ChangeMaterial(GameObject item, Material material) => item.GetComponentInChildren<SpriteRenderer>().material = material;
+    void ChangeMaterial(GameObject item, Material material)
+    { 
+        SpriteRenderer spriteRenderer = item.GetComponentInChildren<SpriteRenderer>();
+        if(spriteRenderer != null) spriteRenderer.material = material;
+    }
 
     void ChangeToSelectedMaterial(GameObject item) => ChangeMaterial(item, newMaterial);
 

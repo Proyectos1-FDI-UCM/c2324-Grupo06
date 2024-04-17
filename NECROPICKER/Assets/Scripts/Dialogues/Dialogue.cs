@@ -31,7 +31,6 @@ public class Dialogue : MonoBehaviour
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.X) && !didDialogueStart)
         {
             StartDialogue();
-            onDialogueStarts.Invoke();
         }
         else if(dialogueText.text == dialogueLines[currentDialogue] && Input.GetKeyDown(KeyCode.X) && didDialogueStart)
         {
@@ -41,6 +40,7 @@ public class Dialogue : MonoBehaviour
 
     public void StartDialogue()
     {
+        onDialogueStarts.Invoke();
         didDialogueStart = true;
         dialoguePanel.SetActive(true);
         DialogueMark.SetActive(false);
@@ -59,7 +59,7 @@ public class Dialogue : MonoBehaviour
             onDialogueEnds.Invoke();
             didDialogueStart = false;
             enabled = false;
-            print("Has ended");
+            dialoguePanel.SetActive(false);
             DialogueMark.SetActive(true);
         }
     }

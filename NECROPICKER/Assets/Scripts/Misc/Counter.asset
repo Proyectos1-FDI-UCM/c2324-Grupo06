@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d47c549d274d2094da4ac69bf6439c0d, type: 3}
   m_Name: Counter
   m_EditorClassIdentifier: 
-  OnEnemyNumberChanged:
+  _totalEnemies: 0
+  OnEnemiesDisplayed:
+    m_PersistentCalls:
+      m_Calls: []
+  OnEnemiesDefeated:
     m_PersistentCalls:
       m_Calls: []

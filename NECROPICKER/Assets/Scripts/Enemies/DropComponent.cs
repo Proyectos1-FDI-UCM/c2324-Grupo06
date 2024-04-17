@@ -36,7 +36,6 @@ public class DropComponent : MonoBehaviour
         int randomPercentage = Random.Range(0, 101);
         for (int i = 0; i < dropItems.Count; i++)
         {
-            print(i);
             if (randomPercentage < dropChance[i])
             {
                 GameObject obj = Instantiate(dropItems[i], _transform.position, _transform.rotation);

@@ -13,14 +13,10 @@ public class DoorManager : MonoBehaviour
     }
     private void Open()
     {
-
-        GetComponent<Animator>().SetBool("EnemiesDeployed", false);
-
+        GetComponent<Animator>().Play("Open");
     }
     private void Close()
     {
-
-        GetComponent<Animator>().SetBool("EnemiesDeployed", true);
-
+        GetComponent<Animator>().Play("Close");
     }
 }

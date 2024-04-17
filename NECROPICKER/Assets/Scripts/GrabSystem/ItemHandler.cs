@@ -5,7 +5,13 @@ using UnityEngine.Events;
 
 public class ItemHandler : MonoBehaviour
 {
-    [SerializeField] ItemData _necronomicon;
+    [SerializeField] ItemData _default;
+    public ItemData defaultItem 
+    {
+        get => _default;
+        set => _default = value;
+    }
+
     [SerializeField] ItemData _initialItem;
     public ItemData initialItem => _initialItem;
 
@@ -55,7 +61,7 @@ public class ItemHandler : MonoBehaviour
 
     public void DropItem()
     {
-        if (selectedItem.ItemData != _necronomicon)
+        if (selectedItem.ItemData != _default)
         {
             selectedItem.gameObject.layer = LayerMask.NameToLayer("Item");
             Rigidbody2D rb = selectedItem.gameObject.GetComponent<Rigidbody2D>();
