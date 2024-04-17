@@ -6152,7 +6152,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAnimation: Death
-  onEnterPerformers: []
+  onEnterPerformers:
+  - condition:
+    - conditionContainer: {fileID: 7594791459420894841}
+      negated: 0
+    behaviourContainers:
+    - {fileID: 6123514547789137678}
   onUpdatePerformers: []
   onExitPerformers: []
   nextStates:

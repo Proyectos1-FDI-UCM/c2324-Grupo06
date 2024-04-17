@@ -48,6 +48,7 @@ MonoBehaviour:
   onEnterPerformers:
   - condition: []
     behaviourContainers:
+    - {fileID: 7986350308801353067}
     - {fileID: 4918312643679883549}
   onUpdatePerformers: []
   onExitPerformers: []
@@ -10498,6 +10499,7 @@ MonoBehaviour:
     behaviourContainers:
     - {fileID: 3772110839383842298}
     - {fileID: 2365057448222980709}
+    - {fileID: 7986350308801353067}
   onUpdatePerformers: []
   onExitPerformers:
   - condition: []
@@ -11162,6 +11164,7 @@ Transform:
   - {fileID: 4409998867902508095}
   - {fileID: 6979334253589688314}
   - {fileID: 5635584923403721379}
+  - {fileID: 3742083533319003807}
   - {fileID: 6343018861663129046}
   - {fileID: 5899999577017162952}
   m_Father: {fileID: 3289782059979269340}
@@ -11226,6 +11229,65 @@ MonoBehaviour:
     - conditionContainer: {fileID: 2222709498328028732}
       negated: 0
     stateContainer: {fileID: 290293579546676707}
+--- !u!1 &7986350308801353067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3742083533319003807}
+  - component: {fileID: 5999619586421763155}
+  m_Layer: 0
+  m_Name: desable collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3742083533319003807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7986350308801353067}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3472183225199847069}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5999619586421763155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7986350308801353067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef76340760308e242bfc6008bf3a8626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnExecuteBehaviour:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1998909231940616078}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8031162257131718077
 GameObject:
   m_ObjectHideFlags: 0
