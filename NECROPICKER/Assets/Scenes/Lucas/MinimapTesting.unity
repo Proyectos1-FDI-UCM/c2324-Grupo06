@@ -672,6 +672,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6353334474862720841, guid: 7888c5ee8889ddf4689b5460e76c283c, type: 3}
+      propertyPath: orthographic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6353334474862720841, guid: 7888c5ee8889ddf4689b5460e76c283c, type: 3}
+      propertyPath: field of view
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 6353334474862720841, guid: 7888c5ee8889ddf4689b5460e76c283c, type: 3}
+      propertyPath: far clip plane
+      value: 1076.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6353334474862720841, guid: 7888c5ee8889ddf4689b5460e76c283c, type: 3}
+      propertyPath: orthographic size
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6353334474862720841, guid: 7888c5ee8889ddf4689b5460e76c283c, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 8192
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -728,6 +748,14 @@ PrefabInstance:
     - target: {fileID: 4307584060901219949, guid: 744468da7a4b6d54998e5ddf2c2c5607, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402092387907438330, guid: 744468da7a4b6d54998e5ddf2c2c5607, type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402092387907438330, guid: 744468da7a4b6d54998e5ddf2c2c5607, type: 3}
+      propertyPath: orthographic size
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

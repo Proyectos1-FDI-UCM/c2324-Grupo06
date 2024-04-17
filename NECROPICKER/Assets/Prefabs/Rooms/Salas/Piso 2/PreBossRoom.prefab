@@ -4434,7 +4434,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3002524023435895121}
-  - component: {fileID: 6332803598272030870}
   - component: {fileID: 1897731607450276197}
   - component: {fileID: 7430964381926643606}
   - component: {fileID: 7001945115277126405}
@@ -4464,39 +4463,6 @@ Transform:
   - {fileID: 5548282190212769581}
   m_Father: {fileID: 3392252310748588806}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6332803598272030870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5390086280253601509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7a598752bbe377438343d7af0e36343, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <onTriggerEnter>k__BackingField:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: dcd41b88c4a42b3418b30d67140e6d1e, type: 2}
-        m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Boss Scene
-          m_BoolArgument: 0
-        m_CallState: 2
-  <onTriggerExit>k__BackingField:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerLayer:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!61 &1897731607450276197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4601,7 +4567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1218113675931832422}
   scenesManager: {fileID: 11400000, guid: dcd41b88c4a42b3418b30d67140e6d1e, type: 2}
-  scene: BossRoom(NotFinished) 1
+  scene: Boss Scene
 --- !u!58 &1584212248190305425
 CircleCollider2D:
   m_ObjectHideFlags: 0
