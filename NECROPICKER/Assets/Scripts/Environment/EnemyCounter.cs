@@ -15,12 +15,14 @@ public class EnemyCounter : ScriptableObject
     public void RegisterEnemy()
     {
         _totalEnemies++;
+       // Debug.Log(_totalEnemies);
         if(_totalEnemies == 1) OnEnemiesDisplayed?.Invoke();
     }
     public void UnregisterEnemy()
     {
         _totalEnemies--;
-        if(_totalEnemies == 0) OnEnemiesDefeated?.Invoke();
+        //Debug.Log(_totalEnemies);
+        if (_totalEnemies == 0) OnEnemiesDefeated?.Invoke();
     }
 
     public void ResetCounter()

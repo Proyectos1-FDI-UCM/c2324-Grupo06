@@ -12,7 +12,7 @@ public class HealthHandler : MonoBehaviour
 
     UnityEvent<float> onHealthDifer = new UnityEvent<float>();
     public UnityEvent<float> OnHealthDifer => onHealthDifer;
-
+     
     [SerializeField] UnityEvent onTakeDamage = new UnityEvent();
     public UnityEvent OnTakeDamage => onTakeDamage;
 
@@ -46,7 +46,6 @@ public class HealthHandler : MonoBehaviour
     }
 
     void Start() => SetCurrentHealth(maxHealth);
-
     public void Death() => onDeath?.Invoke();
 
     public void TakeDamage(float damage)
@@ -73,6 +72,7 @@ public class HealthHandler : MonoBehaviour
         _maxHealth = newMaxHealth;
         maxHealth = newMaxHealth;
     }
+   
     public void SetCurrentHealth(float newCurrentHealth) => currentHealth = newCurrentHealth;
     public float GetCurrentHealth() => currentHealth;
     public float GetMaxHealth() => _maxHealth;

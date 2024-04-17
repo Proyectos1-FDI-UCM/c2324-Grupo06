@@ -142,6 +142,10 @@ PrefabInstance:
       propertyPath: damage
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: -8166464752845091290, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+      propertyPath: targetLayer.m_Bits
+      value: 1022
+      objectReference: {fileID: 0}
     - target: {fileID: -3087249472022360179, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
       propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -204,6 +208,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 360736ec3b0e0cd459b835c90700d391, type: 2}
     m_RemovedComponents:
     - {fileID: -1005988595442207404, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
+    - {fileID: -8166464752845091290, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
     m_RemovedGameObjects:
     - {fileID: 3148872780604231532, guid: 0499e4b14a0c97643adc7e6554b3dfbd, type: 3}
     m_AddedGameObjects:
