@@ -1723,7 +1723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6907328283199108370
 Transform:
   m_ObjectHideFlags: 0
@@ -1773,7 +1773,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3583052193604524969}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -1815,6 +1815,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 9518e87e-c317-4527-a98d-cb7785b3d588
     m_ActionName: Client/Minimap[/Keyboard/m]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 99c68653-8ac2-4233-ae66-db6b02cd68df
+    m_ActionName: Client/returnMinimap[/Keyboard/escape,/Keyboard/m]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e6c7733c-03ba-413f-aec7-59b39e297820
+    m_ActionName: Client/interact[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Client
@@ -1913,6 +1921,18 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: e0343c36-ef0a-4fb6-b946-93239ff603c7
     m_ActionName: Client/navegate[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9518e87e-c317-4527-a98d-cb7785b3d588
+    m_ActionName: Client/Minimap[/Keyboard/m]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 99c68653-8ac2-4233-ae66-db6b02cd68df
+    m_ActionName: Client/returnMinimap[/Keyboard/escape,/Keyboard/m]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e6c7733c-03ba-413f-aec7-59b39e297820
+    m_ActionName: Client/interact[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Client
@@ -2986,11 +3006,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3608663180664121230, guid: 8c6b60323cda05c4b95f8a806e22d20e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8333414363721664670}
   m_SourcePrefab: {fileID: 100100000, guid: 8c6b60323cda05c4b95f8a806e22d20e, type: 3}
 --- !u!4 &1142052526248040918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7687231701859540128, guid: 8c6b60323cda05c4b95f8a806e22d20e, type: 3}
+  m_PrefabInstance: {fileID: 7311570053993825654}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6296989072672662264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3608663180664121230, guid: 8c6b60323cda05c4b95f8a806e22d20e, type: 3}
+  m_PrefabInstance: {fileID: 7311570053993825654}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8333414363721664670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6296989072672662264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514106b355b65924f87af9a0752e53ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bottom: {fileID: 6728309059425772877}
+--- !u!1 &6728309059425772877 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4046531856797147195, guid: 8c6b60323cda05c4b95f8a806e22d20e, type: 3}
   m_PrefabInstance: {fileID: 7311570053993825654}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8151881134703297468

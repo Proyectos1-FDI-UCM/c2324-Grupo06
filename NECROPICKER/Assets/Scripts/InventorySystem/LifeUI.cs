@@ -27,7 +27,7 @@ public class LifeUI : MonoBehaviour
             {
                 margenes[margenesCount].SetActive(true);
                 margenesCount++;
-                Debug.Log(margenesCount);
+                //Debug.Log(margenesCount);
             }
         }
     }

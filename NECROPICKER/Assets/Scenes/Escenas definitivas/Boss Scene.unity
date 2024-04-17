@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1254619676913607412, guid: bc7c3ae944cca4f4288a2b1b1b2428bd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3379113324238308028, guid: bc7c3ae944cca4f4288a2b1b1b2428bd, type: 3}
       propertyPath: m_Name
       value: MenuHandler
@@ -190,8 +194,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1254619676913607412, guid: bc7c3ae944cca4f4288a2b1b1b2428bd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 235892}
   m_SourcePrefab: {fileID: 100100000, guid: bc7c3ae944cca4f4288a2b1b1b2428bd, type: 3}
+--- !u!1 &235891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1254619676913607412, guid: bc7c3ae944cca4f4288a2b1b1b2428bd, type: 3}
+  m_PrefabInstance: {fileID: 235890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &235892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bda266e852c901479c2841ffcd354a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deactivateTime: 5
 --- !u!4 &265462028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6158992163573531715, guid: 0cfe29cf7ca00ac4fa4af4cc58eaa509, type: 3}
@@ -855,7 +880,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 733019806238982433, guid: 744468da7a4b6d54998e5ddf2c2c5607, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 62.1
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 733019806238982433, guid: 744468da7a4b6d54998e5ddf2c2c5607, type: 3}
       propertyPath: m_LocalPosition.z
@@ -899,7 +924,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6402092387907438330, guid: 744468da7a4b6d54998e5ddf2c2c5607, type: 3}
       propertyPath: orthographic size
-      value: 0
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
