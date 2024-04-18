@@ -5503,7 +5503,6 @@ GameObject:
   - component: {fileID: 9039509038530449924}
   - component: {fileID: 6148283224164941932}
   - component: {fileID: 7285965501859734971}
-  - component: {fileID: 9057694853243924835}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -6026,32 +6025,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 0}
---- !u!114 &9057694853243924835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7096676606624458962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 612af64c72a05ba48934effececaf3ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthSetted: 0
-  _maxHealthSetted: 0
-  _healthToHeal: 12
-  _objectsToInstantiate:
-  - {fileID: 3848557150264641513, guid: 0428fc602a330d94a920b19198e02ac5, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &7144362698587863308
 GameObject:
   m_ObjectHideFlags: 0

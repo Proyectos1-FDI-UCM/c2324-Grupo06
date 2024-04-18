@@ -13,16 +13,6 @@ public class StopBehaviour : MonoBehaviour, IBehaviour
         movementController.Rb.velocity = Vector2.zero;
     }
 
-    // IEnumerator Stop()
-    // {
-    //     while (movementController.Rb.velocity.magnitude > 0.1f)
-    //     {
-    //         movementController.Rb.velocity = Vector2.Lerp(movementController.Rb.velocity, Vector2.zero, 
-    //         stopVelocity);
-    //         yield return new WaitForSeconds(0.01f);
-    //     }
-    // }
-
     private void OnValidate() {
         name = "Stop";
     }

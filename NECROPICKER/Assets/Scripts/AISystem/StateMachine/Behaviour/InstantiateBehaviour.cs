@@ -1,20 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
-using UnityEditorInternal;
-using UnityEditor.Animations;
+
 using UnityEngine;
 
 public class InstantiateBehaviour : MonoBehaviour, IBehaviour
 {
     [SerializeField] GameObject prefab;
-    [SerializeField] float velocity = 0.0f;
+    [SerializeField] float velocity = 0.0f, rotation=0.0f;
     [SerializeField] bool setAnimationOn;
     [SerializeField] string animation;
     public void ExecuteBehaviour()
     {
-        GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
-        if (velocity != 0)
+        Quaternion addRotation = Quaternion.Euler(0,0,rotation);
+        GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity*addRotation.normalized);
         {
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.velocity = transform.up * velocity;

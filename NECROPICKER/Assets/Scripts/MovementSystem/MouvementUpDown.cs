@@ -29,12 +29,10 @@ public class MouvementUpDown : MonoBehaviour
         //comprueba si nos acercamos al punto de arriba o al de abajo
         if (_myTransform.position.y + distance >= _up.position.y)
         {
-            Debug.Log("baja");
             _myRigidBody.AddForce(new Vector2(0,-force));
         }
         else if(_myTransform.position.y - distance  <= _down.position.y)
         {
-            Debug.Log("sube");
             _myRigidBody.AddForce(new Vector2(0, force));
         }
     }
