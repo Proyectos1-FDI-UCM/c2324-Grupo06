@@ -23,13 +23,6 @@ public class Inventory : ScriptableObject
             items[i].item = Necronomicon;
             UpdateInventory();
         }
-        if (initialItem != null)
-        {
-            for(int i = 0; i < numberOfInitials; i++)
-            {
-                AddItem(initialItem);
-            }
-        }
     }
     public int SelectedItemIndex
     {
@@ -119,6 +112,14 @@ public class Inventory : ScriptableObject
         {
             items[i].amount = 1;
             items[i].item = Necronomicon;
+        }
+    }
+
+    public void RestartWithInitialItem()
+    {
+        for (int i = 0; i < numberOfInitials; i++)
+        {
+            AddItem(initialItem);
         }
     }
 }
