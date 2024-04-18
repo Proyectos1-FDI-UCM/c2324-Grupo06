@@ -26,8 +26,6 @@ public class MoveTowardsDirectionCondition : MonoBehaviour, ICondition
 
     private void OnValidate() 
     {
-        if(rbToCheck == null) rbToCheck = FindObjectOfType<InputManager>().GetComponent<Rigidbody2D>();
-        
-        name = $"{rbToCheck.name} move towards {directionToCheck.normalized}";
+        name = $"Something move towards {directionToCheck.normalized}";
     }
 }
