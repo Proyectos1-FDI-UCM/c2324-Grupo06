@@ -1113,6 +1113,7 @@ MonoBehaviour:
   text: {fileID: 1268051996274389673}
   scenesManager: {fileID: 11400000, guid: dcd41b88c4a42b3418b30d67140e6d1e, type: 2}
   scene: Level2
+  inputActionReference: {fileID: -2565893101477362875, guid: 167d68811d0269249af63e6c593c7c31, type: 3}
 --- !u!1 &1268051996274389673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,7 +1179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Click x to go down
+  m_text: Click E to go down
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 123adad5e1c5dfe4fbb4911654eda959, type: 2}
   m_sharedMaterial: {fileID: 6325678223434401787, guid: 123adad5e1c5dfe4fbb4911654eda959, type: 2}
