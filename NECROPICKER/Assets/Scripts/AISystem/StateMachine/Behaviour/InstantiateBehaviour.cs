@@ -10,7 +10,7 @@ public class InstantiateBehaviour : MonoBehaviour, IBehaviour
     public void ExecuteBehaviour()
     {
         Quaternion addRotation = Quaternion.Euler(0,0,rotation);
-        GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity*addRotation.normalized);
+        GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity*addRotation*transform.rotation);
         {
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.velocity = transform.up * velocity;
