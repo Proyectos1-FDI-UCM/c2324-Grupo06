@@ -12,13 +12,9 @@ public class AutoGraph : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out InputManager inputManager))
         {
-            if(_inventory.items[0].amount < _item.maxStackSize)
+            if (_inventory.AddItem(_item))
             {
-                if (_inventory.AddItem(_item))
-                {
-                    _inventory.UpdateInventory();
-                    Destroy(gameObject);
-                }
+                Destroy(gameObject);
             }
         }
     }

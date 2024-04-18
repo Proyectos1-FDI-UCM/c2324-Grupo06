@@ -24,6 +24,17 @@ public class AudioPerformer : MonoBehaviour
             {
                 AudioSource currentSource = gameObject.AddComponent<AudioSource>();
 
+                _audioPlayer[i].OnAudioOneShotPlay.
+                AddListener((AudioClip clip, float volume, float pitch, bool loop) =>
+                    {
+                        currentSource.volume = volume;
+                        currentSource.pitch = pitch;
+                        currentSource.clip = clip;
+                        currentSource.loop = loop;
+                        currentSource.Play();
+                    }
+                );
+
                 _audioPlayer[i].OnAudioPlay.
                 AddListener((AudioClip clip, float volume, float pitch, bool loop) =>
                     {
