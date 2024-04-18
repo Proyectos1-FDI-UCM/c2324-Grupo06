@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class OnButtonLoad : MonoBehaviour
@@ -9,13 +10,14 @@ public class OnButtonLoad : MonoBehaviour
     [SerializeField] private GameObject text;
     [SerializeField] private ScenesManager scenesManager;
     [SerializeField] private string scene;
+    [SerializeField] private InputActionReference inputActionReference;
     bool enArea;
     // Start is called before the first frame update
     private void Update()
     {
         if (enArea)
         {
-            if (Input.GetKeyDown(KeyCode.X))
+            if (inputActionReference.action.WasPerformedThisFrame())
             {
                 scenesManager.LoadScene(scene);
             }
