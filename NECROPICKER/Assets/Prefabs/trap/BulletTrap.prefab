@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2395086642778384531}
   - component: {fileID: 5444801521512904383}
-  - component: {fileID: 2316095872360136455}
   m_Layer: 7
   m_Name: AI
   m_TagString: Untagged
@@ -50,19 +49,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialStateContainer: {fileID: 5341506684706688359}
   permanentBehaviours: []
---- !u!114 &2316095872360136455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2230618871744277960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 164dc154bca55f94a8d0715b8f43ddf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _target: {fileID: 0}
 --- !u!1 &2678145533230600295
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +187,7 @@ Transform:
   m_GameObject: {fileID: 4946757888201884674}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -0.5, z: 0}
+  m_LocalPosition: {x: -0.089999676, y: -0.50000006, z: 0}
   m_LocalScale: {x: 1, y: -0.005, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -382,7 +368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 5619736930784732870, guid: eee786079ff721146bc4609efa0aa42c, type: 3}
   velocity: 6
-  rotation: -90
+  rotation: 180
   setAnimationOn: 0
   animation: 
 --- !u!1 &5341506684706688359
@@ -468,7 +454,7 @@ Transform:
   m_GameObject: {fileID: 5467717224861013793}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: -0.09, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: -0.005, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -796,7 +782,7 @@ Transform:
   m_GameObject: {fileID: 8919103579270333736}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.35, y: 0, z: 0}
+  m_LocalPosition: {x: 0.14, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -869,6 +855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _up: {fileID: 1388667922394888273}
   _down: {fileID: 187107969924944981}
+  _parentTransform: {fileID: 9154458323429318072}
   distance: 0.6
   force: 50
   inicialForce: 80
@@ -898,7 +885,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 0
 --- !u!58 &850716855628511962
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1012,7 +999,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
