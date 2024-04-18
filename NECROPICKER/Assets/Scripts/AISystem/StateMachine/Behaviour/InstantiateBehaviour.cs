@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
-using UnityEditorInternal;
-using UnityEditor.Animations;
+
 using UnityEngine;
 
 public class InstantiateBehaviour : MonoBehaviour, IBehaviour
