@@ -48,8 +48,9 @@ public class LaserItem : MonoBehaviour, IItem
 
     public void DrawRay()
     {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, 100, targetLayer);
         lineRenderer.SetPosition(0, transform.position);
-        lineRenderer.SetPosition(1, transform.position + transform.up * 100);
+        lineRenderer.SetPosition(1, hit ? hit.point : transform.position + transform.up * 100);
     }
 
     private void Update()

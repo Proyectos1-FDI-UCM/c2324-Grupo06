@@ -48,7 +48,6 @@ public class SoftRandomMovement : MonoBehaviour, IBehaviour
         else
         {
             float angle = Random.Range(0, 360);
-            Debug.Log(angle);
             randomDirection = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
         }
     }
