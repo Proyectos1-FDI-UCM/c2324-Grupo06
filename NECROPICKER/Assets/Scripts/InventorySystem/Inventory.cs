@@ -117,6 +117,7 @@ public class Inventory : ScriptableObject
 
     public void RestartWithInitialItem()
     {
+        EmptyInventory();
         for (int i = 0; i < numberOfInitials; i++)
         {
             AddItem(initialItem);
