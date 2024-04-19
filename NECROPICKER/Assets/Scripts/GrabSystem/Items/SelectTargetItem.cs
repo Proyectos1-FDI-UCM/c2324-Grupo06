@@ -10,6 +10,8 @@ public class SelectTargetItem : MonoBehaviour, IItem
     LayerMask targetLayer;
     TargetHandler targetHandler;
 
+    [SerializeField] float radius = 100f;
+
     private void Awake()
     {
         targetHandler = GetComponent<TargetHandler>();
@@ -17,9 +19,9 @@ public class SelectTargetItem : MonoBehaviour, IItem
 
     public bool Use(ItemHandler handler)
     {
-        Transform target = Physics2D.OverlapCircle(transform.position, 15f, targetLayer).transform;
+        Transform target = Physics2D.OverlapCircle(transform.position, radius, targetLayer).transform;
 
-        if (target == null) target = Physics2D.OverlapCircle(transform.position, 50f, 0).transform;
+        if (target == null) target = Physics2D.Raycast(transform.position, transform.up, 200f).transform;
 
         targetHandler.SetTarget(target);
 
