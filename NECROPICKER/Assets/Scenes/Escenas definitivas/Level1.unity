@@ -456,12 +456,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: Rooms.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: maxRoomExtension
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
+      propertyPath: initialRoom.roomPrefab
+      value: 
+      objectReference: {fileID: 168292651923293047, guid: e0704046ee05349418babe2e7055bef5, type: 3}
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: Rooms.Array.data[0].roomPrefab
       value: 
@@ -479,16 +483,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4081519400070103902, guid: e9d4729b5ff124140a8f9b4d7118a16d, type: 3}
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
+      propertyPath: Rooms.Array.data[4].roomPrefab
+      value: 
+      objectReference: {fileID: 6898600944130308036, guid: 673aa014f3f985447bd5810dd5239294, type: 3}
+    - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: Rooms.Array.data[0].probability
       value: 0.654
       objectReference: {fileID: 0}
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: Rooms.Array.data[2].probability
-      value: 0.344
+      value: 0.418
       objectReference: {fileID: 0}
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: Rooms.Array.data[3].probability
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
+      propertyPath: Rooms.Array.data[4].probability
+      value: 0.516
       objectReference: {fileID: 0}
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: Rooms.Array.data[0].minNumOfInstances
@@ -501,6 +513,10 @@ PrefabInstance:
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: Rooms.Array.data[3].minNumOfInstances
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
+      propertyPath: Rooms.Array.data[4].minNumOfInstances
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1392821162466313952, guid: edb23bbfa8884f84cbd22a2ad1b53eb2, type: 3}
       propertyPath: onLoaded.m_PersistentCalls.m_Calls.Array.size
