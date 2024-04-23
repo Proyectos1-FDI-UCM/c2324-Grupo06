@@ -15,6 +15,8 @@ public class RandomInstancerOnGridArea : MonoBehaviour
     private void OnDrawGizmos()
     {
         grid = GetComponentInParent<Grid>();
+        if(grid == null) return;
+        
         Gizmos.color = Color.blue;
         Gizmos.DrawWireCube(transform.position, 
         new Vector3(size.x * grid.cellSize.x, size.y * grid.cellSize.y, 0));
