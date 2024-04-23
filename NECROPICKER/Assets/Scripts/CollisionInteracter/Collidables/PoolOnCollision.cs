@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(PoolTaker))]
 public class PoolOnCollision : MonoBehaviour, ICollidable
 {
     [SerializeField] GameObject[] prefabs;
@@ -10,7 +9,8 @@ public class PoolOnCollision : MonoBehaviour, ICollidable
 
     private void Awake()
     {
-        poolTaker = GetComponent<PoolTaker>();
+        if(poolTaker == null) poolTaker = GetComponent<PoolTaker>();
+        else poolTaker = gameObject.AddComponent<PoolTaker>();
     }
 
     public void OnCollide(Collider2D collision)
