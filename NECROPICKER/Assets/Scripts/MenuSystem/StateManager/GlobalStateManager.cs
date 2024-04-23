@@ -29,8 +29,8 @@ public class GlobalStateManager : ScriptableObject
 
     public void Pause()
     {
-        Time.timeScale = 0;
         onPause?.Invoke();
+        Time.timeScale = 0;
     }
 
     public void Resume()
