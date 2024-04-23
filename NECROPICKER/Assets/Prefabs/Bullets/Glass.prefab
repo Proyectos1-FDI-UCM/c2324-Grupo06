@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 8646341109574954228}
   - component: {fileID: 8693471809126549179}
   - component: {fileID: 8359296099950291436}
-  - component: {fileID: -5361316375379844419}
   - component: {fileID: 6502146709052401106}
   - component: {fileID: 7204166686157451126}
   - component: {fileID: 9188580237525665907}
   - component: {fileID: 2670096651792955070}
   - component: {fileID: -971830517203505996}
+  - component: {fileID: 7828319812364047312}
   m_Layer: 8
   m_Name: Glass
   m_TagString: Untagged
@@ -118,23 +118,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-5361316375379844419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4567352639947266525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d90ae57c15aadd4bacfde23fa427b20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  minSpeed: 0
-  targetLayer:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!58 &6502146709052401106
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -236,3 +219,20 @@ MonoBehaviour:
     m_Bits: 4294967295
   prefab: {fileID: 3880065285134877251, guid: 19110eb1b27268140a1be8313a49f2a9, type: 3}
   maxNumOfInstances: 1
+--- !u!114 &7828319812364047312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4567352639947266525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79da746c559355e4c8b87b688c25ba79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  minSpeed: 0
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
