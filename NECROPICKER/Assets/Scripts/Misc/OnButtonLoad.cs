@@ -10,6 +10,7 @@ public class OnButtonLoad : MonoBehaviour
     [SerializeField] private GameObject text;
     [SerializeField] private ScenesManager scenesManager;
     [SerializeField] private string scene;
+    [SerializeField] private Upgrades upgrades;
     [SerializeField] private InputActionReference inputActionReference;
     bool enArea;
     // Start is called before the first frame update
@@ -19,6 +20,7 @@ public class OnButtonLoad : MonoBehaviour
         {
             if (inputActionReference.action.WasPerformedThisFrame())
             {
+                upgrades.StorageActHealth(upgrades.FindPlayer().GetComponent<HealthHandler>().GetCurrentHealth());
                 scenesManager.LoadScene(scene);
             }
 

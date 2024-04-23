@@ -8,6 +8,7 @@ public class Upgrades : ScriptableObject
 {// primera estadistica vida seguida de numero maximo de pociones y velocidad de movimiento
     [SerializeField] private float[] stats = new float[3];
     [SerializeField] ItemData Pociones;
+    [SerializeField] private float act_health;
     [SerializeField] private float Ini_maxhealth = 0;
     [SerializeField] private int Ini_maxpotionsize = 0;
     [SerializeField] private float Ini_speed = 0;
@@ -17,12 +18,19 @@ public class Upgrades : ScriptableObject
     {
         GameObject player = FindPlayer();
         player.GetComponent<HealthHandler>().SetMaxHealth(stats[0]);
+       
         Pociones.SetMaxStackSize((int)stats[1]);
         player.GetComponent<MovementController>().SetSpeed(stats[2]);
     }
-
+    public void SetActHealth()
+    {
+        GameObject player = FindPlayer();
+        player.GetComponent<HealthHandler>().SetCurrentHealth(act_health);
+    }
+    public void StorageActHealth(float health) => act_health = health;
     public void Resetstats()
     {
+        StorageActHealth(Ini_maxhealth);
         stats[0] = Ini_maxhealth;
         stats[1] = Ini_maxpotionsize;
         stats[2] = Ini_speed;

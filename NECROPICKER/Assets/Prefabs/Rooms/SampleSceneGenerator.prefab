@@ -45,14 +45,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialRoom:
-    roomPrefab: {fileID: 168292651923293047, guid: e0704046ee05349418babe2e7055bef5, type: 3}
+    roomPrefab: {fileID: 168292651923293047, guid: 38791d7670c85054aaba6455128941ab, type: 3}
     probability: 1
     minNumOfInstances: 0
   Rooms:
-  - roomPrefab: {fileID: 2741341949905470546, guid: 034f7e5160ca2064eaf2f0b28bb27f61, type: 3}
-    probability: 1
-    minNumOfInstances: 9
-  - roomPrefab: {fileID: 5623586957072344595, guid: da26367ddbdc86c4da70fbedd3e3a71f, type: 3}
+  - roomPrefab: {fileID: 4588333738580742897, guid: ed277d83d47e8604baad011fea387945, type: 3}
+    probability: 0.56
+    minNumOfInstances: 5
+  - roomPrefab: {fileID: 8075029029157897325, guid: 00b570099a52aef49a0d911d65f6a13f, type: 3}
+    probability: 0
+    minNumOfInstances: 1
+  - roomPrefab: {fileID: 1953806277259749121, guid: 93fba0db1337fd74f8f140d8ddac282e, type: 3}
+    probability: 0.53
+    minNumOfInstances: 3
+  - roomPrefab: {fileID: 3156200202445372448, guid: 9101dddb43b0da841977321391793db7, type: 3}
     probability: 0
     minNumOfInstances: 1
   roomSize: {x: 40, y: 30}
@@ -90,6 +96,30 @@ MonoBehaviour:
       - m_Target: {fileID: 11400000, guid: 8767bcdb43874ea40913981434c69a1a, type: 2}
         m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 0f19e62fbfd0d984b8bd6ba54c2188e1, type: 2}
+        m_TargetAssemblyTypeName: Upgrades, Assembly-CSharp
+        m_MethodName: SetStats
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 0f19e62fbfd0d984b8bd6ba54c2188e1, type: 2}
+        m_TargetAssemblyTypeName: Upgrades, Assembly-CSharp
+        m_MethodName: SetActHealth
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
