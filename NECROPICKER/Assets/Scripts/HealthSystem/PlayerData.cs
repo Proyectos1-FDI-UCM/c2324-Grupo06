@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Transform _playerTransform;
+    private Transform _potion;
+    private void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _potion = transform;
+        _playerTransform = FindAnyObjectByType<InputManager>().transform;
+        _potion.position = _playerTransform.position;
     }
 }
