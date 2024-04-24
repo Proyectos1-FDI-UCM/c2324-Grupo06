@@ -11,5 +11,6 @@ public class PlayerData : MonoBehaviour
         _potion = transform;
         _playerTransform = FindAnyObjectByType<InputManager>().transform;
         _potion.position = _playerTransform.position;
+        _potion.rotation = _playerTransform.rotation;
     }
 }
