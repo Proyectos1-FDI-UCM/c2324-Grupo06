@@ -76,7 +76,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 69
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -1442,8 +1442,8 @@ ParticleSystem:
         m_NumAlphaKeys: 2
   UVModule:
     serializedVersion: 2
-    enabled: 0
-    mode: 0
+    enabled: 1
+    mode: 1
     timeMode: 0
     fps: 30
     frameOverTime:
@@ -1561,7 +1561,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 0}
+    - sprite: {fileID: -1100070348, guid: cd928150b9f2b2f44a24b89b9b4c1bd7, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
