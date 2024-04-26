@@ -27,19 +27,19 @@ public class Cheats : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z)) //Setear vida actual
         {
-            _myHealthHandler.SetCurrentHealth(_healthSetted);
+            //_myHealthHandler.SetCurrentHealth(_healthSetted);
         }
         if (Input.GetKeyDown(KeyCode.H))
         {
-            _myHealthHandler.Heal(_healthToHeal);
+           // _myHealthHandler.Heal(_healthToHeal);
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
-            _myHealthHandler.Death();
+            //_myHealthHandler.Death();
         }
         if (Input.GetKeyDown(KeyCode.M)) //Setear vida m�xima
         {
-            _myHealthHandler.SetMaxHealth(_maxHealthSetted);
+            //_myHealthHandler.SetMaxHealth(_maxHealthSetted);
         }
         if (Input.GetKeyDown(KeyCode.Keypad0)) //Instanciar objetos
         {
