@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6842467074644042397}
   - component: {fileID: 6406510097177765934}
   - component: {fileID: 918446776603885769}
-  - component: {fileID: 6640368515777031479}
   m_Layer: 0
   m_Name: Heal_Effect
   m_TagString: Untagged
@@ -361,8 +360,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.27
-      minScalar: 0.18
+      scalar: 0.75
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4843,15 +4842,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deactivateTime: 0.7
---- !u!114 &6640368515777031479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5338780099931557242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b17beac7e5632a643837fad06cc9aa00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

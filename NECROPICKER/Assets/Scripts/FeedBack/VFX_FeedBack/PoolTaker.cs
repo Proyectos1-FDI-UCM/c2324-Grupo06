@@ -26,4 +26,6 @@ public class PoolTaker : MonoBehaviour
     {
         objectPooler.SpawnFromPool(spawnPoint.position, spawnPoint.rotation, prefab);
     }
+
+    public void SetSpawnPoint(Transform transform) => spawnPoint = transform;
 }
