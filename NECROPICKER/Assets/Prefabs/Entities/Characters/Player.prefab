@@ -5503,6 +5503,7 @@ GameObject:
   - component: {fileID: 6148283224164941932}
   - component: {fileID: 7285965501859734971}
   - component: {fileID: 1558682039562597839}
+  - component: {fileID: 7080158958294060353}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -6015,6 +6016,37 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &7080158958294060353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7096676606624458962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612af64c72a05ba48934effececaf3ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inventory: {fileID: 11400000, guid: f6d81b7acdfb2e747b1093ad5d20de2c, type: 2}
+  _health: {fileID: 11400000, guid: a8db82361061134468f45c4723ccfb59, type: 2}
+  _healthSetted: 0
+  _maxHealthSetted: 0
+  _healthToHeal: 0
+  _objectsToInstantiate:
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 360736ec3b0e0cd459b835c90700d391, type: 2}
+  - {fileID: 11400000, guid: 6f43ca34d313ea9469fb8b1e7ed2b715, type: 2}
+  - {fileID: 11400000, guid: 78c9f9d3ac2850a40836dfa3021df14e, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _objectsToAdd: 000000000a0000000a00000001000000000000000000000000000000000000000000000000000000
+  _potion: {fileID: 11400000, guid: 15063406dc58e854cb9e9a14cfe98928, type: 2}
+  _potionsToAdd: 5
 --- !u!1 &7144362698587863308
 GameObject:
   m_ObjectHideFlags: 0
