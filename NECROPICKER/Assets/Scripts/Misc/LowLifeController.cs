@@ -8,6 +8,9 @@ public class LowLifeController : MonoBehaviour
 
     IEnumerator LowLife(bool active)
     {
-        yield return null;
+        while (active)
+        {
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 }
