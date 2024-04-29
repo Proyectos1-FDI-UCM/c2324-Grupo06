@@ -92,8 +92,11 @@ public class HealthHandler : MonoBehaviour
     {
         if (currentHealth <= 4 && currentHealth > 0)
         {
-            onLowLife?.Invoke();
-            active = true;
+            if (!active)
+            {
+                onLowLife?.Invoke();
+                active = true;
+            }
         }
         else if (active)
         {
