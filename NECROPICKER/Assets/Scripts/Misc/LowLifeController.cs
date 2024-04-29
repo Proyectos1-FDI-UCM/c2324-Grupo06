@@ -1,16 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class LowLifeController : MonoBehaviour
 {
-    public void PlayLowHealth(bool active) => StartCoroutine(LowLife(active));
-
-    IEnumerator LowLife(bool active)
+    [SerializeField] float duration = 3;
+    [SerializeField] AnimationCurve curve;
+    Vignette vignette;
+    [SerializeField] VolumeProfile postProcessVolume;
+    bool active = false;
+    void Start() => postProcessVolume.TryGet(out vignette);
+    public void PlayLowHealth(bool Active)
     {
+        active = Active;
+        StartCoroutine(LowLife());
+    }
+    IEnumerator LowLife()
+    {
+        float time = 0;
+        if(!active)
+        {
+            vignette.intensity.Override(0);
+            yield break;
+        }
         while (active)
         {
-            yield return new WaitForSeconds(0.5f);
+            vignette.intensity.Override(curve.Evaluate(time / duration));
+            time += 0.05f;
+            yield return new WaitForSecondsRealtime(0.05f);
         }
     }
 }

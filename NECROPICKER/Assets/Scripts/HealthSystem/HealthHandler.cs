@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class HealthHandler : MonoBehaviour
 {
+    bool active = false; //Sirve para saber si la animacion de low life esta activa o no
+
     UnityEvent<float> onHealthChanged = new UnityEvent<float>();
     public UnityEvent<float> OnHealthChanged => onHealthChanged;
     UnityEvent<float> onMaxHealthChanged = new UnityEvent<float>();
@@ -19,7 +21,14 @@ public class HealthHandler : MonoBehaviour
     [SerializeField] UnityEvent onDeath = new UnityEvent();
     public UnityEvent OnDeath => onDeath;
 
+    [SerializeField] UnityEvent onLowLife = new UnityEvent();
+    public UnityEvent OnLowLife => onLowLife;
+
+    [SerializeField] UnityEvent onNormalLife = new UnityEvent();
+    public UnityEvent OnNormalLife => onNormalLife;
+
     [SerializeField] float _currentHealth = 1;
+    [SerializeField] float _lowLifeAnimDuration = 3;
     public float currentHealth
     {
         get => _currentHealth;
@@ -52,11 +61,13 @@ public class HealthHandler : MonoBehaviour
     {
         currentHealth -= damage;
         if(currentHealth > 0) OnTakeDamage?.Invoke();
+        LookLowLife();
     }
 
     public void NecroDamage(float damage)
     {
         currentHealth -= damage;
+        LookLowLife();
     }
 
     public void Heal(float healAmount)
@@ -66,6 +77,7 @@ public class HealthHandler : MonoBehaviour
             currentHealth += _maxHealth - currentHealth;
         }
         else currentHealth += healAmount;
+        LookLowLife();
     }
     public void SetMaxHealth(float newMaxHealth)
     {
@@ -76,4 +88,17 @@ public class HealthHandler : MonoBehaviour
     public void SetCurrentHealth(float newCurrentHealth) => currentHealth = newCurrentHealth;
     public float GetCurrentHealth() => currentHealth;
     public float GetMaxHealth() => _maxHealth;
+    private void LookLowLife()
+    {
+        if (currentHealth <= 4 && currentHealth > 0)
+        {
+            onLowLife?.Invoke();
+            active = true;
+        }
+        else if (active)
+        {
+            onNormalLife?.Invoke();
+            active = false;
+        }
+    }
 }

@@ -5504,6 +5504,7 @@ GameObject:
   - component: {fileID: 7285965501859734971}
   - component: {fileID: 1558682039562597839}
   - component: {fileID: 7080158958294060353}
+  - component: {fileID: 6594571074829279658}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -5713,7 +5714,38 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onLowLife:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6594571074829279658}
+        m_TargetAssemblyTypeName: LowLifeController, Assembly-CSharp
+        m_MethodName: PlayLowHealth
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onNormalLife:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6594571074829279658}
+        m_TargetAssemblyTypeName: LowLifeController, Assembly-CSharp
+        m_MethodName: PlayLowHealth
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _currentHealth: 1
+  _lowLifeAnimDuration: 3
   _maxHealth: 12
 --- !u!95 &119600144967311043
 Animator:
@@ -6047,6 +6079,134 @@ MonoBehaviour:
   _objectsToAdd: 000000000a0000000a00000001000000070000000f00000003000000000000000000000000000000
   _potion: {fileID: 11400000, guid: 15063406dc58e854cb9e9a14cfe98928, type: 2}
   _potionsToAdd: 5
+--- !u!114 &6594571074829279658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7096676606624458962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3de52f9b466ba57408fd7e1de73363f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 3
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.09015122
+      value: 0.4139204
+      inSlope: 1.4105246
+      outSlope: 1.4105246
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.15917245
+      value: 0.4869355
+      inSlope: 0.78080094
+      outSlope: 0.78080094
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.16316193
+      value: 0.48683393
+      inSlope: 1.3472786
+      outSlope: 1.3472786
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.27723238
+      value: 0.42631334
+      inSlope: -0.029625105
+      outSlope: -0.029625105
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.29331887
+      value: 0.42536616
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.31263795
+      value: 0.44053376
+      inSlope: -0.08566152
+      outSlope: -0.08566152
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.41406927
+      value: 0.49247688
+      inSlope: -0.28183058
+      outSlope: -0.28183058
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.47540495
+      value: 0.40622205
+      inSlope: -0.2586491
+      outSlope: -0.2586491
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5957022
+      value: 0.15679677
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.6752113
+      value: 0.044087805
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.694507
+      value: 0.0026501212
+      inSlope: 0.053637367
+      outSlope: 0.053637367
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  postProcessVolume: {fileID: 11400000, guid: a07439d6c69dad34bb89ef5fbf6ce622, type: 2}
 --- !u!1 &7144362698587863308
 GameObject:
   m_ObjectHideFlags: 0

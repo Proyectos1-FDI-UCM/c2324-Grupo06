@@ -17,11 +17,12 @@ public class Cheats : MonoBehaviour
     [SerializeField] private int[] _objectsToAdd = new int[10];
     [SerializeField] private ItemData _potion;
     [SerializeField] private int _potionsToAdd;
+    LowLifeController _lowLifeController;
 
     private void Start()
     {
         _myHealthHandler = GetComponent<HealthHandler>();
-
+        _lowLifeController = GetComponent<LowLifeController>();
     }
     private void Update()
     {
