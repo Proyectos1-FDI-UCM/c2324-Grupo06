@@ -361,6 +361,14 @@ PrefabInstance:
       value: -0.9974464
       objectReference: {fileID: 0}
     - target: {fileID: 222602107886958620, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 222602107886958620, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 222602107886958620, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.071418926
       objectReference: {fileID: 0}
@@ -387,6 +395,10 @@ PrefabInstance:
     - target: {fileID: 2057559736410586598, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.36193243
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057559736410586598, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2057559736410586598, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: m_LocalRotation.z
@@ -431,6 +443,14 @@ PrefabInstance:
     - target: {fileID: 4346421018392329115, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9664319
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346421018392329115, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346421018392329115, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4346421018392329115, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: m_LocalRotation.z
@@ -478,7 +498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6260945093231321969, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9631977
+      value: 0.9914702
       objectReference: {fileID: 0}
     - target: {fileID: 6260945093231321969, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: m_LocalRotation.x
@@ -490,7 +510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6260945093231321969, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.26879418
+      value: 0.13033392
       objectReference: {fileID: 0}
     - target: {fileID: 6260945093231321969, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -506,7 +526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7612237791749808374, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.99450576
+      value: -0.96391493
       objectReference: {fileID: 0}
     - target: {fileID: 7612237791749808374, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: m_LocalRotation.x
@@ -518,7 +538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7612237791749808374, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.104682356
+      value: -0.26621047
       objectReference: {fileID: 0}
     - target: {fileID: 8091954116438805126, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: m_AnchorMax.x
@@ -530,7 +550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8520569897178227980, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.38151112
+      value: 0.15786847
       objectReference: {fileID: 0}
     - target: {fileID: 8520569897178227980, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: m_LocalRotation.y
@@ -538,7 +558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8520569897178227980, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.9243643
+      value: -0.98746014
       objectReference: {fileID: 0}
     - target: {fileID: 9175910865684251760, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: m_IsActive
@@ -1484,7 +1504,7 @@ PlayableDirector:
   - key: {fileID: -1847412882247739927, guid: 8a7727d5b39445243b0ade0fad129200, type: 2}
     value: {fileID: 1887381535}
   - key: {fileID: 187434307436468061, guid: 8a7727d5b39445243b0ade0fad129200, type: 2}
-    value: {fileID: 1887381552}
+    value: {fileID: 1472400642}
   - key: {fileID: -4946448523457409448, guid: 8a7727d5b39445243b0ade0fad129200, type: 2}
     value: {fileID: 1010463273}
   - key: {fileID: -5904396616820433021, guid: 8a7727d5b39445243b0ade0fad129200, type: 2}
@@ -1499,6 +1519,8 @@ PlayableDirector:
     value: {fileID: 1746559281}
   - key: {fileID: 7524955020006708523, guid: 8a7727d5b39445243b0ade0fad129200, type: 2}
     value: {fileID: 1951791692}
+  - key: {fileID: -9065275690993216224, guid: 8a7727d5b39445243b0ade0fad129200, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1231429299
@@ -1977,6 +1999,7 @@ MonoBehaviour:
     m_Signals:
     - {fileID: 11400000, guid: aba0a6e5b5efc9a4c8d20c9d914fdbe0, type: 2}
     - {fileID: 11400000, guid: ee2029b3aacd9094aa48dbd4516eb3f8, type: 2}
+    - {fileID: 11400000, guid: d01d3675e7fffba4ab79d628b28a50a7, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -2006,6 +2029,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls: []
 --- !u!1001 &1656968816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2020,7 +2045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 733019806238982433, guid: 744468da7a4b6d54998e5ddf2c2c5607, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 62.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 733019806238982433, guid: 744468da7a4b6d54998e5ddf2c2c5607, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2201,7 +2226,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2567,7 +2592,31 @@ MonoBehaviour:
     agradecido
   OnCharWrite:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: d53b21f0306042b4c8d83bed2e408f0b, type: 2}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: d53b21f0306042b4c8d83bed2e408f0b, type: 2}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1810941766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2865,11 +2914,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!95 &1887381552 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 244239593772364383, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
-  m_PrefabInstance: {fileID: 418229939}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1904747529
 GameObject:
   m_ObjectHideFlags: 0
@@ -3090,7 +3134,31 @@ MonoBehaviour:
   texct: Ya eres nuevamente libre, usa el portal blanco para volver a casa
   OnCharWrite:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: d53b21f0306042b4c8d83bed2e408f0b, type: 2}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: d53b21f0306042b4c8d83bed2e408f0b, type: 2}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1993064278 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1344474538559018425, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
