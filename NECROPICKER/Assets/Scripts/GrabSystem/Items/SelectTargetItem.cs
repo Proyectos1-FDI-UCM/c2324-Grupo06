@@ -6,6 +6,7 @@ public class SelectTargetItem : MonoBehaviour, IItem
 {
     [SerializeField] ItemData itemData;
     public ItemData ItemData => itemData;
+    private Transform target;
     [SerializeField]
     LayerMask targetLayer;
     TargetHandler targetHandler;
@@ -19,10 +20,15 @@ public class SelectTargetItem : MonoBehaviour, IItem
 
     public bool Use(ItemHandler handler)
     {
-        Transform target = Physics2D.OverlapCircle(transform.position, radius, targetLayer).transform;
-
-        if (target == null) target = Physics2D.Raycast(transform.position, transform.up, 200f).transform;
-
+        try
+        {
+            target = Physics2D.OverlapCircle(transform.position, radius, targetLayer).transform;
+        }
+        catch
+        {
+            target = Physics2D.Raycast(transform.position, transform.up, 200f).transform;
+        }
+        
         targetHandler.SetTarget(target);
 
         return true;
