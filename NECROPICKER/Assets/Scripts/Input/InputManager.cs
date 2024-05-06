@@ -17,7 +17,7 @@ public class InputManager : MonoBehaviour
     {
         movementController = GetComponent<MovementController>();
         grabHandler = GetComponentInChildren<GrabHandler>();
-       itemHandler = GetComponentInChildren<ItemHandler>();
+        itemHandler = GetComponentInChildren<ItemHandler>();
         pointer = GetComponentInChildren<Pointer>();
     }
 

@@ -37,6 +37,17 @@ public class Inventory : ScriptableObject
     UnityEvent<ItemData> onItemChanged = new UnityEvent<ItemData>();
     public UnityEvent<ItemData> OnItemChanged => onItemChanged;
 
+    public bool HasItem(ItemData itemData)
+    {
+        for (int i = 0; i < items.Length; i++)
+        {
+            if (items[i].item == itemData) return true;
+        }
+        return false;
+    }
+
+    public void AddItemNonReturn(ItemData itemToAdd) => AddItem(itemToAdd);
+
     public bool AddItem(ItemData itemToAdd)
     {
         for(int i = 0; i < items.Length; i++)
