@@ -21,7 +21,7 @@ public class SlowlyWritetext : MonoBehaviour
         {
             textUI.text += letra;
             OnCharWrite.Invoke();
-            yield return new WaitForSeconds(writingSpeed);
+            yield return new WaitForSeconds(writingSpeed*Time.deltaTime);
         }
     }
 }
