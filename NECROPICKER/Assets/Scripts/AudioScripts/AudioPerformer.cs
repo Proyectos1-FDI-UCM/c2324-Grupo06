@@ -27,10 +27,11 @@ public class AudioPerformer : MonoBehaviour
                 _audioPlayer[i].OnAudioOneShotPlay.
                 AddListener((AudioClip clip, float volume, float pitch, bool loop) =>
                     {
-                        currentSource.volume = volume;
-                        currentSource.pitch = pitch;
-                        currentSource.clip = clip;
-                        currentSource.loop = loop;
+                        if(currentSource.volume != volume) currentSource.volume = volume;
+                        if(currentSource.pitch != pitch) currentSource.pitch = pitch;
+                        if(currentSource.clip != clip) currentSource.clip = clip;
+                        if(currentSource.loop != loop) currentSource.loop = loop;
+
                         currentSource.Play();
                     }
                 );
@@ -38,10 +39,11 @@ public class AudioPerformer : MonoBehaviour
                 _audioPlayer[i].OnAudioPlay.
                 AddListener((AudioClip clip, float volume, float pitch, bool loop) =>
                     {
-                        currentSource.volume = volume;
-                        currentSource.pitch = pitch;
-                        currentSource.clip = clip;
-                        currentSource.loop = loop;
+                        if(currentSource.volume != volume) currentSource.volume = volume;
+                        if(currentSource.pitch != pitch) currentSource.pitch = pitch;
+                        if(currentSource.clip != clip) currentSource.clip = clip;
+                        if(currentSource.loop != loop) currentSource.loop = loop;
+                        
                         currentSource.PlayOneShot(clip);
                     }
                 );
