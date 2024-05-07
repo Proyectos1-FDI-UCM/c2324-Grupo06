@@ -1236,6 +1236,65 @@ MonoBehaviour:
     - conditionContainer: {fileID: 0}
       negated: 0
     stateContainer: {fileID: 2911573329784009074}
+--- !u!1 &3070811050833867239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2081185708692243005}
+  - component: {fileID: 6435944195370456865}
+  m_Layer: 7
+  m_Name: Si-No-Compila
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2081185708692243005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3070811050833867239}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8382546977113607221}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6435944195370456865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3070811050833867239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef76340760308e242bfc6008bf3a8626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnExecuteBehaviour:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 88a211b4e65fd984b9c155c5bd95a642, type: 2}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3827667961398594144
 GameObject:
   m_ObjectHideFlags: 0
@@ -19136,7 +19195,7 @@ PrefabInstance:
     - target: {fileID: 2510682375245702007, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 11400000, guid: dd18b78b0c066fd40af1d2c852d22b05, type: 2}
+      objectReference: {fileID: 11400000, guid: cb0d4a820d7a85a46bf483ab2c049d7a, type: 2}
     - target: {fileID: 2510682375245702007, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
@@ -19459,7 +19518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8344837490231204735, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: onEnterPerformers.Array.data[0].behaviourContainers.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8344837490231204735, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: onUpdatePerformers.Array.data[0].behaviourContainers.Array.size
@@ -19469,6 +19528,10 @@ PrefabInstance:
       propertyPath: onEnterPerformers.Array.data[0].behaviourContainers.Array.data[0]
       value: 
       objectReference: {fileID: 5592055850227248909}
+    - target: {fileID: 8344837490231204735, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
+      propertyPath: onEnterPerformers.Array.data[0].behaviourContainers.Array.data[1]
+      value: 
+      objectReference: {fileID: 3070811050833867239}
     - target: {fileID: 8344837490231204735, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       propertyPath: onUpdatePerformers.Array.data[0].behaviourContainers.Array.data[0]
       value: 
@@ -19535,6 +19598,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8072889455528226984, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       insertIndex: 3
       addedObject: {fileID: 1996095905680809096}
+    - targetCorrespondingSourceObject: {fileID: 8072889455528226984, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2081185708692243005}
     - targetCorrespondingSourceObject: {fileID: 5007367036955506471, guid: 66fa1b77a6a598c4c820963889658c77, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8691030828384134359}
