@@ -11,7 +11,7 @@ public class Inventory : ScriptableObject
 {
     [SerializeField] public ItemStack[] items = new ItemStack[5];
     
-    [SerializeField] ItemData Necronomicon;
+    [SerializeField] ItemData Default;
     [SerializeField] int _selectedItemIndex = 0;
     [SerializeField] ItemData initialItem;
     [SerializeField] int numberOfInitials;
@@ -20,9 +20,9 @@ public class Inventory : ScriptableObject
     {
         for (int i = 0; i < items.Length; i++)
         {
-            items[i].item = Necronomicon;
-            UpdateInventory();
+            items[i].item = Default;
         }
+        UpdateInventory();
     }
     public int SelectedItemIndex
     {
@@ -36,6 +36,9 @@ public class Inventory : ScriptableObject
    
     UnityEvent<ItemData> onItemChanged = new UnityEvent<ItemData>();
     public UnityEvent<ItemData> OnItemChanged => onItemChanged;
+
+    UnityEvent<ItemData> onDefaultChanged = new UnityEvent<ItemData>();
+    public UnityEvent<ItemData> OnDefaultChanged => onDefaultChanged;
 
     public bool HasItem(ItemData itemData)
     {
@@ -62,9 +65,9 @@ public class Inventory : ScriptableObject
         
         for (int i = 0; i < items.Length; i++)
         {
-            if (items[i].item == Necronomicon)
+            if (items[i].item == Default)
             {
-                if(items[SelectedItemIndex].item == Necronomicon) SelectedItemIndex = i;
+                if(items[SelectedItemIndex].item == Default) SelectedItemIndex = i;
                 items[i].item = itemToAdd;
                 items[i].amount = 1;
                 
@@ -78,11 +81,11 @@ public class Inventory : ScriptableObject
 
     void LookForAnItem()
     {
-        if(items[SelectedItemIndex].item != Necronomicon) return;
+        if(items[SelectedItemIndex].item != Default) return;
 
         for (int i = 0; i < items.Length; i++)
         {
-            if (items[i].item != Necronomicon)
+            if (items[i].item != Default)
             {
                 SelectedItemIndex = i;
                 return;
@@ -94,11 +97,11 @@ public class Inventory : ScriptableObject
 
     public void RemoveItem()
     {
-        if (items[SelectedItemIndex].item != Necronomicon)
+        if (items[SelectedItemIndex].item != Default)
         {
             if (items[SelectedItemIndex].amount == 1)
             {
-                items[SelectedItemIndex].item = Necronomicon;
+                items[SelectedItemIndex].item = Default;
                 LookForAnItem();
             }
             else 
@@ -110,11 +113,11 @@ public class Inventory : ScriptableObject
     }
     public void RemoveItemUpgrades(int i)
     {
-        if (items[i].item != Necronomicon)
+        if (items[i].item != Default)
         {
             if (items[i].amount == 1)
             {
-                items[i].item = Necronomicon;
+                items[i].item = Default;
                 LookForAnItem();
             }
             else
@@ -138,7 +141,7 @@ public class Inventory : ScriptableObject
         for (int i = 0; i < items.Length; i++)
         {
             items[i].amount = 1;
-            items[i].item = Necronomicon;
+            items[i].item = Default;
         }
     }
 
@@ -149,6 +152,17 @@ public class Inventory : ScriptableObject
         {
             AddItem(initialItem);
         }
+    }
+
+    public void ChangeDefault(ItemData itemData)
+    {
+        for (int i = 0; i < items.Length; i++)
+        {
+            if(items[i].item = Default) items[i].item = itemData;
+        }
+        UpdateInventory();
+        Default = itemData;
+        OnDefaultChanged?.Invoke(itemData);
     }
 }
 
