@@ -108,6 +108,22 @@ public class Inventory : ScriptableObject
             }
         }
     }
+    public void RemoveItemUpgrades(int i)
+    {
+        if (items[i].item != Necronomicon)
+        {
+            if (items[i].amount == 1)
+            {
+                items[i].item = Necronomicon;
+                LookForAnItem();
+            }
+            else
+            {
+                items[i].amount--;
+                UpdateInventory();
+            }
+        }
+    }
 
     public void SumToIndex(int index) {
         if (SelectedItemIndex + index < 0) SelectedItemIndex = items.Length - 1;

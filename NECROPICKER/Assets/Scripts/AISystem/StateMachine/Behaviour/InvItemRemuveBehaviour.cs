@@ -9,7 +9,7 @@ public class InvItemRemuveBehaviour : MonoBehaviour, IBehaviour
     [SerializeField] ItemData necromicon;
     public void ExecuteBehaviour()
     {
-        for (int i = 0;i <itemData.Recipe.Ingredients.Length;i++)
+        for (int i = 0; i < itemData.Recipe.Ingredients.Length; i++)
         {
             int ingremove = itemData.Recipe.Ingredients[i].amount;
             bool control = false;
@@ -18,29 +18,20 @@ public class InvItemRemuveBehaviour : MonoBehaviour, IBehaviour
             {
                 if (inventory.items[j].item.itemName == itemData.Recipe.Ingredients[i].ingredientName)
                 {
-                    
                     if (inventory.items[j].amount < itemData.Recipe.Ingredients[i].amount)
                     {
                         ingremove -= inventory.items[j].amount;
-                        inventory.items[j].item = necromicon;
-                        inventory.items[j].amount = 1;
-                        inventory.RemoveItem();
-                        inventory.UpdateInventory();
-                        //inventory.items[j].item = necromicon;
+                        inventory.RemoveItemUpgrades(j);
                     }
                     else if (inventory.items[j].amount > itemData.Recipe.Ingredients[i].amount)
-                           {
+                    {
                         inventory.items[j].amount -= ingremove;
                         inventory.UpdateInventory();
                         control = true;
-                           }
+                    }
                     else
                     {
-                        inventory.items[j].item = necromicon;
-                        inventory.items[j].amount = 1;
-                        inventory.UpdateInventory();
-                        inventory.RemoveItem();
-                        
+                        inventory.RemoveItemUpgrades(j);
                         control = true;
                     }
                 }
@@ -51,5 +42,4 @@ public class InvItemRemuveBehaviour : MonoBehaviour, IBehaviour
         }
 
     }
-
 }
