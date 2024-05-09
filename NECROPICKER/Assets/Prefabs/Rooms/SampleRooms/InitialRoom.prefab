@@ -469,7 +469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5549314274625250922, guid: e6941b698fdf41b4bb0f55b631dc886e, type: 3}
       propertyPath: _totalAccess
-      value: 15
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5549314274625250922, guid: e6941b698fdf41b4bb0f55b631dc886e, type: 3}
       propertyPath: entryPoints.Array.size
@@ -494,6 +494,14 @@ PrefabInstance:
     - target: {fileID: 5810088250319644353, guid: e6941b698fdf41b4bb0f55b631dc886e, type: 3}
       propertyPath: m_Name
       value: InitialRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206511896077222738, guid: e6941b698fdf41b4bb0f55b631dc886e, type: 3}
+      propertyPath: m_ChunkCullingBounds.x
+      value: 0.03333336
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206511896077222738, guid: e6941b698fdf41b4bb0f55b631dc886e, type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 0.03333336
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
