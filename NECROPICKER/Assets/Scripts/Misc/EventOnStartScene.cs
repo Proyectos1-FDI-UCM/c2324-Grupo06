@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CosaParaQueSeLanceLaMusica : MonoBehaviour
+public class EventOnStart : MonoBehaviour
 {
     [SerializeField] UnityEvent onStart = new UnityEvent();
     public UnityEvent OnStart => onStart;
