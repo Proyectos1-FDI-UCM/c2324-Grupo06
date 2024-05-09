@@ -4616,15 +4616,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 733019806238982433, guid: 744468da7a4b6d54998e5ddf2c2c5607, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1500
+      value: 2025.01
       objectReference: {fileID: 0}
     - target: {fileID: 733019806238982433, guid: 744468da7a4b6d54998e5ddf2c2c5607, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1500
+      value: 1479.66
       objectReference: {fileID: 0}
     - target: {fileID: 733019806238982433, guid: 744468da7a4b6d54998e5ddf2c2c5607, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.053131
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 733019806238982433, guid: 744468da7a4b6d54998e5ddf2c2c5607, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4660,11 +4660,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6402092387907438330, guid: 744468da7a4b6d54998e5ddf2c2c5607, type: 3}
       propertyPath: near clip plane
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 6402092387907438330, guid: 744468da7a4b6d54998e5ddf2c2c5607, type: 3}
       propertyPath: orthographic size
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6312,6 +6312,22 @@ PrefabInstance:
     - target: {fileID: 4954465360016943308, guid: 083523dacde1c85449edb76df7ae08cf, type: 3}
       propertyPath: onDialogueStarts.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013424967108468653, guid: 083523dacde1c85449edb76df7ae08cf, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013424967108468653, guid: 083523dacde1c85449edb76df7ae08cf, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013424967108468653, guid: 083523dacde1c85449edb76df7ae08cf, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013424967108468653, guid: 083523dacde1c85449edb76df7ae08cf, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5458732721265205171, guid: 083523dacde1c85449edb76df7ae08cf, type: 3}
       propertyPath: OnExecuteBehaviour.m_PersistentCalls.m_Calls.Array.data[0].m_Target
