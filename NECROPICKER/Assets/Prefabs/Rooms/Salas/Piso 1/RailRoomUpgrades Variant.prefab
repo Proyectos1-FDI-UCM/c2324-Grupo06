@@ -98,7 +98,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 711073847960397299, guid: 034f7e5160ca2064eaf2f0b28bb27f61, type: 3}
       propertyPath: percentages.Array.size
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 711073847960397299, guid: 034f7e5160ca2064eaf2f0b28bb27f61, type: 3}
+      propertyPath: percentages.Array.data[1]
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2741341949905470546, guid: 034f7e5160ca2064eaf2f0b28bb27f61, type: 3}
       propertyPath: m_Name
@@ -108,6 +112,14 @@ PrefabInstance:
       propertyPath: _randomInstanceData
       value: 
       objectReference: {fileID: 11400000, guid: dd55774699d7d974c975a85aaaa86eba, type: 2}
+    - target: {fileID: 8029920513087551926, guid: 034f7e5160ca2064eaf2f0b28bb27f61, type: 3}
+      propertyPath: m_Size.y
+      value: 18.692627
+      objectReference: {fileID: 0}
+    - target: {fileID: 8029920513087551926, guid: 034f7e5160ca2064eaf2f0b28bb27f61, type: 3}
+      propertyPath: m_Offset.y
+      value: -2.2506104
+      objectReference: {fileID: 0}
     - target: {fileID: 8489260709028641966, guid: 034f7e5160ca2064eaf2f0b28bb27f61, type: 3}
       propertyPath: m_Color.b
       value: 0.82663727
