@@ -115,16 +115,10 @@ public class Inventory : ScriptableObject
     {
         if (items[i].item != Default)
         {
-            if (items[i].amount == 1)
-            {
                 items[i].item = Default;
-                LookForAnItem();
-            }
-            else
-            {
-                items[i].amount--;
+               // LookForAnItem();
                 UpdateInventory();
-            }
+            
         }
     }
 
