@@ -5,14 +5,14 @@ using UnityEngine.Events;
 
 public class GrabHandler : MonoBehaviour
 {
-    LayerMask itemLayer;
-    [SerializeField] float grabRadius = 2f;
-    [SerializeField] float grabOffset = 1f;
-    [SerializeField] Inventory _inventory;
-    IItem takeAbleItem;
+    LayerMask itemLayer; // Capa de los items
+    [SerializeField] float grabRadius = 2f; // Radio de alcance para agarrar items
+    [SerializeField] float grabOffset = 1f; // Offset para el radio de alcance
+    [SerializeField] Inventory _inventory; // Inventario al que se añadirán los items
+    IItem takeAbleItem; // Item a agarrar
     IItem TakeAbleItem
     {
-        set
+        set // Si se agarra un item, se deselecciona el item anterior y se selecciona el nuevo
         {
             if(takeAbleItem != value)
             {
@@ -43,6 +43,7 @@ public class GrabHandler : MonoBehaviour
         itemLayer = LayerMask.GetMask("Item");
     }
 
+    // Si hay un item en el radio de alcance, se selecciona como item a agarrar
     private void Update() {
         Collider2D hit = Physics2D.OverlapCircle(transform.position + transform.up * grabOffset, grabRadius, itemLayer);
 
@@ -58,6 +59,7 @@ public class GrabHandler : MonoBehaviour
         }
     }
 
+    // Si se presiona el botón de agarrar, se añade el item a agarrar al inventario, solo si hay espacio, y se destruye el item en el mundo
     public void TakeItem()
     {
         if(takeAbleItem != null) 
@@ -75,7 +77,7 @@ public class GrabHandler : MonoBehaviour
             }
         }
     }
-
+    // Dibuja el radio de alcance en el editor
     private void OnDrawGizmos() {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position + transform.up * grabOffset, grabRadius);
