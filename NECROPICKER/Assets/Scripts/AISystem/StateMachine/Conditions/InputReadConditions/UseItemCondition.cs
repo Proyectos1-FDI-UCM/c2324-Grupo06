@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Devuelve verdadero si un ItemHandler determinado ha usado un item.
 public class UseItemCondition : MonoBehaviour, ICondition
 {
     [SerializeField] ItemHandler itemHandlerToCheck;

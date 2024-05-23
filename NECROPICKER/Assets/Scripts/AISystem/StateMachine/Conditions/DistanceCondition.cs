@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Devuelve verdadero si la distancia entre el objeto y el objetivo está en un rango determinado.
 public class DistanceCondition : MonoBehaviour, ICondition
 {
     TargetHandler targetHandler;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class AnimationPlayer : MonoBehaviour
+public class AnimationPlayer : MonoBehaviour //Reproduce las animaciones de la IA.
 {
     Animator _animator;
 

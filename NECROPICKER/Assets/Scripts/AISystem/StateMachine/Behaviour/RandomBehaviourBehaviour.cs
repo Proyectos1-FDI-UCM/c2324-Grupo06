@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Ejecuta un comportamiento aleatorio de una lista de comportamientos.
 public class RandomBehaviourBehaviour : MonoBehaviour, IBehaviour
 {
     [SerializeField] GameObject[] behavioursContainers;

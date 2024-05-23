@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Hace que un puntero apunte al objetivo dado por el TargetHandler.
 public class PointToTargetBehaviour : MonoBehaviour, IBehaviour
 {
     Pointer pointer;

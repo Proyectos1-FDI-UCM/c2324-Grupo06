@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Devuelve verdadero si hay al menos un número determinador de
+//objetos de una determinada capa dentro de un área determinada.
 public class OverlapBoxCondition : MonoBehaviour, ICondition
 {
     [SerializeField] private LayerMask layerMask;

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//(Obsoleto -> Usar SoftRandomMovementBehaviour)
+//Mueve al objeto en una dirección dada por el ruido de Perlin.
 public class PerlinMovementBehaviour : MonoBehaviour, IBehaviour
 {
     MovementController movementController;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
+//Cambia el tamaño de un objeto en un tiempo determinado.
 public class ChangeSizeBehaviour : MonoBehaviour, IBehaviour
 {
     [SerializeField] Vector3 finalSize

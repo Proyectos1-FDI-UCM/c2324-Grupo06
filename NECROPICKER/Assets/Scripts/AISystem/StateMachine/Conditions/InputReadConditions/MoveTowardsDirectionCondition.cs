@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Devuelve verdadero si el objeto se mueve en una dirección determinada.
 public class MoveTowardsDirectionCondition : MonoBehaviour, ICondition
 {
     [SerializeField] Rigidbody2D rbToCheck;

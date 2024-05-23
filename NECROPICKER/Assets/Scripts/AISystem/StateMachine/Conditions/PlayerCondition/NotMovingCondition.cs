@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Devuelve verdadero si el objeto no posee una velocidad mayor a un umbral determinado.
 public class NotMovingCondition : MonoBehaviour, ICondition
 {
     [SerializeField] private Rigidbody2D rb2d;

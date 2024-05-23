@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Activa o desactiva el collider2D del objeto que contiene este componente.
 public class ActiveColliderBehaviour : MonoBehaviour , IBehaviour
 {
     public bool active = false;

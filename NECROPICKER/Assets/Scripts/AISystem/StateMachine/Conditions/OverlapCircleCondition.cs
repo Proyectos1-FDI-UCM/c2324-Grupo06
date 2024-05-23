@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Devuelve verdadero si hay un objeto en una capa determinada dentro de un radio determinado.
 public class OverlapCircleCondition : MonoBehaviour, ICondition
 {
     [SerializeField] LayerMask layerMask;

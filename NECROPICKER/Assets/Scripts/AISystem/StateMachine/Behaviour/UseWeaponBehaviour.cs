@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Hace que un ItemHandler use su item seleccionado.
 public class UseWeaponBehaviour : MonoBehaviour, IBehaviour
 {
     ItemHandler itemHandler;
@@ -13,7 +14,6 @@ public class UseWeaponBehaviour : MonoBehaviour, IBehaviour
 
     public void ExecuteBehaviour()
     {
-        
         itemHandler.UseItem();
     }
 

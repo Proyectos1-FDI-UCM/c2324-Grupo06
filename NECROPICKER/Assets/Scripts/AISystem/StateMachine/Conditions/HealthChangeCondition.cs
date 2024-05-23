@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Guarda el valor de la diferencia de vida del objeto y devuelve verdadero si
+//dicha diferencia está dentro de un rango determinado.
 public class HealthChangeCondition : MonoBehaviour, ICondition
 {
     HealthHandler healthHandler;

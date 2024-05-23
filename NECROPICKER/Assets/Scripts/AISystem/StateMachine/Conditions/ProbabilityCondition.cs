@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Condición que se cumple con una probabilidad determinada.
 public class ProbabilityCondition : MonoBehaviour, ICondition
 {
     [Range(0, 100)]

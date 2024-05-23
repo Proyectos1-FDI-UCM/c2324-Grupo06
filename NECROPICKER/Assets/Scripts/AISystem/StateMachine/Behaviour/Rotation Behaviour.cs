@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+
+//Rota el objeto un número de grados en un tiempo determinado.
 public class RotationBehaviour : MonoBehaviour, IBehaviour
 {
     [SerializeField] private Transform _myTransform;

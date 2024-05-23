@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+//Este comportamiento se utiliza para cambiar el estado de la máquina de estados.
 public class ChangeStateBehaviour : MonoBehaviour, IBehaviour
 {
     StateHandler stateHandler;

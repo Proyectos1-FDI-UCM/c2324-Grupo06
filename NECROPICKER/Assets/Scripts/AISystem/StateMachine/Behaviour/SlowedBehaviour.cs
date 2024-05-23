@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Realentiza la velocidad de un controlador de movimiento.
 public class SlowedBehaviour : MonoBehaviour, IBehaviour
 {
     MovementController _controller;
@@ -14,7 +15,7 @@ public class SlowedBehaviour : MonoBehaviour, IBehaviour
     }
     public void ExecuteBehaviour()
     {    
-      _controller.SetSpeed(_SlowedSpeed); //Llamada al método new speed para igualar la velocidad a SlowedSpeed     
+      _controller.SetSpeed(_SlowedSpeed); //Llamada al mï¿½todo new speed para igualar la velocidad a SlowedSpeed     
     }
     private void OnValidate() => name = $"slower";
 }

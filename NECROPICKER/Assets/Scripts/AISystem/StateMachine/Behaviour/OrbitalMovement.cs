@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Mueve al objeto en una órbita circular alrededor del objetivo dado por el TargetHandler.
+//El radio de la órbita, la velocidad de ajuste al radio y la influencia del movimiento se pueden ajustar.
 public class OrbitalMovement : MonoBehaviour, IBehaviour
 {
     MovementController movementController;

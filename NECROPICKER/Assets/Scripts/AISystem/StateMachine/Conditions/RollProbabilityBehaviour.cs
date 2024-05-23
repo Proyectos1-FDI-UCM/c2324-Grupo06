@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Similar a un dado, cada vez que se ejecuta el comportamiento genera un número aleatorio entre 0 y 1.
 public class RollProbabilityBehaviour : MonoBehaviour, IBehaviour
 {
     float _probability;

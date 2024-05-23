@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.XR;
 
+//Activa o desactiva un objeto determinado.
 public class setbehaviour : MonoBehaviour, IBehaviour
 {
     [SerializeField] private bool activation = true;

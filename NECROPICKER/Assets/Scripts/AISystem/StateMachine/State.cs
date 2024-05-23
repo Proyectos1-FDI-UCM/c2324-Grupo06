@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/*
+Se encarga de la ejecución de los estados de la IA.
+Además contiene un parámetro que guarda el nombre de la animación que se reproduce al entrar en el estado y
+*/
 public class State : MonoBehaviour, IState
 {
     AnimationPlayer animationPlayer;
@@ -51,6 +55,10 @@ public class State : MonoBehaviour, IState
 
     public IState GetNextState() => NextStatePerformer.GetNextState(nextStates);
 }
+
+//Guarda los estados a los que puede transicionar el estado actual y sus respectivas condiciones.
+//Posse un método que devuelve el siguiente estado a ejecutar que en caso de que no se cumpla
+//ninguna condición de salida, devuelve null.
 
 [System.Serializable]
 public class NextStatePerformer

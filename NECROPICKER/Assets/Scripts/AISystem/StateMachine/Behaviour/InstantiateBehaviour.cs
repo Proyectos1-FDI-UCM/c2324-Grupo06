@@ -1,6 +1,8 @@
  
 using UnityEngine;
 
+//Se utiliza para instanciar un objeto determinado en la posición y
+// rotación del GameObject que contiene este componente.
 public class InstantiateBehaviour : MonoBehaviour, IBehaviour
 {
     [SerializeField] GameObject prefab;

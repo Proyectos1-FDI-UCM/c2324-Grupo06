@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Detiene el movimiento del objeto.
 public class StopBehaviour : MonoBehaviour, IBehaviour
 {
     MovementController movementController;
