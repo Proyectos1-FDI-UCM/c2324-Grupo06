@@ -7,7 +7,9 @@ using UnityEngine.EventSystems;
 
 
 public class FirstBotomSelector : MonoBehaviour
-{
+{/// <summary>
+/// le pasa el primer boton de un menu al eventsystem que esta relalcionado con el NewInput de unity
+/// </summary>
     [SerializeField] private GameObject bottom;
     private EventSystem eventSystem;
     // Start is called before the first frame update

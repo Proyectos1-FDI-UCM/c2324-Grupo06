@@ -78,7 +78,7 @@ public class Inventory : ScriptableObject
         }
         return false;
     }
-
+    //busca un item en el inventario en caso de encontrar uno cambia el selectedItemIndex a este
     void LookForAnItem()
     {
         if(items[SelectedItemIndex].item != Default) return;
@@ -94,7 +94,7 @@ public class Inventory : ScriptableObject
 
         UpdateInventory();
     }
-
+    //en caso de q la cantidad de un amount sea 1 que equivale a estar vacio lo cambia por el objeto default
     public void RemoveItem()
     {
         if (items[SelectedItemIndex].item != Default)
@@ -111,25 +111,26 @@ public class Inventory : ScriptableObject
             }
         }
     }
+    // elimina un item dado su indice
     public void RemoveItemUpgrades(int i)
     {
         if (items[i].item != Default)
         {
                 items[i].item = Default;
-               // LookForAnItem();
+               
                 UpdateInventory();
             
         }
     }
-
+    //Modifica el SelectedItemIndex en funcion de del index que le pasemos al metodo 
     public void SumToIndex(int index) {
         if (SelectedItemIndex + index < 0) SelectedItemIndex = items.Length - 1;
         else if (SelectedItemIndex + index >= items.Length) SelectedItemIndex = 0;
         else SelectedItemIndex += index;
     }
-
+    //Llama al evento on ItemChanged
     public void UpdateInventory() => onItemChanged?.Invoke(items[SelectedItemIndex].item);
-
+    //Vacia el inventario por completo (ya que es un scriptableobject hay que hacerlo a partir de este metodo)
     public void EmptyInventory()
     {
         for (int i = 0; i < items.Length; i++)
@@ -138,7 +139,7 @@ public class Inventory : ScriptableObject
             items[i].item = Default;
         }
     }
-
+    //vacia el inventario y lo rellena con el inicial item elegido
     public void RestartWithInitialItem()
     {
         EmptyInventory();
@@ -147,7 +148,7 @@ public class Inventory : ScriptableObject
             AddItem(initialItem);
         }
     }
-
+    //cambia introduce el nuevo item en el inventario
     public void ChangeDefault(ItemData itemData)
     {
         for (int i = 0; i < items.Length; i++)
@@ -178,79 +179,3 @@ public class Inventory : ScriptableObject
 
 
 
-/*
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting.FullSerializer;
-using UnityEngine;
-using UnityEngine.Events;
-using static UnityEditor.Progress;
-
-[CreateAssetMenu(fileName = "Inventory", menuName = "InventorySystem/Inventory", order = 1)]
-public class Inventory : ScriptableObject
-{
-    public ItemData[] items = new ItemData[5];
-    [SerializeField] ItemData Necronomicon;
-    [SerializeField] int _selectedItemIndex = 0;
-    public int SelectedItemIndex
-    {
-        get => _selectedItemIndex;
-        private set
-        {
-            _selectedItemIndex = value;
-            UpdateInventory();
-        }
-    }
-
-    UnityEvent<ItemData> onItemChanged = new UnityEvent<ItemData>();
-    public UnityEvent<ItemData> OnItemChanged => onItemChanged;
-
-    public bool AddItem(ItemData itemToAdd)
-    {
-        for (int i = 0; i < items.Length; i++)
-        {
-            if (items[i] == Necronomicon)
-            {
-                if (items[SelectedItemIndex] == Necronomicon) SelectedItemIndex = i;
-                items[i] = itemToAdd;
-                UpdateInventory();
-                return true;
-            }
-        }
-        return false;
-    }
-
-    void LookForAnItem()
-    {
-        if (items[SelectedItemIndex] != Necronomicon) return;
-
-        for (int i = 0; i < items.Length; i++)
-        {
-            if (items[i] != Necronomicon)
-            {
-                SelectedItemIndex = i;
-                return;
-            }
-        }
-    }
-
-    public void RemoveItem()
-    {
-        items[SelectedItemIndex] = Necronomicon;
-        UpdateInventory();
-    }
-
-    public void SumToIndex(int index)
-    {
-        if (SelectedItemIndex + index < 0) SelectedItemIndex = items.Length - 1;
-        else if (SelectedItemIndex + index >= items.Length) SelectedItemIndex = 0;
-        else SelectedItemIndex += index;
-    }
-
-    public void UpdateInventory()
-    {
-        LookForAnItem();
-        onItemChanged?.Invoke(items[SelectedItemIndex]);
-    }
-}*/

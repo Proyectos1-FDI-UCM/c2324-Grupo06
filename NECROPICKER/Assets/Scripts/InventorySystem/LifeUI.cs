@@ -5,6 +5,10 @@ using UnityEngine.Events;
 
 public class LifeUI : MonoBehaviour
 {
+    /// <summary>
+    /// Se encarga de gestionar la vida del player en la UI desde los corazones actuales hasta los margenes en caso de que
+    /// deban ser aumentados al conseguir una mejora por ejemplo
+    /// </summary>
     
     [SerializeField] private HealthHandler healthHandler;
     [SerializeField] private GameObject[] margenes = new GameObject[5];
@@ -27,7 +31,6 @@ public class LifeUI : MonoBehaviour
             {
                 margenes[margenesCount].SetActive(true);
                 margenesCount++;
-                //Debug.Log(margenesCount);
             }
         }
     }

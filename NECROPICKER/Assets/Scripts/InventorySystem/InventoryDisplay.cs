@@ -15,7 +15,10 @@ public class InventoryDisplay : MonoBehaviour
         inventory.OnItemChanged.AddListener(UpdateInventory);
         inventory.UpdateInventory();
     }
-
+    /// <summary>
+    /// Tiene toda la lógica asociada al inventario en pantalla. Activa y desactiva las imagenes y el numero de items
+    /// </summary>
+  
     void UpdateInventory(ItemData itemData)
     {
         slotPointer.transform.position = slots[inventory.SelectedItemIndex].transform.position;

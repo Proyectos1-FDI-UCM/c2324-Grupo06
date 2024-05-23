@@ -13,7 +13,9 @@ public class Upgrades : ScriptableObject
     [SerializeField] private int Ini_maxpotionsize = 0;
     [SerializeField] private float Ini_speed = 0;
     
+    //metodo para buscar al player en escena 
     public GameObject FindPlayer() => FindAnyObjectByType<InputManager>().gameObject;
+    //Metodo para setear todas las estadisticas al prefab del player en escena
     public void SetStats()
     {
         GameObject player = FindPlayer();
@@ -22,12 +24,15 @@ public class Upgrades : ScriptableObject
         Pociones.SetMaxStackSize((int)stats[1]);
         player.GetComponent<MovementController>().SetSpeed(stats[2]);
     }
+    //setea solo la vida
     public void SetActHealth()
     {
         GameObject player = FindPlayer();
         player.GetComponent<HealthHandler>().SetCurrentHealth(act_health);
     }
+    //guarda la vida actual para mantenerla entre escenas
     public void StorageActHealth(float health) => act_health = health;
+    //restaura los vaalores de las estadisticas a sus valores iniciales preestablecidos
     public void Resetstats()
     {
         StorageActHealth(Ini_maxhealth);
@@ -37,6 +42,7 @@ public class Upgrades : ScriptableObject
         SetStats();
 
     }
+
     public void AddSpeed(float aumento)
     {
         stats[2] += aumento;
