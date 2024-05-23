@@ -6,8 +6,6 @@ using UnityEngine.Events;
 
 public class Cheats : MonoBehaviour
 {
-    HealthHandler _myHealthHandler;
-
     [SerializeField] private Inventory _inventory;
     [SerializeField] private Inventory _health;
     [SerializeField] private int _healthSetted;
@@ -17,6 +15,7 @@ public class Cheats : MonoBehaviour
     [SerializeField] private int[] _objectsToAdd = new int[10];
     [SerializeField] private ItemData _potion;
     [SerializeField] private int _potionsToAdd;
+    HealthHandler _myHealthHandler;
     LowLifeController _lowLifeController;
 
     private void Start()
@@ -28,19 +27,19 @@ public class Cheats : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z)) //Setear vida actual
         {
-            //_myHealthHandler.SetCurrentHealth(_healthSetted);
+            _myHealthHandler.SetCurrentHealth(_healthSetted);
         }
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.H)) //Curar la cantidad de vida asignada
         {
-           // _myHealthHandler.Heal(_healthToHeal);
+            _myHealthHandler.Heal(_healthToHeal);
         }
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K)) //Llamar al método de muerte
         {
-            //_myHealthHandler.Death();
+            _myHealthHandler.Death();
         }
-        if (Input.GetKeyDown(KeyCode.M)) //Setear vida m�xima
+        if (Input.GetKeyDown(KeyCode.M)) //Setear vida máxima
         {
-            //_myHealthHandler.SetMaxHealth(_maxHealthSetted);
+            _myHealthHandler.SetMaxHealth(_maxHealthSetted);
         }
         if (Input.GetKeyDown(KeyCode.Keypad0)) //Instanciar objetos
         {
@@ -92,9 +91,9 @@ public class Cheats : MonoBehaviour
     }
     private void AddItem(int n)
     {
-        if (_objectsToInstantiate[n] != null)
+        if (_objectsToInstantiate[n] != null) //Si hay objeto para añadir
         {
-            for (int j = 0; j < _objectsToAdd[n]; j++)
+            for (int j = 0; j < _objectsToAdd[n]; j++) //Añade un objeto hasta que llegues al límite
             {
                 _inventory.AddItem(_objectsToInstantiate[n]);
             }

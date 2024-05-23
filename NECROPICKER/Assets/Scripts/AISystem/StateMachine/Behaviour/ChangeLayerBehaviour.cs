@@ -5,11 +5,10 @@ using UnityEngine;
 
 public class LayerChangeDistanceItem : MonoBehaviour, IBehaviour
 {
-    [SerializeField] GameObject item;
+    [SerializeField] GameObject item; 
     [SerializeField] int targetLayer;
     public void ExecuteBehaviour()
     {
-        print("change to " + targetLayer);
-        item.layer = targetLayer;
+        item.layer = targetLayer; //Cambia la capa del objeto específico a la targetlayer
     }
 }
