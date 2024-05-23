@@ -9,7 +9,7 @@ public class ShockWaveController : MonoBehaviour
     [SerializeField] private float shockWaveTime = 0.75f;
     private Coroutine shockWaveCoroutine;
     private Material _material;
-    // Start is called before the first frame update
+    // Cada vez que se inicia, se inicia una corrutina que hace que el círculo que se genera con el shader aumente en diámetro, dando una sensación de onda
     void Start()
     {
         _material = GetComponent<SpriteRenderer>().material;
