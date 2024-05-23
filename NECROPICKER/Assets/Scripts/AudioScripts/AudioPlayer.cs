@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
-//using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using UnityEngine.Events;
 
+/*
+ * Este escript permite crear scriptable objects que guardaran una o varias pistas de audio. 
+ * Los scriptable objects tendrán varias funciones que permitirán manejar tanto efectos de sonido como música.
+ * Estos Audio Players se suscribiran a eventos para ser reproducidos
+*/
 [CreateAssetMenu(fileName = "NewSoundEffect", menuName = "Audio/New Sound Effect")]
 public class AudioPlayer : ScriptableObject
 {
