@@ -44,14 +44,14 @@ public class Dialogue : MonoBehaviour
        
     }
 
-    // Update is called once per frame
+    // Si el jugador aún no ha iniciado diálogo, está en el rango para iniciarlo y cumple cierta condición, se inicia el diálogo
     void Update()
     {
         if (isPlayerInRange && condition.CheckCondition() && !didDialogueStart)
         {
             StartDialogue();
         }
-
+    //Si pasa la condición y el diálogo ya ha empezado, continúa con la siguiente línea de diálogo
          else   if (dialogueText.text == dialogueLines[currentDialogue] && conditiondg.CheckCondition() && didDialogueStart)
         {
             
@@ -60,7 +60,7 @@ public class Dialogue : MonoBehaviour
         
         
     }
-
+    //Settea todo para iniciar el diálogo
     public void StartDialogue()
     {
         onDialogueStarts.Invoke();
@@ -70,6 +70,7 @@ public class Dialogue : MonoBehaviour
         currentDialogue = 0;
         StartCoroutine(ShowLine());
     }
+    //Determina si el diálogo finaliza o si continúa, haciendo las modificaciones necesarias si se da el primer caso.
     public void NextDialogue()
     {
         currentDialogue++;
@@ -86,6 +87,7 @@ public class Dialogue : MonoBehaviour
             DialogueMark.SetActive(true);
         }
     }
+    //Determina quién está diciendo el diálogo actual para cambiar de un sprite a otro y para cada línea de diálogo, las descompone en caracteres que se irán mostrando poco a poco
     private IEnumerator ShowLine()
     {
         dialogueText.text = string.Empty;
@@ -103,6 +105,7 @@ public class Dialogue : MonoBehaviour
             yield return new WaitForSeconds(timeBetweenCharacters);
         }
     }
+    //Si el jugador está en el rango, se mostrará el indicador de que se puede iniciar diálogo
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.GetComponent<MovementController>() != null)
@@ -111,6 +114,7 @@ public class Dialogue : MonoBehaviour
             DialogueMark.SetActive(true);
         }
     }
+    //Si el jugador sale del rango, desactiva el indicador
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<MovementController>() != null)

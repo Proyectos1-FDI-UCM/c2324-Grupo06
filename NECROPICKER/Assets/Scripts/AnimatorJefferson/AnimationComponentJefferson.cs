@@ -9,6 +9,7 @@ public class AnimationComponentJefferson : MonoBehaviour
     float previousX;
     float previousY;
     bool isMooving;
+    //Tomando en cuenta el vector de la velocidad del rigid body, determina si se está moviendo o no y posteriormente determina en qué dirección está moviendose a partir de ese mismo vector
     private void Start()
     {
         animator = GetComponent<Animator>();

@@ -14,7 +14,7 @@ public class DropComponent : MonoBehaviour
     {
         _transform = transform;
     }
-
+    //Determina qué objeto se deja caer, basado en las probabilidades definidas en la lista dropChance. Solo deja caer uno, por lo que si varios cumplen los requisitos, se dejará caer el último que los cumpla
     public void DropItemExclusive()
     {
         int numofitem=0;
@@ -30,7 +30,7 @@ public class DropComponent : MonoBehaviour
         }
         if (!noInstanciate)Instantiate(dropItems[numofitem], _transform.position, _transform.rotation);
     }
-
+    //Determina qué items se dejan caer, basado en las probabilidades definidas por la lista dropChance y llama a LaunchItem. En este caso, puede caer más de un Item
     public void DropItem()
     {
         int randomPercentage = Random.Range(0, 101);
@@ -43,7 +43,7 @@ public class DropComponent : MonoBehaviour
             }
         }
     }
-
+    //Si el objeto que se va a droppearse tiene algún comportamiento, lo ejecuta
     void LaunchItem(GameObject item)
     {
         if(item.TryGetComponent(out IBehaviour behaviour))
@@ -51,12 +51,10 @@ public class DropComponent : MonoBehaviour
             behaviour.ExecuteBehaviour();
         }
     }
+    //Hace que las posibilidades de droppeo de un item i sean cero
     public void DropToCero(int i)
     {
         dropChance[i] = 0;
     }
-    //El código está genial, esto son solo algunas sugerencias para mejorar la legibilidad y mantenibilidad del código
-    //buen trabajo David! :D
-    //Si tienes alguna duda, no dudes en preguntarme
 }
 
