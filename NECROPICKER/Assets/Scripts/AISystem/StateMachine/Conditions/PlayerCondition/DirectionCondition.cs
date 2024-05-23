@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//(Obsoleto) Devuelve verdadero si el objeto se mueve en una dirección determinada.
 public class DirectionCondition : MonoBehaviour, ICondition
 {
     MovementController movementController;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+//Devuelve verdadero si se detecta un input determinado.
 public class InputCondition : MonoBehaviour, ICondition
 {
     [SerializeField] InputActionReference inputactionreference;

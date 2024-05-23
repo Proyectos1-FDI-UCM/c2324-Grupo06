@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Repite un conjunto de comportamientos un número aleatorio de veces dentro de un rango determinado.
+//Cada comportamiento se ejecuta en un intervalo de tiempo aleatorio también dentro de un rango determinado.
 public class RepeatBehaviour : MonoBehaviour, IBehaviour
 {
     [SerializeField] private int _minNumberOfIterations;

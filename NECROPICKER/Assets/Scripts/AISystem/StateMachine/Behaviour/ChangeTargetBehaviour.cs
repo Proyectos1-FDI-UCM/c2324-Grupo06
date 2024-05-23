@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Cambiar el objetivo asignado al componente TargetHandler.
+//El jugador se establece como objetivo por defecto.
 public class ChangeTargetBehaviour : MonoBehaviour, IBehaviour
 {
     [SerializeField] Transform _targetTransform;

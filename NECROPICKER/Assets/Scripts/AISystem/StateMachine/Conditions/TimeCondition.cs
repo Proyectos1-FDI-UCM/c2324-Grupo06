@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Devuelve verdadero si ha pasado un tiempo determinado.
 public class TimeCondition : MonoBehaviour, ICondition
 {
     [SerializeField] float timeToWait;

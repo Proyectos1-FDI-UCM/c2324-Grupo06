@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Comprueba si la probabilidad de un RollProbabilityBehaviour está dentro de un rango determinado.
 public class ReadProbabilityCondition : MonoBehaviour, ICondition
 {
     [SerializeField] 

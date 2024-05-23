@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
+
+//Se encarga de almacenar el objetivo al que se dirige la IA.
+
 public class TargetHandler : MonoBehaviour
 {
     [SerializeField] Transform _target;

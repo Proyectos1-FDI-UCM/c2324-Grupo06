@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Define un tiempo aleatorio entre un rango determinado cada vez que se reinicia el contador.
+//Devuelve verdadero si ha pasado el tiempo aleatorio.
 public class RandomTimeCondition : MonoBehaviour, ICondition
 {
     [SerializeField] float minTime;

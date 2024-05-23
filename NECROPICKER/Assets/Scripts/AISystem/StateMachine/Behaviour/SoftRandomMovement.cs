@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Mueve al objeto en una dirección aleatoria.
+//El objeto se moverá en una dirección aleatoria durante un tiempo determinado, luego cambiará de dirección.
+//La dirección cambiará de forma suave o brusca dependiendo del factor de lerp.
 public class SoftRandomMovement : MonoBehaviour, IBehaviour
 {
     float timer;

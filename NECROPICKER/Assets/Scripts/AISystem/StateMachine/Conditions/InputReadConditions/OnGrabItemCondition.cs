@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Devuelve verdadero si un GrabHandler ha agarrado un objeto.
 public class OnGrabItemCondition : MonoBehaviour, ICondition
 {
     [SerializeField] GrabHandler grabHandlerToCheck;

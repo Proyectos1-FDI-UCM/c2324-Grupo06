@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Guarda un conjunto de condiciones y comportamientos que se ejecutan si todas las condiciones se cumplen.
 [System.Serializable]
 public class BehaviourPerformer
 {
@@ -41,6 +42,7 @@ public class BehaviourPerformer
     }
 }
 
+//Guarda una condición y un booleano que indica si la condición debe ser negada.
 [System.Serializable]
 public class Condition
 {

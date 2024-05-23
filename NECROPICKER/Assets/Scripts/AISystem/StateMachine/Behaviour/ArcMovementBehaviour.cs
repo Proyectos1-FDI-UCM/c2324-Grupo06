@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Hace que el objeto se mueva en un arco.
+//El objeto se moverá desde su posición actual a una posición aleatoria en un rango determinado.
+//La altura del arco y la duración del movimiento son ajustables.
+
 public class ArcMovementBehaviour : MonoBehaviour, IBehaviour
 {
     MovementController movementController;

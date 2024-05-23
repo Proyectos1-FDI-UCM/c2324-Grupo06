@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Una condición que se cumple solo una vez.
 public class PlayOnceCondition : MonoBehaviour, ICondition
 {
     bool playedonce = false;

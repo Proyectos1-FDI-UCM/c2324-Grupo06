@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//(Obsoleto -> Usar SoftRandomMovementBehaviour)
 public class RandomMovementBehaviour : MonoBehaviour, IBehaviour
 {
  

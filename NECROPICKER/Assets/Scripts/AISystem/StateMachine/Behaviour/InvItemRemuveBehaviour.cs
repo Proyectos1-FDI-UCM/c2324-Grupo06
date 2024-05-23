@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Este comportamiento se utiliza para eliminar elementos del inventario.
 public class InvItemRemuveBehaviour : MonoBehaviour, IBehaviour
 {
     [SerializeField] private Inventory inventory;

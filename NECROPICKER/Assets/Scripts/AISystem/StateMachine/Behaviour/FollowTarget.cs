@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Mueve al objeto hacia el objetivo dado por el TargetHandler.
+//Se puede ajustar el multiplicador de velocidad de forma que se pueda mover más rápido o más lento
+//además de hacer que el objeto se aleje del objetivo.
+//Se puede ajustar el peso de la interpolación para que el objeto ajuste su velocidad de forma más suave.
 public class FollowTarget : MonoBehaviour, IBehaviour
 {
     TargetHandler targetHandler;

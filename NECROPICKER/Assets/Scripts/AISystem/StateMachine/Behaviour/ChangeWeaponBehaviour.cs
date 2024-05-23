@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Cambia el Item equipado de un ItemHandler por otro Item.
 public class ChangeWeaponBehaviour : MonoBehaviour, IBehaviour
 {
     private ItemHandler _itemHandler;
