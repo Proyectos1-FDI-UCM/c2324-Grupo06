@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PlayOnCollision : MonoBehaviour, ICollidable
 {
-    // Start is called before the first frame update
     Rigidbody2D rb;
     Animator animator;
-    [SerializeField] AnimationClip collisionAnimation;
-    [SerializeField] LayerMask targetLayer;
+    [SerializeField] AnimationClip collisionAnimation; // Animación que se reproduce al colisionar
+    [SerializeField] LayerMask targetLayer; // Capa con la que se debe colisionar
 
     private void Awake()
     {
@@ -17,8 +16,10 @@ public class PlayOnCollision : MonoBehaviour, ICollidable
     }
     public void OnCollide(Collider2D other)
     {
+        // Si la capa del objeto es la requerida, se llama a la corrutina Timer
         if (targetLayer == (targetLayer | (1 << other.gameObject.layer))) StartCoroutine(Timer());
     }
+    // Se reproduce la animación de colisión con el rigidbody kinemático y luego se destruye el objeto
     private IEnumerator Timer()
     {
         animator.Play(collisionAnimation.name);

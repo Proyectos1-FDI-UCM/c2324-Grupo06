@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PoolOnCollision : MonoBehaviour, ICollidable
 {
-    [SerializeField] GameObject[] prefabs;
-    PoolTaker poolTaker;
+    [SerializeField] GameObject[] prefabs; // Prefabs que aparecerán al colisionar
+    PoolTaker poolTaker; // Componente que se encarga de gestionar los objetos de la pool
 
     private void Awake()
     {
@@ -15,6 +15,7 @@ public class PoolOnCollision : MonoBehaviour, ICollidable
 
     public void OnCollide(Collider2D collision)
     {
+        // Se activan los prefabs de la pool
         foreach (GameObject prefab in prefabs)
         {
             poolTaker.TakeFromPool(prefab);
