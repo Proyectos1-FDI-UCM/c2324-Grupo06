@@ -12,7 +12,7 @@ public class ShakePerfomer : MonoBehaviour
     TriggerArea triggerArea;
     CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin;
     [SerializeField] float shakeTime = 0.20f;
-
+    //Toma los componentes necesarios y se suscribe a eventos
     private void Awake()
     {
         triggerArea = GetComponent<TriggerArea>();
@@ -24,12 +24,13 @@ public class ShakePerfomer : MonoBehaviour
         triggerArea.onTriggerEnter.AddListener(SubscribeToCameraEffects);
         triggerArea.onTriggerExit.AddListener(UnsubscribeToCameraEffects);
     }
-
+    //Se suscribe al evento ShakeEvent de camera effects
     void SubscribeToCameraEffects() => cameraEffects.ShakeEvent.AddListener(Shake);
+    //Se desuscribe al evento ShakeEvent de camera effects
     void UnsubscribeToCameraEffects() => cameraEffects.ShakeEvent.RemoveListener(Shake);
-
+    //Inicia una corrutina
     void Shake(float shakeValue) => StartCoroutine(ShakeRoutine(shakeValue));
-
+    //CinemachineMultiChannelPerlin aplica ruidos perlin a la cámara, básicamente, se controla la intensidad y la frecuencia de sacudida de la cámara con el parámetro shake value, se espera shakeTime segundos y se reestablece a los valores originales (0)
     IEnumerator ShakeRoutine(float shakeValue)
     {
         cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = shakeValue;
