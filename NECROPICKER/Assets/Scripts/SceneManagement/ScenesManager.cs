@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [CreateAssetMenu(fileName = "ScenesManager", menuName = "SceneManagement/ScenesManager")]
+//Define los diferentes métodos a usar a la hora de administrar escenas (cargar, volver a cargar, eliminar escena, cerrar el juego, etc)
 public class ScenesManager : ScriptableObject
 {
     public void LoadSceneAdditive(string sceneName) => SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
