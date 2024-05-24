@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SoftRandomTransform : MonoBehaviour
-{
+{/// <summary>
+///  Mueve suavemente el GameObject en una dirección aleatoria dentro 
+/// de un rango de distancia durante un período de tiempo asignado
+/// </summary>
     [SerializeField] float duration = 1;
     [SerializeField] Vector2 directionRange;
     [SerializeField] Vector2 distanceRange = new Vector2(0.45f, 0.45f);

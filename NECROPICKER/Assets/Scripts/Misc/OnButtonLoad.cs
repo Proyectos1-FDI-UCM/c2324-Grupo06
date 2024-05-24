@@ -13,7 +13,8 @@ public class OnButtonLoad : MonoBehaviour
     [SerializeField] private Upgrades upgrades;
     [SerializeField] private InputActionReference inputActionReference;
     bool enArea;
-    // Start is called before the first frame update
+    //si hay un jugador en el area permite cambiar de escena al pulsar el input elegido. Ademas guarda la vida actual del player
+    //entre escenas
     private void Update()
     {
         if (enArea)

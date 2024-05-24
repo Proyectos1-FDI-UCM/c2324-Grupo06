@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class RandomRotation : MonoBehaviour
 {
+    /// <summary>
+    ///  Aplica una rotación aleatoria en el eje Z al objeto
+    /// </summary> <summary>
+    
     [SerializeField] Vector2 rotationRange = new Vector2(-180, 180);
     private void OnEnable() 
     {

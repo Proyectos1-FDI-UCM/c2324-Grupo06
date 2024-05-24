@@ -7,7 +7,7 @@ public class ChangeItemLayer : MonoBehaviour
     [SerializeField] LayerMask _staticLayer;
     [SerializeField] LayerMask _movementLayer;
     Rigidbody2D rb;
-    // Start is called before the first frame update
+    //Si un objeto es lanzado este pasa a la capa bullet o disparado
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
