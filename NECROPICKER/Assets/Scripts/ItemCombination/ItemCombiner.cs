@@ -12,10 +12,11 @@ public class ItemCombiner : MonoBehaviour
     
     [SerializeField] ItemData[] itemsCombinations;
     List<ItemData> itemsToCombine = new List<ItemData>();
-
+    //Añade el item a la lista
     public void AddItem(ItemData item) => itemsToCombine.Add(item);
+    //elimina el item de la lista
     public void RemoveItem(ItemData item) => itemsToCombine.Remove(item);
-
+    //Si los items a combinar no son dos o más, no se ejecuta (no se puede combinar un solo item). Crea una lista de ingredientes y para cada item data de la lista de items que combinar y cada ingrediente en data, añade en ingrediente a la lista de ingredientes. Crea un array a partir de la lista de ingredientes. Si check ingredients es true, entonces se instancia el item adecuado y se invoca ItemCombined, que destruye el game object.
     public void GenerateItem()
     {
         if(itemsToCombine.Count < 2) return;
@@ -46,7 +47,7 @@ public class ItemCombiner : MonoBehaviour
             }
         }
     }
-
+    //Si los contenidos de la receta no son iguales a los que se proporcionan, devuelve falso, si no, comprueba que todos los ingredientes son los adecuados y devuelve verdadero o falso dependiendo de esto
     bool CheckIngredients(Ingredient[] recipe, Ingredient[] ingredients)
     {
         if(recipe.Length > ingredients.Length) return false;
