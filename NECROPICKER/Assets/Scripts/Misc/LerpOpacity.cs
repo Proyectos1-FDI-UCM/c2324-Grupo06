@@ -9,6 +9,7 @@ public class LerpOpacity : MonoBehaviour
     [SerializeField] float time;
     [SerializeField] bool fadeOut;
     private float passedtime;
+    //permite cambiar la opacidad de un objeto ya sea aumentandola de 0 a 1 o viceversa
     void Update()
     {
         passedtime += Time.deltaTime;
@@ -17,7 +18,6 @@ public class LerpOpacity : MonoBehaviour
          if (fadeOut)sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, Mathf.Lerp(1f, 0f, t));
         
          else sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, Mathf.Lerp(1f, 0f, t));
-        Debug.Log("mondongo");
     }
 
 

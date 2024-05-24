@@ -17,6 +17,7 @@ public class LowLifeController : MonoBehaviour
         active = Active;
         StartCoroutine(LowLife());
     }
+    // se encarga del efecto en pantalla cuando al player le queda poca vida
     IEnumerator LowLife()
     {
         float time = 0;

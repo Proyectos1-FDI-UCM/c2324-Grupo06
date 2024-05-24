@@ -7,15 +7,11 @@ public class EventOnStart : MonoBehaviour
 {
     [SerializeField] UnityEvent onStart = new UnityEvent();
     public UnityEvent OnStart => onStart;
-    // Start is called before the first frame update
+    /// <summary>
+    /// invoca el evento asignado en el editor en el start
+    /// </summary>
     void Start()
     {
         onStart?.Invoke();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
