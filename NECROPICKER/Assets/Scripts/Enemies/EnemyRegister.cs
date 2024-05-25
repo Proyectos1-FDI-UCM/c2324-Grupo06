@@ -6,7 +6,7 @@ public class EnemyRegister : MonoBehaviour
 {
     [SerializeField] EnemyCounter _myCounter;
     HealthHandler _myHealthHandler;
-
+    //añade el objeto actual al EnemyCounter
     private void Start()
     {
         _myHealthHandler = GetComponent<HealthHandler>();
