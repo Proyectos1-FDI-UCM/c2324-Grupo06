@@ -11,7 +11,7 @@ public class WaveFunctionCollapse : MonoBehaviour
     [SerializeField] Vector2Int size;
 
     [SerializeField] WaveElement initialWave;
-    public WaveElement InitialWave
+    public WaveElement InitialWave //Constructora
     {
         set 
         { 
@@ -22,11 +22,11 @@ public class WaveFunctionCollapse : MonoBehaviour
     [SerializeField] WaveElement[,] waveMap;
     Vector2Int[] directions = new Vector2Int[] { Vector2Int.up, Vector2Int.left, Vector2Int.right, Vector2Int.down };
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmos() //Cuando se dibujen los gizmos
     {
         grid = GetComponentInParent<Grid>();
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireCube(transform.position + new Vector3(size.x * grid.cellSize.x / 2, size.y * grid.cellSize.y / 2, 0) , new Vector3(size.x * grid.cellSize.x, size.y * grid.cellSize.y, 0));
+        Gizmos.color = Color.green; //Se asigna el color
+        Gizmos.DrawWireCube(transform.position + new Vector3(size.x * grid.cellSize.x / 2, size.y * grid.cellSize.y / 2, 0) , new Vector3(size.x * grid.cellSize.x, size.y * grid.cellSize.y, 0)); //Se dibuja en la posición correspondiente con su tamaño definido
     }
 
     private void Awake() {
@@ -35,7 +35,7 @@ public class WaveFunctionCollapse : MonoBehaviour
         grid = GetComponentInParent<Grid>();
     }
 
-    public void Collapse(WaveElement waveElement)
+    public void Collapse(WaveElement waveElement) //Método que asigna a initialwave el WaveElement que le pasemos e inicie su corutina
     {
         initialWave = waveElement;
         StartCoroutine(WaveFunction());
@@ -43,29 +43,29 @@ public class WaveFunctionCollapse : MonoBehaviour
 
     IEnumerator WaveFunction()
     {
-        List<Vector2Int> wavesToComplete = new List<Vector2Int>();
+        List<Vector2Int> wavesToComplete = new List<Vector2Int>(); //Nos creamos una lista de vectores
 
-        Vector2Int initialPos = new Vector2Int(size.x / 2, size.y / 2);
-        SetWaveElement(initialPos, initialWave, wavesToComplete);
+        Vector2Int initialPos = new Vector2Int(size.x / 2, size.y / 2); //Guardamos la posición inicial
+        SetWaveElement(initialPos, initialWave, wavesToComplete); //Seteamos los elementos del Wave
 
-        while(wavesToComplete.Count > 0)
+        while(wavesToComplete.Count > 0) //Mientras que haya Waves sin completar
         {
-            List<Vector2Int> newWavesPositions = new List<Vector2Int>();
+            List<Vector2Int> newWavesPositions = new List<Vector2Int>(); //Nos creamos otra variable para asignarle las posiciones
 
-            foreach(Vector2Int tilePos in wavesToComplete)
+            foreach(Vector2Int tilePos in wavesToComplete) //recorremos todos los elementos del wavesToComplet
             {
-                WaveElement wave = waveMap[tilePos.x, tilePos.y];
+                WaveElement wave = waveMap[tilePos.x, tilePos.y]; //Nos creamos un WaveElement al que le asignamos la posición del tile del WaveMap
                 for(int i = 0; i < 4; i++)
                 {
-                    Vector2Int newPos = tilePos + directions[i];
-                    if(CheckPosition(newPos))
+                    Vector2Int newPos = tilePos + directions[i]; //Guardamos la nueva posición
+                    if(CheckPosition(newPos)) //Si está dentro Setea el wave element
                     {
                         SetWaveElement(newPos, ProccesWaveElementSet(newPos), newWavesPositions);
                     }
                 }
             }
-            yield return new WaitForSeconds(0.001f);
-            wavesToComplete = newWavesPositions;
+            yield return new WaitForSeconds(0.001f); //Tiempo a esperar
+            wavesToComplete = newWavesPositions; //Rellenamos el WaveToComplete
         }
     }
 
@@ -73,13 +73,14 @@ public class WaveFunctionCollapse : MonoBehaviour
     {
         List<WaveElement> intersectedWaves = new List<WaveElement>();
 
-        for(int i = 0; i < 4; i++)
+        for(int i = 0; i < 4; i++) //Para cada elemento del Wave
         {
-            Vector2Int newPos = pos + directions[i];
-            WaveElement waveInPos = CheckWave(newPos);
-            if(waveInPos != null)
+            Vector2Int newPos = pos + directions[i]; //Calcula la nueva posición
+            WaveElement waveInPos = CheckWave(newPos); //Se asigna a la posición del CheckWave
+            if(waveInPos != null) // Si no es null
             {
-                if(intersectedWaves.Count == 0)
+                //Se comprueba el total de Wavers intersecados y se asigna el intersected wave en función del total de intersecados que halla
+                if (intersectedWaves.Count == 0) 
                 {
                     intersectedWaves.AddRange(CheckWave(newPos).Neighbors[i]);
                 }
@@ -89,30 +90,30 @@ public class WaveFunctionCollapse : MonoBehaviour
                 }
             }
         }
-        if(intersectedWaves.Count == 0)
+        if(intersectedWaves.Count == 0) //si el intersected wave es 0
         {
-            return initialWave;
+            return initialWave; //Devuelve el valor inicial
         }
-        return intersectedWaves[Random.Range(0, intersectedWaves.Count)];
+        return intersectedWaves[Random.Range(0, intersectedWaves.Count)]; // si es > que 0 devuelve un valor aleatorio del intersectedWave
     }
 
-    WaveElement[] IntersectedWaveElements(WaveElement[] wave1, WaveElement[] wave2)
+    WaveElement[] IntersectedWaveElements(WaveElement[] wave1, WaveElement[] wave2) //Método que devuelve la cantidad de elemetos que se encuentren intersecados
     {
-        List<WaveElement> intersectedWaves = new List<WaveElement>();
-        for(int i = 0; i < wave1.Length; i++)
+        List<WaveElement> intersectedWaves = new List<WaveElement>(); //WaveElement donde almacenaremos los intesecados
+        for(int i = 0; i < wave1.Length; i++) //Recorre el primer Wave
         {
-            for(int j = 0; j < wave2.Length; j++)
+            for(int j = 0; j < wave2.Length; j++) //Recorre el segundo Wave
             {
-                if(wave1[i] == wave2[j])
+                if(wave1[i] == wave2[j]) //Si coincide
                 {
-                    intersectedWaves.Add(wave1[i]);
+                    intersectedWaves.Add(wave1[i]); //Añadelo al intersected wave
                 }
             }
         }
-        return intersectedWaves.ToArray();
+        return intersectedWaves.ToArray(); //Devuelve el intersected Wave como un array
     }
 
-    void SetWaveElement(Vector2Int pos, WaveElement wave, List<Vector2Int> wavesToComplete)
+    void SetWaveElement(Vector2Int pos, WaveElement wave, List<Vector2Int> wavesToComplete) //Método que asigna el elemento del Wave en función de una posición y un vector que le pasemos
     {
         waveMap[pos.x, pos.y] = wave;
         tilemap.SetTile(tilemap.WorldToCell(new Vector3Int((int)transform.position.x, (int)transform.position.y, 0) 
@@ -120,7 +121,7 @@ public class WaveFunctionCollapse : MonoBehaviour
         wavesToComplete.Add(pos);
     }
 
-    bool CheckPosition(Vector2Int pos)
+    bool CheckPosition(Vector2Int pos) //Método que comprueba si la posición entra dentro del rango o no
     {
         if (pos.x < 0 || pos.x >= size.x || pos.y < 0 || pos.y >= size.y || waveMap[pos.x, pos.y] != null)
         {
@@ -129,16 +130,16 @@ public class WaveFunctionCollapse : MonoBehaviour
         return true;
     }
 
-    WaveElement CheckWave(Vector2Int pos)
+    WaveElement CheckWave(Vector2Int pos) //Método que comprueba si el wave está en rango o no
     {
         if (pos.x < 0 || pos.x >= size.x || pos.y < 0 || pos.y >= size.y)
         {
             return null;
         }
-        return waveMap[pos.x, pos.y];
+        return waveMap[pos.x, pos.y]; //Si está en rango devuelve el wavMap en la posición correspondiente
     }
 
-    Vector2Int RandomDirection()
+    Vector2Int RandomDirection() //Método que genera una dirección aleatoria
     {
         int random = Random.Range(0, 4);
         switch (random)
