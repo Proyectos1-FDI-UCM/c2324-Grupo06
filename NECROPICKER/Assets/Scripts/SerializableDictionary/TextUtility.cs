@@ -1,5 +1,12 @@
+using UnityEngine.TextCore.Text;
+using UnityEngine.UIElements;
+
 public static class TextUtility
 {
+    //Este script define una clase TextUtility con tres métodos de extensión:
+    //IsWhitespace verifica si un carácter es un espacio en blanco utilizando una lista de caracteres específicos.
+    //RemoveWhitespaces elimina todos los espacios en blanco de un texto.
+    //RemoveSpecialCharacters elimina todos los caracteres que no sean letras, dígitos o espacios en blanco de un texto.
     public static bool IsWhitespace(this char character)
     {
         switch (character)

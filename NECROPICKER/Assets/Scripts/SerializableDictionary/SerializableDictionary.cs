@@ -9,12 +9,19 @@ public class SerializableDictionary
 {
 }
 
+//Este script define una clase SerializableDictionary que es un diccionario serializable y genérico.
+//Implementa IDictionary<TKey, TValue> y ISerializationCallbackReceiver para permitir
+//que los pares clave-valor se serialicen y deserialicen correctamente.
+//La clase utiliza una lista interna de pares clave-valor serializables
+//y un diccionario para rastrear las posiciones de las claves en la lista. 
 [Serializable]
 public class SerializableDictionary<TKey, TValue> : SerializableDictionary, IDictionary<TKey, TValue>, ISerializationCallbackReceiver
 {
+    // Lista de pares clave-valor serializables
     [SerializeField]
     private List<SerializableKeyValuePair> list = new List<SerializableKeyValuePair>();
 
+    // Estructura para almacenar pares clave-valor
     [Serializable]
     public struct SerializableKeyValuePair
     {
@@ -33,14 +40,17 @@ public class SerializableDictionary<TKey, TValue> : SerializableDictionary, IDic
         }
     }
 
+    // Diccionario para mapear claves a sus posiciones en la lista
     private Dictionary<TKey, uint> KeyPositions => _keyPositions.Value;
     private Lazy<Dictionary<TKey, uint>> _keyPositions;
 
+    // Constructor por defecto
     public SerializableDictionary()
     {
         _keyPositions = new Lazy<Dictionary<TKey, uint>>(MakeKeyPositions);
     }
 
+    // Constructor que inicializa el diccionario con otro diccionario
     public SerializableDictionary(IDictionary<TKey, TValue> dictionary)
     {
         _keyPositions = new Lazy<Dictionary<TKey, uint>>(MakeKeyPositions);
@@ -56,6 +66,7 @@ public class SerializableDictionary<TKey, TValue> : SerializableDictionary, IDic
         }
     }
 
+    // Método para crear el diccionario de posiciones de claves
     private Dictionary<TKey, uint> MakeKeyPositions()
     {
         int numEntries = list.Count;
@@ -70,10 +81,12 @@ public class SerializableDictionary<TKey, TValue> : SerializableDictionary, IDic
         return result;
     }
 
+    // Método llamado antes de la serialización
     public void OnBeforeSerialize()
     {
     }
 
+    // Método llamado después de la deserialización
     public void OnAfterDeserialize()
     {
         // After deserialization, the key positions might be changed

@@ -1,5 +1,9 @@
 using System.Collections.Generic;
 
+//Este script define un método de extensión AddItem para un SerializableDictionary 
+//cuyo valor es una lista. Si la clave ya existe, añade el valor a la lista correspondiente;
+//si no, crea una nueva entrada con una lista que contiene el valor proporcionado.
+
 namespace DS.Utilities
 {
     public static class CollectionUtility
