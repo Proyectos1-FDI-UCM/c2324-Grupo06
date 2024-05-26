@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Flags] public enum RoomAccess
+[Flags] public enum RoomAccess //Indicadores para averiguar que tipo de sala es
 {
     None = 0,
     North = 1,
@@ -14,8 +14,8 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
-    [SerializeField] RoomAccess _totalAccess;
-    public RoomAccess totalAccess => _totalAccess;
+    [SerializeField] RoomAccess _totalAccess; //Accesos totales que se encuentran serializados
+    public RoomAccess totalAccess => _totalAccess; //Constructora
 
     private void Update() {
         foreach(RoomAccess access in GetAllAccess())
@@ -24,12 +24,7 @@ public class Room : MonoBehaviour
             Debug.DrawRay(transform.position, new Vector2(debugDirection.x, debugDirection.y) * 10, Color.red); 
         }
     }
-
-    private void OnDrawGizmos() {
-        //Gizmos.DrawCube(transform.position, new Vector3(5, 5, 5));
-    }
-
-    Vector2Int AccessValueToVector2(RoomAccess accessValue)
+    Vector2Int AccessValueToVector2(RoomAccess accessValue) //Método encargado de asignar un valor a los access
     {
         switch (accessValue)
         {
@@ -46,15 +41,15 @@ public class Room : MonoBehaviour
         }
     }
 
-    public RoomAccess[] GetAllAccess()
+    public RoomAccess[] GetAllAccess() //Método encargado de devolver los posibles accesos de la sala
     {
-        List<RoomAccess> accessList = new List<RoomAccess>();
-        foreach(RoomAccess access in Enum.GetValues(typeof(RoomAccess)))
+        List<RoomAccess> accessList = new List<RoomAccess>(); //Variable donde se almacenaran todos los roomAccess
+        foreach(RoomAccess access in Enum.GetValues(typeof(RoomAccess))) //Se recorren todos los roomAccess
         {
-            if(_totalAccess.HasFlag(access)) accessList.Add(access);
+            if(_totalAccess.HasFlag(access)) accessList.Add(access); //Si coincide con alguno se le añade al accessList
         }
-        return accessList.ToArray();
+        return accessList.ToArray(); //Devuelve la lista con todos los roomAccess
     }
 
-    public void SetAccess(RoomAccess roomAccess) => _totalAccess = roomAccess;
+    public void SetAccess(RoomAccess roomAccess) => _totalAccess = roomAccess; //Setea el total de accesos de la sala
 }
