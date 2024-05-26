@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Este script maneja las transiciones de menú basadas en los cambios de estado del juego.
+// Escucha varios eventos (Pausa, Reanudar, Muerte, Cargando, Minimapa) del GlobalStateManager 
+// y actualiza el menú activo en consecuencia.
+
 public class MenuHandler : MonoBehaviour
 {
     [SerializeField] GlobalStateManager globalStateManager;

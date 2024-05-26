@@ -12,13 +12,10 @@ public class FirstBotomSelector : MonoBehaviour
 /// </summary>
     [SerializeField] private GameObject bottom;
     private EventSystem eventSystem;
-    // Start is called before the first frame update
     private void Start()
     {
         eventSystem = FindAnyObjectByType<EventSystem>();
 
         eventSystem.SetSelectedGameObject(bottom);
     }
-
-    
 }
