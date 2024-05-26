@@ -4,6 +4,10 @@ using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.Events;
 
+
+// Este script es un ScriptableObject que mantiene un contador de enemigos, invocando eventos cuando se muestran enemigos
+// y cuando todos los enemigos son derrotados. Proporciona métodos para registrar y eliminar enemigos, así como para reiniciar el contador.
+
 [CreateAssetMenu(fileName = "Counter")]
 public class EnemyCounter : ScriptableObject
 {
@@ -15,13 +19,11 @@ public class EnemyCounter : ScriptableObject
     public void RegisterEnemy()
     {
         _totalEnemies++;
-       // Debug.Log(_totalEnemies);
         if(_totalEnemies == 1) OnEnemiesDisplayed?.Invoke();
     }
     public void UnregisterEnemy()
     {
         _totalEnemies--;
-        //Debug.Log(_totalEnemies);
         if (_totalEnemies == 0) OnEnemiesDefeated?.Invoke();
     }
 

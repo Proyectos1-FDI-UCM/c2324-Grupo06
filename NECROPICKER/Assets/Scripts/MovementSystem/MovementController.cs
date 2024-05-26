@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Este script controla el movimiento de un objeto con Rigidbody2D, permitiendo moverlo en una dirección especificada 
+// con una velocidad ajustable, reproducir partículas durante el movimiento y restaurar la velocidad original.
+
 public class MovementController : MonoBehaviour
 {
     Rigidbody2D rb;

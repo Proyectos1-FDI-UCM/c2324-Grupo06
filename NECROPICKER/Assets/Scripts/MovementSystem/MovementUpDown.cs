@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouvementUpDown : MonoBehaviour
+
+// Este script mueve un objeto entre dos límites (_up y _down) aplicando fuerzas en dirección contraria cuando alcanza
+// un límite, utilizando la fuerza y la distancia especificadas para cambiar de dirección.
+
+public class MovementUpDown : MonoBehaviour
 {
     [SerializeField]
     private Transform _up, _down,//limites del movimiento

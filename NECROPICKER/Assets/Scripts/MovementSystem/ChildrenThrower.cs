@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Este script lanza a los hijos del objeto con una fuerza y un torque aleatorios cuando se habilita, 
+// restaurando sus posiciones y rotaciones iniciales cada vez que se reinicia.
 public class ChildrenThrower : MonoBehaviour
 {
     float randomDirection;
